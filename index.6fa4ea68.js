@@ -27682,17 +27682,16 @@ var Mouth = function Mouth(_ref) {
     var avatarSad = {
         position: "absolute",
         transform: "translate(-50%)",
-        borderColor: "10px solid transparent",
+        border: "10px solid " + mouthColor,
         left: "50%",
         top: "65%",
         width: "70px",
         height: "70px",
         background: "transparent",
         borderRadius: "50%",
-        borderTop: "10px solid " + mouthColor,
-        borderLeftColor: "0px solid transparent",
-        borderRightColor: "0px solid transparent",
-        borderBottomColor: "0px solid transparent"
+        borderLeftColor: "transparent",
+        borderRightColor: "transparent",
+        borderBottomColor: "transparent"
     };
     var avatarWoh = {
         position: "absolute",
