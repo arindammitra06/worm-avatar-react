@@ -2947,27 +2947,442 @@ var _react = require("react");
 var _reactDom = require("react-dom");
 var _ = require("../.");
 var _Default = parcelHelpers.interopDefault(_);
+var _reactColor = require("react-color");
+var _s = $RefreshSig$();
 const App = ()=>{
+    _s();
+    const container = {
+        backgroundColor: "white",
+        padding: "10px",
+        margin: "auto",
+        width: "100%",
+        textAlign: "center"
+    };
+    const output = {
+        padding: "10px",
+        display: "flex",
+        justifyContent: "center"
+    };
+    const gridContainer = {
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gridGap: "20px"
+    };
+    const divider = {
+        borderTop: "3px dashed #bbb"
+    };
+    const [seed, setSeed] = (0, _react.useState)("worm-avatar-react");
+    const [isRandom, setIsRandom] = (0, _react.useState)(false);
+    const [isBGGradient, setIsBGGradient] = (0, _react.useState)(true);
+    const [backgroundColor, setBackgroundColor] = (0, _react.useState)("#697689");
+    const [backgroundEndColor, setBackgroundEndColor] = (0, _react.useState)("#DCE775");
+    const [isBodyGradient, setIsBodyGradient] = (0, _react.useState)(true);
+    const [bodyColor, setBodyColor] = (0, _react.useState)("#D9E3F0");
+    const [bodyEndColor, setBodyEndColor] = (0, _react.useState)("#D9E3F0");
+    const [showEar, setShowEar] = (0, _react.useState)(false);
+    const [showTeeth, setShowTeeth] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _Default.default), {
-            isRandom: true,
-            //seed='arindammitra06@gmail.com'
-            radius: 20
-        }, void 0, false, {
-            fileName: "index.tsx",
-            lineNumber: 8,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        style: container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Funny & Customizable Worm Avatars for your react project"
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 58,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: output,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _Default.default), {
+                    isRandom: isRandom,
+                    seed: seed,
+                    radius: 20,
+                    isBackgroundGradient: isBGGradient,
+                    backgroundStartColor: (0, _.hexColor)(backgroundColor),
+                    backgroundEndColor: (0, _.hexColor)(backgroundEndColor),
+                    bodyColorGradient: isBodyGradient,
+                    // bodyGradientDegree={gradientDegrees(180)}
+                    bodyStartColor: (0, _.hexColor)(bodyColor),
+                    bodyEndColor: (0, _.hexColor)(bodyEndColor),
+                    // backgroundGradientDegree={gradientDegrees(0)}
+                    mouthExpression: (0, _.Expression).SAD,
+                    showEar: showEar,
+                    // earColor={hexColor('#f5af19')}
+                    // eyePosition={EyePosition.NORMAL}
+                    // eyeCount={EyeCount.TWO}
+                    // eyeShadeColor={hexColor('#fca311')}
+                    // eyePupilGradient={true}
+                    // eyePupilStartColor={hexColor('#fca311')}
+                    // eyePupilEndColor={hexColor('#ef233c')}
+                    showTongueOrTeeth: showTeeth ? (0, _.TongueOrTeeth).TEETH : (0, _.TongueOrTeeth).TONGUE
+                }, void 0, false, {
+                    fileName: "index.tsx",
+                    lineNumber: 60,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 59,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                style: divider
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 91,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: gridContainer,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            textAlign: "left",
+                            marginLeft: "50px"
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Seed/Email-id/Unique Key:",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "Seed/Email-id/Unique Key",
+                                        value: seed,
+                                        onChange: (event)=>setSeed(event.currentTarget.value)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 98,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 96,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 95,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                textAlign: "left",
+                                marginLeft: "50px"
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Random Worms",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: isRandom,
+                                        onChange: (event)=>setIsRandom(!isRandom)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 111,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 109,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 108,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "index.tsx",
+                lineNumber: 93,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                style: divider
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 120,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: gridContainer,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            textAlign: "left",
+                            marginLeft: "50px"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                    children: [
+                                        "Is Background Gradient?:",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "checkbox",
+                                            checked: isBGGradient,
+                                            onChange: (event)=>setIsBGGradient(!isBGGradient)
+                                        }, void 0, false, {
+                                            fileName: "index.tsx",
+                                            lineNumber: 127,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "index.tsx",
+                                    lineNumber: 125,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "index.tsx",
+                                lineNumber: 124,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                style: {
+                                    margin: "20px"
+                                },
+                                children: [
+                                    "Start Color",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactColor.BlockPicker), {
+                                        color: backgroundColor,
+                                        onChange: (color)=>{
+                                            setBackgroundColor(color.hex);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 136,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 134,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                style: {
+                                    margin: "20px",
+                                    display: isBGGradient ? "block" : "none"
+                                },
+                                children: [
+                                    "End Color",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactColor.BlockPicker), {
+                                        color: backgroundEndColor,
+                                        onChange: (color)=>{
+                                            setBackgroundEndColor(color.hex);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 148,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 144,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.tsx",
+                        lineNumber: 123,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            textAlign: "left",
+                            marginLeft: "50px"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                    children: [
+                                        "Is Body Gradient? :",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "checkbox",
+                                            checked: isBodyGradient,
+                                            onChange: (event)=>setIsBodyGradient(!isBodyGradient)
+                                        }, void 0, false, {
+                                            fileName: "index.tsx",
+                                            lineNumber: 161,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "index.tsx",
+                                    lineNumber: 159,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "index.tsx",
+                                lineNumber: 158,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                style: {
+                                    margin: "20px"
+                                },
+                                children: [
+                                    "Start Color",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactColor.BlockPicker), {
+                                        color: bodyColor,
+                                        onChange: (color)=>{
+                                            setBodyColor(color.hex);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 170,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 168,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                style: {
+                                    margin: "20px",
+                                    display: isBodyGradient ? "block" : "none"
+                                },
+                                children: [
+                                    "End Color",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactColor.BlockPicker), {
+                                        color: bodyEndColor,
+                                        onChange: (color)=>{
+                                            setBodyEndColor(color.hex);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 185,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 178,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.tsx",
+                        lineNumber: 157,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "index.tsx",
+                lineNumber: 122,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                style: divider
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 195,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: gridContainer,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            textAlign: "left",
+                            marginLeft: "50px"
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Show Ear ?",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: showEar,
+                                        onChange: (event)=>setShowEar(!showEar)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 202,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 200,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 199,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 198,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                textAlign: "left",
+                                marginLeft: "50px"
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Show Teeth?",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: showTeeth,
+                                        onChange: (event)=>setShowTeeth(!showTeeth)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 215,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 213,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 212,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 211,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "index.tsx",
+                lineNumber: 197,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "index.tsx",
-        lineNumber: 7,
+        lineNumber: 57,
         columnNumber: 5
     }, undefined);
 };
+_s(App, "rW9043BEu7KVGQ6XRWBBGD/E1jI=");
 _c = App;
 _reactDom.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "index.tsx",
-    lineNumber: 40,
+    lineNumber: 228,
     columnNumber: 17
 }, undefined), document.getElementById("root"));
 var _c;
@@ -2978,7 +3393,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"jzgEL","react":"b6YLU","react-dom":"e1xEC","../.":"5kTE3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzgEL":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"jzgEL","react":"b6YLU","react-dom":"e1xEC","../.":"5kTE3","react-color":"lmwza","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jzgEL":[function(require,module,exports) {
 "use strict";
 module.exports = require("47cb393cebf769d2");
 
@@ -27267,16 +27682,17 @@ var Mouth = function Mouth(_ref) {
     var avatarSad = {
         position: "absolute",
         transform: "translate(-50%)",
-        border: "10px solid " + mouthColor,
+        borderColor: "10px solid transparent",
         left: "50%",
         top: "65%",
         width: "70px",
         height: "70px",
         background: "transparent",
         borderRadius: "50%",
-        borderLeftColor: "transparent",
-        borderRightColor: "transparent",
-        borderBottomColor: "transparent"
+        borderTop: "10px solid " + mouthColor,
+        borderLeftColor: "0px solid transparent",
+        borderRightColor: "0px solid transparent",
+        borderBottomColor: "0px solid transparent"
     };
     var avatarWoh = {
         position: "absolute",
@@ -30748,18 +31164,22 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             var _backgroundStartColor;
             if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor = backgroundStartColor) == null ? void 0 : _backgroundStartColor.trim()) === "" || !isValidHex(backgroundStartColor)) {
                 var index = hashSeed % options.backgroundColor.length;
-                console.log("Background Color index :" + index);
+                //console.log('Background Color index :' + index);
                 backgroundStartColor = options.backgroundColor[index][0];
                 backgroundEndColor = options.backgroundColor[index][1];
-                console.log("Background Color Start :" + backgroundStartColor);
-                console.log("Background Color End :" + backgroundEndColor);
-            } else backgroundEndColor = backgroundStartColor;
-            console.log("backgroundGradientDegree :" + backgroundGradientDegree);
+            //console.log('Background Color Start :' + backgroundStartColor);
+            //console.log('Background Color End :' + backgroundEndColor);
+            } else {
+                var _backgroundEndColor;
+                if (backgroundEndColor === null || backgroundEndColor !== null && ((_backgroundEndColor = backgroundEndColor) == null ? void 0 : _backgroundEndColor.trim()) === "" || !isValidHex(backgroundEndColor)) backgroundEndColor = backgroundStartColor;
+                else backgroundEndColor;
+            }
+            //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
             if (backgroundGradientDegree === null || backgroundGradientDegree === undefined) {
                 var _index = hashSeed % options.backgroundGradientDegree.length;
                 backgroundGradientDegree = gradientDegrees(options.backgroundGradientDegree[_index]);
             }
-            console.log("backgroundGradientDegree :" + backgroundGradientDegree);
+        //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
         } else {
             var _backgroundStartColor2;
             if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor2 = backgroundStartColor) == null ? void 0 : _backgroundStartColor2.trim()) === "" || !isValidHex(backgroundStartColor)) {
@@ -30767,7 +31187,7 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
                 backgroundStartColor = options.backgroundColor[_index2][0];
             }
         }
-        //Process Body 
+        //Process Body
         if (bodyHeight === null || bodyHeight === undefined) {
             var _index3 = hashSeed % options.bodyHeight.length;
             bodyHeight = options.bodyHeight[_index3];
@@ -30776,16 +31196,20 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             var _index4 = hashSeed % options.bodyShape.length;
             bodyShape = options.bodyShape[_index4];
         }
-        console.log("bodyColorGradient :" + bodyColorGradient);
+        //console.log('bodyColorGradient :' + bodyColorGradient);
         if (bodyColorGradient) {
             var _bodyStartColor;
             if (bodyStartColor === null || bodyStartColor === undefined || bodyStartColor !== null && ((_bodyStartColor = bodyStartColor) == null ? void 0 : _bodyStartColor.trim()) === "" || !isValidHex(bodyStartColor)) {
                 var _index5 = hashSeed % options.bodyColor.length;
                 bodyStartColor = options.bodyColor[_index5][0];
                 bodyEndColor = options.bodyColor[_index5][1];
-                console.log("bodyStartColor :" + bodyStartColor);
-                console.log("bodyEndColor :" + bodyEndColor);
-            } else bodyEndColor = bodyStartColor;
+            //console.log('bodyStartColor :' + bodyStartColor);
+            //console.log('bodyEndColor :' + bodyEndColor);
+            } else {
+                var _bodyEndColor;
+                if (bodyEndColor === null || bodyEndColor !== null && ((_bodyEndColor = bodyEndColor) == null ? void 0 : _bodyEndColor.trim()) === "" || !isValidHex(bodyEndColor)) bodyEndColor = bodyStartColor;
+                else bodyEndColor;
+            }
             if (bodyGradientDegree === null || bodyGradientDegree === undefined) {
                 var _index6 = hashSeed % options.bodyGradientDegree.length;
                 bodyGradientDegree = gradientDegrees(options.bodyGradientDegree[_index6]);
@@ -30823,14 +31247,18 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             eyeShadeColor = options.eyeShadeColor[_index12];
         }
         //Eye Pupil Color
-        console.log("eyePupilGradient " + eyePupilGradient);
+        //console.log('eyePupilGradient ' + eyePupilGradient);
         if (eyePupilGradient) {
             var _eyePupilStartColor;
             if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === "" || !isValidHex(eyePupilStartColor)) {
                 var _index13 = hashSeed % options.eyePupilColor.length;
                 eyePupilStartColor = options.backgroundColor[_index13][0];
                 eyePupilEndColor = options.backgroundColor[_index13][1];
-            } else eyePupilEndColor = eyePupilStartColor;
+            } else {
+                var _eyePupilEndColor;
+                if (eyePupilEndColor === null || eyePupilEndColor !== null && ((_eyePupilEndColor = eyePupilEndColor) == null ? void 0 : _eyePupilEndColor.trim()) === "" || !isValidHex(eyePupilEndColor)) eyePupilEndColor = eyePupilStartColor;
+                else eyePupilEndColor;
+            }
         } else {
             var _eyePupilStartColor2;
             if (eyePupilStartColor === null || eyePupilStartColor !== null && ((_eyePupilStartColor2 = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor2.trim()) === "" || !isValidHex(eyePupilStartColor)) {
@@ -31070,6 +31498,15465 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["3fE3b","1xC6H","kjLP2"], "kjLP2", "parcelRequired98c")
+},{"7422ead32dcc1e6b":"786KC"}],"lmwza":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AlphaPicker", ()=>(0, _alphaDefault.default));
+parcelHelpers.export(exports, "BlockPicker", ()=>(0, _blockDefault.default));
+parcelHelpers.export(exports, "CirclePicker", ()=>(0, _circleDefault.default));
+parcelHelpers.export(exports, "ChromePicker", ()=>(0, _chromeDefault.default));
+parcelHelpers.export(exports, "CompactPicker", ()=>(0, _compactDefault.default));
+parcelHelpers.export(exports, "GithubPicker", ()=>(0, _githubDefault.default));
+parcelHelpers.export(exports, "HuePicker", ()=>(0, _hueDefault.default));
+parcelHelpers.export(exports, "MaterialPicker", ()=>(0, _materialDefault.default));
+parcelHelpers.export(exports, "PhotoshopPicker", ()=>(0, _photoshopDefault.default));
+parcelHelpers.export(exports, "SketchPicker", ()=>(0, _sketchDefault.default));
+parcelHelpers.export(exports, "SliderPicker", ()=>(0, _sliderDefault.default));
+parcelHelpers.export(exports, "SwatchesPicker", ()=>(0, _swatchesDefault.default));
+parcelHelpers.export(exports, "TwitterPicker", ()=>(0, _twitterDefault.default));
+parcelHelpers.export(exports, "GooglePicker", ()=>(0, _googleDefault.default));
+parcelHelpers.export(exports, "CustomPicker", ()=>(0, _colorWrapDefault.default));
+parcelHelpers.export(exports, "default", ()=>(0, _chromeDefault.default));
+var _alpha = require("./components/alpha/Alpha");
+var _alphaDefault = parcelHelpers.interopDefault(_alpha);
+var _block = require("./components/block/Block");
+var _blockDefault = parcelHelpers.interopDefault(_block);
+var _circle = require("./components/circle/Circle");
+var _circleDefault = parcelHelpers.interopDefault(_circle);
+var _chrome = require("./components/chrome/Chrome");
+var _chromeDefault = parcelHelpers.interopDefault(_chrome);
+var _compact = require("./components/compact/Compact");
+var _compactDefault = parcelHelpers.interopDefault(_compact);
+var _github = require("./components/github/Github");
+var _githubDefault = parcelHelpers.interopDefault(_github);
+var _hue = require("./components/hue/Hue");
+var _hueDefault = parcelHelpers.interopDefault(_hue);
+var _material = require("./components/material/Material");
+var _materialDefault = parcelHelpers.interopDefault(_material);
+var _photoshop = require("./components/photoshop/Photoshop");
+var _photoshopDefault = parcelHelpers.interopDefault(_photoshop);
+var _sketch = require("./components/sketch/Sketch");
+var _sketchDefault = parcelHelpers.interopDefault(_sketch);
+var _slider = require("./components/slider/Slider");
+var _sliderDefault = parcelHelpers.interopDefault(_slider);
+var _swatches = require("./components/swatches/Swatches");
+var _swatchesDefault = parcelHelpers.interopDefault(_swatches);
+var _twitter = require("./components/twitter/Twitter");
+var _twitterDefault = parcelHelpers.interopDefault(_twitter);
+var _google = require("./components/google/Google");
+var _googleDefault = parcelHelpers.interopDefault(_google);
+var _colorWrap = require("./components/common/ColorWrap");
+var _colorWrapDefault = parcelHelpers.interopDefault(_colorWrap);
+
+},{"./components/alpha/Alpha":"jjk3f","./components/block/Block":"6r7Ju","./components/circle/Circle":"9XyVW","./components/chrome/Chrome":"4lhyU","./components/compact/Compact":"3JYFT","./components/github/Github":"7KVSO","./components/hue/Hue":"6eXMl","./components/material/Material":"9cZy9","./components/photoshop/Photoshop":"5T5Xy","./components/sketch/Sketch":"hAcy1","./components/slider/Slider":"9r1rG","./components/swatches/Swatches":"jZHDH","./components/twitter/Twitter":"ceLEj","./components/google/Google":"eNjIx","./components/common/ColorWrap":"4qAWv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jjk3f":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AlphaPicker", ()=>AlphaPicker);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _common = require("../common");
+var _alphaPointer = require("./AlphaPointer");
+var _alphaPointerDefault = parcelHelpers.interopDefault(_alphaPointer);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var AlphaPicker = function AlphaPicker(_ref) {
+    var rgb = _ref.rgb, hsl = _ref.hsl, width = _ref.width, height = _ref.height, onChange = _ref.onChange, direction = _ref.direction, style = _ref.style, renderers = _ref.renderers, pointer = _ref.pointer, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                position: "relative",
+                width: width,
+                height: height
+            },
+            alpha: {
+                radius: "2px",
+                style: style
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "alpha-picker " + className
+    }, (0, _reactDefault.default).createElement((0, _common.Alpha), _extends({}, styles.alpha, {
+        rgb: rgb,
+        hsl: hsl,
+        pointer: pointer,
+        renderers: renderers,
+        onChange: onChange,
+        direction: direction
+    })));
+};
+AlphaPicker.defaultProps = {
+    width: "316px",
+    height: "16px",
+    direction: "horizontal",
+    pointer: (0, _alphaPointerDefault.default)
+};
+exports.default = (0, _common.ColorWrap)(AlphaPicker);
+
+},{"react":"b6YLU","reactcss":"e0uT9","../common":"4lq7P","./AlphaPointer":"6zIuq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e0uT9":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ReactCSS = exports.loop = exports.handleActive = exports.handleHover = exports.hover = undefined;
+var _flattenNames = require("d21bbaf20f135ed7");
+var _flattenNames2 = _interopRequireDefault(_flattenNames);
+var _mergeClasses = require("7ab5259b27ba03f4");
+var _mergeClasses2 = _interopRequireDefault(_mergeClasses);
+var _autoprefix = require("f7ab0b82c66de9f6");
+var _autoprefix2 = _interopRequireDefault(_autoprefix);
+var _hover2 = require("610a3f6b931726da");
+var _hover3 = _interopRequireDefault(_hover2);
+var _active = require("8d8d6281227b8365");
+var _active2 = _interopRequireDefault(_active);
+var _loop2 = require("c3bae8551a541b09");
+var _loop3 = _interopRequireDefault(_loop2);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+exports.hover = _hover3.default;
+exports.handleHover = _hover3.default;
+exports.handleActive = _active2.default;
+exports.loop = _loop3.default;
+var ReactCSS = exports.ReactCSS = function ReactCSS(classes) {
+    for(var _len = arguments.length, activations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)activations[_key - 1] = arguments[_key];
+    var activeNames = (0, _flattenNames2.default)(activations);
+    var merged = (0, _mergeClasses2.default)(classes, activeNames);
+    return (0, _autoprefix2.default)(merged);
+};
+exports.default = ReactCSS;
+
+},{"d21bbaf20f135ed7":"4nTKY","7ab5259b27ba03f4":"iQp0Y","f7ab0b82c66de9f6":"2E7gL","610a3f6b931726da":"7oF03","8d8d6281227b8365":"gUZuP","c3bae8551a541b09":"hzRnf"}],"4nTKY":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.flattenNames = undefined;
+var _isString2 = require("cc07907b88eac890");
+var _isString3 = _interopRequireDefault(_isString2);
+var _forOwn2 = require("2db844d13e15e498");
+var _forOwn3 = _interopRequireDefault(_forOwn2);
+var _isPlainObject2 = require("8ea197129e7ee890");
+var _isPlainObject3 = _interopRequireDefault(_isPlainObject2);
+var _map2 = require("8f65518dcbd71fa0");
+var _map3 = _interopRequireDefault(_map2);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+var flattenNames = exports.flattenNames = function flattenNames() {
+    var things = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var names = [];
+    (0, _map3.default)(things, function(thing) {
+        if (Array.isArray(thing)) flattenNames(thing).map(function(name) {
+            return names.push(name);
+        });
+        else if ((0, _isPlainObject3.default)(thing)) (0, _forOwn3.default)(thing, function(value, key) {
+            value === true && names.push(key);
+            names.push(key + "-" + value);
+        });
+        else if ((0, _isString3.default)(thing)) names.push(thing);
+    });
+    return names;
+};
+exports.default = flattenNames;
+
+},{"cc07907b88eac890":"iAF7t","2db844d13e15e498":"eUMKv","8ea197129e7ee890":"cvSNF","8f65518dcbd71fa0":"94CDd"}],"iAF7t":[function(require,module,exports) {
+var baseGetTag = require("b4b8a393acf14901"), isArray = require("46fdd4d2c5d7b4ab"), isObjectLike = require("36ebbb6a9d8b3fe4");
+/** `Object#toString` result references. */ var stringTag = "[object String]";
+/**
+ * Checks if `value` is classified as a `String` primitive or object.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a string, else `false`.
+ * @example
+ *
+ * _.isString('abc');
+ * // => true
+ *
+ * _.isString(1);
+ * // => false
+ */ function isString(value) {
+    return typeof value == "string" || !isArray(value) && isObjectLike(value) && baseGetTag(value) == stringTag;
+}
+module.exports = isString;
+
+},{"b4b8a393acf14901":"lOnbo","46fdd4d2c5d7b4ab":"dZaTH","36ebbb6a9d8b3fe4":"3BLi4"}],"lOnbo":[function(require,module,exports) {
+var Symbol = require("68a84eb98c5d3fa2"), getRawTag = require("9b2aaf31b7bdd837"), objectToString = require("46d5beb3375f8a28");
+/** `Object#toString` result references. */ var nullTag = "[object Null]", undefinedTag = "[object Undefined]";
+/** Built-in value references. */ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ function baseGetTag(value) {
+    if (value == null) return value === undefined ? undefinedTag : nullTag;
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+}
+module.exports = baseGetTag;
+
+},{"68a84eb98c5d3fa2":"7lsL9","9b2aaf31b7bdd837":"995sO","46d5beb3375f8a28":"bmE3g"}],"7lsL9":[function(require,module,exports) {
+var root = require("9ff1abd51ad45ac0");
+/** Built-in value references. */ var Symbol = root.Symbol;
+module.exports = Symbol;
+
+},{"9ff1abd51ad45ac0":"dSYUs"}],"dSYUs":[function(require,module,exports) {
+var freeGlobal = require("cd92e8811deaabf5");
+/** Detect free variable `self`. */ var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+/** Used as a reference to the global object. */ var root = freeGlobal || freeSelf || Function("return this")();
+module.exports = root;
+
+},{"cd92e8811deaabf5":"kAk32"}],"kAk32":[function(require,module,exports) {
+/** Detect free variable `global` from Node.js. */ var global = arguments[3];
+var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
+module.exports = freeGlobal;
+
+},{}],"995sO":[function(require,module,exports) {
+var Symbol = require("e9b4533b2a68f814");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/** Built-in value references. */ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */ function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+    try {
+        value[symToStringTag] = undefined;
+        var unmasked = true;
+    } catch (e) {}
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+        if (isOwn) value[symToStringTag] = tag;
+        else delete value[symToStringTag];
+    }
+    return result;
+}
+module.exports = getRawTag;
+
+},{"e9b4533b2a68f814":"7lsL9"}],"bmE3g":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */ function objectToString(value) {
+    return nativeObjectToString.call(value);
+}
+module.exports = objectToString;
+
+},{}],"dZaTH":[function(require,module,exports) {
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */ var isArray = Array.isArray;
+module.exports = isArray;
+
+},{}],"3BLi4":[function(require,module,exports) {
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */ function isObjectLike(value) {
+    return value != null && typeof value == "object";
+}
+module.exports = isObjectLike;
+
+},{}],"eUMKv":[function(require,module,exports) {
+var baseForOwn = require("29fecbf008d96984"), castFunction = require("e9d5e9d48b9f93d3");
+/**
+ * Iterates over own enumerable string keyed properties of an object and
+ * invokes `iteratee` for each property. The iteratee is invoked with three
+ * arguments: (value, key, object). Iteratee functions may exit iteration
+ * early by explicitly returning `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.3.0
+ * @category Object
+ * @param {Object} object The object to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ * @see _.forOwnRight
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.forOwn(new Foo, function(value, key) {
+ *   console.log(key);
+ * });
+ * // => Logs 'a' then 'b' (iteration order is not guaranteed).
+ */ function forOwn(object, iteratee) {
+    return object && baseForOwn(object, castFunction(iteratee));
+}
+module.exports = forOwn;
+
+},{"29fecbf008d96984":"6MqUM","e9d5e9d48b9f93d3":"9qOGA"}],"6MqUM":[function(require,module,exports) {
+var baseFor = require("c7da20818a5fe3d6"), keys = require("1fb77c53defe5720");
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */ function baseForOwn(object, iteratee) {
+    return object && baseFor(object, iteratee, keys);
+}
+module.exports = baseForOwn;
+
+},{"c7da20818a5fe3d6":"k0bbR","1fb77c53defe5720":"6fHVw"}],"k0bbR":[function(require,module,exports) {
+var createBaseFor = require("178c767a7be60d59");
+/**
+ * The base implementation of `baseForOwn` which iterates over `object`
+ * properties returned by `keysFunc` and invokes `iteratee` for each property.
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @returns {Object} Returns `object`.
+ */ var baseFor = createBaseFor();
+module.exports = baseFor;
+
+},{"178c767a7be60d59":"hCIGA"}],"hCIGA":[function(require,module,exports) {
+/**
+ * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ function createBaseFor(fromRight) {
+    return function(object, iteratee, keysFunc) {
+        var index = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
+        while(length--){
+            var key = props[fromRight ? length : ++index];
+            if (iteratee(iterable[key], key, iterable) === false) break;
+        }
+        return object;
+    };
+}
+module.exports = createBaseFor;
+
+},{}],"6fHVw":[function(require,module,exports) {
+var arrayLikeKeys = require("4c73ca42c789e5ab"), baseKeys = require("e8453365fdacc8da"), isArrayLike = require("7760b47b02971dfa");
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */ function keys(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+module.exports = keys;
+
+},{"4c73ca42c789e5ab":"dquIQ","e8453365fdacc8da":"c0eiI","7760b47b02971dfa":"gMCbp"}],"dquIQ":[function(require,module,exports) {
+var baseTimes = require("7ed875a0e67be76f"), isArguments = require("9cdb51ffa56f149b"), isArray = require("38cd49f1e493b3d7"), isBuffer = require("b379831fe1873fed"), isIndex = require("f362a34cd8321bb7"), isTypedArray = require("c019db5297494469");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */ function arrayLikeKeys(value, inherited) {
+    var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value.length, String) : [], length = result.length;
+    for(var key in value)if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
+    (key == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
+    isBuff && (key == "offset" || key == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
+    isType && (key == "buffer" || key == "byteLength" || key == "byteOffset") || // Skip index properties.
+    isIndex(key, length)))) result.push(key);
+    return result;
+}
+module.exports = arrayLikeKeys;
+
+},{"7ed875a0e67be76f":"odqYd","9cdb51ffa56f149b":"8ReNj","38cd49f1e493b3d7":"dZaTH","b379831fe1873fed":"cn85h","f362a34cd8321bb7":"aJpx0","c019db5297494469":"6SVKk"}],"odqYd":[function(require,module,exports) {
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */ function baseTimes(n, iteratee) {
+    var index = -1, result = Array(n);
+    while(++index < n)result[index] = iteratee(index);
+    return result;
+}
+module.exports = baseTimes;
+
+},{}],"8ReNj":[function(require,module,exports) {
+var baseIsArguments = require("b56e5b7d86069686"), isObjectLike = require("bead821d6af018b5");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */ var isArguments = baseIsArguments(function() {
+    return arguments;
+}()) ? baseIsArguments : function(value) {
+    return isObjectLike(value) && hasOwnProperty.call(value, "callee") && !propertyIsEnumerable.call(value, "callee");
+};
+module.exports = isArguments;
+
+},{"b56e5b7d86069686":"gx70P","bead821d6af018b5":"3BLi4"}],"gx70P":[function(require,module,exports) {
+var baseGetTag = require("7e8612a4a451f2cc"), isObjectLike = require("b6cdbe52dcf709f8");
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]";
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */ function baseIsArguments(value) {
+    return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+module.exports = baseIsArguments;
+
+},{"7e8612a4a451f2cc":"lOnbo","b6cdbe52dcf709f8":"3BLi4"}],"cn85h":[function(require,module,exports) {
+var root = require("cef5ec6f0da1ab00"), stubFalse = require("a1e87b138cf75d1d");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */ var isBuffer = nativeIsBuffer || stubFalse;
+module.exports = isBuffer;
+
+},{"cef5ec6f0da1ab00":"dSYUs","a1e87b138cf75d1d":"dx4uy"}],"dx4uy":[function(require,module,exports) {
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */ function stubFalse() {
+    return false;
+}
+module.exports = stubFalse;
+
+},{}],"aJpx0":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/** Used to detect unsigned integer values. */ var reIsUint = /^(?:0|[1-9]\d*)$/;
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */ function isIndex(value, length) {
+    var type = typeof value;
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (type == "number" || type != "symbol" && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+module.exports = isIndex;
+
+},{}],"6SVKk":[function(require,module,exports) {
+var baseIsTypedArray = require("75a26f037e65be61"), baseUnary = require("903f50eb1c16d257"), nodeUtil = require("fa49853a82034c30");
+/* Node.js helper references. */ var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+module.exports = isTypedArray;
+
+},{"75a26f037e65be61":"lGSsl","903f50eb1c16d257":"eJXq4","fa49853a82034c30":"5edNe"}],"lGSsl":[function(require,module,exports) {
+var baseGetTag = require("67544c3df364a802"), isLength = require("f661b3a120d7a4cb"), isObjectLike = require("cdd86c83797c0618");
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]", arrayTag = "[object Array]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag = "[object Function]", mapTag = "[object Map]", numberTag = "[object Number]", objectTag = "[object Object]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", weakMapTag = "[object WeakMap]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+/** Used to identify `toStringTag` values of typed arrays. */ var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */ function baseIsTypedArray(value) {
+    return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+module.exports = baseIsTypedArray;
+
+},{"67544c3df364a802":"lOnbo","f661b3a120d7a4cb":"hrTBx","cdd86c83797c0618":"3BLi4"}],"hrTBx":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */ function isLength(value) {
+    return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+module.exports = isLength;
+
+},{}],"eJXq4":[function(require,module,exports) {
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */ function baseUnary(func) {
+    return function(value) {
+        return func(value);
+    };
+}
+module.exports = baseUnary;
+
+},{}],"5edNe":[function(require,module,exports) {
+var freeGlobal = require("94e753dfbe54816e");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Detect free variable `process` from Node.js. */ var freeProcess = moduleExports && freeGlobal.process;
+/** Used to access faster Node.js helpers. */ var nodeUtil = function() {
+    try {
+        // Use `util.types` for Node.js 10+.
+        var types = freeModule && freeModule.require && freeModule.require("util").types;
+        if (types) return types;
+        // Legacy `process.binding('util')` for Node.js < 10.
+        return freeProcess && freeProcess.binding && freeProcess.binding("util");
+    } catch (e) {}
+}();
+module.exports = nodeUtil;
+
+},{"94e753dfbe54816e":"kAk32"}],"c0eiI":[function(require,module,exports) {
+var isPrototype = require("7da6298814f9bd95"), nativeKeys = require("3ec652610d8dd5d3");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeys(object) {
+    if (!isPrototype(object)) return nativeKeys(object);
+    var result = [];
+    for(var key in Object(object))if (hasOwnProperty.call(object, key) && key != "constructor") result.push(key);
+    return result;
+}
+module.exports = baseKeys;
+
+},{"7da6298814f9bd95":"iG4eR","3ec652610d8dd5d3":"k97u2"}],"iG4eR":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */ function isPrototype(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto;
+    return value === proto;
+}
+module.exports = isPrototype;
+
+},{}],"k97u2":[function(require,module,exports) {
+var overArg = require("aa3357c7a3889df");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeKeys = overArg(Object.keys, Object);
+module.exports = nativeKeys;
+
+},{"aa3357c7a3889df":"dpUvl"}],"dpUvl":[function(require,module,exports) {
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */ function overArg(func, transform) {
+    return function(arg) {
+        return func(transform(arg));
+    };
+}
+module.exports = overArg;
+
+},{}],"gMCbp":[function(require,module,exports) {
+var isFunction = require("bb060d4356645330"), isLength = require("f3db08d4d1110aaf");
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */ function isArrayLike(value) {
+    return value != null && isLength(value.length) && !isFunction(value);
+}
+module.exports = isArrayLike;
+
+},{"bb060d4356645330":"cfti6","f3db08d4d1110aaf":"hrTBx"}],"cfti6":[function(require,module,exports) {
+var baseGetTag = require("5419308bd9194e11"), isObject = require("3cba3c966459d528");
+/** `Object#toString` result references. */ var asyncTag = "[object AsyncFunction]", funcTag = "[object Function]", genTag = "[object GeneratorFunction]", proxyTag = "[object Proxy]";
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */ function isFunction(value) {
+    if (!isObject(value)) return false;
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+module.exports = isFunction;
+
+},{"5419308bd9194e11":"lOnbo","3cba3c966459d528":"cGhqJ"}],"cGhqJ":[function(require,module,exports) {
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */ function isObject(value) {
+    var type = typeof value;
+    return value != null && (type == "object" || type == "function");
+}
+module.exports = isObject;
+
+},{}],"9qOGA":[function(require,module,exports) {
+var identity = require("c0eaa1c5ad52cc2f");
+/**
+ * Casts `value` to `identity` if it's not a function.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Function} Returns cast function.
+ */ function castFunction(value) {
+    return typeof value == "function" ? value : identity;
+}
+module.exports = castFunction;
+
+},{"c0eaa1c5ad52cc2f":"dgTUN"}],"dgTUN":[function(require,module,exports) {
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */ function identity(value) {
+    return value;
+}
+module.exports = identity;
+
+},{}],"cvSNF":[function(require,module,exports) {
+var baseGetTag = require("c03dd41ed9922dd2"), getPrototype = require("2ca5b85a120835de"), isObjectLike = require("963b65e043435612");
+/** `Object#toString` result references. */ var objectTag = "[object Object]";
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to infer the `Object` constructor. */ var objectCtorString = funcToString.call(Object);
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */ function isPlainObject(value) {
+    if (!isObjectLike(value) || baseGetTag(value) != objectTag) return false;
+    var proto = getPrototype(value);
+    if (proto === null) return true;
+    var Ctor = hasOwnProperty.call(proto, "constructor") && proto.constructor;
+    return typeof Ctor == "function" && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+module.exports = isPlainObject;
+
+},{"c03dd41ed9922dd2":"lOnbo","2ca5b85a120835de":"8ASKT","963b65e043435612":"3BLi4"}],"8ASKT":[function(require,module,exports) {
+var overArg = require("11c2fcc01fbb2119");
+/** Built-in value references. */ var getPrototype = overArg(Object.getPrototypeOf, Object);
+module.exports = getPrototype;
+
+},{"11c2fcc01fbb2119":"dpUvl"}],"94CDd":[function(require,module,exports) {
+var arrayMap = require("61518c8bb036dd9b"), baseIteratee = require("8bad46685c8864d"), baseMap = require("51c76ab24fdb66f9"), isArray = require("7cb4cacc4dea406c");
+/**
+ * Creates an array of values by running each element in `collection` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * Many lodash methods are guarded to work as iteratees for methods like
+ * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
+ *
+ * The guarded methods are:
+ * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
+ * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
+ * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
+ * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * _.map([4, 8], square);
+ * // => [16, 64]
+ *
+ * _.map({ 'a': 4, 'b': 8 }, square);
+ * // => [16, 64] (iteration order is not guaranteed)
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.map(users, 'user');
+ * // => ['barney', 'fred']
+ */ function map(collection, iteratee) {
+    var func = isArray(collection) ? arrayMap : baseMap;
+    return func(collection, baseIteratee(iteratee, 3));
+}
+module.exports = map;
+
+},{"61518c8bb036dd9b":"imI5Z","8bad46685c8864d":"2fsgg","51c76ab24fdb66f9":"cLeHB","7cb4cacc4dea406c":"dZaTH"}],"imI5Z":[function(require,module,exports) {
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function arrayMap(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length, result = Array(length);
+    while(++index < length)result[index] = iteratee(array[index], index, array);
+    return result;
+}
+module.exports = arrayMap;
+
+},{}],"2fsgg":[function(require,module,exports) {
+var baseMatches = require("30aeab910fab669"), baseMatchesProperty = require("4f010869f7b63154"), identity = require("28f06147d1eb9502"), isArray = require("3c56f88c4debf449"), property = require("aee920e0ef5bf111");
+/**
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */ function baseIteratee(value) {
+    // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+    // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+    if (typeof value == "function") return value;
+    if (value == null) return identity;
+    if (typeof value == "object") return isArray(value) ? baseMatchesProperty(value[0], value[1]) : baseMatches(value);
+    return property(value);
+}
+module.exports = baseIteratee;
+
+},{"30aeab910fab669":"2mdwX","4f010869f7b63154":"48kxC","28f06147d1eb9502":"dgTUN","3c56f88c4debf449":"dZaTH","aee920e0ef5bf111":"8aSQI"}],"2mdwX":[function(require,module,exports) {
+var baseIsMatch = require("e45515c903dc8f87"), getMatchData = require("89e9034a8071e297"), matchesStrictComparable = require("782598b150762386");
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
+ *
+ * @private
+ * @param {Object} source The object of property values to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatches(source) {
+    var matchData = getMatchData(source);
+    if (matchData.length == 1 && matchData[0][2]) return matchesStrictComparable(matchData[0][0], matchData[0][1]);
+    return function(object) {
+        return object === source || baseIsMatch(object, source, matchData);
+    };
+}
+module.exports = baseMatches;
+
+},{"e45515c903dc8f87":"joJZV","89e9034a8071e297":"48Qyi","782598b150762386":"a9Bav"}],"joJZV":[function(require,module,exports) {
+var Stack = require("ae43062900bf7e4d"), baseIsEqual = require("9003c0cc8ac007b6");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to inspect.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+ */ function baseIsMatch(object, source, matchData, customizer) {
+    var index = matchData.length, length = index, noCustomizer = !customizer;
+    if (object == null) return !length;
+    object = Object(object);
+    while(index--){
+        var data = matchData[index];
+        if (noCustomizer && data[2] ? data[1] !== object[data[0]] : !(data[0] in object)) return false;
+    }
+    while(++index < length){
+        data = matchData[index];
+        var key = data[0], objValue = object[key], srcValue = data[1];
+        if (noCustomizer && data[2]) {
+            if (objValue === undefined && !(key in object)) return false;
+        } else {
+            var stack = new Stack;
+            if (customizer) var result = customizer(objValue, srcValue, key, object, source, stack);
+            if (!(result === undefined ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack) : result)) return false;
+        }
+    }
+    return true;
+}
+module.exports = baseIsMatch;
+
+},{"ae43062900bf7e4d":"atP87","9003c0cc8ac007b6":"7i3qr"}],"atP87":[function(require,module,exports) {
+var ListCache = require("cfb30a39eead9e7e"), stackClear = require("ceda2a63c77c915"), stackDelete = require("91ee1b348d9d7172"), stackGet = require("3fe28318f65b9332"), stackHas = require("724ca4def8b84e06"), stackSet = require("e9ceacb40d9582bd");
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Stack(entries) {
+    var data = this.__data__ = new ListCache(entries);
+    this.size = data.size;
+}
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype["delete"] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+module.exports = Stack;
+
+},{"cfb30a39eead9e7e":"3UZeo","ceda2a63c77c915":"6CpyN","91ee1b348d9d7172":"dGFb0","3fe28318f65b9332":"6zFUp","724ca4def8b84e06":"3VJUX","e9ceacb40d9582bd":"ZfrYM"}],"3UZeo":[function(require,module,exports) {
+var listCacheClear = require("4b1a0d54aed80a7b"), listCacheDelete = require("b700cb849df2c166"), listCacheGet = require("d76dd90eead6cced"), listCacheHas = require("3d210628ba60ec8"), listCacheSet = require("76026bf2d4cfff93");
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function ListCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype["delete"] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+module.exports = ListCache;
+
+},{"4b1a0d54aed80a7b":"7AKQv","b700cb849df2c166":"j2Z5O","d76dd90eead6cced":"6Zrrs","3d210628ba60ec8":"i1CBK","76026bf2d4cfff93":"2Rcur"}],"7AKQv":[function(require,module,exports) {
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */ function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+}
+module.exports = listCacheClear;
+
+},{}],"j2Z5O":[function(require,module,exports) {
+var assocIndexOf = require("173cad7d48c35f4f");
+/** Used for built-in method references. */ var arrayProto = Array.prototype;
+/** Built-in value references. */ var splice = arrayProto.splice;
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function listCacheDelete(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) return false;
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) data.pop();
+    else splice.call(data, index, 1);
+    --this.size;
+    return true;
+}
+module.exports = listCacheDelete;
+
+},{"173cad7d48c35f4f":"cRVsl"}],"cRVsl":[function(require,module,exports) {
+var eq = require("b38bfe408564f7a5");
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function assocIndexOf(array, key) {
+    var length = array.length;
+    while(length--){
+        if (eq(array[length][0], key)) return length;
+    }
+    return -1;
+}
+module.exports = assocIndexOf;
+
+},{"b38bfe408564f7a5":"aVz5f"}],"aVz5f":[function(require,module,exports) {
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */ function eq(value, other) {
+    return value === other || value !== value && other !== other;
+}
+module.exports = eq;
+
+},{}],"6Zrrs":[function(require,module,exports) {
+var assocIndexOf = require("c0bae780ed176e2c");
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function listCacheGet(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    return index < 0 ? undefined : data[index][1];
+}
+module.exports = listCacheGet;
+
+},{"c0bae780ed176e2c":"cRVsl"}],"i1CBK":[function(require,module,exports) {
+var assocIndexOf = require("7ed3d4e3adbd64a4");
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function listCacheHas(key) {
+    return assocIndexOf(this.__data__, key) > -1;
+}
+module.exports = listCacheHas;
+
+},{"7ed3d4e3adbd64a4":"cRVsl"}],"2Rcur":[function(require,module,exports) {
+var assocIndexOf = require("5be4035c2d7ca432");
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */ function listCacheSet(key, value) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) {
+        ++this.size;
+        data.push([
+            key,
+            value
+        ]);
+    } else data[index][1] = value;
+    return this;
+}
+module.exports = listCacheSet;
+
+},{"5be4035c2d7ca432":"cRVsl"}],"6CpyN":[function(require,module,exports) {
+var ListCache = require("8a0350213da984ae");
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */ function stackClear() {
+    this.__data__ = new ListCache;
+    this.size = 0;
+}
+module.exports = stackClear;
+
+},{"8a0350213da984ae":"3UZeo"}],"dGFb0":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function stackDelete(key) {
+    var data = this.__data__, result = data["delete"](key);
+    this.size = data.size;
+    return result;
+}
+module.exports = stackDelete;
+
+},{}],"6zFUp":[function(require,module,exports) {
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function stackGet(key) {
+    return this.__data__.get(key);
+}
+module.exports = stackGet;
+
+},{}],"3VJUX":[function(require,module,exports) {
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function stackHas(key) {
+    return this.__data__.has(key);
+}
+module.exports = stackHas;
+
+},{}],"ZfrYM":[function(require,module,exports) {
+var ListCache = require("4737651e99b917d2"), Map = require("1494efbafafa9552"), MapCache = require("6049e8027fe9407f");
+/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */ function stackSet(key, value) {
+    var data = this.__data__;
+    if (data instanceof ListCache) {
+        var pairs = data.__data__;
+        if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+            pairs.push([
+                key,
+                value
+            ]);
+            this.size = ++data.size;
+            return this;
+        }
+        data = this.__data__ = new MapCache(pairs);
+    }
+    data.set(key, value);
+    this.size = data.size;
+    return this;
+}
+module.exports = stackSet;
+
+},{"4737651e99b917d2":"3UZeo","1494efbafafa9552":"8YjF4","6049e8027fe9407f":"664I1"}],"8YjF4":[function(require,module,exports) {
+var getNative = require("ed0752fe9f482107"), root = require("29224713b8d411e6");
+/* Built-in method references that are verified to be native. */ var Map = getNative(root, "Map");
+module.exports = Map;
+
+},{"ed0752fe9f482107":"9PCIl","29224713b8d411e6":"dSYUs"}],"9PCIl":[function(require,module,exports) {
+var baseIsNative = require("63e3f1300cdc459f"), getValue = require("16db51a0e009bd8c");
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */ function getNative(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+}
+module.exports = getNative;
+
+},{"63e3f1300cdc459f":"2U9Pn","16db51a0e009bd8c":"kKx5I"}],"2U9Pn":[function(require,module,exports) {
+var isFunction = require("2f9b4543c84c6692"), isMasked = require("cabbc2adfaeb27d9"), isObject = require("cbb5703fe1562e7f"), toSource = require("388b819f47a43aa5");
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+/** Used to detect host constructors (Safari). */ var reIsHostCtor = /^\[object .+?Constructor\]$/;
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to detect if a method is native. */ var reIsNative = RegExp("^" + funcToString.call(hasOwnProperty).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */ function baseIsNative(value) {
+    if (!isObject(value) || isMasked(value)) return false;
+    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource(value));
+}
+module.exports = baseIsNative;
+
+},{"2f9b4543c84c6692":"cfti6","cabbc2adfaeb27d9":"cMDzi","cbb5703fe1562e7f":"cGhqJ","388b819f47a43aa5":"bYHc7"}],"cMDzi":[function(require,module,exports) {
+var coreJsData = require("2fa6c734b0792bcf");
+/** Used to detect methods masquerading as native. */ var maskSrcKey = function() {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
+    return uid ? "Symbol(src)_1." + uid : "";
+}();
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */ function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+}
+module.exports = isMasked;
+
+},{"2fa6c734b0792bcf":"6gJwQ"}],"6gJwQ":[function(require,module,exports) {
+var root = require("2f0959b2c20d7fb0");
+/** Used to detect overreaching core-js shims. */ var coreJsData = root["__core-js_shared__"];
+module.exports = coreJsData;
+
+},{"2f0959b2c20d7fb0":"dSYUs"}],"bYHc7":[function(require,module,exports) {
+/** Used for built-in method references. */ var funcProto = Function.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */ function toSource(func) {
+    if (func != null) {
+        try {
+            return funcToString.call(func);
+        } catch (e) {}
+        try {
+            return func + "";
+        } catch (e) {}
+    }
+    return "";
+}
+module.exports = toSource;
+
+},{}],"kKx5I":[function(require,module,exports) {
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */ function getValue(object, key) {
+    return object == null ? undefined : object[key];
+}
+module.exports = getValue;
+
+},{}],"664I1":[function(require,module,exports) {
+var mapCacheClear = require("a5ffecfb6a8bdac1"), mapCacheDelete = require("d2967b0e32ccfa56"), mapCacheGet = require("ca21409ea89624c0"), mapCacheHas = require("f88fd07f8dd1f67d"), mapCacheSet = require("dbf3eae765642a3b");
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function MapCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype["delete"] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+module.exports = MapCache;
+
+},{"a5ffecfb6a8bdac1":"7kHs4","d2967b0e32ccfa56":"4ny9y","ca21409ea89624c0":"gVeFY","f88fd07f8dd1f67d":"idSOY","dbf3eae765642a3b":"lXUJT"}],"7kHs4":[function(require,module,exports) {
+var Hash = require("4ae82d88051cc92b"), ListCache = require("a07dcf3fd3097a0c"), Map = require("92c01c953ef00ded");
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */ function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+        "hash": new Hash,
+        "map": new (Map || ListCache),
+        "string": new Hash
+    };
+}
+module.exports = mapCacheClear;
+
+},{"4ae82d88051cc92b":"jFMT5","a07dcf3fd3097a0c":"3UZeo","92c01c953ef00ded":"8YjF4"}],"jFMT5":[function(require,module,exports) {
+var hashClear = require("f47a1723b6e2d79b"), hashDelete = require("bc25d439ccd1fb47"), hashGet = require("f096b37295a92ab0"), hashHas = require("d88173cbc6a133c8"), hashSet = require("afb9b3bae0461cbf");
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Hash(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype["delete"] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+module.exports = Hash;
+
+},{"f47a1723b6e2d79b":"f2NRo","bc25d439ccd1fb47":"cCdgz","f096b37295a92ab0":"eKqTO","d88173cbc6a133c8":"ghnqP","afb9b3bae0461cbf":"6i99R"}],"f2NRo":[function(require,module,exports) {
+var nativeCreate = require("dc294230a47ca365");
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */ function hashClear() {
+    this.__data__ = nativeCreate ? nativeCreate(null) : {};
+    this.size = 0;
+}
+module.exports = hashClear;
+
+},{"dc294230a47ca365":"6i8Uf"}],"6i8Uf":[function(require,module,exports) {
+var getNative = require("12f496acdffb7cf7");
+/* Built-in method references that are verified to be native. */ var nativeCreate = getNative(Object, "create");
+module.exports = nativeCreate;
+
+},{"12f496acdffb7cf7":"9PCIl"}],"cCdgz":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = hashDelete;
+
+},{}],"eKqTO":[function(require,module,exports) {
+var nativeCreate = require("627211fa3e1596e1");
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function hashGet(key) {
+    var data = this.__data__;
+    if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+module.exports = hashGet;
+
+},{"627211fa3e1596e1":"6i8Uf"}],"ghnqP":[function(require,module,exports) {
+var nativeCreate = require("52b3f0bfeddceb45");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function hashHas(key) {
+    var data = this.__data__;
+    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+module.exports = hashHas;
+
+},{"52b3f0bfeddceb45":"6i8Uf"}],"6i99R":[function(require,module,exports) {
+var nativeCreate = require("67b7d10f53ccd515");
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */ function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+}
+module.exports = hashSet;
+
+},{"67b7d10f53ccd515":"6i8Uf"}],"4ny9y":[function(require,module,exports) {
+var getMapData = require("656d8c5510e0af84");
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function mapCacheDelete(key) {
+    var result = getMapData(this, key)["delete"](key);
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = mapCacheDelete;
+
+},{"656d8c5510e0af84":"aptgk"}],"aptgk":[function(require,module,exports) {
+var isKeyable = require("adfdd2b4101370ed");
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */ function getMapData(map, key) {
+    var data = map.__data__;
+    return isKeyable(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+}
+module.exports = getMapData;
+
+},{"adfdd2b4101370ed":"icylN"}],"icylN":[function(require,module,exports) {
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */ function isKeyable(value) {
+    var type = typeof value;
+    return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+}
+module.exports = isKeyable;
+
+},{}],"gVeFY":[function(require,module,exports) {
+var getMapData = require("d345cdfee2b4007d");
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function mapCacheGet(key) {
+    return getMapData(this, key).get(key);
+}
+module.exports = mapCacheGet;
+
+},{"d345cdfee2b4007d":"aptgk"}],"idSOY":[function(require,module,exports) {
+var getMapData = require("29ebabd55e2d6074");
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function mapCacheHas(key) {
+    return getMapData(this, key).has(key);
+}
+module.exports = mapCacheHas;
+
+},{"29ebabd55e2d6074":"aptgk"}],"lXUJT":[function(require,module,exports) {
+var getMapData = require("21c5ffca56eeb737");
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */ function mapCacheSet(key, value) {
+    var data = getMapData(this, key), size = data.size;
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+}
+module.exports = mapCacheSet;
+
+},{"21c5ffca56eeb737":"aptgk"}],"7i3qr":[function(require,module,exports) {
+var baseIsEqualDeep = require("bd1d38ebd4028e5a"), isObjectLike = require("809bbb0c20650dbc");
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */ function baseIsEqual(value, other, bitmask, customizer, stack) {
+    if (value === other) return true;
+    if (value == null || other == null || !isObjectLike(value) && !isObjectLike(other)) return value !== value && other !== other;
+    return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+module.exports = baseIsEqual;
+
+},{"bd1d38ebd4028e5a":"6GoQ9","809bbb0c20650dbc":"3BLi4"}],"6GoQ9":[function(require,module,exports) {
+var Stack = require("60c73bca87468e58"), equalArrays = require("96bc8a1825db53a5"), equalByTag = require("8bdece495e87fb69"), equalObjects = require("bb94920432a68eca"), getTag = require("45495edff98e5837"), isArray = require("18256411ae9e2858"), isBuffer = require("e5ba7abf54247fc5"), isTypedArray = require("50d786bb5c7366af");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]", arrayTag = "[object Array]", objectTag = "[object Object]";
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+    var objIsArr = isArray(object), othIsArr = isArray(other), objTag = objIsArr ? arrayTag : getTag(object), othTag = othIsArr ? arrayTag : getTag(other);
+    objTag = objTag == argsTag ? objectTag : objTag;
+    othTag = othTag == argsTag ? objectTag : othTag;
+    var objIsObj = objTag == objectTag, othIsObj = othTag == objectTag, isSameTag = objTag == othTag;
+    if (isSameTag && isBuffer(object)) {
+        if (!isBuffer(other)) return false;
+        objIsArr = true;
+        objIsObj = false;
+    }
+    if (isSameTag && !objIsObj) {
+        stack || (stack = new Stack);
+        return objIsArr || isTypedArray(object) ? equalArrays(object, other, bitmask, customizer, equalFunc, stack) : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+    }
+    if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+        var objIsWrapped = objIsObj && hasOwnProperty.call(object, "__wrapped__"), othIsWrapped = othIsObj && hasOwnProperty.call(other, "__wrapped__");
+        if (objIsWrapped || othIsWrapped) {
+            var objUnwrapped = objIsWrapped ? object.value() : object, othUnwrapped = othIsWrapped ? other.value() : other;
+            stack || (stack = new Stack);
+            return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+        }
+    }
+    if (!isSameTag) return false;
+    stack || (stack = new Stack);
+    return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+}
+module.exports = baseIsEqualDeep;
+
+},{"60c73bca87468e58":"atP87","96bc8a1825db53a5":"dQBwf","8bdece495e87fb69":"iqa6H","bb94920432a68eca":"klCEf","45495edff98e5837":"cRPhM","18256411ae9e2858":"dZaTH","e5ba7abf54247fc5":"cn85h","50d786bb5c7366af":"6SVKk"}],"dQBwf":[function(require,module,exports) {
+var SetCache = require("9b110ce138e67ce5"), arraySome = require("1ee20de911db0cb0"), cacheHas = require("defff3d81be91b23");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, arrLength = array.length, othLength = other.length;
+    if (arrLength != othLength && !(isPartial && othLength > arrLength)) return false;
+    // Check that cyclic values are equal.
+    var arrStacked = stack.get(array);
+    var othStacked = stack.get(other);
+    if (arrStacked && othStacked) return arrStacked == other && othStacked == array;
+    var index = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG ? new SetCache : undefined;
+    stack.set(array, other);
+    stack.set(other, array);
+    // Ignore non-index properties.
+    while(++index < arrLength){
+        var arrValue = array[index], othValue = other[index];
+        if (customizer) var compared = isPartial ? customizer(othValue, arrValue, index, other, array, stack) : customizer(arrValue, othValue, index, array, other, stack);
+        if (compared !== undefined) {
+            if (compared) continue;
+            result = false;
+            break;
+        }
+        // Recursively compare arrays (susceptible to call stack limits).
+        if (seen) {
+            if (!arraySome(other, function(othValue, othIndex) {
+                if (!cacheHas(seen, othIndex) && (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) return seen.push(othIndex);
+            })) {
+                result = false;
+                break;
+            }
+        } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+            result = false;
+            break;
+        }
+    }
+    stack["delete"](array);
+    stack["delete"](other);
+    return result;
+}
+module.exports = equalArrays;
+
+},{"9b110ce138e67ce5":"1SXrY","1ee20de911db0cb0":"aLDHW","defff3d81be91b23":"70cVb"}],"1SXrY":[function(require,module,exports) {
+var MapCache = require("10fe37252553d0bd"), setCacheAdd = require("9a831e81e9a1f98c"), setCacheHas = require("1a2b6c8a7399c39f");
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */ function SetCache(values) {
+    var index = -1, length = values == null ? 0 : values.length;
+    this.__data__ = new MapCache;
+    while(++index < length)this.add(values[index]);
+}
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+module.exports = SetCache;
+
+},{"10fe37252553d0bd":"664I1","9a831e81e9a1f98c":"cZViu","1a2b6c8a7399c39f":"4zNID"}],"cZViu":[function(require,module,exports) {
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */ function setCacheAdd(value) {
+    this.__data__.set(value, HASH_UNDEFINED);
+    return this;
+}
+module.exports = setCacheAdd;
+
+},{}],"4zNID":[function(require,module,exports) {
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */ function setCacheHas(value) {
+    return this.__data__.has(value);
+}
+module.exports = setCacheHas;
+
+},{}],"aLDHW":[function(require,module,exports) {
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */ function arraySome(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (predicate(array[index], index, array)) return true;
+    }
+    return false;
+}
+module.exports = arraySome;
+
+},{}],"70cVb":[function(require,module,exports) {
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function cacheHas(cache, key) {
+    return cache.has(key);
+}
+module.exports = cacheHas;
+
+},{}],"iqa6H":[function(require,module,exports) {
+var Symbol = require("474c1df4fc722b40"), Uint8Array = require("dbf6aa5033a0f48"), eq = require("539966708f906e61"), equalArrays = require("8142d4017f0a425f"), mapToArray = require("48cddf732eff33ba"), setToArray = require("9dc78b26c5daba20");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/** `Object#toString` result references. */ var boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", mapTag = "[object Map]", numberTag = "[object Number]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]";
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+    switch(tag){
+        case dataViewTag:
+            if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) return false;
+            object = object.buffer;
+            other = other.buffer;
+        case arrayBufferTag:
+            if (object.byteLength != other.byteLength || !equalFunc(new Uint8Array(object), new Uint8Array(other))) return false;
+            return true;
+        case boolTag:
+        case dateTag:
+        case numberTag:
+            // Coerce booleans to `1` or `0` and dates to milliseconds.
+            // Invalid dates are coerced to `NaN`.
+            return eq(+object, +other);
+        case errorTag:
+            return object.name == other.name && object.message == other.message;
+        case regexpTag:
+        case stringTag:
+            // Coerce regexes to strings and treat strings, primitives and objects,
+            // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+            // for more details.
+            return object == other + "";
+        case mapTag:
+            var convert = mapToArray;
+        case setTag:
+            var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+            convert || (convert = setToArray);
+            if (object.size != other.size && !isPartial) return false;
+            // Assume cyclic values are equal.
+            var stacked = stack.get(object);
+            if (stacked) return stacked == other;
+            bitmask |= COMPARE_UNORDERED_FLAG;
+            // Recursively compare objects (susceptible to call stack limits).
+            stack.set(object, other);
+            var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+            stack["delete"](object);
+            return result;
+        case symbolTag:
+            if (symbolValueOf) return symbolValueOf.call(object) == symbolValueOf.call(other);
+    }
+    return false;
+}
+module.exports = equalByTag;
+
+},{"474c1df4fc722b40":"7lsL9","dbf6aa5033a0f48":"6xFrA","539966708f906e61":"aVz5f","8142d4017f0a425f":"dQBwf","48cddf732eff33ba":"kAwkU","9dc78b26c5daba20":"2qJif"}],"6xFrA":[function(require,module,exports) {
+var root = require("f755339301d6568f");
+/** Built-in value references. */ var Uint8Array = root.Uint8Array;
+module.exports = Uint8Array;
+
+},{"f755339301d6568f":"dSYUs"}],"kAwkU":[function(require,module,exports) {
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */ function mapToArray(map) {
+    var index = -1, result = Array(map.size);
+    map.forEach(function(value, key) {
+        result[++index] = [
+            key,
+            value
+        ];
+    });
+    return result;
+}
+module.exports = mapToArray;
+
+},{}],"2qJif":[function(require,module,exports) {
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */ function setToArray(set) {
+    var index = -1, result = Array(set.size);
+    set.forEach(function(value) {
+        result[++index] = value;
+    });
+    return result;
+}
+module.exports = setToArray;
+
+},{}],"klCEf":[function(require,module,exports) {
+var getAllKeys = require("b911593d305cf4a2");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, objProps = getAllKeys(object), objLength = objProps.length, othProps = getAllKeys(other), othLength = othProps.length;
+    if (objLength != othLength && !isPartial) return false;
+    var index = objLength;
+    while(index--){
+        var key = objProps[index];
+        if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) return false;
+    }
+    // Check that cyclic values are equal.
+    var objStacked = stack.get(object);
+    var othStacked = stack.get(other);
+    if (objStacked && othStacked) return objStacked == other && othStacked == object;
+    var result = true;
+    stack.set(object, other);
+    stack.set(other, object);
+    var skipCtor = isPartial;
+    while(++index < objLength){
+        key = objProps[index];
+        var objValue = object[key], othValue = other[key];
+        if (customizer) var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
+        // Recursively compare objects (susceptible to call stack limits).
+        if (!(compared === undefined ? objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack) : compared)) {
+            result = false;
+            break;
+        }
+        skipCtor || (skipCtor = key == "constructor");
+    }
+    if (result && !skipCtor) {
+        var objCtor = object.constructor, othCtor = other.constructor;
+        // Non `Object` object instances with different constructors are not equal.
+        if (objCtor != othCtor && "constructor" in object && "constructor" in other && !(typeof objCtor == "function" && objCtor instanceof objCtor && typeof othCtor == "function" && othCtor instanceof othCtor)) result = false;
+    }
+    stack["delete"](object);
+    stack["delete"](other);
+    return result;
+}
+module.exports = equalObjects;
+
+},{"b911593d305cf4a2":"d2kML"}],"d2kML":[function(require,module,exports) {
+var baseGetAllKeys = require("c3dbe402f6996a21"), getSymbols = require("aa79b69a13f924db"), keys = require("e3ad83e53433bc8a");
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeys(object) {
+    return baseGetAllKeys(object, keys, getSymbols);
+}
+module.exports = getAllKeys;
+
+},{"c3dbe402f6996a21":"aeckf","aa79b69a13f924db":"5p5Yd","e3ad83e53433bc8a":"6fHVw"}],"aeckf":[function(require,module,exports) {
+var arrayPush = require("abfc70b400ed76c2"), isArray = require("148b85918856c33a");
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+    var result = keysFunc(object);
+    return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+module.exports = baseGetAllKeys;
+
+},{"abfc70b400ed76c2":"ivo5r","148b85918856c33a":"dZaTH"}],"ivo5r":[function(require,module,exports) {
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */ function arrayPush(array, values) {
+    var index = -1, length = values.length, offset = array.length;
+    while(++index < length)array[offset + index] = values[index];
+    return array;
+}
+module.exports = arrayPush;
+
+},{}],"5p5Yd":[function(require,module,exports) {
+var arrayFilter = require("7fe025254f0b7e4a"), stubArray = require("6b1c62cea92cdb9");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+    if (object == null) return [];
+    object = Object(object);
+    return arrayFilter(nativeGetSymbols(object), function(symbol) {
+        return propertyIsEnumerable.call(object, symbol);
+    });
+};
+module.exports = getSymbols;
+
+},{"7fe025254f0b7e4a":"hmIQ7","6b1c62cea92cdb9":"6TgRy"}],"hmIQ7":[function(require,module,exports) {
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */ function arrayFilter(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+    while(++index < length){
+        var value = array[index];
+        if (predicate(value, index, array)) result[resIndex++] = value;
+    }
+    return result;
+}
+module.exports = arrayFilter;
+
+},{}],"6TgRy":[function(require,module,exports) {
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */ function stubArray() {
+    return [];
+}
+module.exports = stubArray;
+
+},{}],"cRPhM":[function(require,module,exports) {
+var DataView = require("7f038695b2fdb86e"), Map = require("28e3344aae951f13"), Promise = require("b286298be5b1d9a4"), Set = require("3ae50c158f89813"), WeakMap = require("9f458755f627d456"), baseGetTag = require("8e9160b373d7fe66"), toSource = require("b210627dd951641f");
+/** `Object#toString` result references. */ var mapTag = "[object Map]", objectTag = "[object Object]", promiseTag = "[object Promise]", setTag = "[object Set]", weakMapTag = "[object WeakMap]";
+var dataViewTag = "[object DataView]";
+/** Used to detect maps, sets, and weakmaps. */ var dataViewCtorString = toSource(DataView), mapCtorString = toSource(Map), promiseCtorString = toSource(Promise), setCtorString = toSource(Set), weakMapCtorString = toSource(WeakMap);
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ var getTag = baseGetTag;
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map && getTag(new Map) != mapTag || Promise && getTag(Promise.resolve()) != promiseTag || Set && getTag(new Set) != setTag || WeakMap && getTag(new WeakMap) != weakMapTag) getTag = function(value) {
+    var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : undefined, ctorString = Ctor ? toSource(Ctor) : "";
+    if (ctorString) switch(ctorString){
+        case dataViewCtorString:
+            return dataViewTag;
+        case mapCtorString:
+            return mapTag;
+        case promiseCtorString:
+            return promiseTag;
+        case setCtorString:
+            return setTag;
+        case weakMapCtorString:
+            return weakMapTag;
+    }
+    return result;
+};
+module.exports = getTag;
+
+},{"7f038695b2fdb86e":"ejRu5","28e3344aae951f13":"8YjF4","b286298be5b1d9a4":"jbvCt","3ae50c158f89813":"4xGLf","9f458755f627d456":"av50V","8e9160b373d7fe66":"lOnbo","b210627dd951641f":"bYHc7"}],"ejRu5":[function(require,module,exports) {
+var getNative = require("a6517d0448dad786"), root = require("f83c375075418382");
+/* Built-in method references that are verified to be native. */ var DataView = getNative(root, "DataView");
+module.exports = DataView;
+
+},{"a6517d0448dad786":"9PCIl","f83c375075418382":"dSYUs"}],"jbvCt":[function(require,module,exports) {
+var getNative = require("6940648d854355b5"), root = require("a5c6637bac681a0");
+/* Built-in method references that are verified to be native. */ var Promise = getNative(root, "Promise");
+module.exports = Promise;
+
+},{"6940648d854355b5":"9PCIl","a5c6637bac681a0":"dSYUs"}],"4xGLf":[function(require,module,exports) {
+var getNative = require("56b792d64741a4ff"), root = require("ca486d41cdf819d4");
+/* Built-in method references that are verified to be native. */ var Set = getNative(root, "Set");
+module.exports = Set;
+
+},{"56b792d64741a4ff":"9PCIl","ca486d41cdf819d4":"dSYUs"}],"av50V":[function(require,module,exports) {
+var getNative = require("4507415bd8810d3c"), root = require("7a9a6581834a8452");
+/* Built-in method references that are verified to be native. */ var WeakMap = getNative(root, "WeakMap");
+module.exports = WeakMap;
+
+},{"4507415bd8810d3c":"9PCIl","7a9a6581834a8452":"dSYUs"}],"48Qyi":[function(require,module,exports) {
+var isStrictComparable = require("8ba18052e16e94fb"), keys = require("94ffded3a85af2f6");
+/**
+ * Gets the property names, values, and compare flags of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the match data of `object`.
+ */ function getMatchData(object) {
+    var result = keys(object), length = result.length;
+    while(length--){
+        var key = result[length], value = object[key];
+        result[length] = [
+            key,
+            value,
+            isStrictComparable(value)
+        ];
+    }
+    return result;
+}
+module.exports = getMatchData;
+
+},{"8ba18052e16e94fb":"lpdGS","94ffded3a85af2f6":"6fHVw"}],"lpdGS":[function(require,module,exports) {
+var isObject = require("be1941f960bbf057");
+/**
+ * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` if suitable for strict
+ *  equality comparisons, else `false`.
+ */ function isStrictComparable(value) {
+    return value === value && !isObject(value);
+}
+module.exports = isStrictComparable;
+
+},{"be1941f960bbf057":"cGhqJ"}],"a9Bav":[function(require,module,exports) {
+/**
+ * A specialized version of `matchesProperty` for source values suitable
+ * for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ function matchesStrictComparable(key, srcValue) {
+    return function(object) {
+        if (object == null) return false;
+        return object[key] === srcValue && (srcValue !== undefined || key in Object(object));
+    };
+}
+module.exports = matchesStrictComparable;
+
+},{}],"48kxC":[function(require,module,exports) {
+var baseIsEqual = require("cebe22f5ca0827a7"), get = require("d5ca180f7d6f956a"), hasIn = require("3462bb3f546fa1f7"), isKey = require("f5fef07966a1c4ee"), isStrictComparable = require("2a1cd212d48516"), matchesStrictComparable = require("885e72ee7fc6d296"), toKey = require("cd65eaf4a3af29f6");
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+ *
+ * @private
+ * @param {string} path The path of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatchesProperty(path, srcValue) {
+    if (isKey(path) && isStrictComparable(srcValue)) return matchesStrictComparable(toKey(path), srcValue);
+    return function(object) {
+        var objValue = get(object, path);
+        return objValue === undefined && objValue === srcValue ? hasIn(object, path) : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
+    };
+}
+module.exports = baseMatchesProperty;
+
+},{"cebe22f5ca0827a7":"7i3qr","d5ca180f7d6f956a":"8UELX","3462bb3f546fa1f7":"57qii","f5fef07966a1c4ee":"4wPWG","2a1cd212d48516":"lpdGS","885e72ee7fc6d296":"a9Bav","cd65eaf4a3af29f6":"bEgue"}],"8UELX":[function(require,module,exports) {
+var baseGet = require("446ba3c1be7939a3");
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined`, the `defaultValue` is returned in its place.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */ function get(object, path, defaultValue) {
+    var result = object == null ? undefined : baseGet(object, path);
+    return result === undefined ? defaultValue : result;
+}
+module.exports = get;
+
+},{"446ba3c1be7939a3":"kMRe3"}],"kMRe3":[function(require,module,exports) {
+var castPath = require("434ba191fc1dcf09"), toKey = require("c3296f04fad32769");
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */ function baseGet(object, path) {
+    path = castPath(path, object);
+    var index = 0, length = path.length;
+    while(object != null && index < length)object = object[toKey(path[index++])];
+    return index && index == length ? object : undefined;
+}
+module.exports = baseGet;
+
+},{"434ba191fc1dcf09":"apxk5","c3296f04fad32769":"bEgue"}],"apxk5":[function(require,module,exports) {
+var isArray = require("26a856890198f45b"), isKey = require("e823e604d75f975b"), stringToPath = require("f5fff1c342107fbd"), toString = require("b04e8cc634273c23");
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
+ */ function castPath(value, object) {
+    if (isArray(value)) return value;
+    return isKey(value, object) ? [
+        value
+    ] : stringToPath(toString(value));
+}
+module.exports = castPath;
+
+},{"26a856890198f45b":"dZaTH","e823e604d75f975b":"4wPWG","f5fff1c342107fbd":"1m1j5","b04e8cc634273c23":"joIdQ"}],"4wPWG":[function(require,module,exports) {
+var isArray = require("1efcc081e9a448a8"), isSymbol = require("4cdff6c9e9ff5d38");
+/** Used to match property names within property paths. */ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */ function isKey(value, object) {
+    if (isArray(value)) return false;
+    var type = typeof value;
+    if (type == "number" || type == "symbol" || type == "boolean" || value == null || isSymbol(value)) return true;
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+}
+module.exports = isKey;
+
+},{"1efcc081e9a448a8":"dZaTH","4cdff6c9e9ff5d38":"i3BHC"}],"i3BHC":[function(require,module,exports) {
+var baseGetTag = require("6118c0d5630f51ce"), isObjectLike = require("74644060ad1a1d3c");
+/** `Object#toString` result references. */ var symbolTag = "[object Symbol]";
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */ function isSymbol(value) {
+    return typeof value == "symbol" || isObjectLike(value) && baseGetTag(value) == symbolTag;
+}
+module.exports = isSymbol;
+
+},{"6118c0d5630f51ce":"lOnbo","74644060ad1a1d3c":"3BLi4"}],"1m1j5":[function(require,module,exports) {
+var memoizeCapped = require("55f565a895f455e5");
+/** Used to match property names within property paths. */ var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+/** Used to match backslashes in property paths. */ var reEscapeChar = /\\(\\)?/g;
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */ var stringToPath = memoizeCapped(function(string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */ ) result.push("");
+    string.replace(rePropName, function(match, number, quote, subString) {
+        result.push(quote ? subString.replace(reEscapeChar, "$1") : number || match);
+    });
+    return result;
+});
+module.exports = stringToPath;
+
+},{"55f565a895f455e5":"j3xlQ"}],"j3xlQ":[function(require,module,exports) {
+var memoize = require("cb456550b1f5dd0a");
+/** Used as the maximum memoize cache size. */ var MAX_MEMOIZE_SIZE = 500;
+/**
+ * A specialized version of `_.memoize` which clears the memoized function's
+ * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+ *
+ * @private
+ * @param {Function} func The function to have its output memoized.
+ * @returns {Function} Returns the new memoized function.
+ */ function memoizeCapped(func) {
+    var result = memoize(func, function(key) {
+        if (cache.size === MAX_MEMOIZE_SIZE) cache.clear();
+        return key;
+    });
+    var cache = result.cache;
+    return result;
+}
+module.exports = memoizeCapped;
+
+},{"cb456550b1f5dd0a":"azHKC"}],"azHKC":[function(require,module,exports) {
+var MapCache = require("b34b26bf235f1cdd");
+/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */ function memoize(func, resolver) {
+    if (typeof func != "function" || resolver != null && typeof resolver != "function") throw new TypeError(FUNC_ERROR_TEXT);
+    var memoized = function() {
+        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+        if (cache.has(key)) return cache.get(key);
+        var result = func.apply(this, args);
+        memoized.cache = cache.set(key, result) || cache;
+        return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache);
+    return memoized;
+}
+// Expose `MapCache`.
+memoize.Cache = MapCache;
+module.exports = memoize;
+
+},{"b34b26bf235f1cdd":"664I1"}],"joIdQ":[function(require,module,exports) {
+var baseToString = require("81fca33832a744d9");
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */ function toString(value) {
+    return value == null ? "" : baseToString(value);
+}
+module.exports = toString;
+
+},{"81fca33832a744d9":"goDP8"}],"goDP8":[function(require,module,exports) {
+var Symbol = require("16af83505444e42a"), arrayMap = require("8439a3a1551d0706"), isArray = require("4b12c9f502d3288a"), isSymbol = require("a0ebd327d618908a");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolToString = symbolProto ? symbolProto.toString : undefined;
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */ function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == "string") return value;
+    if (isArray(value)) // Recursively convert values (susceptible to call stack limits).
+    return arrayMap(value, baseToString) + "";
+    if (isSymbol(value)) return symbolToString ? symbolToString.call(value) : "";
+    var result = value + "";
+    return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+}
+module.exports = baseToString;
+
+},{"16af83505444e42a":"7lsL9","8439a3a1551d0706":"imI5Z","4b12c9f502d3288a":"dZaTH","a0ebd327d618908a":"i3BHC"}],"bEgue":[function(require,module,exports) {
+var isSymbol = require("2aed9f6fd4b7386");
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */ function toKey(value) {
+    if (typeof value == "string" || isSymbol(value)) return value;
+    var result = value + "";
+    return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+}
+module.exports = toKey;
+
+},{"2aed9f6fd4b7386":"i3BHC"}],"57qii":[function(require,module,exports) {
+var baseHasIn = require("9fbd4bb192f3f572"), hasPath = require("b0aefd36de99e579");
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */ function hasIn(object, path) {
+    return object != null && hasPath(object, path, baseHasIn);
+}
+module.exports = hasIn;
+
+},{"9fbd4bb192f3f572":"in8KZ","b0aefd36de99e579":"4QNMG"}],"in8KZ":[function(require,module,exports) {
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */ function baseHasIn(object, key) {
+    return object != null && key in Object(object);
+}
+module.exports = baseHasIn;
+
+},{}],"4QNMG":[function(require,module,exports) {
+var castPath = require("bdbd2cfd212d36f7"), isArguments = require("47ffafdab3ba0d6f"), isArray = require("93ebd263ff0131c1"), isIndex = require("252ef74480e01958"), isLength = require("23c2f64e75e90a2"), toKey = require("af5ade297cb685ee");
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */ function hasPath(object, path, hasFunc) {
+    path = castPath(path, object);
+    var index = -1, length = path.length, result = false;
+    while(++index < length){
+        var key = toKey(path[index]);
+        if (!(result = object != null && hasFunc(object, key))) break;
+        object = object[key];
+    }
+    if (result || ++index != length) return result;
+    length = object == null ? 0 : object.length;
+    return !!length && isLength(length) && isIndex(key, length) && (isArray(object) || isArguments(object));
+}
+module.exports = hasPath;
+
+},{"bdbd2cfd212d36f7":"apxk5","47ffafdab3ba0d6f":"8ReNj","93ebd263ff0131c1":"dZaTH","252ef74480e01958":"aJpx0","23c2f64e75e90a2":"hrTBx","af5ade297cb685ee":"bEgue"}],"8aSQI":[function(require,module,exports) {
+var baseProperty = require("c7f2d79ee4b1c16a"), basePropertyDeep = require("abf31da39349df22"), isKey = require("a387ef4a4373de2c"), toKey = require("9315973458389ae7");
+/**
+ * Creates a function that returns the value at `path` of a given object.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ * @example
+ *
+ * var objects = [
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
+ * ];
+ *
+ * _.map(objects, _.property('a.b'));
+ * // => [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // => [1, 2]
+ */ function property(path) {
+    return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+}
+module.exports = property;
+
+},{"c7f2d79ee4b1c16a":"4HOmE","abf31da39349df22":"c9dhz","a387ef4a4373de2c":"4wPWG","9315973458389ae7":"bEgue"}],"4HOmE":[function(require,module,exports) {
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ function baseProperty(key) {
+    return function(object) {
+        return object == null ? undefined : object[key];
+    };
+}
+module.exports = baseProperty;
+
+},{}],"c9dhz":[function(require,module,exports) {
+var baseGet = require("f0f9f03bc3030d02");
+/**
+ * A specialized version of `baseProperty` which supports deep paths.
+ *
+ * @private
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ function basePropertyDeep(path) {
+    return function(object) {
+        return baseGet(object, path);
+    };
+}
+module.exports = basePropertyDeep;
+
+},{"f0f9f03bc3030d02":"kMRe3"}],"cLeHB":[function(require,module,exports) {
+var baseEach = require("488df795cf6fe570"), isArrayLike = require("2924e2db4bb5430d");
+/**
+ * The base implementation of `_.map` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function baseMap(collection, iteratee) {
+    var index = -1, result = isArrayLike(collection) ? Array(collection.length) : [];
+    baseEach(collection, function(value, key, collection) {
+        result[++index] = iteratee(value, key, collection);
+    });
+    return result;
+}
+module.exports = baseMap;
+
+},{"488df795cf6fe570":"1glfs","2924e2db4bb5430d":"gMCbp"}],"1glfs":[function(require,module,exports) {
+var baseForOwn = require("ee57d32bcdc873cb"), createBaseEach = require("f1e3fc84161ef3ec");
+/**
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ */ var baseEach = createBaseEach(baseForOwn);
+module.exports = baseEach;
+
+},{"ee57d32bcdc873cb":"6MqUM","f1e3fc84161ef3ec":"dfv3e"}],"dfv3e":[function(require,module,exports) {
+var isArrayLike = require("49bbd11cbf093bb1");
+/**
+ * Creates a `baseEach` or `baseEachRight` function.
+ *
+ * @private
+ * @param {Function} eachFunc The function to iterate over a collection.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ function createBaseEach(eachFunc, fromRight) {
+    return function(collection, iteratee) {
+        if (collection == null) return collection;
+        if (!isArrayLike(collection)) return eachFunc(collection, iteratee);
+        var length = collection.length, index = fromRight ? length : -1, iterable = Object(collection);
+        while(fromRight ? index-- : ++index < length){
+            if (iteratee(iterable[index], index, iterable) === false) break;
+        }
+        return collection;
+    };
+}
+module.exports = createBaseEach;
+
+},{"49bbd11cbf093bb1":"gMCbp"}],"iQp0Y":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.mergeClasses = undefined;
+var _forOwn2 = require("42f7fd880fbb6b28");
+var _forOwn3 = _interopRequireDefault(_forOwn2);
+var _cloneDeep2 = require("fe0598645aa3c32b");
+var _cloneDeep3 = _interopRequireDefault(_cloneDeep2);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+var mergeClasses = exports.mergeClasses = function mergeClasses(classes) {
+    var activeNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var styles = classes.default && (0, _cloneDeep3.default)(classes.default) || {};
+    activeNames.map(function(name) {
+        var toMerge = classes[name];
+        if (toMerge) (0, _forOwn3.default)(toMerge, function(value, key) {
+            if (!styles[key]) styles[key] = {};
+            styles[key] = _extends({}, styles[key], toMerge[key]);
+        });
+        return name;
+    });
+    return styles;
+};
+exports.default = mergeClasses;
+
+},{"42f7fd880fbb6b28":"eUMKv","fe0598645aa3c32b":"NMIiZ"}],"NMIiZ":[function(require,module,exports) {
+var baseClone = require("9b38cc9a3ba32230");
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_SYMBOLS_FLAG = 4;
+/**
+ * This method is like `_.clone` except that it recursively clones `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.0.0
+ * @category Lang
+ * @param {*} value The value to recursively clone.
+ * @returns {*} Returns the deep cloned value.
+ * @see _.clone
+ * @example
+ *
+ * var objects = [{ 'a': 1 }, { 'b': 2 }];
+ *
+ * var deep = _.cloneDeep(objects);
+ * console.log(deep[0] === objects[0]);
+ * // => false
+ */ function cloneDeep(value) {
+    return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG);
+}
+module.exports = cloneDeep;
+
+},{"9b38cc9a3ba32230":"2GC2p"}],"2GC2p":[function(require,module,exports) {
+var Stack = require("c3256a0a192955f9"), arrayEach = require("3a79976eb46af94a"), assignValue = require("bc83a05a4f99d69b"), baseAssign = require("e6b4c3e6c85df6bb"), baseAssignIn = require("f340cc553ba5643c"), cloneBuffer = require("e72e99883a50402d"), copyArray = require("dc840ead07f1054"), copySymbols = require("309288e8ee190af0"), copySymbolsIn = require("687fa30fede0b048"), getAllKeys = require("bb0ba724f98b094d"), getAllKeysIn = require("12bae1dca0e83064"), getTag = require("4c3204eaea28d680"), initCloneArray = require("fd7741200b462cdf"), initCloneByTag = require("f93a1d24ac08e076"), initCloneObject = require("630039e80f692f17"), isArray = require("f37949484ab52dae"), isBuffer = require("ac876cc65d29c86e"), isMap = require("1056c031d98783c0"), isObject = require("1800fb3122907fc2"), isSet = require("31f022f648037bd3"), keys = require("5f3267fbd9848a7d"), keysIn = require("7d3f3bdc4f2e7bb8");
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]", arrayTag = "[object Array]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag = "[object Function]", genTag = "[object GeneratorFunction]", mapTag = "[object Map]", numberTag = "[object Number]", objectTag = "[object Object]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]", weakMapTag = "[object WeakMap]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+/** Used to identify `toStringTag` values supported by `_.clone`. */ var cloneableTags = {};
+cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag] = cloneableTags[dateTag] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag] = cloneableTags[objectTag] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] = cloneableTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+ * traversed objects.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Deep clone
+ *  2 - Flatten inherited properties
+ *  4 - Clone symbols
+ * @param {Function} [customizer] The function to customize cloning.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The parent object of `value`.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @returns {*} Returns the cloned value.
+ */ function baseClone(value, bitmask, customizer, key, object, stack) {
+    var result, isDeep = bitmask & CLONE_DEEP_FLAG, isFlat = bitmask & CLONE_FLAT_FLAG, isFull = bitmask & CLONE_SYMBOLS_FLAG;
+    if (customizer) result = object ? customizer(value, key, object, stack) : customizer(value);
+    if (result !== undefined) return result;
+    if (!isObject(value)) return value;
+    var isArr = isArray(value);
+    if (isArr) {
+        result = initCloneArray(value);
+        if (!isDeep) return copyArray(value, result);
+    } else {
+        var tag = getTag(value), isFunc = tag == funcTag || tag == genTag;
+        if (isBuffer(value)) return cloneBuffer(value, isDeep);
+        if (tag == objectTag || tag == argsTag || isFunc && !object) {
+            result = isFlat || isFunc ? {} : initCloneObject(value);
+            if (!isDeep) return isFlat ? copySymbolsIn(value, baseAssignIn(result, value)) : copySymbols(value, baseAssign(result, value));
+        } else {
+            if (!cloneableTags[tag]) return object ? value : {};
+            result = initCloneByTag(value, tag, isDeep);
+        }
+    }
+    // Check for circular references and return its corresponding clone.
+    stack || (stack = new Stack);
+    var stacked = stack.get(value);
+    if (stacked) return stacked;
+    stack.set(value, result);
+    if (isSet(value)) value.forEach(function(subValue) {
+        result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
+    });
+    else if (isMap(value)) value.forEach(function(subValue, key) {
+        result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));
+    });
+    var keysFunc = isFull ? isFlat ? getAllKeysIn : getAllKeys : isFlat ? keysIn : keys;
+    var props = isArr ? undefined : keysFunc(value);
+    arrayEach(props || value, function(subValue, key) {
+        if (props) {
+            key = subValue;
+            subValue = value[key];
+        }
+        // Recursively populate clone (susceptible to call stack limits).
+        assignValue(result, key, baseClone(subValue, bitmask, customizer, key, value, stack));
+    });
+    return result;
+}
+module.exports = baseClone;
+
+},{"c3256a0a192955f9":"atP87","3a79976eb46af94a":"kMhnH","bc83a05a4f99d69b":"5M3eX","e6b4c3e6c85df6bb":"fNRtQ","f340cc553ba5643c":"6Gpuu","e72e99883a50402d":"6zXd4","dc840ead07f1054":"jJ8fu","309288e8ee190af0":"78Za0","687fa30fede0b048":"lhZg2","bb0ba724f98b094d":"d2kML","12bae1dca0e83064":"6BBOq","4c3204eaea28d680":"cRPhM","fd7741200b462cdf":"1RKeS","f93a1d24ac08e076":"26ysD","630039e80f692f17":"dG1H0","f37949484ab52dae":"dZaTH","ac876cc65d29c86e":"cn85h","1056c031d98783c0":"3qbv8","1800fb3122907fc2":"cGhqJ","31f022f648037bd3":"bZrVh","5f3267fbd9848a7d":"6fHVw","7d3f3bdc4f2e7bb8":"c9sMs"}],"kMhnH":[function(require,module,exports) {
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */ function arrayEach(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (iteratee(array[index], index, array) === false) break;
+    }
+    return array;
+}
+module.exports = arrayEach;
+
+},{}],"5M3eX":[function(require,module,exports) {
+var baseAssignValue = require("be513dd57a36b3f4"), eq = require("b62ef95b3cf1cde1");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) baseAssignValue(object, key, value);
+}
+module.exports = assignValue;
+
+},{"be513dd57a36b3f4":"fprBU","b62ef95b3cf1cde1":"aVz5f"}],"fprBU":[function(require,module,exports) {
+var defineProperty = require("57c6267f904aee0a");
+/**
+ * The base implementation of `assignValue` and `assignMergeValue` without
+ * value checks.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function baseAssignValue(object, key, value) {
+    if (key == "__proto__" && defineProperty) defineProperty(object, key, {
+        "configurable": true,
+        "enumerable": true,
+        "value": value,
+        "writable": true
+    });
+    else object[key] = value;
+}
+module.exports = baseAssignValue;
+
+},{"57c6267f904aee0a":"cZOnw"}],"cZOnw":[function(require,module,exports) {
+var getNative = require("7565accd8c33cb8b");
+var defineProperty = function() {
+    try {
+        var func = getNative(Object, "defineProperty");
+        func({}, "", {});
+        return func;
+    } catch (e) {}
+}();
+module.exports = defineProperty;
+
+},{"7565accd8c33cb8b":"9PCIl"}],"fNRtQ":[function(require,module,exports) {
+var copyObject = require("c7567f70ddd05963"), keys = require("fcf23a0242ef0da9");
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssign(object, source) {
+    return object && copyObject(source, keys(source), object);
+}
+module.exports = baseAssign;
+
+},{"c7567f70ddd05963":"gfA7W","fcf23a0242ef0da9":"6fHVw"}],"gfA7W":[function(require,module,exports) {
+var assignValue = require("51e2769785cbfa78"), baseAssignValue = require("9cddf6ac1a092765");
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */ function copyObject(source, props, object, customizer) {
+    var isNew = !object;
+    object || (object = {});
+    var index = -1, length = props.length;
+    while(++index < length){
+        var key = props[index];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+        if (newValue === undefined) newValue = source[key];
+        if (isNew) baseAssignValue(object, key, newValue);
+        else assignValue(object, key, newValue);
+    }
+    return object;
+}
+module.exports = copyObject;
+
+},{"51e2769785cbfa78":"5M3eX","9cddf6ac1a092765":"fprBU"}],"6Gpuu":[function(require,module,exports) {
+var copyObject = require("6f2a44bcb454186d"), keysIn = require("7697a1565646c93");
+/**
+ * The base implementation of `_.assignIn` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssignIn(object, source) {
+    return object && copyObject(source, keysIn(source), object);
+}
+module.exports = baseAssignIn;
+
+},{"6f2a44bcb454186d":"gfA7W","7697a1565646c93":"c9sMs"}],"c9sMs":[function(require,module,exports) {
+var arrayLikeKeys = require("635aebb56f3a408f"), baseKeysIn = require("194eb1a802636842"), isArrayLike = require("ac15afdc3ddd76cd");
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */ function keysIn(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+}
+module.exports = keysIn;
+
+},{"635aebb56f3a408f":"dquIQ","194eb1a802636842":"23s7e","ac15afdc3ddd76cd":"gMCbp"}],"23s7e":[function(require,module,exports) {
+var isObject = require("bd1636f5883f1002"), isPrototype = require("f7d53cd92b2b977b"), nativeKeysIn = require("c039208a16eb68bd");
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeysIn(object) {
+    if (!isObject(object)) return nativeKeysIn(object);
+    var isProto = isPrototype(object), result = [];
+    for(var key in object)if (!(key == "constructor" && (isProto || !hasOwnProperty.call(object, key)))) result.push(key);
+    return result;
+}
+module.exports = baseKeysIn;
+
+},{"bd1636f5883f1002":"cGhqJ","f7d53cd92b2b977b":"iG4eR","c039208a16eb68bd":"5CFL0"}],"5CFL0":[function(require,module,exports) {
+/**
+ * This function is like
+ * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * except that it includes inherited enumerable properties.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function nativeKeysIn(object) {
+    var result = [];
+    if (object != null) for(var key in Object(object))result.push(key);
+    return result;
+}
+module.exports = nativeKeysIn;
+
+},{}],"6zXd4":[function(require,module,exports) {
+var root = require("5d68e87b918bbcc5");
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined, allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */ function cloneBuffer(buffer, isDeep) {
+    if (isDeep) return buffer.slice();
+    var length = buffer.length, result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
+    buffer.copy(result);
+    return result;
+}
+module.exports = cloneBuffer;
+
+},{"5d68e87b918bbcc5":"dSYUs"}],"jJ8fu":[function(require,module,exports) {
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */ function copyArray(source, array) {
+    var index = -1, length = source.length;
+    array || (array = Array(length));
+    while(++index < length)array[index] = source[index];
+    return array;
+}
+module.exports = copyArray;
+
+},{}],"78Za0":[function(require,module,exports) {
+var copyObject = require("4cc37626612884ad"), getSymbols = require("39cbde2205d9399c");
+/**
+ * Copies own symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbols(source, object) {
+    return copyObject(source, getSymbols(source), object);
+}
+module.exports = copySymbols;
+
+},{"4cc37626612884ad":"gfA7W","39cbde2205d9399c":"5p5Yd"}],"lhZg2":[function(require,module,exports) {
+var copyObject = require("73fd77060a6bfcff"), getSymbolsIn = require("9b660e6b0c20d303");
+/**
+ * Copies own and inherited symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbolsIn(source, object) {
+    return copyObject(source, getSymbolsIn(source), object);
+}
+module.exports = copySymbolsIn;
+
+},{"73fd77060a6bfcff":"gfA7W","9b660e6b0c20d303":"dVaAc"}],"dVaAc":[function(require,module,exports) {
+var arrayPush = require("2f7c7daf8773557"), getPrototype = require("6ccae2aa7cfa3c66"), getSymbols = require("bdb501682ee9305d"), stubArray = require("7641fe4ae6d2cc96");
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own and inherited enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+    var result = [];
+    while(object){
+        arrayPush(result, getSymbols(object));
+        object = getPrototype(object);
+    }
+    return result;
+};
+module.exports = getSymbolsIn;
+
+},{"2f7c7daf8773557":"ivo5r","6ccae2aa7cfa3c66":"8ASKT","bdb501682ee9305d":"5p5Yd","7641fe4ae6d2cc96":"6TgRy"}],"6BBOq":[function(require,module,exports) {
+var baseGetAllKeys = require("f6d6a583609f5bf6"), getSymbolsIn = require("feede5d0a2d06427"), keysIn = require("287f70f798405911");
+/**
+ * Creates an array of own and inherited enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeysIn(object) {
+    return baseGetAllKeys(object, keysIn, getSymbolsIn);
+}
+module.exports = getAllKeysIn;
+
+},{"f6d6a583609f5bf6":"aeckf","feede5d0a2d06427":"dVaAc","287f70f798405911":"c9sMs"}],"1RKeS":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */ function initCloneArray(array) {
+    var length = array.length, result = new array.constructor(length);
+    // Add properties assigned by `RegExp#exec`.
+    if (length && typeof array[0] == "string" && hasOwnProperty.call(array, "index")) {
+        result.index = array.index;
+        result.input = array.input;
+    }
+    return result;
+}
+module.exports = initCloneArray;
+
+},{}],"26ysD":[function(require,module,exports) {
+var cloneArrayBuffer = require("d24f0b9a34d2e38a"), cloneDataView = require("dbf04edaab2ae376"), cloneRegExp = require("763300f2dd9bdaf3"), cloneSymbol = require("c30e64d90e4b92d1"), cloneTypedArray = require("d1edd8349e9ad54d");
+/** `Object#toString` result references. */ var boolTag = "[object Boolean]", dateTag = "[object Date]", mapTag = "[object Map]", numberTag = "[object Number]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneByTag(object, tag, isDeep) {
+    var Ctor = object.constructor;
+    switch(tag){
+        case arrayBufferTag:
+            return cloneArrayBuffer(object);
+        case boolTag:
+        case dateTag:
+            return new Ctor(+object);
+        case dataViewTag:
+            return cloneDataView(object, isDeep);
+        case float32Tag:
+        case float64Tag:
+        case int8Tag:
+        case int16Tag:
+        case int32Tag:
+        case uint8Tag:
+        case uint8ClampedTag:
+        case uint16Tag:
+        case uint32Tag:
+            return cloneTypedArray(object, isDeep);
+        case mapTag:
+            return new Ctor;
+        case numberTag:
+        case stringTag:
+            return new Ctor(object);
+        case regexpTag:
+            return cloneRegExp(object);
+        case setTag:
+            return new Ctor;
+        case symbolTag:
+            return cloneSymbol(object);
+    }
+}
+module.exports = initCloneByTag;
+
+},{"d24f0b9a34d2e38a":"7fi2W","dbf04edaab2ae376":"hEqzP","763300f2dd9bdaf3":"aeJOQ","c30e64d90e4b92d1":"5ScBc","d1edd8349e9ad54d":"7eG7Y"}],"7fi2W":[function(require,module,exports) {
+var Uint8Array = require("c50984a96481fd62");
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */ function cloneArrayBuffer(arrayBuffer) {
+    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+    new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+    return result;
+}
+module.exports = cloneArrayBuffer;
+
+},{"c50984a96481fd62":"6xFrA"}],"hEqzP":[function(require,module,exports) {
+var cloneArrayBuffer = require("55b473c4a5622b5a");
+/**
+ * Creates a clone of `dataView`.
+ *
+ * @private
+ * @param {Object} dataView The data view to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned data view.
+ */ function cloneDataView(dataView, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+    return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+}
+module.exports = cloneDataView;
+
+},{"55b473c4a5622b5a":"7fi2W"}],"aeJOQ":[function(require,module,exports) {
+/** Used to match `RegExp` flags from their coerced string values. */ var reFlags = /\w*$/;
+/**
+ * Creates a clone of `regexp`.
+ *
+ * @private
+ * @param {Object} regexp The regexp to clone.
+ * @returns {Object} Returns the cloned regexp.
+ */ function cloneRegExp(regexp) {
+    var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+    result.lastIndex = regexp.lastIndex;
+    return result;
+}
+module.exports = cloneRegExp;
+
+},{}],"5ScBc":[function(require,module,exports) {
+var Symbol = require("b88cf659c1f1d984");
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol ? Symbol.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * Creates a clone of the `symbol` object.
+ *
+ * @private
+ * @param {Object} symbol The symbol object to clone.
+ * @returns {Object} Returns the cloned symbol object.
+ */ function cloneSymbol(symbol) {
+    return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};
+}
+module.exports = cloneSymbol;
+
+},{"b88cf659c1f1d984":"7lsL9"}],"7eG7Y":[function(require,module,exports) {
+var cloneArrayBuffer = require("b3183de060e04548");
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */ function cloneTypedArray(typedArray, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+module.exports = cloneTypedArray;
+
+},{"b3183de060e04548":"7fi2W"}],"dG1H0":[function(require,module,exports) {
+var baseCreate = require("4a25a11eb90445e8"), getPrototype = require("8c92276927b7c3e0"), isPrototype = require("e939f15d7a0f64a5");
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneObject(object) {
+    return typeof object.constructor == "function" && !isPrototype(object) ? baseCreate(getPrototype(object)) : {};
+}
+module.exports = initCloneObject;
+
+},{"4a25a11eb90445e8":"ef1VZ","8c92276927b7c3e0":"8ASKT","e939f15d7a0f64a5":"iG4eR"}],"ef1VZ":[function(require,module,exports) {
+var isObject = require("2c87f13f7934e7bd");
+/** Built-in value references. */ var objectCreate = Object.create;
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */ var baseCreate = function() {
+    function object() {}
+    return function(proto) {
+        if (!isObject(proto)) return {};
+        if (objectCreate) return objectCreate(proto);
+        object.prototype = proto;
+        var result = new object;
+        object.prototype = undefined;
+        return result;
+    };
+}();
+module.exports = baseCreate;
+
+},{"2c87f13f7934e7bd":"cGhqJ"}],"3qbv8":[function(require,module,exports) {
+var baseIsMap = require("bcb4b5290583d129"), baseUnary = require("6a7e6b1a2d9fb1d5"), nodeUtil = require("7d4f449dd306450f");
+/* Node.js helper references. */ var nodeIsMap = nodeUtil && nodeUtil.isMap;
+/**
+ * Checks if `value` is classified as a `Map` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ * @example
+ *
+ * _.isMap(new Map);
+ * // => true
+ *
+ * _.isMap(new WeakMap);
+ * // => false
+ */ var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
+module.exports = isMap;
+
+},{"bcb4b5290583d129":"9v3CD","6a7e6b1a2d9fb1d5":"eJXq4","7d4f449dd306450f":"5edNe"}],"9v3CD":[function(require,module,exports) {
+var getTag = require("f59b9932854175ea"), isObjectLike = require("88260e33e0003386");
+/** `Object#toString` result references. */ var mapTag = "[object Map]";
+/**
+ * The base implementation of `_.isMap` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ */ function baseIsMap(value) {
+    return isObjectLike(value) && getTag(value) == mapTag;
+}
+module.exports = baseIsMap;
+
+},{"f59b9932854175ea":"cRPhM","88260e33e0003386":"3BLi4"}],"bZrVh":[function(require,module,exports) {
+var baseIsSet = require("efa5963001bed2f4"), baseUnary = require("3cb35dba719c68b1"), nodeUtil = require("7a3e899a332ff7be");
+/* Node.js helper references. */ var nodeIsSet = nodeUtil && nodeUtil.isSet;
+/**
+ * Checks if `value` is classified as a `Set` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ * @example
+ *
+ * _.isSet(new Set);
+ * // => true
+ *
+ * _.isSet(new WeakSet);
+ * // => false
+ */ var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
+module.exports = isSet;
+
+},{"efa5963001bed2f4":"7lzzg","3cb35dba719c68b1":"eJXq4","7a3e899a332ff7be":"5edNe"}],"7lzzg":[function(require,module,exports) {
+var getTag = require("3451ecb010f954cc"), isObjectLike = require("b6fc875bc5f351c9");
+/** `Object#toString` result references. */ var setTag = "[object Set]";
+/**
+ * The base implementation of `_.isSet` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ */ function baseIsSet(value) {
+    return isObjectLike(value) && getTag(value) == setTag;
+}
+module.exports = baseIsSet;
+
+},{"3451ecb010f954cc":"cRPhM","b6fc875bc5f351c9":"3BLi4"}],"2E7gL":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.autoprefix = undefined;
+var _forOwn2 = require("6b2ab06ed0e74650");
+var _forOwn3 = _interopRequireDefault(_forOwn2);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+var transforms = {
+    borderRadius: function borderRadius(value) {
+        return {
+            msBorderRadius: value,
+            MozBorderRadius: value,
+            OBorderRadius: value,
+            WebkitBorderRadius: value,
+            borderRadius: value
+        };
+    },
+    boxShadow: function boxShadow(value) {
+        return {
+            msBoxShadow: value,
+            MozBoxShadow: value,
+            OBoxShadow: value,
+            WebkitBoxShadow: value,
+            boxShadow: value
+        };
+    },
+    userSelect: function userSelect(value) {
+        return {
+            WebkitTouchCallout: value,
+            KhtmlUserSelect: value,
+            MozUserSelect: value,
+            msUserSelect: value,
+            WebkitUserSelect: value,
+            userSelect: value
+        };
+    },
+    flex: function flex(value) {
+        return {
+            WebkitBoxFlex: value,
+            MozBoxFlex: value,
+            WebkitFlex: value,
+            msFlex: value,
+            flex: value
+        };
+    },
+    flexBasis: function flexBasis(value) {
+        return {
+            WebkitFlexBasis: value,
+            flexBasis: value
+        };
+    },
+    justifyContent: function justifyContent(value) {
+        return {
+            WebkitJustifyContent: value,
+            justifyContent: value
+        };
+    },
+    transition: function transition(value) {
+        return {
+            msTransition: value,
+            MozTransition: value,
+            OTransition: value,
+            WebkitTransition: value,
+            transition: value
+        };
+    },
+    transform: function transform(value) {
+        return {
+            msTransform: value,
+            MozTransform: value,
+            OTransform: value,
+            WebkitTransform: value,
+            transform: value
+        };
+    },
+    absolute: function absolute(value) {
+        var direction = value && value.split(" ");
+        return {
+            position: "absolute",
+            top: direction && direction[0],
+            right: direction && direction[1],
+            bottom: direction && direction[2],
+            left: direction && direction[3]
+        };
+    },
+    extend: function extend(name, otherElementStyles) {
+        var otherStyle = otherElementStyles[name];
+        if (otherStyle) return otherStyle;
+        return {
+            "extend": name
+        };
+    }
+};
+var autoprefix = exports.autoprefix = function autoprefix(elements) {
+    var prefixed = {};
+    (0, _forOwn3.default)(elements, function(styles, element) {
+        var expanded = {};
+        (0, _forOwn3.default)(styles, function(value, key) {
+            var transform = transforms[key];
+            if (transform) expanded = _extends({}, expanded, transform(value));
+            else expanded[key] = value;
+        });
+        prefixed[element] = expanded;
+    });
+    return prefixed;
+};
+exports.default = autoprefix;
+
+},{"6b2ab06ed0e74650":"eUMKv"}],"7oF03":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.hover = undefined;
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _react = require("a618bb79e13970dd");
+var _react2 = _interopRequireDefault(_react);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var hover = exports.hover = function hover(Component) {
+    var Span = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "span";
+    return function(_React$Component) {
+        _inherits(Hover, _React$Component);
+        function Hover() {
+            var _ref;
+            var _temp, _this, _ret;
+            _classCallCheck(this, Hover);
+            for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Hover.__proto__ || Object.getPrototypeOf(Hover)).call.apply(_ref, [
+                this
+            ].concat(args))), _this), _this.state = {
+                hover: false
+            }, _this.handleMouseOver = function() {
+                return _this.setState({
+                    hover: true
+                });
+            }, _this.handleMouseOut = function() {
+                return _this.setState({
+                    hover: false
+                });
+            }, _this.render = function() {
+                return _react2.default.createElement(Span, {
+                    onMouseOver: _this.handleMouseOver,
+                    onMouseOut: _this.handleMouseOut
+                }, _react2.default.createElement(Component, _extends({}, _this.props, _this.state)));
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+        return Hover;
+    }(_react2.default.Component);
+};
+exports.default = hover;
+
+},{"a618bb79e13970dd":"b6YLU"}],"gUZuP":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.active = undefined;
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _react = require("91e1b91cd0b21ba2");
+var _react2 = _interopRequireDefault(_react);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var active = exports.active = function active(Component) {
+    var Span = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "span";
+    return function(_React$Component) {
+        _inherits(Active, _React$Component);
+        function Active() {
+            var _ref;
+            var _temp, _this, _ret;
+            _classCallCheck(this, Active);
+            for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Active.__proto__ || Object.getPrototypeOf(Active)).call.apply(_ref, [
+                this
+            ].concat(args))), _this), _this.state = {
+                active: false
+            }, _this.handleMouseDown = function() {
+                return _this.setState({
+                    active: true
+                });
+            }, _this.handleMouseUp = function() {
+                return _this.setState({
+                    active: false
+                });
+            }, _this.render = function() {
+                return _react2.default.createElement(Span, {
+                    onMouseDown: _this.handleMouseDown,
+                    onMouseUp: _this.handleMouseUp
+                }, _react2.default.createElement(Component, _extends({}, _this.props, _this.state)));
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+        return Active;
+    }(_react2.default.Component);
+};
+exports.default = active;
+
+},{"91e1b91cd0b21ba2":"b6YLU"}],"hzRnf":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var loopable = function loopable(i, length) {
+    var props = {};
+    var setProp = function setProp(name) {
+        var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+        props[name] = value;
+    };
+    i === 0 && setProp("first-child");
+    i === length - 1 && setProp("last-child");
+    (i === 0 || i % 2 === 0) && setProp("even");
+    Math.abs(i % 2) === 1 && setProp("odd");
+    setProp("nth-child", i);
+    return props;
+};
+exports.default = loopable;
+
+},{}],"4lq7P":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Alpha", ()=>(0, _alphaDefault.default));
+parcelHelpers.export(exports, "Checkboard", ()=>(0, _checkboardDefault.default));
+parcelHelpers.export(exports, "EditableInput", ()=>(0, _editableInputDefault.default));
+parcelHelpers.export(exports, "Hue", ()=>(0, _hueDefault.default));
+parcelHelpers.export(exports, "Raised", ()=>(0, _raisedDefault.default));
+parcelHelpers.export(exports, "Saturation", ()=>(0, _saturationDefault.default));
+parcelHelpers.export(exports, "ColorWrap", ()=>(0, _colorWrapDefault.default));
+parcelHelpers.export(exports, "Swatch", ()=>(0, _swatchDefault.default));
+var _alpha = require("./Alpha");
+var _alphaDefault = parcelHelpers.interopDefault(_alpha);
+var _checkboard = require("./Checkboard");
+var _checkboardDefault = parcelHelpers.interopDefault(_checkboard);
+var _editableInput = require("./EditableInput");
+var _editableInputDefault = parcelHelpers.interopDefault(_editableInput);
+var _hue = require("./Hue");
+var _hueDefault = parcelHelpers.interopDefault(_hue);
+var _raised = require("./Raised");
+var _raisedDefault = parcelHelpers.interopDefault(_raised);
+var _saturation = require("./Saturation");
+var _saturationDefault = parcelHelpers.interopDefault(_saturation);
+var _colorWrap = require("./ColorWrap");
+var _colorWrapDefault = parcelHelpers.interopDefault(_colorWrap);
+var _swatch = require("./Swatch");
+var _swatchDefault = parcelHelpers.interopDefault(_swatch);
+
+},{"./Alpha":"bfmMN","./Checkboard":"f36zN","./EditableInput":"4Z8c5","./Hue":"gpbVp","./Raised":"25kHL","./Saturation":"cMKtC","./ColorWrap":"4qAWv","./Swatch":"jSM15","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bfmMN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Alpha", ()=>Alpha);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _alpha = require("../../helpers/alpha");
+var _checkboard = require("./Checkboard");
+var _checkboardDefault = parcelHelpers.interopDefault(_checkboard);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var Alpha = function(_ref) {
+    _inherits(Alpha, _ref);
+    function Alpha() {
+        var _ref2;
+        var _temp, _this, _ret;
+        _classCallCheck(this, Alpha);
+        for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = Alpha.__proto__ || Object.getPrototypeOf(Alpha)).call.apply(_ref2, [
+            this
+        ].concat(args))), _this), _this.handleChange = function(e) {
+            var change = _alpha.calculateChange(e, _this.props.hsl, _this.props.direction, _this.props.a, _this.container);
+            change && typeof _this.props.onChange === "function" && _this.props.onChange(change, e);
+        }, _this.handleMouseDown = function(e) {
+            _this.handleChange(e);
+            window.addEventListener("mousemove", _this.handleChange);
+            window.addEventListener("mouseup", _this.handleMouseUp);
+        }, _this.handleMouseUp = function() {
+            _this.unbindEventListeners();
+        }, _this.unbindEventListeners = function() {
+            window.removeEventListener("mousemove", _this.handleChange);
+            window.removeEventListener("mouseup", _this.handleMouseUp);
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+    _createClass(Alpha, [
+        {
+            key: "componentWillUnmount",
+            value: function componentWillUnmount() {
+                this.unbindEventListeners();
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+                var rgb = this.props.rgb;
+                var styles = (0, _reactcssDefault.default)({
+                    "default": {
+                        alpha: {
+                            absolute: "0px 0px 0px 0px",
+                            borderRadius: this.props.radius
+                        },
+                        checkboard: {
+                            absolute: "0px 0px 0px 0px",
+                            overflow: "hidden",
+                            borderRadius: this.props.radius
+                        },
+                        gradient: {
+                            absolute: "0px 0px 0px 0px",
+                            background: "linear-gradient(to right, rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ", 0) 0%,\n           rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ", 1) 100%)",
+                            boxShadow: this.props.shadow,
+                            borderRadius: this.props.radius
+                        },
+                        container: {
+                            position: "relative",
+                            height: "100%",
+                            margin: "0 3px"
+                        },
+                        pointer: {
+                            position: "absolute",
+                            left: rgb.a * 100 + "%"
+                        },
+                        slider: {
+                            width: "4px",
+                            borderRadius: "1px",
+                            height: "8px",
+                            boxShadow: "0 0 2px rgba(0, 0, 0, .6)",
+                            background: "#fff",
+                            marginTop: "1px",
+                            transform: "translateX(-2px)"
+                        }
+                    },
+                    "vertical": {
+                        gradient: {
+                            background: "linear-gradient(to bottom, rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ", 0) 0%,\n           rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ", 1) 100%)"
+                        },
+                        pointer: {
+                            left: 0,
+                            top: rgb.a * 100 + "%"
+                        }
+                    },
+                    "overwrite": _extends({}, this.props.style)
+                }, {
+                    vertical: this.props.direction === "vertical",
+                    overwrite: true
+                });
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.alpha
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.checkboard
+                }, (0, _reactDefault.default).createElement((0, _checkboardDefault.default), {
+                    renderers: this.props.renderers
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.gradient
+                }), (0, _reactDefault.default).createElement("div", {
+                    style: styles.container,
+                    ref: function ref(container) {
+                        return _this2.container = container;
+                    },
+                    onMouseDown: this.handleMouseDown,
+                    onTouchMove: this.handleChange,
+                    onTouchStart: this.handleChange
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.pointer
+                }, this.props.pointer ? (0, _reactDefault.default).createElement(this.props.pointer, this.props) : (0, _reactDefault.default).createElement("div", {
+                    style: styles.slider
+                }))));
+            }
+        }
+    ]);
+    return Alpha;
+}((0, _react.PureComponent) || (0, _react.Component));
+exports.default = Alpha;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/alpha":"epzDz","./Checkboard":"f36zN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"epzDz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "calculateChange", ()=>calculateChange);
+var calculateChange = function calculateChange(e, hsl, direction, initialA, container) {
+    var containerWidth = container.clientWidth;
+    var containerHeight = container.clientHeight;
+    var x = typeof e.pageX === "number" ? e.pageX : e.touches[0].pageX;
+    var y = typeof e.pageY === "number" ? e.pageY : e.touches[0].pageY;
+    var left = x - (container.getBoundingClientRect().left + window.pageXOffset);
+    var top = y - (container.getBoundingClientRect().top + window.pageYOffset);
+    if (direction === "vertical") {
+        var a = void 0;
+        if (top < 0) a = 0;
+        else if (top > containerHeight) a = 1;
+        else a = Math.round(top * 100 / containerHeight) / 100;
+        if (hsl.a !== a) return {
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l,
+            a: a,
+            source: "rgb"
+        };
+    } else {
+        var _a = void 0;
+        if (left < 0) _a = 0;
+        else if (left > containerWidth) _a = 1;
+        else _a = Math.round(left * 100 / containerWidth) / 100;
+        if (initialA !== _a) return {
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l,
+            a: _a,
+            source: "rgb"
+        };
+    }
+    return null;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f36zN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Checkboard", ()=>Checkboard);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _checkboard = require("../../helpers/checkboard");
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var Checkboard = function Checkboard(_ref) {
+    var white = _ref.white, grey = _ref.grey, size = _ref.size, renderers = _ref.renderers, borderRadius = _ref.borderRadius, boxShadow = _ref.boxShadow, children = _ref.children;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            grid: {
+                borderRadius: borderRadius,
+                boxShadow: boxShadow,
+                absolute: "0px 0px 0px 0px",
+                background: "url(" + _checkboard.get(white, grey, size, renderers.canvas) + ") center left"
+            }
+        }
+    });
+    return (0, _react.isValidElement)(children) ? (0, _reactDefault.default).cloneElement(children, _extends({}, children.props, {
+        style: _extends({}, children.props.style, styles.grid)
+    })) : (0, _reactDefault.default).createElement("div", {
+        style: styles.grid
+    });
+};
+Checkboard.defaultProps = {
+    size: 8,
+    white: "transparent",
+    grey: "rgba(0,0,0,.08)",
+    renderers: {}
+};
+exports.default = Checkboard;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/checkboard":"higGs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"higGs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "render", ()=>render);
+parcelHelpers.export(exports, "get", ()=>get);
+var checkboardCache = {};
+var render = function render(c1, c2, size, serverCanvas) {
+    if (typeof document === "undefined" && !serverCanvas) return null;
+    var canvas = serverCanvas ? new serverCanvas() : document.createElement("canvas");
+    canvas.width = size * 2;
+    canvas.height = size * 2;
+    var ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+     // If no context can be found, return early.
+    ctx.fillStyle = c1;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = c2;
+    ctx.fillRect(0, 0, size, size);
+    ctx.translate(size, size);
+    ctx.fillRect(0, 0, size, size);
+    return canvas.toDataURL();
+};
+var get = function get(c1, c2, size, serverCanvas) {
+    var key = c1 + "-" + c2 + "-" + size + (serverCanvas ? "-server" : "");
+    if (checkboardCache[key]) return checkboardCache[key];
+    var checkboard = render(c1, c2, size, serverCanvas);
+    checkboardCache[key] = checkboard;
+    return checkboard;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4Z8c5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "EditableInput", ()=>EditableInput);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var DEFAULT_ARROW_OFFSET = 1;
+var UP_KEY_CODE = 38;
+var DOWN_KEY_CODE = 40;
+var VALID_KEY_CODES = [
+    UP_KEY_CODE,
+    DOWN_KEY_CODE
+];
+var isValidKeyCode = function isValidKeyCode(keyCode) {
+    return VALID_KEY_CODES.indexOf(keyCode) > -1;
+};
+var getNumberValue = function getNumberValue(value) {
+    return Number(String(value).replace(/%/g, ""));
+};
+var idCounter = 1;
+var EditableInput = function(_ref) {
+    _inherits(EditableInput, _ref);
+    function EditableInput(props) {
+        _classCallCheck(this, EditableInput);
+        var _this = _possibleConstructorReturn(this, (EditableInput.__proto__ || Object.getPrototypeOf(EditableInput)).call(this));
+        _this.handleBlur = function() {
+            if (_this.state.blurValue) _this.setState({
+                value: _this.state.blurValue,
+                blurValue: null
+            });
+        };
+        _this.handleChange = function(e) {
+            _this.setUpdatedValue(e.target.value, e);
+        };
+        _this.handleKeyDown = function(e) {
+            // In case `e.target.value` is a percentage remove the `%` character
+            // and update accordingly with a percentage
+            // https://github.com/casesandberg/react-color/issues/383
+            var value = getNumberValue(e.target.value);
+            if (!isNaN(value) && isValidKeyCode(e.keyCode)) {
+                var offset = _this.getArrowOffset();
+                var updatedValue = e.keyCode === UP_KEY_CODE ? value + offset : value - offset;
+                _this.setUpdatedValue(updatedValue, e);
+            }
+        };
+        _this.handleDrag = function(e) {
+            if (_this.props.dragLabel) {
+                var newValue = Math.round(_this.props.value + e.movementX);
+                if (newValue >= 0 && newValue <= _this.props.dragMax) _this.props.onChange && _this.props.onChange(_this.getValueObjectWithLabel(newValue), e);
+            }
+        };
+        _this.handleMouseDown = function(e) {
+            if (_this.props.dragLabel) {
+                e.preventDefault();
+                _this.handleDrag(e);
+                window.addEventListener("mousemove", _this.handleDrag);
+                window.addEventListener("mouseup", _this.handleMouseUp);
+            }
+        };
+        _this.handleMouseUp = function() {
+            _this.unbindEventListeners();
+        };
+        _this.unbindEventListeners = function() {
+            window.removeEventListener("mousemove", _this.handleDrag);
+            window.removeEventListener("mouseup", _this.handleMouseUp);
+        };
+        _this.state = {
+            value: String(props.value).toUpperCase(),
+            blurValue: String(props.value).toUpperCase()
+        };
+        _this.inputId = "rc-editable-input-" + idCounter++;
+        return _this;
+    }
+    _createClass(EditableInput, [
+        {
+            key: "componentDidUpdate",
+            value: function componentDidUpdate(prevProps, prevState) {
+                if (this.props.value !== this.state.value && (prevProps.value !== this.props.value || prevState.value !== this.state.value)) {
+                    if (this.input === document.activeElement) this.setState({
+                        blurValue: String(this.props.value).toUpperCase()
+                    });
+                    else this.setState({
+                        value: String(this.props.value).toUpperCase(),
+                        blurValue: !this.state.blurValue && String(this.props.value).toUpperCase()
+                    });
+                }
+            }
+        },
+        {
+            key: "componentWillUnmount",
+            value: function componentWillUnmount() {
+                this.unbindEventListeners();
+            }
+        },
+        {
+            key: "getValueObjectWithLabel",
+            value: function getValueObjectWithLabel(value) {
+                return _defineProperty({}, this.props.label, value);
+            }
+        },
+        {
+            key: "getArrowOffset",
+            value: function getArrowOffset() {
+                return this.props.arrowOffset || DEFAULT_ARROW_OFFSET;
+            }
+        },
+        {
+            key: "setUpdatedValue",
+            value: function setUpdatedValue(value, e) {
+                var onChangeValue = this.props.label ? this.getValueObjectWithLabel(value) : value;
+                this.props.onChange && this.props.onChange(onChangeValue, e);
+                this.setState({
+                    value: value
+                });
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+                var styles = (0, _reactcssDefault.default)({
+                    "default": {
+                        wrap: {
+                            position: "relative"
+                        }
+                    },
+                    "user-override": {
+                        wrap: this.props.style && this.props.style.wrap ? this.props.style.wrap : {},
+                        input: this.props.style && this.props.style.input ? this.props.style.input : {},
+                        label: this.props.style && this.props.style.label ? this.props.style.label : {}
+                    },
+                    "dragLabel-true": {
+                        label: {
+                            cursor: "ew-resize"
+                        }
+                    }
+                }, {
+                    "user-override": true
+                }, this.props);
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.wrap
+                }, (0, _reactDefault.default).createElement("input", {
+                    id: this.inputId,
+                    style: styles.input,
+                    ref: function ref(input) {
+                        return _this2.input = input;
+                    },
+                    value: this.state.value,
+                    onKeyDown: this.handleKeyDown,
+                    onChange: this.handleChange,
+                    onBlur: this.handleBlur,
+                    placeholder: this.props.placeholder,
+                    spellCheck: "false"
+                }), this.props.label && !this.props.hideLabel ? (0, _reactDefault.default).createElement("label", {
+                    htmlFor: this.inputId,
+                    style: styles.label,
+                    onMouseDown: this.handleMouseDown
+                }, this.props.label) : null);
+            }
+        }
+    ]);
+    return EditableInput;
+}((0, _react.PureComponent) || (0, _react.Component));
+exports.default = EditableInput;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gpbVp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Hue", ()=>Hue);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _hue = require("../../helpers/hue");
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var Hue = function(_ref) {
+    _inherits(Hue, _ref);
+    function Hue() {
+        var _ref2;
+        var _temp, _this, _ret;
+        _classCallCheck(this, Hue);
+        for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = Hue.__proto__ || Object.getPrototypeOf(Hue)).call.apply(_ref2, [
+            this
+        ].concat(args))), _this), _this.handleChange = function(e) {
+            var change = _hue.calculateChange(e, _this.props.direction, _this.props.hsl, _this.container);
+            change && typeof _this.props.onChange === "function" && _this.props.onChange(change, e);
+        }, _this.handleMouseDown = function(e) {
+            _this.handleChange(e);
+            window.addEventListener("mousemove", _this.handleChange);
+            window.addEventListener("mouseup", _this.handleMouseUp);
+        }, _this.handleMouseUp = function() {
+            _this.unbindEventListeners();
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+    _createClass(Hue, [
+        {
+            key: "componentWillUnmount",
+            value: function componentWillUnmount() {
+                this.unbindEventListeners();
+            }
+        },
+        {
+            key: "unbindEventListeners",
+            value: function unbindEventListeners() {
+                window.removeEventListener("mousemove", this.handleChange);
+                window.removeEventListener("mouseup", this.handleMouseUp);
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+                var _props$direction = this.props.direction, direction = _props$direction === undefined ? "horizontal" : _props$direction;
+                var styles = (0, _reactcssDefault.default)({
+                    "default": {
+                        hue: {
+                            absolute: "0px 0px 0px 0px",
+                            borderRadius: this.props.radius,
+                            boxShadow: this.props.shadow
+                        },
+                        container: {
+                            padding: "0 2px",
+                            position: "relative",
+                            height: "100%",
+                            borderRadius: this.props.radius
+                        },
+                        pointer: {
+                            position: "absolute",
+                            left: this.props.hsl.h * 100 / 360 + "%"
+                        },
+                        slider: {
+                            marginTop: "1px",
+                            width: "4px",
+                            borderRadius: "1px",
+                            height: "8px",
+                            boxShadow: "0 0 2px rgba(0, 0, 0, .6)",
+                            background: "#fff",
+                            transform: "translateX(-2px)"
+                        }
+                    },
+                    "vertical": {
+                        pointer: {
+                            left: "0px",
+                            top: -(this.props.hsl.h * 100 / 360) + 100 + "%"
+                        }
+                    }
+                }, {
+                    vertical: direction === "vertical"
+                });
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.hue
+                }, (0, _reactDefault.default).createElement("div", {
+                    className: "hue-" + direction,
+                    style: styles.container,
+                    ref: function ref(container) {
+                        return _this2.container = container;
+                    },
+                    onMouseDown: this.handleMouseDown,
+                    onTouchMove: this.handleChange,
+                    onTouchStart: this.handleChange
+                }, (0, _reactDefault.default).createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), (0, _reactDefault.default).createElement("div", {
+                    style: styles.pointer
+                }, this.props.pointer ? (0, _reactDefault.default).createElement(this.props.pointer, this.props) : (0, _reactDefault.default).createElement("div", {
+                    style: styles.slider
+                }))));
+            }
+        }
+    ]);
+    return Hue;
+}((0, _react.PureComponent) || (0, _react.Component));
+exports.default = Hue;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/hue":"h2eC5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h2eC5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "calculateChange", ()=>calculateChange);
+var calculateChange = function calculateChange(e, direction, hsl, container) {
+    var containerWidth = container.clientWidth;
+    var containerHeight = container.clientHeight;
+    var x = typeof e.pageX === "number" ? e.pageX : e.touches[0].pageX;
+    var y = typeof e.pageY === "number" ? e.pageY : e.touches[0].pageY;
+    var left = x - (container.getBoundingClientRect().left + window.pageXOffset);
+    var top = y - (container.getBoundingClientRect().top + window.pageYOffset);
+    if (direction === "vertical") {
+        var h = void 0;
+        if (top < 0) h = 359;
+        else if (top > containerHeight) h = 0;
+        else {
+            var percent = -(top * 100 / containerHeight) + 100;
+            h = 360 * percent / 100;
+        }
+        if (hsl.h !== h) return {
+            h: h,
+            s: hsl.s,
+            l: hsl.l,
+            a: hsl.a,
+            source: "hsl"
+        };
+    } else {
+        var _h = void 0;
+        if (left < 0) _h = 0;
+        else if (left > containerWidth) _h = 359;
+        else {
+            var _percent = left * 100 / containerWidth;
+            _h = 360 * _percent / 100;
+        }
+        if (hsl.h !== _h) return {
+            h: _h,
+            s: hsl.s,
+            l: hsl.l,
+            a: hsl.a,
+            source: "hsl"
+        };
+    }
+    return null;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"25kHL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Raised", ()=>Raised);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var Raised = function Raised(_ref) {
+    var zDepth = _ref.zDepth, radius = _ref.radius, background = _ref.background, children = _ref.children, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            wrap: {
+                position: "relative",
+                display: "inline-block"
+            },
+            content: {
+                position: "relative"
+            },
+            bg: {
+                absolute: "0px 0px 0px 0px",
+                boxShadow: "0 " + zDepth + "px " + zDepth * 4 + "px rgba(0,0,0,.24)",
+                borderRadius: radius,
+                background: background
+            }
+        },
+        "zDepth-0": {
+            bg: {
+                boxShadow: "none"
+            }
+        },
+        "zDepth-1": {
+            bg: {
+                boxShadow: "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)"
+            }
+        },
+        "zDepth-2": {
+            bg: {
+                boxShadow: "0 6px 20px rgba(0,0,0,.19), 0 8px 17px rgba(0,0,0,.2)"
+            }
+        },
+        "zDepth-3": {
+            bg: {
+                boxShadow: "0 17px 50px rgba(0,0,0,.19), 0 12px 15px rgba(0,0,0,.24)"
+            }
+        },
+        "zDepth-4": {
+            bg: {
+                boxShadow: "0 25px 55px rgba(0,0,0,.21), 0 16px 28px rgba(0,0,0,.22)"
+            }
+        },
+        "zDepth-5": {
+            bg: {
+                boxShadow: "0 40px 77px rgba(0,0,0,.22), 0 27px 24px rgba(0,0,0,.2)"
+            }
+        },
+        "square": {
+            bg: {
+                borderRadius: "0"
+            }
+        },
+        "circle": {
+            bg: {
+                borderRadius: "50%"
+            }
+        }
+    }, passedStyles), {
+        "zDepth-1": zDepth === 1
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.wrap
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.bg
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.content
+    }, children));
+};
+Raised.propTypes = {
+    background: (0, _propTypesDefault.default).string,
+    zDepth: (0, _propTypesDefault.default).oneOf([
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ]),
+    radius: (0, _propTypesDefault.default).number,
+    styles: (0, _propTypesDefault.default).object
+};
+Raised.defaultProps = {
+    background: "#fff",
+    zDepth: 1,
+    radius: 2,
+    styles: {}
+};
+exports.default = Raised;
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wKI2":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ var ReactIs = require("96e34ae03f5a2631");
+// By explicitly using `prop-types` you are opting into new development behavior.
+// http://fb.me/prop-types-in-prod
+var throwOnDirectAccess = true;
+module.exports = require("cb216452e2171041")(ReactIs.isElement, throwOnDirectAccess);
+
+},{"96e34ae03f5a2631":"7EuwB","cb216452e2171041":"bBUgD"}],"7EuwB":[function(require,module,exports) {
+"use strict";
+module.exports = require("2255125a8e8b1051");
+
+},{"2255125a8e8b1051":"5DsXl"}],"5DsXl":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    "use strict";
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === "function" && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for("react.element") : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for("react.portal") : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for("react.fragment") : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for("react.strict_mode") : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for("react.profiler") : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for("react.provider") : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for("react.context") : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for("react.async_mode") : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for("react.concurrent_mode") : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for("react.forward_ref") : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for("react.suspense") : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for("react.suspense_list") : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for("react.memo") : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for("react.lazy") : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for("react.block") : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for("react.fundamental") : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for("react.responder") : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for("react.scope") : 0xead7;
+    function isValidElementType(type) {
+        return typeof type === "string" || typeof type === "function" || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === "object" && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function typeOf(object) {
+        if (typeof object === "object" && object !== null) {
+            var $$typeof = object.$$typeof;
+            switch($$typeof){
+                case REACT_ELEMENT_TYPE:
+                    var type = object.type;
+                    switch(type){
+                        case REACT_ASYNC_MODE_TYPE:
+                        case REACT_CONCURRENT_MODE_TYPE:
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                            return type;
+                        default:
+                            var $$typeofType = type && type.$$typeof;
+                            switch($$typeofType){
+                                case REACT_CONTEXT_TYPE:
+                                case REACT_FORWARD_REF_TYPE:
+                                case REACT_LAZY_TYPE:
+                                case REACT_MEMO_TYPE:
+                                case REACT_PROVIDER_TYPE:
+                                    return $$typeofType;
+                                default:
+                                    return $$typeof;
+                            }
+                    }
+                case REACT_PORTAL_TYPE:
+                    return $$typeof;
+            }
+        }
+        return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+            console["warn"]("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.");
+        }
+        return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+    function isConcurrentMode(object) {
+        return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+    function isContextConsumer(object) {
+        return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+        return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+        return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+        return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+        return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+        return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+        return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+        return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+        return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+        return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+        return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+})();
+
+},{}],"bBUgD":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactIs = require("c437388b089702c3");
+var assign = require("c067a60101d8520c");
+var ReactPropTypesSecret = require("74a0f89a70b9f3c2");
+var has = require("18441b11647bc78");
+var checkPropTypes = require("bec3f6ff89f0b072");
+var printWarning = function() {};
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+function emptyFunctionThatReturnsNull() {
+    return null;
+}
+module.exports = function(isValidElement, throwOnDirectAccess) {
+    /* global Symbol */ var ITERATOR_SYMBOL = typeof Symbol === "function" && Symbol.iterator;
+    var FAUX_ITERATOR_SYMBOL = "@@iterator"; // Before Symbol spec.
+    /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */ function getIteratorFn(maybeIterable) {
+        var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+        if (typeof iteratorFn === "function") return iteratorFn;
+    }
+    /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */ var ANONYMOUS = "<<anonymous>>";
+    // Important!
+    // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+    var ReactPropTypes = {
+        array: createPrimitiveTypeChecker("array"),
+        bigint: createPrimitiveTypeChecker("bigint"),
+        bool: createPrimitiveTypeChecker("boolean"),
+        func: createPrimitiveTypeChecker("function"),
+        number: createPrimitiveTypeChecker("number"),
+        object: createPrimitiveTypeChecker("object"),
+        string: createPrimitiveTypeChecker("string"),
+        symbol: createPrimitiveTypeChecker("symbol"),
+        any: createAnyTypeChecker(),
+        arrayOf: createArrayOfTypeChecker,
+        element: createElementTypeChecker(),
+        elementType: createElementTypeTypeChecker(),
+        instanceOf: createInstanceTypeChecker,
+        node: createNodeChecker(),
+        objectOf: createObjectOfTypeChecker,
+        oneOf: createEnumTypeChecker,
+        oneOfType: createUnionTypeChecker,
+        shape: createShapeTypeChecker,
+        exact: createStrictShapeTypeChecker
+    };
+    /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */ /*eslint-disable no-self-compare*/ function is(x, y) {
+        // SameValue algorithm
+        if (x === y) // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+        else // Step 6.a: NaN == NaN
+        return x !== x && y !== y;
+    }
+    /*eslint-enable no-self-compare*/ /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */ function PropTypeError(message, data) {
+        this.message = message;
+        this.data = data && typeof data === "object" ? data : {};
+        this.stack = "";
+    }
+    // Make `instanceof Error` still work for returned errors.
+    PropTypeError.prototype = Error.prototype;
+    function createChainableTypeChecker(validate) {
+        var manualPropTypeCallCache = {};
+        var manualPropTypeWarningCount = 0;
+        function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+            componentName = componentName || ANONYMOUS;
+            propFullName = propFullName || propName;
+            if (secret !== ReactPropTypesSecret) {
+                if (throwOnDirectAccess) {
+                    // New behavior only for users of `prop-types` package
+                    var err = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");
+                    err.name = "Invariant Violation";
+                    throw err;
+                } else if (typeof console !== "undefined") {
+                    // Old behavior for people using React.PropTypes
+                    var cacheKey = componentName + ":" + propName;
+                    if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
+                    manualPropTypeWarningCount < 3) {
+                        printWarning("You are manually calling a React.PropTypes validation function for the `" + propFullName + "` prop on `" + componentName + "`. This is deprecated " + "and will throw in the standalone `prop-types` package. " + "You may be seeing this warning due to a third-party PropTypes " + "library. See https://fb.me/react-warning-dont-call-proptypes " + "for details.");
+                        manualPropTypeCallCache[cacheKey] = true;
+                        manualPropTypeWarningCount++;
+                    }
+                }
+            }
+            if (props[propName] == null) {
+                if (isRequired) {
+                    if (props[propName] === null) return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
+                    return new PropTypeError("The " + location + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
+                }
+                return null;
+            } else return validate(props, propName, componentName, location, propFullName);
+        }
+        var chainedCheckType = checkType.bind(null, false);
+        chainedCheckType.isRequired = checkType.bind(null, true);
+        return chainedCheckType;
+    }
+    function createPrimitiveTypeChecker(expectedType) {
+        function validate(props, propName, componentName, location, propFullName, secret) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== expectedType) {
+                // `propValue` being instance of, say, date/regexp, pass the 'object'
+                // check, but we can offer a more precise error message here rather than
+                // 'of type `object`'.
+                var preciseType = getPreciseType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + preciseType + "` supplied to `" + componentName + "`, expected ") + ("`" + expectedType + "`."), {
+                    expectedType: expectedType
+                });
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createAnyTypeChecker() {
+        return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+    }
+    function createArrayOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside arrayOf.");
+            var propValue = props[propName];
+            if (!Array.isArray(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an array."));
+            }
+            for(var i = 0; i < propValue.length; i++){
+                var error = typeChecker(propValue, i, componentName, location, propFullName + "[" + i + "]", ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!isValidElement(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!ReactIs.isValidElementType(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected a single ReactElement type."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createInstanceTypeChecker(expectedClass) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!(props[propName] instanceof expectedClass)) {
+                var expectedClassName = expectedClass.name || ANONYMOUS;
+                var actualClassName = getClassName(props[propName]);
+                return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + actualClassName + "` supplied to `" + componentName + "`, expected ") + ("instance of `" + expectedClassName + "`."));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createEnumTypeChecker(expectedValues) {
+        if (!Array.isArray(expectedValues)) {
+            {
+                if (arguments.length > 1) printWarning("Invalid arguments supplied to oneOf, expected an array, got " + arguments.length + " arguments. " + "A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).");
+                else printWarning("Invalid argument supplied to oneOf, expected an array.");
+            }
+            return emptyFunctionThatReturnsNull;
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            for(var i = 0; i < expectedValues.length; i++){
+                if (is(propValue, expectedValues[i])) return null;
+            }
+            var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+                var type = getPreciseType(value);
+                if (type === "symbol") return String(value);
+                return value;
+            });
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` of value `" + String(propValue) + "` " + ("supplied to `" + componentName + "`, expected one of " + valuesString + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createObjectOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== "function") return new PropTypeError("Property `" + propFullName + "` of component `" + componentName + "` has invalid PropType notation inside objectOf.");
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type " + ("`" + propType + "` supplied to `" + componentName + "`, expected an object."));
+            for(var key in propValue)if (has(propValue, key)) {
+                var error = typeChecker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createUnionTypeChecker(arrayOfTypeCheckers) {
+        if (!Array.isArray(arrayOfTypeCheckers)) {
+            printWarning("Invalid argument supplied to oneOfType, expected an instance of array.");
+            return emptyFunctionThatReturnsNull;
+        }
+        for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+            var checker = arrayOfTypeCheckers[i];
+            if (typeof checker !== "function") {
+                printWarning("Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + getPostfixForTypeWarning(checker) + " at index " + i + ".");
+                return emptyFunctionThatReturnsNull;
+            }
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var expectedTypes = [];
+            for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+                var checker = arrayOfTypeCheckers[i];
+                var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+                if (checkerResult == null) return null;
+                if (checkerResult.data && has(checkerResult.data, "expectedType")) expectedTypes.push(checkerResult.data.expectedType);
+            }
+            var expectedTypesMessage = expectedTypes.length > 0 ? ", expected one of type [" + expectedTypes.join(", ") + "]" : "";
+            return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`" + expectedTypesMessage + "."));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createNodeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!isNode(props[propName])) return new PropTypeError("Invalid " + location + " `" + propFullName + "` supplied to " + ("`" + componentName + "`, expected a ReactNode."));
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function invalidValidatorError(componentName, location, propFullName, key, type) {
+        return new PropTypeError((componentName || "React class") + ": " + location + " type `" + propFullName + "." + key + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + type + "`.");
+    }
+    function createShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            for(var key in shapeTypes){
+                var checker = shapeTypes[key];
+                if (typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createStrictShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== "object") return new PropTypeError("Invalid " + location + " `" + propFullName + "` of type `" + propType + "` " + ("supplied to `" + componentName + "`, expected `object`."));
+            // We need to check all keys in case some are required but missing from props.
+            var allKeys = assign({}, props[propName], shapeTypes);
+            for(var key in allKeys){
+                var checker = shapeTypes[key];
+                if (has(shapeTypes, key) && typeof checker !== "function") return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+                if (!checker) return new PropTypeError("Invalid " + location + " `" + propFullName + "` key `" + key + "` supplied to `" + componentName + "`." + "\nBad object: " + JSON.stringify(props[propName], null, "  ") + "\nValid keys: " + JSON.stringify(Object.keys(shapeTypes), null, "  "));
+                var error = checker(propValue, key, componentName, location, propFullName + "." + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function isNode(propValue) {
+        switch(typeof propValue){
+            case "number":
+            case "string":
+            case "undefined":
+                return true;
+            case "boolean":
+                return !propValue;
+            case "object":
+                if (Array.isArray(propValue)) return propValue.every(isNode);
+                if (propValue === null || isValidElement(propValue)) return true;
+                var iteratorFn = getIteratorFn(propValue);
+                if (iteratorFn) {
+                    var iterator = iteratorFn.call(propValue);
+                    var step;
+                    if (iteratorFn !== propValue.entries) while(!(step = iterator.next()).done){
+                        if (!isNode(step.value)) return false;
+                    }
+                    else // Iterator will provide entry [k,v] tuples rather than values.
+                    while(!(step = iterator.next()).done){
+                        var entry = step.value;
+                        if (entry) {
+                            if (!isNode(entry[1])) return false;
+                        }
+                    }
+                } else return false;
+                return true;
+            default:
+                return false;
+        }
+    }
+    function isSymbol(propType, propValue) {
+        // Native Symbol.
+        if (propType === "symbol") return true;
+        // falsy value can't be a Symbol
+        if (!propValue) return false;
+        // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+        if (propValue["@@toStringTag"] === "Symbol") return true;
+        // Fallback for non-spec compliant Symbols which are polyfilled.
+        if (typeof Symbol === "function" && propValue instanceof Symbol) return true;
+        return false;
+    }
+    // Equivalent of `typeof` but with special handling for array and regexp.
+    function getPropType(propValue) {
+        var propType = typeof propValue;
+        if (Array.isArray(propValue)) return "array";
+        if (propValue instanceof RegExp) // Old webkits (at least until Android 4.0) return 'function' rather than
+        // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+        // passes PropTypes.object.
+        return "object";
+        if (isSymbol(propType, propValue)) return "symbol";
+        return propType;
+    }
+    // This handles more types than `getPropType`. Only used for error messages.
+    // See `createPrimitiveTypeChecker`.
+    function getPreciseType(propValue) {
+        if (typeof propValue === "undefined" || propValue === null) return "" + propValue;
+        var propType = getPropType(propValue);
+        if (propType === "object") {
+            if (propValue instanceof Date) return "date";
+            else if (propValue instanceof RegExp) return "regexp";
+        }
+        return propType;
+    }
+    // Returns a string that is postfixed to a warning about an invalid type.
+    // For example, "undefined" or "of type array"
+    function getPostfixForTypeWarning(value) {
+        var type = getPreciseType(value);
+        switch(type){
+            case "array":
+            case "object":
+                return "an " + type;
+            case "boolean":
+            case "date":
+            case "regexp":
+                return "a " + type;
+            default:
+                return type;
+        }
+    }
+    // Returns class name of the object, if any.
+    function getClassName(propValue) {
+        if (!propValue.constructor || !propValue.constructor.name) return ANONYMOUS;
+        return propValue.constructor.name;
+    }
+    ReactPropTypes.checkPropTypes = checkPropTypes;
+    ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+    ReactPropTypes.PropTypes = ReactPropTypes;
+    return ReactPropTypes;
+};
+
+},{"c437388b089702c3":"7EuwB","c067a60101d8520c":"7OXxh","74a0f89a70b9f3c2":"jZTZJ","18441b11647bc78":"fqKuf","bec3f6ff89f0b072":"5VwyJ"}],"7OXxh":[function(require,module,exports) {
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/ "use strict";
+/* eslint-disable no-unused-vars */ var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+function toObject(val) {
+    if (val === null || val === undefined) throw new TypeError("Object.assign cannot be called with null or undefined");
+    return Object(val);
+}
+function shouldUseNative() {
+    try {
+        if (!Object.assign) return false;
+        // Detect buggy property enumeration order in older V8 versions.
+        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
+        var test1 = new String("abc"); // eslint-disable-line no-new-wrappers
+        test1[5] = "de";
+        if (Object.getOwnPropertyNames(test1)[0] === "5") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test2 = {};
+        for(var i = 0; i < 10; i++)test2["_" + String.fromCharCode(i)] = i;
+        var order2 = Object.getOwnPropertyNames(test2).map(function(n) {
+            return test2[n];
+        });
+        if (order2.join("") !== "0123456789") return false;
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test3 = {};
+        "abcdefghijklmnopqrst".split("").forEach(function(letter) {
+            test3[letter] = letter;
+        });
+        if (Object.keys(Object.assign({}, test3)).join("") !== "abcdefghijklmnopqrst") return false;
+        return true;
+    } catch (err) {
+        // We don't expect any of the above to throw, but better to be safe.
+        return false;
+    }
+}
+module.exports = shouldUseNative() ? Object.assign : function(target, source) {
+    var from;
+    var to = toObject(target);
+    var symbols;
+    for(var s = 1; s < arguments.length; s++){
+        from = Object(arguments[s]);
+        for(var key in from)if (hasOwnProperty.call(from, key)) to[key] = from[key];
+        if (getOwnPropertySymbols) {
+            symbols = getOwnPropertySymbols(from);
+            for(var i = 0; i < symbols.length; i++)if (propIsEnumerable.call(from, symbols[i])) to[symbols[i]] = from[symbols[i]];
+        }
+    }
+    return to;
+};
+
+},{}],"jZTZJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+module.exports = ReactPropTypesSecret;
+
+},{}],"fqKuf":[function(require,module,exports) {
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
+
+},{}],"5VwyJ":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+var printWarning = function() {};
+var ReactPropTypesSecret = require("24ba1e58d167a82c");
+var loggedTypeFailures = {};
+var has = require("898bc82f39d83f7c");
+printWarning = function(text) {
+    var message = "Warning: " + text;
+    if (typeof console !== "undefined") console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {}
+};
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+    for(var typeSpecName in typeSpecs)if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+            // This is intentionally an invariant that gets caught. It's the same
+            // behavior as without this statement except with a better message.
+            if (typeof typeSpecs[typeSpecName] !== "function") {
+                var err = Error((componentName || "React class") + ": " + location + " type `" + typeSpecName + "` is invalid; " + "it must be a function, usually from the `prop-types` package, but received `" + typeof typeSpecs[typeSpecName] + "`." + "This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                err.name = "Invariant Violation";
+                throw err;
+            }
+            error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+            error = ex;
+        }
+        if (error && !(error instanceof Error)) printWarning((componentName || "React class") + ": type specification of " + location + " `" + typeSpecName + "` is invalid; the type checker " + "function must return `null` or an `Error` but returned a " + typeof error + ". " + "You may have forgotten to pass an argument to the type checker " + "creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and " + "shape all require an argument).");
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+            // Only monitor this failure once because there tends to be a lot of the
+            // same error.
+            loggedTypeFailures[error.message] = true;
+            var stack = getStack ? getStack() : "";
+            printWarning("Failed " + location + " type: " + error.message + (stack != null ? stack : ""));
+        }
+    }
+}
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */ checkPropTypes.resetWarningCache = function() {
+    loggedTypeFailures = {};
+};
+module.exports = checkPropTypes;
+
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"hwXcM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseMergeJs = require("./_baseMerge.js");
+var _baseMergeJsDefault = parcelHelpers.interopDefault(_baseMergeJs);
+var _createAssignerJs = require("./_createAssigner.js");
+var _createAssignerJsDefault = parcelHelpers.interopDefault(_createAssignerJs);
+/**
+ * This method is like `_.assign` except that it recursively merges own and
+ * inherited enumerable string keyed properties of source objects into the
+ * destination object. Source properties that resolve to `undefined` are
+ * skipped if a destination value exists. Array and plain object properties
+ * are merged recursively. Other objects and value types are overridden by
+ * assignment. Source objects are applied from left to right. Subsequent
+ * sources overwrite property assignments of previous sources.
+ *
+ * **Note:** This method mutates `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.5.0
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns `object`.
+ * @example
+ *
+ * var object = {
+ *   'a': [{ 'b': 2 }, { 'd': 4 }]
+ * };
+ *
+ * var other = {
+ *   'a': [{ 'c': 3 }, { 'e': 5 }]
+ * };
+ *
+ * _.merge(object, other);
+ * // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }
+ */ var merge = (0, _createAssignerJsDefault.default)(function(object, source, srcIndex) {
+    (0, _baseMergeJsDefault.default)(object, source, srcIndex);
+});
+exports.default = merge;
+
+},{"./_baseMerge.js":"gyMbG","./_createAssigner.js":"ED1h3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gyMbG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _stackJs = require("./_Stack.js");
+var _stackJsDefault = parcelHelpers.interopDefault(_stackJs);
+var _assignMergeValueJs = require("./_assignMergeValue.js");
+var _assignMergeValueJsDefault = parcelHelpers.interopDefault(_assignMergeValueJs);
+var _baseForJs = require("./_baseFor.js");
+var _baseForJsDefault = parcelHelpers.interopDefault(_baseForJs);
+var _baseMergeDeepJs = require("./_baseMergeDeep.js");
+var _baseMergeDeepJsDefault = parcelHelpers.interopDefault(_baseMergeDeepJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _keysInJs = require("./keysIn.js");
+var _keysInJsDefault = parcelHelpers.interopDefault(_keysInJs);
+var _safeGetJs = require("./_safeGet.js");
+var _safeGetJsDefault = parcelHelpers.interopDefault(_safeGetJs);
+/**
+ * The base implementation of `_.merge` without support for multiple sources.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @param {number} srcIndex The index of `source`.
+ * @param {Function} [customizer] The function to customize merged values.
+ * @param {Object} [stack] Tracks traversed source values and their merged
+ *  counterparts.
+ */ function baseMerge(object, source, srcIndex, customizer, stack) {
+    if (object === source) return;
+    (0, _baseForJsDefault.default)(source, function(srcValue, key) {
+        stack || (stack = new (0, _stackJsDefault.default));
+        if ((0, _isObjectJsDefault.default)(srcValue)) (0, _baseMergeDeepJsDefault.default)(object, source, key, srcIndex, baseMerge, customizer, stack);
+        else {
+            var newValue = customizer ? customizer((0, _safeGetJsDefault.default)(object, key), srcValue, key + "", object, source, stack) : undefined;
+            if (newValue === undefined) newValue = srcValue;
+            (0, _assignMergeValueJsDefault.default)(object, key, newValue);
+        }
+    }, (0, _keysInJsDefault.default));
+}
+exports.default = baseMerge;
+
+},{"./_Stack.js":"dCpM5","./_assignMergeValue.js":"gQcrW","./_baseFor.js":"1Zprl","./_baseMergeDeep.js":"cVDnk","./isObject.js":"dHhyW","./keysIn.js":"jms5f","./_safeGet.js":"SYKdD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dCpM5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _listCacheJs = require("./_ListCache.js");
+var _listCacheJsDefault = parcelHelpers.interopDefault(_listCacheJs);
+var _stackClearJs = require("./_stackClear.js");
+var _stackClearJsDefault = parcelHelpers.interopDefault(_stackClearJs);
+var _stackDeleteJs = require("./_stackDelete.js");
+var _stackDeleteJsDefault = parcelHelpers.interopDefault(_stackDeleteJs);
+var _stackGetJs = require("./_stackGet.js");
+var _stackGetJsDefault = parcelHelpers.interopDefault(_stackGetJs);
+var _stackHasJs = require("./_stackHas.js");
+var _stackHasJsDefault = parcelHelpers.interopDefault(_stackHasJs);
+var _stackSetJs = require("./_stackSet.js");
+var _stackSetJsDefault = parcelHelpers.interopDefault(_stackSetJs);
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Stack(entries) {
+    var data = this.__data__ = new (0, _listCacheJsDefault.default)(entries);
+    this.size = data.size;
+}
+// Add methods to `Stack`.
+Stack.prototype.clear = (0, _stackClearJsDefault.default);
+Stack.prototype["delete"] = (0, _stackDeleteJsDefault.default);
+Stack.prototype.get = (0, _stackGetJsDefault.default);
+Stack.prototype.has = (0, _stackHasJsDefault.default);
+Stack.prototype.set = (0, _stackSetJsDefault.default);
+exports.default = Stack;
+
+},{"./_ListCache.js":"cqhDQ","./_stackClear.js":"4BuA3","./_stackDelete.js":"2mGxC","./_stackGet.js":"c3cE4","./_stackHas.js":"23Sz6","./_stackSet.js":"jnSxK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cqhDQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _listCacheClearJs = require("./_listCacheClear.js");
+var _listCacheClearJsDefault = parcelHelpers.interopDefault(_listCacheClearJs);
+var _listCacheDeleteJs = require("./_listCacheDelete.js");
+var _listCacheDeleteJsDefault = parcelHelpers.interopDefault(_listCacheDeleteJs);
+var _listCacheGetJs = require("./_listCacheGet.js");
+var _listCacheGetJsDefault = parcelHelpers.interopDefault(_listCacheGetJs);
+var _listCacheHasJs = require("./_listCacheHas.js");
+var _listCacheHasJsDefault = parcelHelpers.interopDefault(_listCacheHasJs);
+var _listCacheSetJs = require("./_listCacheSet.js");
+var _listCacheSetJsDefault = parcelHelpers.interopDefault(_listCacheSetJs);
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function ListCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `ListCache`.
+ListCache.prototype.clear = (0, _listCacheClearJsDefault.default);
+ListCache.prototype["delete"] = (0, _listCacheDeleteJsDefault.default);
+ListCache.prototype.get = (0, _listCacheGetJsDefault.default);
+ListCache.prototype.has = (0, _listCacheHasJsDefault.default);
+ListCache.prototype.set = (0, _listCacheSetJsDefault.default);
+exports.default = ListCache;
+
+},{"./_listCacheClear.js":"bSUq2","./_listCacheDelete.js":"3kM5j","./_listCacheGet.js":"9nv7v","./_listCacheHas.js":"4N5RL","./_listCacheSet.js":"bA8oX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bSUq2":[function(require,module,exports) {
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+}
+exports.default = listCacheClear;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3kM5j":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assocIndexOfJs = require("./_assocIndexOf.js");
+var _assocIndexOfJsDefault = parcelHelpers.interopDefault(_assocIndexOfJs);
+/** Used for built-in method references. */ var arrayProto = Array.prototype;
+/** Built-in value references. */ var splice = arrayProto.splice;
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function listCacheDelete(key) {
+    var data = this.__data__, index = (0, _assocIndexOfJsDefault.default)(data, key);
+    if (index < 0) return false;
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) data.pop();
+    else splice.call(data, index, 1);
+    --this.size;
+    return true;
+}
+exports.default = listCacheDelete;
+
+},{"./_assocIndexOf.js":"124Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"124Ga":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _eqJs = require("./eq.js");
+var _eqJsDefault = parcelHelpers.interopDefault(_eqJs);
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function assocIndexOf(array, key) {
+    var length = array.length;
+    while(length--){
+        if ((0, _eqJsDefault.default)(array[length][0], key)) return length;
+    }
+    return -1;
+}
+exports.default = assocIndexOf;
+
+},{"./eq.js":"7el3s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7el3s":[function(require,module,exports) {
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function eq(value, other) {
+    return value === other || value !== value && other !== other;
+}
+exports.default = eq;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9nv7v":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assocIndexOfJs = require("./_assocIndexOf.js");
+var _assocIndexOfJsDefault = parcelHelpers.interopDefault(_assocIndexOfJs);
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function listCacheGet(key) {
+    var data = this.__data__, index = (0, _assocIndexOfJsDefault.default)(data, key);
+    return index < 0 ? undefined : data[index][1];
+}
+exports.default = listCacheGet;
+
+},{"./_assocIndexOf.js":"124Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4N5RL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assocIndexOfJs = require("./_assocIndexOf.js");
+var _assocIndexOfJsDefault = parcelHelpers.interopDefault(_assocIndexOfJs);
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function listCacheHas(key) {
+    return (0, _assocIndexOfJsDefault.default)(this.__data__, key) > -1;
+}
+exports.default = listCacheHas;
+
+},{"./_assocIndexOf.js":"124Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bA8oX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assocIndexOfJs = require("./_assocIndexOf.js");
+var _assocIndexOfJsDefault = parcelHelpers.interopDefault(_assocIndexOfJs);
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */ function listCacheSet(key, value) {
+    var data = this.__data__, index = (0, _assocIndexOfJsDefault.default)(data, key);
+    if (index < 0) {
+        ++this.size;
+        data.push([
+            key,
+            value
+        ]);
+    } else data[index][1] = value;
+    return this;
+}
+exports.default = listCacheSet;
+
+},{"./_assocIndexOf.js":"124Ga","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4BuA3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _listCacheJs = require("./_ListCache.js");
+var _listCacheJsDefault = parcelHelpers.interopDefault(_listCacheJs);
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */ function stackClear() {
+    this.__data__ = new (0, _listCacheJsDefault.default);
+    this.size = 0;
+}
+exports.default = stackClear;
+
+},{"./_ListCache.js":"cqhDQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2mGxC":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function stackDelete(key) {
+    var data = this.__data__, result = data["delete"](key);
+    this.size = data.size;
+    return result;
+}
+exports.default = stackDelete;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c3cE4":[function(require,module,exports) {
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function stackGet(key) {
+    return this.__data__.get(key);
+}
+exports.default = stackGet;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"23Sz6":[function(require,module,exports) {
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function stackHas(key) {
+    return this.__data__.has(key);
+}
+exports.default = stackHas;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jnSxK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _listCacheJs = require("./_ListCache.js");
+var _listCacheJsDefault = parcelHelpers.interopDefault(_listCacheJs);
+var _mapJs = require("./_Map.js");
+var _mapJsDefault = parcelHelpers.interopDefault(_mapJs);
+var _mapCacheJs = require("./_MapCache.js");
+var _mapCacheJsDefault = parcelHelpers.interopDefault(_mapCacheJs);
+/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */ function stackSet(key, value) {
+    var data = this.__data__;
+    if (data instanceof (0, _listCacheJsDefault.default)) {
+        var pairs = data.__data__;
+        if (!(0, _mapJsDefault.default) || pairs.length < LARGE_ARRAY_SIZE - 1) {
+            pairs.push([
+                key,
+                value
+            ]);
+            this.size = ++data.size;
+            return this;
+        }
+        data = this.__data__ = new (0, _mapCacheJsDefault.default)(pairs);
+    }
+    data.set(key, value);
+    this.size = data.size;
+    return this;
+}
+exports.default = stackSet;
+
+},{"./_ListCache.js":"cqhDQ","./_Map.js":"8spnB","./_MapCache.js":"kdqbj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8spnB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/* Built-in method references that are verified to be native. */ var Map = (0, _getNativeJsDefault.default)((0, _rootJsDefault.default), "Map");
+exports.default = Map;
+
+},{"./_getNative.js":"bQrQL","./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bQrQL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsNativeJs = require("./_baseIsNative.js");
+var _baseIsNativeJsDefault = parcelHelpers.interopDefault(_baseIsNativeJs);
+var _getValueJs = require("./_getValue.js");
+var _getValueJsDefault = parcelHelpers.interopDefault(_getValueJs);
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */ function getNative(object, key) {
+    var value = (0, _getValueJsDefault.default)(object, key);
+    return (0, _baseIsNativeJsDefault.default)(value) ? value : undefined;
+}
+exports.default = getNative;
+
+},{"./_baseIsNative.js":"eZuBv","./_getValue.js":"dHb8j","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eZuBv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isFunctionJs = require("./isFunction.js");
+var _isFunctionJsDefault = parcelHelpers.interopDefault(_isFunctionJs);
+var _isMaskedJs = require("./_isMasked.js");
+var _isMaskedJsDefault = parcelHelpers.interopDefault(_isMaskedJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _toSourceJs = require("./_toSource.js");
+var _toSourceJsDefault = parcelHelpers.interopDefault(_toSourceJs);
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+/** Used to detect host constructors (Safari). */ var reIsHostCtor = /^\[object .+?Constructor\]$/;
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to detect if a method is native. */ var reIsNative = RegExp("^" + funcToString.call(hasOwnProperty).replace(reRegExpChar, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */ function baseIsNative(value) {
+    if (!(0, _isObjectJsDefault.default)(value) || (0, _isMaskedJsDefault.default)(value)) return false;
+    var pattern = (0, _isFunctionJsDefault.default)(value) ? reIsNative : reIsHostCtor;
+    return pattern.test((0, _toSourceJsDefault.default)(value));
+}
+exports.default = baseIsNative;
+
+},{"./isFunction.js":"e5kis","./_isMasked.js":"8rXmg","./isObject.js":"dHhyW","./_toSource.js":"4wd66","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e5kis":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+/** `Object#toString` result references. */ var asyncTag = "[object AsyncFunction]", funcTag = "[object Function]", genTag = "[object GeneratorFunction]", proxyTag = "[object Proxy]";
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */ function isFunction(value) {
+    if (!(0, _isObjectJsDefault.default)(value)) return false;
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = (0, _baseGetTagJsDefault.default)(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+exports.default = isFunction;
+
+},{"./_baseGetTag.js":"gVDfP","./isObject.js":"dHhyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gVDfP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _symbolJs = require("./_Symbol.js");
+var _symbolJsDefault = parcelHelpers.interopDefault(_symbolJs);
+var _getRawTagJs = require("./_getRawTag.js");
+var _getRawTagJsDefault = parcelHelpers.interopDefault(_getRawTagJs);
+var _objectToStringJs = require("./_objectToString.js");
+var _objectToStringJsDefault = parcelHelpers.interopDefault(_objectToStringJs);
+/** `Object#toString` result references. */ var nullTag = "[object Null]", undefinedTag = "[object Undefined]";
+/** Built-in value references. */ var symToStringTag = (0, _symbolJsDefault.default) ? (0, _symbolJsDefault.default).toStringTag : undefined;
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ function baseGetTag(value) {
+    if (value == null) return value === undefined ? undefinedTag : nullTag;
+    return symToStringTag && symToStringTag in Object(value) ? (0, _getRawTagJsDefault.default)(value) : (0, _objectToStringJsDefault.default)(value);
+}
+exports.default = baseGetTag;
+
+},{"./_Symbol.js":"jx216","./_getRawTag.js":"ijXom","./_objectToString.js":"fTkTn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jx216":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/** Built-in value references. */ var Symbol = (0, _rootJsDefault.default).Symbol;
+exports.default = Symbol;
+
+},{"./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yvCA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _freeGlobalJs = require("./_freeGlobal.js");
+var _freeGlobalJsDefault = parcelHelpers.interopDefault(_freeGlobalJs);
+/** Detect free variable `self`. */ var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+/** Used as a reference to the global object. */ var root = (0, _freeGlobalJsDefault.default) || freeSelf || Function("return this")();
+exports.default = root;
+
+},{"./_freeGlobal.js":"98hMd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"98hMd":[function(require,module,exports) {
+/** Detect free variable `global` from Node.js. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var global = arguments[3];
+var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
+exports.default = freeGlobal;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ijXom":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _symbolJs = require("./_Symbol.js");
+var _symbolJsDefault = parcelHelpers.interopDefault(_symbolJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/** Built-in value references. */ var symToStringTag = (0, _symbolJsDefault.default) ? (0, _symbolJsDefault.default).toStringTag : undefined;
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */ function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+    try {
+        value[symToStringTag] = undefined;
+        var unmasked = true;
+    } catch (e) {}
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+        if (isOwn) value[symToStringTag] = tag;
+        else delete value[symToStringTag];
+    }
+    return result;
+}
+exports.default = getRawTag;
+
+},{"./_Symbol.js":"jx216","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fTkTn":[function(require,module,exports) {
+/** Used for built-in method references. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var objectProto = Object.prototype;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */ function objectToString(value) {
+    return nativeObjectToString.call(value);
+}
+exports.default = objectToString;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dHhyW":[function(require,module,exports) {
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function isObject(value) {
+    var type = typeof value;
+    return value != null && (type == "object" || type == "function");
+}
+exports.default = isObject;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8rXmg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _coreJsDataJs = require("./_coreJsData.js");
+var _coreJsDataJsDefault = parcelHelpers.interopDefault(_coreJsDataJs);
+/** Used to detect methods masquerading as native. */ var maskSrcKey = function() {
+    var uid = /[^.]+$/.exec((0, _coreJsDataJsDefault.default) && (0, _coreJsDataJsDefault.default).keys && (0, _coreJsDataJsDefault.default).keys.IE_PROTO || "");
+    return uid ? "Symbol(src)_1." + uid : "";
+}();
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */ function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+}
+exports.default = isMasked;
+
+},{"./_coreJsData.js":"jb15d","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jb15d":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/** Used to detect overreaching core-js shims. */ var coreJsData = (0, _rootJsDefault.default)["__core-js_shared__"];
+exports.default = coreJsData;
+
+},{"./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4wd66":[function(require,module,exports) {
+/** Used for built-in method references. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var funcProto = Function.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */ function toSource(func) {
+    if (func != null) {
+        try {
+            return funcToString.call(func);
+        } catch (e) {}
+        try {
+            return func + "";
+        } catch (e) {}
+    }
+    return "";
+}
+exports.default = toSource;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dHb8j":[function(require,module,exports) {
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function getValue(object, key) {
+    return object == null ? undefined : object[key];
+}
+exports.default = getValue;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kdqbj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _mapCacheClearJs = require("./_mapCacheClear.js");
+var _mapCacheClearJsDefault = parcelHelpers.interopDefault(_mapCacheClearJs);
+var _mapCacheDeleteJs = require("./_mapCacheDelete.js");
+var _mapCacheDeleteJsDefault = parcelHelpers.interopDefault(_mapCacheDeleteJs);
+var _mapCacheGetJs = require("./_mapCacheGet.js");
+var _mapCacheGetJsDefault = parcelHelpers.interopDefault(_mapCacheGetJs);
+var _mapCacheHasJs = require("./_mapCacheHas.js");
+var _mapCacheHasJsDefault = parcelHelpers.interopDefault(_mapCacheHasJs);
+var _mapCacheSetJs = require("./_mapCacheSet.js");
+var _mapCacheSetJsDefault = parcelHelpers.interopDefault(_mapCacheSetJs);
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function MapCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `MapCache`.
+MapCache.prototype.clear = (0, _mapCacheClearJsDefault.default);
+MapCache.prototype["delete"] = (0, _mapCacheDeleteJsDefault.default);
+MapCache.prototype.get = (0, _mapCacheGetJsDefault.default);
+MapCache.prototype.has = (0, _mapCacheHasJsDefault.default);
+MapCache.prototype.set = (0, _mapCacheSetJsDefault.default);
+exports.default = MapCache;
+
+},{"./_mapCacheClear.js":"6PhQB","./_mapCacheDelete.js":"eoP1L","./_mapCacheGet.js":"lbrg6","./_mapCacheHas.js":"lPQeP","./_mapCacheSet.js":"4UIYE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6PhQB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _hashJs = require("./_Hash.js");
+var _hashJsDefault = parcelHelpers.interopDefault(_hashJs);
+var _listCacheJs = require("./_ListCache.js");
+var _listCacheJsDefault = parcelHelpers.interopDefault(_listCacheJs);
+var _mapJs = require("./_Map.js");
+var _mapJsDefault = parcelHelpers.interopDefault(_mapJs);
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */ function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+        "hash": new (0, _hashJsDefault.default),
+        "map": new ((0, _mapJsDefault.default) || (0, _listCacheJsDefault.default)),
+        "string": new (0, _hashJsDefault.default)
+    };
+}
+exports.default = mapCacheClear;
+
+},{"./_Hash.js":"1HkPM","./_ListCache.js":"cqhDQ","./_Map.js":"8spnB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HkPM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _hashClearJs = require("./_hashClear.js");
+var _hashClearJsDefault = parcelHelpers.interopDefault(_hashClearJs);
+var _hashDeleteJs = require("./_hashDelete.js");
+var _hashDeleteJsDefault = parcelHelpers.interopDefault(_hashDeleteJs);
+var _hashGetJs = require("./_hashGet.js");
+var _hashGetJsDefault = parcelHelpers.interopDefault(_hashGetJs);
+var _hashHasJs = require("./_hashHas.js");
+var _hashHasJsDefault = parcelHelpers.interopDefault(_hashHasJs);
+var _hashSetJs = require("./_hashSet.js");
+var _hashSetJsDefault = parcelHelpers.interopDefault(_hashSetJs);
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Hash(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while(++index < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `Hash`.
+Hash.prototype.clear = (0, _hashClearJsDefault.default);
+Hash.prototype["delete"] = (0, _hashDeleteJsDefault.default);
+Hash.prototype.get = (0, _hashGetJsDefault.default);
+Hash.prototype.has = (0, _hashHasJsDefault.default);
+Hash.prototype.set = (0, _hashSetJsDefault.default);
+exports.default = Hash;
+
+},{"./_hashClear.js":"5oLNs","./_hashDelete.js":"3Xo6B","./_hashGet.js":"j4Vuu","./_hashHas.js":"d5QIn","./_hashSet.js":"lQL69","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5oLNs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeCreateJs = require("./_nativeCreate.js");
+var _nativeCreateJsDefault = parcelHelpers.interopDefault(_nativeCreateJs);
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */ function hashClear() {
+    this.__data__ = (0, _nativeCreateJsDefault.default) ? (0, _nativeCreateJsDefault.default)(null) : {};
+    this.size = 0;
+}
+exports.default = hashClear;
+
+},{"./_nativeCreate.js":"2XXd9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2XXd9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+/* Built-in method references that are verified to be native. */ var nativeCreate = (0, _getNativeJsDefault.default)(Object, "create");
+exports.default = nativeCreate;
+
+},{"./_getNative.js":"bQrQL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Xo6B":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+}
+exports.default = hashDelete;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j4Vuu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeCreateJs = require("./_nativeCreate.js");
+var _nativeCreateJsDefault = parcelHelpers.interopDefault(_nativeCreateJs);
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function hashGet(key) {
+    var data = this.__data__;
+    if (0, _nativeCreateJsDefault.default) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+exports.default = hashGet;
+
+},{"./_nativeCreate.js":"2XXd9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5QIn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeCreateJs = require("./_nativeCreate.js");
+var _nativeCreateJsDefault = parcelHelpers.interopDefault(_nativeCreateJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function hashHas(key) {
+    var data = this.__data__;
+    return (0, _nativeCreateJsDefault.default) ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+exports.default = hashHas;
+
+},{"./_nativeCreate.js":"2XXd9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lQL69":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeCreateJs = require("./_nativeCreate.js");
+var _nativeCreateJsDefault = parcelHelpers.interopDefault(_nativeCreateJs);
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */ function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = (0, _nativeCreateJsDefault.default) && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+}
+exports.default = hashSet;
+
+},{"./_nativeCreate.js":"2XXd9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eoP1L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getMapDataJs = require("./_getMapData.js");
+var _getMapDataJsDefault = parcelHelpers.interopDefault(_getMapDataJs);
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function mapCacheDelete(key) {
+    var result = (0, _getMapDataJsDefault.default)(this, key)["delete"](key);
+    this.size -= result ? 1 : 0;
+    return result;
+}
+exports.default = mapCacheDelete;
+
+},{"./_getMapData.js":"3xzxe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3xzxe":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isKeyableJs = require("./_isKeyable.js");
+var _isKeyableJsDefault = parcelHelpers.interopDefault(_isKeyableJs);
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */ function getMapData(map, key) {
+    var data = map.__data__;
+    return (0, _isKeyableJsDefault.default)(key) ? data[typeof key == "string" ? "string" : "hash"] : data.map;
+}
+exports.default = getMapData;
+
+},{"./_isKeyable.js":"9O1jG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9O1jG":[function(require,module,exports) {
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function isKeyable(value) {
+    var type = typeof value;
+    return type == "string" || type == "number" || type == "symbol" || type == "boolean" ? value !== "__proto__" : value === null;
+}
+exports.default = isKeyable;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lbrg6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getMapDataJs = require("./_getMapData.js");
+var _getMapDataJsDefault = parcelHelpers.interopDefault(_getMapDataJs);
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function mapCacheGet(key) {
+    return (0, _getMapDataJsDefault.default)(this, key).get(key);
+}
+exports.default = mapCacheGet;
+
+},{"./_getMapData.js":"3xzxe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lPQeP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getMapDataJs = require("./_getMapData.js");
+var _getMapDataJsDefault = parcelHelpers.interopDefault(_getMapDataJs);
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function mapCacheHas(key) {
+    return (0, _getMapDataJsDefault.default)(this, key).has(key);
+}
+exports.default = mapCacheHas;
+
+},{"./_getMapData.js":"3xzxe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4UIYE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getMapDataJs = require("./_getMapData.js");
+var _getMapDataJsDefault = parcelHelpers.interopDefault(_getMapDataJs);
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */ function mapCacheSet(key, value) {
+    var data = (0, _getMapDataJsDefault.default)(this, key), size = data.size;
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+}
+exports.default = mapCacheSet;
+
+},{"./_getMapData.js":"3xzxe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gQcrW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseAssignValueJs = require("./_baseAssignValue.js");
+var _baseAssignValueJsDefault = parcelHelpers.interopDefault(_baseAssignValueJs);
+var _eqJs = require("./eq.js");
+var _eqJsDefault = parcelHelpers.interopDefault(_eqJs);
+/**
+ * This function is like `assignValue` except that it doesn't assign
+ * `undefined` values.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function assignMergeValue(object, key, value) {
+    if (value !== undefined && !(0, _eqJsDefault.default)(object[key], value) || value === undefined && !(key in object)) (0, _baseAssignValueJsDefault.default)(object, key, value);
+}
+exports.default = assignMergeValue;
+
+},{"./_baseAssignValue.js":"7kEZ2","./eq.js":"7el3s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7kEZ2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _definePropertyJs = require("./_defineProperty.js");
+var _definePropertyJsDefault = parcelHelpers.interopDefault(_definePropertyJs);
+/**
+ * The base implementation of `assignValue` and `assignMergeValue` without
+ * value checks.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function baseAssignValue(object, key, value) {
+    if (key == "__proto__" && (0, _definePropertyJsDefault.default)) (0, _definePropertyJsDefault.default)(object, key, {
+        "configurable": true,
+        "enumerable": true,
+        "value": value,
+        "writable": true
+    });
+    else object[key] = value;
+}
+exports.default = baseAssignValue;
+
+},{"./_defineProperty.js":"8u8dH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8u8dH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var defineProperty = function() {
+    try {
+        var func = (0, _getNativeJsDefault.default)(Object, "defineProperty");
+        func({}, "", {});
+        return func;
+    } catch (e) {}
+}();
+exports.default = defineProperty;
+
+},{"./_getNative.js":"bQrQL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1Zprl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _createBaseForJs = require("./_createBaseFor.js");
+var _createBaseForJsDefault = parcelHelpers.interopDefault(_createBaseForJs);
+/**
+ * The base implementation of `baseForOwn` which iterates over `object`
+ * properties returned by `keysFunc` and invokes `iteratee` for each property.
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @returns {Object} Returns `object`.
+ */ var baseFor = (0, _createBaseForJsDefault.default)();
+exports.default = baseFor;
+
+},{"./_createBaseFor.js":"1W89a","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1W89a":[function(require,module,exports) {
+/**
+ * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function createBaseFor(fromRight) {
+    return function(object, iteratee, keysFunc) {
+        var index = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
+        while(length--){
+            var key = props[fromRight ? length : ++index];
+            if (iteratee(iterable[key], key, iterable) === false) break;
+        }
+        return object;
+    };
+}
+exports.default = createBaseFor;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cVDnk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assignMergeValueJs = require("./_assignMergeValue.js");
+var _assignMergeValueJsDefault = parcelHelpers.interopDefault(_assignMergeValueJs);
+var _cloneBufferJs = require("./_cloneBuffer.js");
+var _cloneBufferJsDefault = parcelHelpers.interopDefault(_cloneBufferJs);
+var _cloneTypedArrayJs = require("./_cloneTypedArray.js");
+var _cloneTypedArrayJsDefault = parcelHelpers.interopDefault(_cloneTypedArrayJs);
+var _copyArrayJs = require("./_copyArray.js");
+var _copyArrayJsDefault = parcelHelpers.interopDefault(_copyArrayJs);
+var _initCloneObjectJs = require("./_initCloneObject.js");
+var _initCloneObjectJsDefault = parcelHelpers.interopDefault(_initCloneObjectJs);
+var _isArgumentsJs = require("./isArguments.js");
+var _isArgumentsJsDefault = parcelHelpers.interopDefault(_isArgumentsJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isArrayLikeObjectJs = require("./isArrayLikeObject.js");
+var _isArrayLikeObjectJsDefault = parcelHelpers.interopDefault(_isArrayLikeObjectJs);
+var _isBufferJs = require("./isBuffer.js");
+var _isBufferJsDefault = parcelHelpers.interopDefault(_isBufferJs);
+var _isFunctionJs = require("./isFunction.js");
+var _isFunctionJsDefault = parcelHelpers.interopDefault(_isFunctionJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _isPlainObjectJs = require("./isPlainObject.js");
+var _isPlainObjectJsDefault = parcelHelpers.interopDefault(_isPlainObjectJs);
+var _isTypedArrayJs = require("./isTypedArray.js");
+var _isTypedArrayJsDefault = parcelHelpers.interopDefault(_isTypedArrayJs);
+var _safeGetJs = require("./_safeGet.js");
+var _safeGetJsDefault = parcelHelpers.interopDefault(_safeGetJs);
+var _toPlainObjectJs = require("./toPlainObject.js");
+var _toPlainObjectJsDefault = parcelHelpers.interopDefault(_toPlainObjectJs);
+/**
+ * A specialized version of `baseMerge` for arrays and objects which performs
+ * deep merges and tracks traversed objects enabling objects with circular
+ * references to be merged.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @param {string} key The key of the value to merge.
+ * @param {number} srcIndex The index of `source`.
+ * @param {Function} mergeFunc The function to merge values.
+ * @param {Function} [customizer] The function to customize assigned values.
+ * @param {Object} [stack] Tracks traversed source values and their merged
+ *  counterparts.
+ */ function baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, stack) {
+    var objValue = (0, _safeGetJsDefault.default)(object, key), srcValue = (0, _safeGetJsDefault.default)(source, key), stacked = stack.get(srcValue);
+    if (stacked) {
+        (0, _assignMergeValueJsDefault.default)(object, key, stacked);
+        return;
+    }
+    var newValue = customizer ? customizer(objValue, srcValue, key + "", object, source, stack) : undefined;
+    var isCommon = newValue === undefined;
+    if (isCommon) {
+        var isArr = (0, _isArrayJsDefault.default)(srcValue), isBuff = !isArr && (0, _isBufferJsDefault.default)(srcValue), isTyped = !isArr && !isBuff && (0, _isTypedArrayJsDefault.default)(srcValue);
+        newValue = srcValue;
+        if (isArr || isBuff || isTyped) {
+            if ((0, _isArrayJsDefault.default)(objValue)) newValue = objValue;
+            else if ((0, _isArrayLikeObjectJsDefault.default)(objValue)) newValue = (0, _copyArrayJsDefault.default)(objValue);
+            else if (isBuff) {
+                isCommon = false;
+                newValue = (0, _cloneBufferJsDefault.default)(srcValue, true);
+            } else if (isTyped) {
+                isCommon = false;
+                newValue = (0, _cloneTypedArrayJsDefault.default)(srcValue, true);
+            } else newValue = [];
+        } else if ((0, _isPlainObjectJsDefault.default)(srcValue) || (0, _isArgumentsJsDefault.default)(srcValue)) {
+            newValue = objValue;
+            if ((0, _isArgumentsJsDefault.default)(objValue)) newValue = (0, _toPlainObjectJsDefault.default)(objValue);
+            else if (!(0, _isObjectJsDefault.default)(objValue) || (0, _isFunctionJsDefault.default)(objValue)) newValue = (0, _initCloneObjectJsDefault.default)(srcValue);
+        } else isCommon = false;
+    }
+    if (isCommon) {
+        // Recursively merge objects and arrays (susceptible to call stack limits).
+        stack.set(srcValue, newValue);
+        mergeFunc(newValue, srcValue, srcIndex, customizer, stack);
+        stack["delete"](srcValue);
+    }
+    (0, _assignMergeValueJsDefault.default)(object, key, newValue);
+}
+exports.default = baseMergeDeep;
+
+},{"./_assignMergeValue.js":"gQcrW","./_cloneBuffer.js":"kMJjN","./_cloneTypedArray.js":"f1GTJ","./_copyArray.js":"9islt","./_initCloneObject.js":"aoDIY","./isArguments.js":"9k91Y","./isArray.js":"ETPQ1","./isArrayLikeObject.js":"gArhC","./isBuffer.js":"llpEE","./isFunction.js":"e5kis","./isObject.js":"dHhyW","./isPlainObject.js":"dB5kc","./isTypedArray.js":"2LIMs","./_safeGet.js":"SYKdD","./toPlainObject.js":"VksIK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kMJjN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? (0, _rootJsDefault.default).Buffer : undefined, allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */ function cloneBuffer(buffer, isDeep) {
+    if (isDeep) return buffer.slice();
+    var length = buffer.length, result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
+    buffer.copy(result);
+    return result;
+}
+exports.default = cloneBuffer;
+
+},{"./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f1GTJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _cloneArrayBufferJs = require("./_cloneArrayBuffer.js");
+var _cloneArrayBufferJsDefault = parcelHelpers.interopDefault(_cloneArrayBufferJs);
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */ function cloneTypedArray(typedArray, isDeep) {
+    var buffer = isDeep ? (0, _cloneArrayBufferJsDefault.default)(typedArray.buffer) : typedArray.buffer;
+    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+exports.default = cloneTypedArray;
+
+},{"./_cloneArrayBuffer.js":"4fVB7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4fVB7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _uint8ArrayJs = require("./_Uint8Array.js");
+var _uint8ArrayJsDefault = parcelHelpers.interopDefault(_uint8ArrayJs);
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */ function cloneArrayBuffer(arrayBuffer) {
+    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+    new (0, _uint8ArrayJsDefault.default)(result).set(new (0, _uint8ArrayJsDefault.default)(arrayBuffer));
+    return result;
+}
+exports.default = cloneArrayBuffer;
+
+},{"./_Uint8Array.js":"5zVAV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5zVAV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/** Built-in value references. */ var Uint8Array = (0, _rootJsDefault.default).Uint8Array;
+exports.default = Uint8Array;
+
+},{"./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9islt":[function(require,module,exports) {
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function copyArray(source, array) {
+    var index = -1, length = source.length;
+    array || (array = Array(length));
+    while(++index < length)array[index] = source[index];
+    return array;
+}
+exports.default = copyArray;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aoDIY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseCreateJs = require("./_baseCreate.js");
+var _baseCreateJsDefault = parcelHelpers.interopDefault(_baseCreateJs);
+var _getPrototypeJs = require("./_getPrototype.js");
+var _getPrototypeJsDefault = parcelHelpers.interopDefault(_getPrototypeJs);
+var _isPrototypeJs = require("./_isPrototype.js");
+var _isPrototypeJsDefault = parcelHelpers.interopDefault(_isPrototypeJs);
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneObject(object) {
+    return typeof object.constructor == "function" && !(0, _isPrototypeJsDefault.default)(object) ? (0, _baseCreateJsDefault.default)((0, _getPrototypeJsDefault.default)(object)) : {};
+}
+exports.default = initCloneObject;
+
+},{"./_baseCreate.js":"aq4aU","./_getPrototype.js":"b49GB","./_isPrototype.js":"jOAyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aq4aU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+/** Built-in value references. */ var objectCreate = Object.create;
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */ var baseCreate = function() {
+    function object() {}
+    return function(proto) {
+        if (!(0, _isObjectJsDefault.default)(proto)) return {};
+        if (objectCreate) return objectCreate(proto);
+        object.prototype = proto;
+        var result = new object;
+        object.prototype = undefined;
+        return result;
+    };
+}();
+exports.default = baseCreate;
+
+},{"./isObject.js":"dHhyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b49GB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _overArgJs = require("./_overArg.js");
+var _overArgJsDefault = parcelHelpers.interopDefault(_overArgJs);
+/** Built-in value references. */ var getPrototype = (0, _overArgJsDefault.default)(Object.getPrototypeOf, Object);
+exports.default = getPrototype;
+
+},{"./_overArg.js":"lqvyN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lqvyN":[function(require,module,exports) {
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function overArg(func, transform) {
+    return function(arg) {
+        return func(transform(arg));
+    };
+}
+exports.default = overArg;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jOAyW":[function(require,module,exports) {
+/** Used for built-in method references. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var objectProto = Object.prototype;
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */ function isPrototype(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto;
+    return value === proto;
+}
+exports.default = isPrototype;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k91Y":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsArgumentsJs = require("./_baseIsArguments.js");
+var _baseIsArgumentsJsDefault = parcelHelpers.interopDefault(_baseIsArgumentsJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */ var isArguments = (0, _baseIsArgumentsJsDefault.default)(function() {
+    return arguments;
+}()) ? (0, _baseIsArgumentsJsDefault.default) : function(value) {
+    return (0, _isObjectLikeJsDefault.default)(value) && hasOwnProperty.call(value, "callee") && !propertyIsEnumerable.call(value, "callee");
+};
+exports.default = isArguments;
+
+},{"./_baseIsArguments.js":"bnUuB","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bnUuB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]";
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */ function baseIsArguments(value) {
+    return (0, _isObjectLikeJsDefault.default)(value) && (0, _baseGetTagJsDefault.default)(value) == argsTag;
+}
+exports.default = baseIsArguments;
+
+},{"./_baseGetTag.js":"gVDfP","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iad76":[function(require,module,exports) {
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function isObjectLike(value) {
+    return value != null && typeof value == "object";
+}
+exports.default = isObjectLike;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ETPQ1":[function(require,module,exports) {
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var isArray = Array.isArray;
+exports.default = isArray;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gArhC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */ function isArrayLikeObject(value) {
+    return (0, _isObjectLikeJsDefault.default)(value) && (0, _isArrayLikeJsDefault.default)(value);
+}
+exports.default = isArrayLikeObject;
+
+},{"./isArrayLike.js":"8SdiO","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8SdiO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isFunctionJs = require("./isFunction.js");
+var _isFunctionJsDefault = parcelHelpers.interopDefault(_isFunctionJs);
+var _isLengthJs = require("./isLength.js");
+var _isLengthJsDefault = parcelHelpers.interopDefault(_isLengthJs);
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */ function isArrayLike(value) {
+    return value != null && (0, _isLengthJsDefault.default)(value.length) && !(0, _isFunctionJsDefault.default)(value);
+}
+exports.default = isArrayLike;
+
+},{"./isFunction.js":"e5kis","./isLength.js":"bItM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bItM0":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var MAX_SAFE_INTEGER = 9007199254740991;
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */ function isLength(value) {
+    return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+exports.default = isLength;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"llpEE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+var _stubFalseJs = require("./stubFalse.js");
+var _stubFalseJsDefault = parcelHelpers.interopDefault(_stubFalseJs);
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? (0, _rootJsDefault.default).Buffer : undefined;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */ var isBuffer = nativeIsBuffer || (0, _stubFalseJsDefault.default);
+exports.default = isBuffer;
+
+},{"./_root.js":"8yvCA","./stubFalse.js":"fF5mf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fF5mf":[function(require,module,exports) {
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function stubFalse() {
+    return false;
+}
+exports.default = stubFalse;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dB5kc":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _getPrototypeJs = require("./_getPrototype.js");
+var _getPrototypeJsDefault = parcelHelpers.interopDefault(_getPrototypeJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/** `Object#toString` result references. */ var objectTag = "[object Object]";
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to infer the `Object` constructor. */ var objectCtorString = funcToString.call(Object);
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */ function isPlainObject(value) {
+    if (!(0, _isObjectLikeJsDefault.default)(value) || (0, _baseGetTagJsDefault.default)(value) != objectTag) return false;
+    var proto = (0, _getPrototypeJsDefault.default)(value);
+    if (proto === null) return true;
+    var Ctor = hasOwnProperty.call(proto, "constructor") && proto.constructor;
+    return typeof Ctor == "function" && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+exports.default = isPlainObject;
+
+},{"./_baseGetTag.js":"gVDfP","./_getPrototype.js":"b49GB","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2LIMs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsTypedArrayJs = require("./_baseIsTypedArray.js");
+var _baseIsTypedArrayJsDefault = parcelHelpers.interopDefault(_baseIsTypedArrayJs);
+var _baseUnaryJs = require("./_baseUnary.js");
+var _baseUnaryJsDefault = parcelHelpers.interopDefault(_baseUnaryJs);
+var _nodeUtilJs = require("./_nodeUtil.js");
+var _nodeUtilJsDefault = parcelHelpers.interopDefault(_nodeUtilJs);
+/* Node.js helper references. */ var nodeIsTypedArray = (0, _nodeUtilJsDefault.default) && (0, _nodeUtilJsDefault.default).isTypedArray;
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */ var isTypedArray = nodeIsTypedArray ? (0, _baseUnaryJsDefault.default)(nodeIsTypedArray) : (0, _baseIsTypedArrayJsDefault.default);
+exports.default = isTypedArray;
+
+},{"./_baseIsTypedArray.js":"jcEk3","./_baseUnary.js":"jBUGV","./_nodeUtil.js":"cxU0K","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jcEk3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _isLengthJs = require("./isLength.js");
+var _isLengthJsDefault = parcelHelpers.interopDefault(_isLengthJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]", arrayTag = "[object Array]", boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", funcTag = "[object Function]", mapTag = "[object Map]", numberTag = "[object Number]", objectTag = "[object Object]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", weakMapTag = "[object WeakMap]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]", float32Tag = "[object Float32Array]", float64Tag = "[object Float64Array]", int8Tag = "[object Int8Array]", int16Tag = "[object Int16Array]", int32Tag = "[object Int32Array]", uint8Tag = "[object Uint8Array]", uint8ClampedTag = "[object Uint8ClampedArray]", uint16Tag = "[object Uint16Array]", uint32Tag = "[object Uint32Array]";
+/** Used to identify `toStringTag` values of typed arrays. */ var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */ function baseIsTypedArray(value) {
+    return (0, _isObjectLikeJsDefault.default)(value) && (0, _isLengthJsDefault.default)(value.length) && !!typedArrayTags[(0, _baseGetTagJsDefault.default)(value)];
+}
+exports.default = baseIsTypedArray;
+
+},{"./_baseGetTag.js":"gVDfP","./isLength.js":"bItM0","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jBUGV":[function(require,module,exports) {
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function baseUnary(func) {
+    return function(value) {
+        return func(value);
+    };
+}
+exports.default = baseUnary;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cxU0K":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _freeGlobalJs = require("./_freeGlobal.js");
+var _freeGlobalJsDefault = parcelHelpers.interopDefault(_freeGlobalJs);
+/** Detect free variable `exports`. */ var freeExports = exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && true && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Detect free variable `process` from Node.js. */ var freeProcess = moduleExports && (0, _freeGlobalJsDefault.default).process;
+/** Used to access faster Node.js helpers. */ var nodeUtil = function() {
+    try {
+        // Use `util.types` for Node.js 10+.
+        var types = freeModule && freeModule.require && freeModule.require("util").types;
+        if (types) return types;
+        // Legacy `process.binding('util')` for Node.js < 10.
+        return freeProcess && freeProcess.binding && freeProcess.binding("util");
+    } catch (e) {}
+}();
+exports.default = nodeUtil;
+
+},{"./_freeGlobal.js":"98hMd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"SYKdD":[function(require,module,exports) {
+/**
+ * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function safeGet(object, key) {
+    if (key === "constructor" && typeof object[key] === "function") return;
+    if (key == "__proto__") return;
+    return object[key];
+}
+exports.default = safeGet;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"VksIK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _copyObjectJs = require("./_copyObject.js");
+var _copyObjectJsDefault = parcelHelpers.interopDefault(_copyObjectJs);
+var _keysInJs = require("./keysIn.js");
+var _keysInJsDefault = parcelHelpers.interopDefault(_keysInJs);
+/**
+ * Converts `value` to a plain object flattening inherited enumerable string
+ * keyed properties of `value` to own properties of the plain object.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {Object} Returns the converted plain object.
+ * @example
+ *
+ * function Foo() {
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.assign({ 'a': 1 }, new Foo);
+ * // => { 'a': 1, 'b': 2 }
+ *
+ * _.assign({ 'a': 1 }, _.toPlainObject(new Foo));
+ * // => { 'a': 1, 'b': 2, 'c': 3 }
+ */ function toPlainObject(value) {
+    return (0, _copyObjectJsDefault.default)(value, (0, _keysInJsDefault.default)(value));
+}
+exports.default = toPlainObject;
+
+},{"./_copyObject.js":"hBRv5","./keysIn.js":"jms5f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBRv5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _assignValueJs = require("./_assignValue.js");
+var _assignValueJsDefault = parcelHelpers.interopDefault(_assignValueJs);
+var _baseAssignValueJs = require("./_baseAssignValue.js");
+var _baseAssignValueJsDefault = parcelHelpers.interopDefault(_baseAssignValueJs);
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */ function copyObject(source, props, object, customizer) {
+    var isNew = !object;
+    object || (object = {});
+    var index = -1, length = props.length;
+    while(++index < length){
+        var key = props[index];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+        if (newValue === undefined) newValue = source[key];
+        if (isNew) (0, _baseAssignValueJsDefault.default)(object, key, newValue);
+        else (0, _assignValueJsDefault.default)(object, key, newValue);
+    }
+    return object;
+}
+exports.default = copyObject;
+
+},{"./_assignValue.js":"lDCb2","./_baseAssignValue.js":"7kEZ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lDCb2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseAssignValueJs = require("./_baseAssignValue.js");
+var _baseAssignValueJsDefault = parcelHelpers.interopDefault(_baseAssignValueJs);
+var _eqJs = require("./eq.js");
+var _eqJsDefault = parcelHelpers.interopDefault(_eqJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && (0, _eqJsDefault.default)(objValue, value)) || value === undefined && !(key in object)) (0, _baseAssignValueJsDefault.default)(object, key, value);
+}
+exports.default = assignValue;
+
+},{"./_baseAssignValue.js":"7kEZ2","./eq.js":"7el3s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jms5f":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayLikeKeysJs = require("./_arrayLikeKeys.js");
+var _arrayLikeKeysJsDefault = parcelHelpers.interopDefault(_arrayLikeKeysJs);
+var _baseKeysInJs = require("./_baseKeysIn.js");
+var _baseKeysInJsDefault = parcelHelpers.interopDefault(_baseKeysInJs);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */ function keysIn(object) {
+    return (0, _isArrayLikeJsDefault.default)(object) ? (0, _arrayLikeKeysJsDefault.default)(object, true) : (0, _baseKeysInJsDefault.default)(object);
+}
+exports.default = keysIn;
+
+},{"./_arrayLikeKeys.js":"b4sHy","./_baseKeysIn.js":"cvYFp","./isArrayLike.js":"8SdiO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b4sHy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseTimesJs = require("./_baseTimes.js");
+var _baseTimesJsDefault = parcelHelpers.interopDefault(_baseTimesJs);
+var _isArgumentsJs = require("./isArguments.js");
+var _isArgumentsJsDefault = parcelHelpers.interopDefault(_isArgumentsJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isBufferJs = require("./isBuffer.js");
+var _isBufferJsDefault = parcelHelpers.interopDefault(_isBufferJs);
+var _isIndexJs = require("./_isIndex.js");
+var _isIndexJsDefault = parcelHelpers.interopDefault(_isIndexJs);
+var _isTypedArrayJs = require("./isTypedArray.js");
+var _isTypedArrayJsDefault = parcelHelpers.interopDefault(_isTypedArrayJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */ function arrayLikeKeys(value, inherited) {
+    var isArr = (0, _isArrayJsDefault.default)(value), isArg = !isArr && (0, _isArgumentsJsDefault.default)(value), isBuff = !isArr && !isArg && (0, _isBufferJsDefault.default)(value), isType = !isArr && !isArg && !isBuff && (0, _isTypedArrayJsDefault.default)(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? (0, _baseTimesJsDefault.default)(value.length, String) : [], length = result.length;
+    for(var key in value)if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
+    (key == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
+    isBuff && (key == "offset" || key == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
+    isType && (key == "buffer" || key == "byteLength" || key == "byteOffset") || // Skip index properties.
+    (0, _isIndexJsDefault.default)(key, length)))) result.push(key);
+    return result;
+}
+exports.default = arrayLikeKeys;
+
+},{"./_baseTimes.js":"6yWeR","./isArguments.js":"9k91Y","./isArray.js":"ETPQ1","./isBuffer.js":"llpEE","./_isIndex.js":"5DS1K","./isTypedArray.js":"2LIMs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6yWeR":[function(require,module,exports) {
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function baseTimes(n, iteratee) {
+    var index = -1, result = Array(n);
+    while(++index < n)result[index] = iteratee(index);
+    return result;
+}
+exports.default = baseTimes;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5DS1K":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var MAX_SAFE_INTEGER = 9007199254740991;
+/** Used to detect unsigned integer values. */ var reIsUint = /^(?:0|[1-9]\d*)$/;
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */ function isIndex(value, length) {
+    var type = typeof value;
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (type == "number" || type != "symbol" && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+exports.default = isIndex;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cvYFp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _isPrototypeJs = require("./_isPrototype.js");
+var _isPrototypeJsDefault = parcelHelpers.interopDefault(_isPrototypeJs);
+var _nativeKeysInJs = require("./_nativeKeysIn.js");
+var _nativeKeysInJsDefault = parcelHelpers.interopDefault(_nativeKeysInJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeysIn(object) {
+    if (!(0, _isObjectJsDefault.default)(object)) return (0, _nativeKeysInJsDefault.default)(object);
+    var isProto = (0, _isPrototypeJsDefault.default)(object), result = [];
+    for(var key in object)if (!(key == "constructor" && (isProto || !hasOwnProperty.call(object, key)))) result.push(key);
+    return result;
+}
+exports.default = baseKeysIn;
+
+},{"./isObject.js":"dHhyW","./_isPrototype.js":"jOAyW","./_nativeKeysIn.js":"ciZAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ciZAw":[function(require,module,exports) {
+/**
+ * This function is like
+ * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * except that it includes inherited enumerable properties.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function nativeKeysIn(object) {
+    var result = [];
+    if (object != null) for(var key in Object(object))result.push(key);
+    return result;
+}
+exports.default = nativeKeysIn;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ED1h3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseRestJs = require("./_baseRest.js");
+var _baseRestJsDefault = parcelHelpers.interopDefault(_baseRestJs);
+var _isIterateeCallJs = require("./_isIterateeCall.js");
+var _isIterateeCallJsDefault = parcelHelpers.interopDefault(_isIterateeCallJs);
+/**
+ * Creates a function like `_.assign`.
+ *
+ * @private
+ * @param {Function} assigner The function to assign values.
+ * @returns {Function} Returns the new assigner function.
+ */ function createAssigner(assigner) {
+    return (0, _baseRestJsDefault.default)(function(object, sources) {
+        var index = -1, length = sources.length, customizer = length > 1 ? sources[length - 1] : undefined, guard = length > 2 ? sources[2] : undefined;
+        customizer = assigner.length > 3 && typeof customizer == "function" ? (length--, customizer) : undefined;
+        if (guard && (0, _isIterateeCallJsDefault.default)(sources[0], sources[1], guard)) {
+            customizer = length < 3 ? undefined : customizer;
+            length = 1;
+        }
+        object = Object(object);
+        while(++index < length){
+            var source = sources[index];
+            if (source) assigner(object, source, index, customizer);
+        }
+        return object;
+    });
+}
+exports.default = createAssigner;
+
+},{"./_baseRest.js":"1fKJX","./_isIterateeCall.js":"1jM1r","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1fKJX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _identityJs = require("./identity.js");
+var _identityJsDefault = parcelHelpers.interopDefault(_identityJs);
+var _overRestJs = require("./_overRest.js");
+var _overRestJsDefault = parcelHelpers.interopDefault(_overRestJs);
+var _setToStringJs = require("./_setToString.js");
+var _setToStringJsDefault = parcelHelpers.interopDefault(_setToStringJs);
+/**
+ * The base implementation of `_.rest` which doesn't validate or coerce arguments.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @returns {Function} Returns the new function.
+ */ function baseRest(func, start) {
+    return (0, _setToStringJsDefault.default)((0, _overRestJsDefault.default)(func, start, (0, _identityJsDefault.default)), func + "");
+}
+exports.default = baseRest;
+
+},{"./identity.js":"1Y0KA","./_overRest.js":"d1Uaz","./_setToString.js":"3GXSg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1Y0KA":[function(require,module,exports) {
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function identity(value) {
+    return value;
+}
+exports.default = identity;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d1Uaz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _applyJs = require("./_apply.js");
+var _applyJsDefault = parcelHelpers.interopDefault(_applyJs);
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * A specialized version of `baseRest` which transforms the rest array.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @param {Function} transform The rest array transform.
+ * @returns {Function} Returns the new function.
+ */ function overRest(func, start, transform) {
+    start = nativeMax(start === undefined ? func.length - 1 : start, 0);
+    return function() {
+        var args = arguments, index = -1, length = nativeMax(args.length - start, 0), array = Array(length);
+        while(++index < length)array[index] = args[start + index];
+        index = -1;
+        var otherArgs = Array(start + 1);
+        while(++index < start)otherArgs[index] = args[index];
+        otherArgs[start] = transform(array);
+        return (0, _applyJsDefault.default)(func, this, otherArgs);
+    };
+}
+exports.default = overRest;
+
+},{"./_apply.js":"kqJ3H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kqJ3H":[function(require,module,exports) {
+/**
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
+ *
+ * @private
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function apply(func, thisArg, args) {
+    switch(args.length){
+        case 0:
+            return func.call(thisArg);
+        case 1:
+            return func.call(thisArg, args[0]);
+        case 2:
+            return func.call(thisArg, args[0], args[1]);
+        case 3:
+            return func.call(thisArg, args[0], args[1], args[2]);
+    }
+    return func.apply(thisArg, args);
+}
+exports.default = apply;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3GXSg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseSetToStringJs = require("./_baseSetToString.js");
+var _baseSetToStringJsDefault = parcelHelpers.interopDefault(_baseSetToStringJs);
+var _shortOutJs = require("./_shortOut.js");
+var _shortOutJsDefault = parcelHelpers.interopDefault(_shortOutJs);
+/**
+ * Sets the `toString` method of `func` to return `string`.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var setToString = (0, _shortOutJsDefault.default)((0, _baseSetToStringJsDefault.default));
+exports.default = setToString;
+
+},{"./_baseSetToString.js":"lc4dY","./_shortOut.js":"dmiNi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lc4dY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _constantJs = require("./constant.js");
+var _constantJsDefault = parcelHelpers.interopDefault(_constantJs);
+var _definePropertyJs = require("./_defineProperty.js");
+var _definePropertyJsDefault = parcelHelpers.interopDefault(_definePropertyJs);
+var _identityJs = require("./identity.js");
+var _identityJsDefault = parcelHelpers.interopDefault(_identityJs);
+/**
+ * The base implementation of `setToString` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var baseSetToString = !(0, _definePropertyJsDefault.default) ? (0, _identityJsDefault.default) : function(func, string) {
+    return (0, _definePropertyJsDefault.default)(func, "toString", {
+        "configurable": true,
+        "enumerable": false,
+        "value": (0, _constantJsDefault.default)(string),
+        "writable": true
+    });
+};
+exports.default = baseSetToString;
+
+},{"./constant.js":"a5s7V","./_defineProperty.js":"8u8dH","./identity.js":"1Y0KA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a5s7V":[function(require,module,exports) {
+/**
+ * Creates a function that returns `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {*} value The value to return from the new function.
+ * @returns {Function} Returns the new constant function.
+ * @example
+ *
+ * var objects = _.times(2, _.constant({ 'a': 1 }));
+ *
+ * console.log(objects);
+ * // => [{ 'a': 1 }, { 'a': 1 }]
+ *
+ * console.log(objects[0] === objects[1]);
+ * // => true
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function constant(value) {
+    return function() {
+        return value;
+    };
+}
+exports.default = constant;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dmiNi":[function(require,module,exports) {
+/** Used to detect hot functions by number of calls within a span of milliseconds. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var HOT_COUNT = 800, HOT_SPAN = 16;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeNow = Date.now;
+/**
+ * Creates a function that'll short out and invoke `identity` instead
+ * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+ * milliseconds.
+ *
+ * @private
+ * @param {Function} func The function to restrict.
+ * @returns {Function} Returns the new shortable function.
+ */ function shortOut(func) {
+    var count = 0, lastCalled = 0;
+    return function() {
+        var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
+        lastCalled = stamp;
+        if (remaining > 0) {
+            if (++count >= HOT_COUNT) return arguments[0];
+        } else count = 0;
+        return func.apply(undefined, arguments);
+    };
+}
+exports.default = shortOut;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1jM1r":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _eqJs = require("./eq.js");
+var _eqJsDefault = parcelHelpers.interopDefault(_eqJs);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+var _isIndexJs = require("./_isIndex.js");
+var _isIndexJsDefault = parcelHelpers.interopDefault(_isIndexJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+/**
+ * Checks if the given arguments are from an iteratee call.
+ *
+ * @private
+ * @param {*} value The potential iteratee value argument.
+ * @param {*} index The potential iteratee index or key argument.
+ * @param {*} object The potential iteratee object argument.
+ * @returns {boolean} Returns `true` if the arguments are from an iteratee call,
+ *  else `false`.
+ */ function isIterateeCall(value, index, object) {
+    if (!(0, _isObjectJsDefault.default)(object)) return false;
+    var type = typeof index;
+    if (type == "number" ? (0, _isArrayLikeJsDefault.default)(object) && (0, _isIndexJsDefault.default)(index, object.length) : type == "string" && index in object) return (0, _eqJsDefault.default)(object[index], value);
+    return false;
+}
+exports.default = isIterateeCall;
+
+},{"./eq.js":"7el3s","./isArrayLike.js":"8SdiO","./_isIndex.js":"5DS1K","./isObject.js":"dHhyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cMKtC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Saturation", ()=>Saturation);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _throttle = require("lodash-es/throttle");
+var _throttleDefault = parcelHelpers.interopDefault(_throttle);
+var _saturation = require("../../helpers/saturation");
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var Saturation = function(_ref) {
+    _inherits(Saturation, _ref);
+    function Saturation(props) {
+        _classCallCheck(this, Saturation);
+        var _this = _possibleConstructorReturn(this, (Saturation.__proto__ || Object.getPrototypeOf(Saturation)).call(this, props));
+        _this.handleChange = function(e) {
+            typeof _this.props.onChange === "function" && _this.throttle(_this.props.onChange, _saturation.calculateChange(e, _this.props.hsl, _this.container), e);
+        };
+        _this.handleMouseDown = function(e) {
+            _this.handleChange(e);
+            var renderWindow = _this.getContainerRenderWindow();
+            renderWindow.addEventListener("mousemove", _this.handleChange);
+            renderWindow.addEventListener("mouseup", _this.handleMouseUp);
+        };
+        _this.handleMouseUp = function() {
+            _this.unbindEventListeners();
+        };
+        _this.throttle = (0, _throttleDefault.default)(function(fn, data, e) {
+            fn(data, e);
+        }, 50);
+        return _this;
+    }
+    _createClass(Saturation, [
+        {
+            key: "componentWillUnmount",
+            value: function componentWillUnmount() {
+                this.throttle.cancel();
+                this.unbindEventListeners();
+            }
+        },
+        {
+            key: "getContainerRenderWindow",
+            value: function getContainerRenderWindow() {
+                var container = this.container;
+                var renderWindow = window;
+                while(!renderWindow.document.contains(container) && renderWindow.parent !== renderWindow)renderWindow = renderWindow.parent;
+                return renderWindow;
+            }
+        },
+        {
+            key: "unbindEventListeners",
+            value: function unbindEventListeners() {
+                var renderWindow = this.getContainerRenderWindow();
+                renderWindow.removeEventListener("mousemove", this.handleChange);
+                renderWindow.removeEventListener("mouseup", this.handleMouseUp);
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+                var _ref2 = this.props.style || {}, color = _ref2.color, white = _ref2.white, black = _ref2.black, pointer = _ref2.pointer, circle = _ref2.circle;
+                var styles = (0, _reactcssDefault.default)({
+                    "default": {
+                        color: {
+                            absolute: "0px 0px 0px 0px",
+                            background: "hsl(" + this.props.hsl.h + ",100%, 50%)",
+                            borderRadius: this.props.radius
+                        },
+                        white: {
+                            absolute: "0px 0px 0px 0px",
+                            borderRadius: this.props.radius
+                        },
+                        black: {
+                            absolute: "0px 0px 0px 0px",
+                            boxShadow: this.props.shadow,
+                            borderRadius: this.props.radius
+                        },
+                        pointer: {
+                            position: "absolute",
+                            top: -(this.props.hsv.v * 100) + 100 + "%",
+                            left: this.props.hsv.s * 100 + "%",
+                            cursor: "default"
+                        },
+                        circle: {
+                            width: "4px",
+                            height: "4px",
+                            boxShadow: "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)",
+                            borderRadius: "50%",
+                            cursor: "hand",
+                            transform: "translate(-2px, -2px)"
+                        }
+                    },
+                    "custom": {
+                        color: color,
+                        white: white,
+                        black: black,
+                        pointer: pointer,
+                        circle: circle
+                    }
+                }, {
+                    "custom": !!this.props.style
+                });
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.color,
+                    ref: function ref(container) {
+                        return _this2.container = container;
+                    },
+                    onMouseDown: this.handleMouseDown,
+                    onTouchMove: this.handleChange,
+                    onTouchStart: this.handleChange
+                }, (0, _reactDefault.default).createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), (0, _reactDefault.default).createElement("div", {
+                    style: styles.white,
+                    className: "saturation-white"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.black,
+                    className: "saturation-black"
+                }), (0, _reactDefault.default).createElement("div", {
+                    style: styles.pointer
+                }, this.props.pointer ? (0, _reactDefault.default).createElement(this.props.pointer, this.props) : (0, _reactDefault.default).createElement("div", {
+                    style: styles.circle
+                }))));
+            }
+        }
+    ]);
+    return Saturation;
+}((0, _react.PureComponent) || (0, _react.Component));
+exports.default = Saturation;
+
+},{"react":"b6YLU","reactcss":"e0uT9","lodash-es/throttle":"at0dX","../../helpers/saturation":"ds3hP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"at0dX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _debounceJs = require("./debounce.js");
+var _debounceJsDefault = parcelHelpers.interopDefault(_debounceJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */ function throttle(func, wait, options) {
+    var leading = true, trailing = true;
+    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT);
+    if ((0, _isObjectJsDefault.default)(options)) {
+        leading = "leading" in options ? !!options.leading : leading;
+        trailing = "trailing" in options ? !!options.trailing : trailing;
+    }
+    return (0, _debounceJsDefault.default)(func, wait, {
+        "leading": leading,
+        "maxWait": wait,
+        "trailing": trailing
+    });
+}
+exports.default = throttle;
+
+},{"./debounce.js":"g26I7","./isObject.js":"dHhyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g26I7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _nowJs = require("./now.js");
+var _nowJsDefault = parcelHelpers.interopDefault(_nowJs);
+var _toNumberJs = require("./toNumber.js");
+var _toNumberJsDefault = parcelHelpers.interopDefault(_toNumberJs);
+/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max, nativeMin = Math.min;
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */ function debounce(func, wait, options) {
+    var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
+    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT);
+    wait = (0, _toNumberJsDefault.default)(wait) || 0;
+    if ((0, _isObjectJsDefault.default)(options)) {
+        leading = !!options.leading;
+        maxing = "maxWait" in options;
+        maxWait = maxing ? nativeMax((0, _toNumberJsDefault.default)(options.maxWait) || 0, wait) : maxWait;
+        trailing = "trailing" in options ? !!options.trailing : trailing;
+    }
+    function invokeFunc(time) {
+        var args = lastArgs, thisArg = lastThis;
+        lastArgs = lastThis = undefined;
+        lastInvokeTime = time;
+        result = func.apply(thisArg, args);
+        return result;
+    }
+    function leadingEdge(time) {
+        // Reset any `maxWait` timer.
+        lastInvokeTime = time;
+        // Start the timer for the trailing edge.
+        timerId = setTimeout(timerExpired, wait);
+        // Invoke the leading edge.
+        return leading ? invokeFunc(time) : result;
+    }
+    function remainingWait(time) {
+        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
+        return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+    }
+    function shouldInvoke(time) {
+        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
+        // Either this is the first call, activity has stopped and we're at the
+        // trailing edge, the system time has gone backwards and we're treating
+        // it as the trailing edge, or we've hit the `maxWait` limit.
+        return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+    }
+    function timerExpired() {
+        var time = (0, _nowJsDefault.default)();
+        if (shouldInvoke(time)) return trailingEdge(time);
+        // Restart the timer.
+        timerId = setTimeout(timerExpired, remainingWait(time));
+    }
+    function trailingEdge(time) {
+        timerId = undefined;
+        // Only invoke if we have `lastArgs` which means `func` has been
+        // debounced at least once.
+        if (trailing && lastArgs) return invokeFunc(time);
+        lastArgs = lastThis = undefined;
+        return result;
+    }
+    function cancel() {
+        if (timerId !== undefined) clearTimeout(timerId);
+        lastInvokeTime = 0;
+        lastArgs = lastCallTime = lastThis = timerId = undefined;
+    }
+    function flush() {
+        return timerId === undefined ? result : trailingEdge((0, _nowJsDefault.default)());
+    }
+    function debounced() {
+        var time = (0, _nowJsDefault.default)(), isInvoking = shouldInvoke(time);
+        lastArgs = arguments;
+        lastThis = this;
+        lastCallTime = time;
+        if (isInvoking) {
+            if (timerId === undefined) return leadingEdge(lastCallTime);
+            if (maxing) {
+                // Handle invocations in a tight loop.
+                clearTimeout(timerId);
+                timerId = setTimeout(timerExpired, wait);
+                return invokeFunc(lastCallTime);
+            }
+        }
+        if (timerId === undefined) timerId = setTimeout(timerExpired, wait);
+        return result;
+    }
+    debounced.cancel = cancel;
+    debounced.flush = flush;
+    return debounced;
+}
+exports.default = debounce;
+
+},{"./isObject.js":"dHhyW","./now.js":"exZwe","./toNumber.js":"4CrK2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"exZwe":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */ var now = function() {
+    return (0, _rootJsDefault.default).Date.now();
+};
+exports.default = now;
+
+},{"./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4CrK2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseTrimJs = require("./_baseTrim.js");
+var _baseTrimJsDefault = parcelHelpers.interopDefault(_baseTrimJs);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+var _isSymbolJs = require("./isSymbol.js");
+var _isSymbolJsDefault = parcelHelpers.interopDefault(_isSymbolJs);
+/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
+/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
+/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
+/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */ function toNumber(value) {
+    if (typeof value == "number") return value;
+    if ((0, _isSymbolJsDefault.default)(value)) return NAN;
+    if ((0, _isObjectJsDefault.default)(value)) {
+        var other = typeof value.valueOf == "function" ? value.valueOf() : value;
+        value = (0, _isObjectJsDefault.default)(other) ? other + "" : other;
+    }
+    if (typeof value != "string") return value === 0 ? value : +value;
+    value = (0, _baseTrimJsDefault.default)(value);
+    var isBinary = reIsBinary.test(value);
+    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+}
+exports.default = toNumber;
+
+},{"./_baseTrim.js":"4X9xl","./isObject.js":"dHhyW","./isSymbol.js":"gCyRJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4X9xl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _trimmedEndIndexJs = require("./_trimmedEndIndex.js");
+var _trimmedEndIndexJsDefault = parcelHelpers.interopDefault(_trimmedEndIndexJs);
+/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */ function baseTrim(string) {
+    return string ? string.slice(0, (0, _trimmedEndIndexJsDefault.default)(string) + 1).replace(reTrimStart, "") : string;
+}
+exports.default = baseTrim;
+
+},{"./_trimmedEndIndex.js":"lXShQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lXShQ":[function(require,module,exports) {
+/** Used to match a single whitespace character. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var reWhitespace = /\s/;
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */ function trimmedEndIndex(string) {
+    var index = string.length;
+    while(index-- && reWhitespace.test(string.charAt(index)));
+    return index;
+}
+exports.default = trimmedEndIndex;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gCyRJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/** `Object#toString` result references. */ var symbolTag = "[object Symbol]";
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */ function isSymbol(value) {
+    return typeof value == "symbol" || (0, _isObjectLikeJsDefault.default)(value) && (0, _baseGetTagJsDefault.default)(value) == symbolTag;
+}
+exports.default = isSymbol;
+
+},{"./_baseGetTag.js":"gVDfP","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ds3hP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "calculateChange", ()=>calculateChange);
+var calculateChange = function calculateChange(e, hsl, container) {
+    var _container$getBoundin = container.getBoundingClientRect(), containerWidth = _container$getBoundin.width, containerHeight = _container$getBoundin.height;
+    var x = typeof e.pageX === "number" ? e.pageX : e.touches[0].pageX;
+    var y = typeof e.pageY === "number" ? e.pageY : e.touches[0].pageY;
+    var left = x - (container.getBoundingClientRect().left + window.pageXOffset);
+    var top = y - (container.getBoundingClientRect().top + window.pageYOffset);
+    if (left < 0) left = 0;
+    else if (left > containerWidth) left = containerWidth;
+    if (top < 0) top = 0;
+    else if (top > containerHeight) top = containerHeight;
+    var saturation = left / containerWidth;
+    var bright = 1 - top / containerHeight;
+    return {
+        h: hsl.h,
+        s: saturation,
+        v: bright,
+        a: hsl.a,
+        source: "hsv"
+    };
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4qAWv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ColorWrap", ()=>ColorWrap);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _debounce = require("lodash-es/debounce");
+var _debounceDefault = parcelHelpers.interopDefault(_debounce);
+var _color = require("../../helpers/color");
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var ColorWrap = function ColorWrap(Picker) {
+    var ColorPicker = function(_ref) {
+        _inherits(ColorPicker, _ref);
+        function ColorPicker(props) {
+            _classCallCheck(this, ColorPicker);
+            var _this = _possibleConstructorReturn(this, (ColorPicker.__proto__ || Object.getPrototypeOf(ColorPicker)).call(this));
+            _this.handleChange = function(data, event) {
+                var isValidColor = _color.simpleCheckForValidColor(data);
+                if (isValidColor) {
+                    var colors = _color.toState(data, data.h || _this.state.oldHue);
+                    _this.setState(colors);
+                    _this.props.onChangeComplete && _this.debounce(_this.props.onChangeComplete, colors, event);
+                    _this.props.onChange && _this.props.onChange(colors, event);
+                }
+            };
+            _this.handleSwatchHover = function(data, event) {
+                var isValidColor = _color.simpleCheckForValidColor(data);
+                if (isValidColor) {
+                    var colors = _color.toState(data, data.h || _this.state.oldHue);
+                    _this.props.onSwatchHover && _this.props.onSwatchHover(colors, event);
+                }
+            };
+            _this.state = _extends({}, _color.toState(props.color, 0));
+            _this.debounce = (0, _debounceDefault.default)(function(fn, data, event) {
+                fn(data, event);
+            }, 100);
+            return _this;
+        }
+        _createClass(ColorPicker, [
+            {
+                key: "render",
+                value: function render() {
+                    var optionalEvents = {};
+                    if (this.props.onSwatchHover) optionalEvents.onSwatchHover = this.handleSwatchHover;
+                    return (0, _reactDefault.default).createElement(Picker, _extends({}, this.props, this.state, {
+                        onChange: this.handleChange
+                    }, optionalEvents));
+                }
+            }
+        ], [
+            {
+                key: "getDerivedStateFromProps",
+                value: function getDerivedStateFromProps(nextProps, state) {
+                    return _extends({}, _color.toState(nextProps.color, state.oldHue));
+                }
+            }
+        ]);
+        return ColorPicker;
+    }((0, _react.PureComponent) || (0, _react.Component));
+    ColorPicker.propTypes = _extends({}, Picker.propTypes);
+    ColorPicker.defaultProps = _extends({}, Picker.defaultProps, {
+        color: {
+            h: 250,
+            s: 0.50,
+            l: 0.20,
+            a: 1
+        }
+    });
+    return ColorPicker;
+};
+exports.default = ColorWrap;
+
+},{"react":"b6YLU","lodash-es/debounce":"g26I7","../../helpers/color":"6bN5W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6bN5W":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "simpleCheckForValidColor", ()=>simpleCheckForValidColor);
+parcelHelpers.export(exports, "toState", ()=>toState);
+parcelHelpers.export(exports, "isValidHex", ()=>isValidHex);
+parcelHelpers.export(exports, "getContrastingColor", ()=>getContrastingColor);
+parcelHelpers.export(exports, "red", ()=>red);
+parcelHelpers.export(exports, "isvalidColorString", ()=>isvalidColorString);
+var _each = require("lodash-es/each");
+var _eachDefault = parcelHelpers.interopDefault(_each);
+var _tinycolor2 = require("tinycolor2");
+var _tinycolor2Default = parcelHelpers.interopDefault(_tinycolor2);
+var simpleCheckForValidColor = function simpleCheckForValidColor(data) {
+    var keysToCheck = [
+        "r",
+        "g",
+        "b",
+        "a",
+        "h",
+        "s",
+        "l",
+        "v"
+    ];
+    var checked = 0;
+    var passed = 0;
+    (0, _eachDefault.default)(keysToCheck, function(letter) {
+        if (data[letter]) {
+            checked += 1;
+            if (!isNaN(data[letter])) passed += 1;
+            if (letter === "s" || letter === "l") {
+                var percentPatt = /^\d+%$/;
+                if (percentPatt.test(data[letter])) passed += 1;
+            }
+        }
+    });
+    return checked === passed ? data : false;
+};
+var toState = function toState(data, oldHue) {
+    var color = data.hex ? (0, _tinycolor2Default.default)(data.hex) : (0, _tinycolor2Default.default)(data);
+    var hsl = color.toHsl();
+    var hsv = color.toHsv();
+    var rgb = color.toRgb();
+    var hex = color.toHex();
+    if (hsl.s === 0) {
+        hsl.h = oldHue || 0;
+        hsv.h = oldHue || 0;
+    }
+    var transparent = hex === "000000" && rgb.a === 0;
+    return {
+        hsl: hsl,
+        hex: transparent ? "transparent" : "#" + hex,
+        rgb: rgb,
+        hsv: hsv,
+        oldHue: data.h || oldHue || hsl.h,
+        source: data.source
+    };
+};
+var isValidHex = function isValidHex(hex) {
+    if (hex === "transparent") return true;
+    // disable hex4 and hex8
+    var lh = String(hex).charAt(0) === "#" ? 1 : 0;
+    return hex.length !== 4 + lh && hex.length < 7 + lh && (0, _tinycolor2Default.default)(hex).isValid();
+};
+var getContrastingColor = function getContrastingColor(data) {
+    if (!data) return "#fff";
+    var col = toState(data);
+    if (col.hex === "transparent") return "rgba(0,0,0,0.4)";
+    var yiq = (col.rgb.r * 299 + col.rgb.g * 587 + col.rgb.b * 114) / 1000;
+    return yiq >= 128 ? "#000" : "#fff";
+};
+var red = {
+    hsl: {
+        a: 1,
+        h: 0,
+        l: 0.5,
+        s: 1
+    },
+    hex: "#ff0000",
+    rgb: {
+        r: 255,
+        g: 0,
+        b: 0,
+        a: 1
+    },
+    hsv: {
+        h: 0,
+        s: 1,
+        v: 1,
+        a: 1
+    }
+};
+var isvalidColorString = function isvalidColorString(string, type) {
+    var stringWithoutDegree = string.replace("\xb0", "");
+    return (0, _tinycolor2Default.default)(type + " (" + stringWithoutDegree + ")")._ok;
+};
+
+},{"lodash-es/each":"fYXEd","tinycolor2":"6vCCi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fYXEd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>(0, _forEachJsDefault.default));
+var _forEachJs = require("./forEach.js");
+var _forEachJsDefault = parcelHelpers.interopDefault(_forEachJs);
+
+},{"./forEach.js":"jqAb8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jqAb8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayEachJs = require("./_arrayEach.js");
+var _arrayEachJsDefault = parcelHelpers.interopDefault(_arrayEachJs);
+var _baseEachJs = require("./_baseEach.js");
+var _baseEachJsDefault = parcelHelpers.interopDefault(_baseEachJs);
+var _castFunctionJs = require("./_castFunction.js");
+var _castFunctionJsDefault = parcelHelpers.interopDefault(_castFunctionJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+/**
+ * Iterates over elements of `collection` and invokes `iteratee` for each element.
+ * The iteratee is invoked with three arguments: (value, index|key, collection).
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * **Note:** As with other "Collections" methods, objects with a "length"
+ * property are iterated like arrays. To avoid this behavior use `_.forIn`
+ * or `_.forOwn` for object iteration.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @alias each
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ * @see _.forEachRight
+ * @example
+ *
+ * _.forEach([1, 2], function(value) {
+ *   console.log(value);
+ * });
+ * // => Logs `1` then `2`.
+ *
+ * _.forEach({ 'a': 1, 'b': 2 }, function(value, key) {
+ *   console.log(key);
+ * });
+ * // => Logs 'a' then 'b' (iteration order is not guaranteed).
+ */ function forEach(collection, iteratee) {
+    var func = (0, _isArrayJsDefault.default)(collection) ? (0, _arrayEachJsDefault.default) : (0, _baseEachJsDefault.default);
+    return func(collection, (0, _castFunctionJsDefault.default)(iteratee));
+}
+exports.default = forEach;
+
+},{"./_arrayEach.js":"d26yI","./_baseEach.js":"cgTz5","./_castFunction.js":"8M8TJ","./isArray.js":"ETPQ1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d26yI":[function(require,module,exports) {
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function arrayEach(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (iteratee(array[index], index, array) === false) break;
+    }
+    return array;
+}
+exports.default = arrayEach;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cgTz5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseForOwnJs = require("./_baseForOwn.js");
+var _baseForOwnJsDefault = parcelHelpers.interopDefault(_baseForOwnJs);
+var _createBaseEachJs = require("./_createBaseEach.js");
+var _createBaseEachJsDefault = parcelHelpers.interopDefault(_createBaseEachJs);
+/**
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ */ var baseEach = (0, _createBaseEachJsDefault.default)((0, _baseForOwnJsDefault.default));
+exports.default = baseEach;
+
+},{"./_baseForOwn.js":"bGCTn","./_createBaseEach.js":"5mXl9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bGCTn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseForJs = require("./_baseFor.js");
+var _baseForJsDefault = parcelHelpers.interopDefault(_baseForJs);
+var _keysJs = require("./keys.js");
+var _keysJsDefault = parcelHelpers.interopDefault(_keysJs);
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */ function baseForOwn(object, iteratee) {
+    return object && (0, _baseForJsDefault.default)(object, iteratee, (0, _keysJsDefault.default));
+}
+exports.default = baseForOwn;
+
+},{"./_baseFor.js":"1Zprl","./keys.js":"lbEZV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lbEZV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayLikeKeysJs = require("./_arrayLikeKeys.js");
+var _arrayLikeKeysJsDefault = parcelHelpers.interopDefault(_arrayLikeKeysJs);
+var _baseKeysJs = require("./_baseKeys.js");
+var _baseKeysJsDefault = parcelHelpers.interopDefault(_baseKeysJs);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */ function keys(object) {
+    return (0, _isArrayLikeJsDefault.default)(object) ? (0, _arrayLikeKeysJsDefault.default)(object) : (0, _baseKeysJsDefault.default)(object);
+}
+exports.default = keys;
+
+},{"./_arrayLikeKeys.js":"b4sHy","./_baseKeys.js":"7rx4g","./isArrayLike.js":"8SdiO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7rx4g":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isPrototypeJs = require("./_isPrototype.js");
+var _isPrototypeJsDefault = parcelHelpers.interopDefault(_isPrototypeJs);
+var _nativeKeysJs = require("./_nativeKeys.js");
+var _nativeKeysJsDefault = parcelHelpers.interopDefault(_nativeKeysJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeys(object) {
+    if (!(0, _isPrototypeJsDefault.default)(object)) return (0, _nativeKeysJsDefault.default)(object);
+    var result = [];
+    for(var key in Object(object))if (hasOwnProperty.call(object, key) && key != "constructor") result.push(key);
+    return result;
+}
+exports.default = baseKeys;
+
+},{"./_isPrototype.js":"jOAyW","./_nativeKeys.js":"4fIwW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4fIwW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _overArgJs = require("./_overArg.js");
+var _overArgJsDefault = parcelHelpers.interopDefault(_overArgJs);
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeKeys = (0, _overArgJsDefault.default)(Object.keys, Object);
+exports.default = nativeKeys;
+
+},{"./_overArg.js":"lqvyN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5mXl9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+/**
+ * Creates a `baseEach` or `baseEachRight` function.
+ *
+ * @private
+ * @param {Function} eachFunc The function to iterate over a collection.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */ function createBaseEach(eachFunc, fromRight) {
+    return function(collection, iteratee) {
+        if (collection == null) return collection;
+        if (!(0, _isArrayLikeJsDefault.default)(collection)) return eachFunc(collection, iteratee);
+        var length = collection.length, index = fromRight ? length : -1, iterable = Object(collection);
+        while(fromRight ? index-- : ++index < length){
+            if (iteratee(iterable[index], index, iterable) === false) break;
+        }
+        return collection;
+    };
+}
+exports.default = createBaseEach;
+
+},{"./isArrayLike.js":"8SdiO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8M8TJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _identityJs = require("./identity.js");
+var _identityJsDefault = parcelHelpers.interopDefault(_identityJs);
+/**
+ * Casts `value` to `identity` if it's not a function.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {Function} Returns cast function.
+ */ function castFunction(value) {
+    return typeof value == "function" ? value : (0, _identityJsDefault.default);
+}
+exports.default = castFunction;
+
+},{"./identity.js":"1Y0KA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6vCCi":[function(require,module,exports) {
+// This file is autogenerated. It's used to publish CJS to npm.
+(function(global, factory) {
+    module.exports = factory();
+})(this, function() {
+    "use strict";
+    function _typeof(obj) {
+        "@babel/helpers - typeof";
+        return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj) {
+            return typeof obj;
+        } : function(obj) {
+            return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+        }, _typeof(obj);
+    }
+    // https://github.com/bgrins/TinyColor
+    // Brian Grinstead, MIT License
+    var trimLeft = /^\s+/;
+    var trimRight = /\s+$/;
+    function tinycolor(color, opts) {
+        color = color ? color : "";
+        opts = opts || {};
+        // If input is already a tinycolor, return itself
+        if (color instanceof tinycolor) return color;
+        // If we are called as a function, call using new instead
+        if (!(this instanceof tinycolor)) return new tinycolor(color, opts);
+        var rgb = inputToRGB(color);
+        this._originalInput = color, this._r = rgb.r, this._g = rgb.g, this._b = rgb.b, this._a = rgb.a, this._roundA = Math.round(100 * this._a) / 100, this._format = opts.format || rgb.format;
+        this._gradientType = opts.gradientType;
+        // Don't let the range of [0,255] come back in [0,1].
+        // Potentially lose a little bit of precision here, but will fix issues where
+        // .5 gets interpreted as half of the total, instead of half of 1
+        // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+        if (this._r < 1) this._r = Math.round(this._r);
+        if (this._g < 1) this._g = Math.round(this._g);
+        if (this._b < 1) this._b = Math.round(this._b);
+        this._ok = rgb.ok;
+    }
+    tinycolor.prototype = {
+        isDark: function isDark() {
+            return this.getBrightness() < 128;
+        },
+        isLight: function isLight() {
+            return !this.isDark();
+        },
+        isValid: function isValid() {
+            return this._ok;
+        },
+        getOriginalInput: function getOriginalInput() {
+            return this._originalInput;
+        },
+        getFormat: function getFormat() {
+            return this._format;
+        },
+        getAlpha: function getAlpha() {
+            return this._a;
+        },
+        getBrightness: function getBrightness() {
+            //http://www.w3.org/TR/AERT#color-contrast
+            var rgb = this.toRgb();
+            return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+        },
+        getLuminance: function getLuminance() {
+            //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+            var rgb = this.toRgb();
+            var RsRGB, GsRGB, BsRGB, R, G, B;
+            RsRGB = rgb.r / 255;
+            GsRGB = rgb.g / 255;
+            BsRGB = rgb.b / 255;
+            if (RsRGB <= 0.03928) R = RsRGB / 12.92;
+            else R = Math.pow((RsRGB + 0.055) / 1.055, 2.4);
+            if (GsRGB <= 0.03928) G = GsRGB / 12.92;
+            else G = Math.pow((GsRGB + 0.055) / 1.055, 2.4);
+            if (BsRGB <= 0.03928) B = BsRGB / 12.92;
+            else B = Math.pow((BsRGB + 0.055) / 1.055, 2.4);
+            return 0.2126 * R + 0.7152 * G + 0.0722 * B;
+        },
+        setAlpha: function setAlpha(value) {
+            this._a = boundAlpha(value);
+            this._roundA = Math.round(100 * this._a) / 100;
+            return this;
+        },
+        toHsv: function toHsv() {
+            var hsv = rgbToHsv(this._r, this._g, this._b);
+            return {
+                h: hsv.h * 360,
+                s: hsv.s,
+                v: hsv.v,
+                a: this._a
+            };
+        },
+        toHsvString: function toHsvString() {
+            var hsv = rgbToHsv(this._r, this._g, this._b);
+            var h = Math.round(hsv.h * 360), s = Math.round(hsv.s * 100), v = Math.round(hsv.v * 100);
+            return this._a == 1 ? "hsv(" + h + ", " + s + "%, " + v + "%)" : "hsva(" + h + ", " + s + "%, " + v + "%, " + this._roundA + ")";
+        },
+        toHsl: function toHsl() {
+            var hsl = rgbToHsl(this._r, this._g, this._b);
+            return {
+                h: hsl.h * 360,
+                s: hsl.s,
+                l: hsl.l,
+                a: this._a
+            };
+        },
+        toHslString: function toHslString() {
+            var hsl = rgbToHsl(this._r, this._g, this._b);
+            var h = Math.round(hsl.h * 360), s = Math.round(hsl.s * 100), l = Math.round(hsl.l * 100);
+            return this._a == 1 ? "hsl(" + h + ", " + s + "%, " + l + "%)" : "hsla(" + h + ", " + s + "%, " + l + "%, " + this._roundA + ")";
+        },
+        toHex: function toHex(allow3Char) {
+            return rgbToHex(this._r, this._g, this._b, allow3Char);
+        },
+        toHexString: function toHexString(allow3Char) {
+            return "#" + this.toHex(allow3Char);
+        },
+        toHex8: function toHex8(allow4Char) {
+            return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+        },
+        toHex8String: function toHex8String(allow4Char) {
+            return "#" + this.toHex8(allow4Char);
+        },
+        toRgb: function toRgb() {
+            return {
+                r: Math.round(this._r),
+                g: Math.round(this._g),
+                b: Math.round(this._b),
+                a: this._a
+            };
+        },
+        toRgbString: function toRgbString() {
+            return this._a == 1 ? "rgb(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ")" : "rgba(" + Math.round(this._r) + ", " + Math.round(this._g) + ", " + Math.round(this._b) + ", " + this._roundA + ")";
+        },
+        toPercentageRgb: function toPercentageRgb() {
+            return {
+                r: Math.round(bound01(this._r, 255) * 100) + "%",
+                g: Math.round(bound01(this._g, 255) * 100) + "%",
+                b: Math.round(bound01(this._b, 255) * 100) + "%",
+                a: this._a
+            };
+        },
+        toPercentageRgbString: function toPercentageRgbString() {
+            return this._a == 1 ? "rgb(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%)" : "rgba(" + Math.round(bound01(this._r, 255) * 100) + "%, " + Math.round(bound01(this._g, 255) * 100) + "%, " + Math.round(bound01(this._b, 255) * 100) + "%, " + this._roundA + ")";
+        },
+        toName: function toName() {
+            if (this._a === 0) return "transparent";
+            if (this._a < 1) return false;
+            return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+        },
+        toFilter: function toFilter(secondColor) {
+            var hex8String = "#" + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+            var secondHex8String = hex8String;
+            var gradientType = this._gradientType ? "GradientType = 1, " : "";
+            if (secondColor) {
+                var s = tinycolor(secondColor);
+                secondHex8String = "#" + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+            }
+            return "progid:DXImageTransform.Microsoft.gradient(" + gradientType + "startColorstr=" + hex8String + ",endColorstr=" + secondHex8String + ")";
+        },
+        toString: function toString(format) {
+            var formatSet = !!format;
+            format = format || this._format;
+            var formattedString = false;
+            var hasAlpha = this._a < 1 && this._a >= 0;
+            var needsAlphaFormat = !formatSet && hasAlpha && (format === "hex" || format === "hex6" || format === "hex3" || format === "hex4" || format === "hex8" || format === "name");
+            if (needsAlphaFormat) {
+                // Special case for "transparent", all other non-alpha formats
+                // will return rgba when there is transparency.
+                if (format === "name" && this._a === 0) return this.toName();
+                return this.toRgbString();
+            }
+            if (format === "rgb") formattedString = this.toRgbString();
+            if (format === "prgb") formattedString = this.toPercentageRgbString();
+            if (format === "hex" || format === "hex6") formattedString = this.toHexString();
+            if (format === "hex3") formattedString = this.toHexString(true);
+            if (format === "hex4") formattedString = this.toHex8String(true);
+            if (format === "hex8") formattedString = this.toHex8String();
+            if (format === "name") formattedString = this.toName();
+            if (format === "hsl") formattedString = this.toHslString();
+            if (format === "hsv") formattedString = this.toHsvString();
+            return formattedString || this.toHexString();
+        },
+        clone: function clone() {
+            return tinycolor(this.toString());
+        },
+        _applyModification: function _applyModification(fn, args) {
+            var color = fn.apply(null, [
+                this
+            ].concat([].slice.call(args)));
+            this._r = color._r;
+            this._g = color._g;
+            this._b = color._b;
+            this.setAlpha(color._a);
+            return this;
+        },
+        lighten: function lighten() {
+            return this._applyModification(_lighten, arguments);
+        },
+        brighten: function brighten() {
+            return this._applyModification(_brighten, arguments);
+        },
+        darken: function darken() {
+            return this._applyModification(_darken, arguments);
+        },
+        desaturate: function desaturate() {
+            return this._applyModification(_desaturate, arguments);
+        },
+        saturate: function saturate() {
+            return this._applyModification(_saturate, arguments);
+        },
+        greyscale: function greyscale() {
+            return this._applyModification(_greyscale, arguments);
+        },
+        spin: function spin() {
+            return this._applyModification(_spin, arguments);
+        },
+        _applyCombination: function _applyCombination(fn, args) {
+            return fn.apply(null, [
+                this
+            ].concat([].slice.call(args)));
+        },
+        analogous: function analogous() {
+            return this._applyCombination(_analogous, arguments);
+        },
+        complement: function complement() {
+            return this._applyCombination(_complement, arguments);
+        },
+        monochromatic: function monochromatic() {
+            return this._applyCombination(_monochromatic, arguments);
+        },
+        splitcomplement: function splitcomplement() {
+            return this._applyCombination(_splitcomplement, arguments);
+        },
+        // Disabled until https://github.com/bgrins/TinyColor/issues/254
+        // polyad: function (number) {
+        //   return this._applyCombination(polyad, [number]);
+        // },
+        triad: function triad() {
+            return this._applyCombination(polyad, [
+                3
+            ]);
+        },
+        tetrad: function tetrad() {
+            return this._applyCombination(polyad, [
+                4
+            ]);
+        }
+    };
+    // If input is an object, force 1 into "1.0" to handle ratios properly
+    // String input requires "1.0" as input, so 1 will be treated as 1
+    tinycolor.fromRatio = function(color, opts) {
+        if (_typeof(color) == "object") {
+            var newColor = {};
+            for(var i in color)if (color.hasOwnProperty(i)) {
+                if (i === "a") newColor[i] = color[i];
+                else newColor[i] = convertToPercentage(color[i]);
+            }
+            color = newColor;
+        }
+        return tinycolor(color, opts);
+    };
+    // Given a string or object, convert that input to RGB
+    // Possible string inputs:
+    //
+    //     "red"
+    //     "#f00" or "f00"
+    //     "#ff0000" or "ff0000"
+    //     "#ff000000" or "ff000000"
+    //     "rgb 255 0 0" or "rgb (255, 0, 0)"
+    //     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+    //     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+    //     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+    //     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+    //     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+    //     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+    //
+    function inputToRGB(color) {
+        var rgb = {
+            r: 0,
+            g: 0,
+            b: 0
+        };
+        var a = 1;
+        var s = null;
+        var v = null;
+        var l = null;
+        var ok = false;
+        var format = false;
+        if (typeof color == "string") color = stringInputToObject(color);
+        if (_typeof(color) == "object") {
+            if (isValidCSSUnit(color.r) && isValidCSSUnit(color.g) && isValidCSSUnit(color.b)) {
+                rgb = rgbToRgb(color.r, color.g, color.b);
+                ok = true;
+                format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+            } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.v)) {
+                s = convertToPercentage(color.s);
+                v = convertToPercentage(color.v);
+                rgb = hsvToRgb(color.h, s, v);
+                ok = true;
+                format = "hsv";
+            } else if (isValidCSSUnit(color.h) && isValidCSSUnit(color.s) && isValidCSSUnit(color.l)) {
+                s = convertToPercentage(color.s);
+                l = convertToPercentage(color.l);
+                rgb = hslToRgb(color.h, s, l);
+                ok = true;
+                format = "hsl";
+            }
+            if (color.hasOwnProperty("a")) a = color.a;
+        }
+        a = boundAlpha(a);
+        return {
+            ok: ok,
+            format: color.format || format,
+            r: Math.min(255, Math.max(rgb.r, 0)),
+            g: Math.min(255, Math.max(rgb.g, 0)),
+            b: Math.min(255, Math.max(rgb.b, 0)),
+            a: a
+        };
+    }
+    // Conversion Functions
+    // --------------------
+    // `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+    // <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
+    // `rgbToRgb`
+    // Handle bounds / percentage checking to conform to CSS color spec
+    // <http://www.w3.org/TR/css3-color/>
+    // *Assumes:* r, g, b in [0, 255] or [0, 1]
+    // *Returns:* { r, g, b } in [0, 255]
+    function rgbToRgb(r, g, b) {
+        return {
+            r: bound01(r, 255) * 255,
+            g: bound01(g, 255) * 255,
+            b: bound01(b, 255) * 255
+        };
+    }
+    // `rgbToHsl`
+    // Converts an RGB color value to HSL.
+    // *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+    // *Returns:* { h, s, l } in [0,1]
+    function rgbToHsl(r, g, b) {
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, l = (max + min) / 2;
+        if (max == min) h = s = 0; // achromatic
+        else {
+            var d = max - min;
+            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+            switch(max){
+                case r:
+                    h = (g - b) / d + (g < b ? 6 : 0);
+                    break;
+                case g:
+                    h = (b - r) / d + 2;
+                    break;
+                case b:
+                    h = (r - g) / d + 4;
+                    break;
+            }
+            h /= 6;
+        }
+        return {
+            h: h,
+            s: s,
+            l: l
+        };
+    }
+    // `hslToRgb`
+    // Converts an HSL color value to RGB.
+    // *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+    // *Returns:* { r, g, b } in the set [0, 255]
+    function hslToRgb(h, s, l) {
+        var r, g, b;
+        h = bound01(h, 360);
+        s = bound01(s, 100);
+        l = bound01(l, 100);
+        function hue2rgb(p, q, t) {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1 / 6) return p + (q - p) * 6 * t;
+            if (t < 0.5) return q;
+            if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+            return p;
+        }
+        if (s === 0) r = g = b = l; // achromatic
+        else {
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1 / 3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1 / 3);
+        }
+        return {
+            r: r * 255,
+            g: g * 255,
+            b: b * 255
+        };
+    }
+    // `rgbToHsv`
+    // Converts an RGB color value to HSV
+    // *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+    // *Returns:* { h, s, v } in [0,1]
+    function rgbToHsv(r, g, b) {
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, v = max;
+        var d = max - min;
+        s = max === 0 ? 0 : d / max;
+        if (max == min) h = 0; // achromatic
+        else {
+            switch(max){
+                case r:
+                    h = (g - b) / d + (g < b ? 6 : 0);
+                    break;
+                case g:
+                    h = (b - r) / d + 2;
+                    break;
+                case b:
+                    h = (r - g) / d + 4;
+                    break;
+            }
+            h /= 6;
+        }
+        return {
+            h: h,
+            s: s,
+            v: v
+        };
+    }
+    // `hsvToRgb`
+    // Converts an HSV color value to RGB.
+    // *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+    // *Returns:* { r, g, b } in the set [0, 255]
+    function hsvToRgb(h, s, v) {
+        h = bound01(h, 360) * 6;
+        s = bound01(s, 100);
+        v = bound01(v, 100);
+        var i = Math.floor(h), f = h - i, p = v * (1 - s), q = v * (1 - f * s), t = v * (1 - (1 - f) * s), mod = i % 6, r = [
+            v,
+            q,
+            p,
+            p,
+            t,
+            v
+        ][mod], g = [
+            t,
+            v,
+            v,
+            q,
+            p,
+            p
+        ][mod], b = [
+            p,
+            p,
+            t,
+            v,
+            v,
+            q
+        ][mod];
+        return {
+            r: r * 255,
+            g: g * 255,
+            b: b * 255
+        };
+    }
+    // `rgbToHex`
+    // Converts an RGB color to hex
+    // Assumes r, g, and b are contained in the set [0, 255]
+    // Returns a 3 or 6 character hex
+    function rgbToHex(r, g, b, allow3Char) {
+        var hex = [
+            pad2(Math.round(r).toString(16)),
+            pad2(Math.round(g).toString(16)),
+            pad2(Math.round(b).toString(16))
+        ];
+        // Return a 3 character hex if possible
+        if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+        return hex.join("");
+    }
+    // `rgbaToHex`
+    // Converts an RGBA color plus alpha transparency to hex
+    // Assumes r, g, b are contained in the set [0, 255] and
+    // a in [0, 1]. Returns a 4 or 8 character rgba hex
+    function rgbaToHex(r, g, b, a, allow4Char) {
+        var hex = [
+            pad2(Math.round(r).toString(16)),
+            pad2(Math.round(g).toString(16)),
+            pad2(Math.round(b).toString(16)),
+            pad2(convertDecimalToHex(a))
+        ];
+        // Return a 4 character hex if possible
+        if (allow4Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1) && hex[3].charAt(0) == hex[3].charAt(1)) return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0) + hex[3].charAt(0);
+        return hex.join("");
+    }
+    // `rgbaToArgbHex`
+    // Converts an RGBA color to an ARGB Hex8 string
+    // Rarely used, but required for "toFilter()"
+    function rgbaToArgbHex(r, g, b, a) {
+        var hex = [
+            pad2(convertDecimalToHex(a)),
+            pad2(Math.round(r).toString(16)),
+            pad2(Math.round(g).toString(16)),
+            pad2(Math.round(b).toString(16))
+        ];
+        return hex.join("");
+    }
+    // `equals`
+    // Can be called with any tinycolor input
+    tinycolor.equals = function(color1, color2) {
+        if (!color1 || !color2) return false;
+        return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+    };
+    tinycolor.random = function() {
+        return tinycolor.fromRatio({
+            r: Math.random(),
+            g: Math.random(),
+            b: Math.random()
+        });
+    };
+    // Modification Functions
+    // ----------------------
+    // Thanks to less.js for some of the basics here
+    // <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
+    function _desaturate(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.s -= amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+    }
+    function _saturate(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.s += amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+    }
+    function _greyscale(color) {
+        return tinycolor(color).desaturate(100);
+    }
+    function _lighten(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.l += amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+    }
+    function _brighten(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var rgb = tinycolor(color).toRgb();
+        rgb.r = Math.max(0, Math.min(255, rgb.r - Math.round(255 * -(amount / 100))));
+        rgb.g = Math.max(0, Math.min(255, rgb.g - Math.round(255 * -(amount / 100))));
+        rgb.b = Math.max(0, Math.min(255, rgb.b - Math.round(255 * -(amount / 100))));
+        return tinycolor(rgb);
+    }
+    function _darken(color, amount) {
+        amount = amount === 0 ? 0 : amount || 10;
+        var hsl = tinycolor(color).toHsl();
+        hsl.l -= amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+    }
+    // Spin takes a positive or negative amount within [-360, 360] indicating the change of hue.
+    // Values outside of this range will be wrapped into this range.
+    function _spin(color, amount) {
+        var hsl = tinycolor(color).toHsl();
+        var hue = (hsl.h + amount) % 360;
+        hsl.h = hue < 0 ? 360 + hue : hue;
+        return tinycolor(hsl);
+    }
+    // Combination Functions
+    // ---------------------
+    // Thanks to jQuery xColor for some of the ideas behind these
+    // <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+    function _complement(color) {
+        var hsl = tinycolor(color).toHsl();
+        hsl.h = (hsl.h + 180) % 360;
+        return tinycolor(hsl);
+    }
+    function polyad(color, number) {
+        if (isNaN(number) || number <= 0) throw new Error("Argument to polyad must be a positive number");
+        var hsl = tinycolor(color).toHsl();
+        var result = [
+            tinycolor(color)
+        ];
+        var step = 360 / number;
+        for(var i = 1; i < number; i++)result.push(tinycolor({
+            h: (hsl.h + i * step) % 360,
+            s: hsl.s,
+            l: hsl.l
+        }));
+        return result;
+    }
+    function _splitcomplement(color) {
+        var hsl = tinycolor(color).toHsl();
+        var h = hsl.h;
+        return [
+            tinycolor(color),
+            tinycolor({
+                h: (h + 72) % 360,
+                s: hsl.s,
+                l: hsl.l
+            }),
+            tinycolor({
+                h: (h + 216) % 360,
+                s: hsl.s,
+                l: hsl.l
+            })
+        ];
+    }
+    function _analogous(color, results, slices) {
+        results = results || 6;
+        slices = slices || 30;
+        var hsl = tinycolor(color).toHsl();
+        var part = 360 / slices;
+        var ret = [
+            tinycolor(color)
+        ];
+        for(hsl.h = (hsl.h - (part * results >> 1) + 720) % 360; --results;){
+            hsl.h = (hsl.h + part) % 360;
+            ret.push(tinycolor(hsl));
+        }
+        return ret;
+    }
+    function _monochromatic(color, results) {
+        results = results || 6;
+        var hsv = tinycolor(color).toHsv();
+        var h = hsv.h, s = hsv.s, v = hsv.v;
+        var ret = [];
+        var modification = 1 / results;
+        while(results--){
+            ret.push(tinycolor({
+                h: h,
+                s: s,
+                v: v
+            }));
+            v = (v + modification) % 1;
+        }
+        return ret;
+    }
+    // Utility Functions
+    // ---------------------
+    tinycolor.mix = function(color1, color2, amount) {
+        amount = amount === 0 ? 0 : amount || 50;
+        var rgb1 = tinycolor(color1).toRgb();
+        var rgb2 = tinycolor(color2).toRgb();
+        var p = amount / 100;
+        var rgba = {
+            r: (rgb2.r - rgb1.r) * p + rgb1.r,
+            g: (rgb2.g - rgb1.g) * p + rgb1.g,
+            b: (rgb2.b - rgb1.b) * p + rgb1.b,
+            a: (rgb2.a - rgb1.a) * p + rgb1.a
+        };
+        return tinycolor(rgba);
+    };
+    // Readability Functions
+    // ---------------------
+    // <http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef (WCAG Version 2)
+    // `contrast`
+    // Analyze the 2 colors and returns the color contrast defined by (WCAG Version 2)
+    tinycolor.readability = function(color1, color2) {
+        var c1 = tinycolor(color1);
+        var c2 = tinycolor(color2);
+        return (Math.max(c1.getLuminance(), c2.getLuminance()) + 0.05) / (Math.min(c1.getLuminance(), c2.getLuminance()) + 0.05);
+    };
+    // `isReadable`
+    // Ensure that foreground and background color combinations meet WCAG2 guidelines.
+    // The third argument is an optional Object.
+    //      the 'level' property states 'AA' or 'AAA' - if missing or invalid, it defaults to 'AA';
+    //      the 'size' property states 'large' or 'small' - if missing or invalid, it defaults to 'small'.
+    // If the entire object is absent, isReadable defaults to {level:"AA",size:"small"}.
+    // *Example*
+    //    tinycolor.isReadable("#000", "#111") => false
+    //    tinycolor.isReadable("#000", "#111",{level:"AA",size:"large"}) => false
+    tinycolor.isReadable = function(color1, color2, wcag2) {
+        var readability = tinycolor.readability(color1, color2);
+        var wcag2Parms, out;
+        out = false;
+        wcag2Parms = validateWCAG2Parms(wcag2);
+        switch(wcag2Parms.level + wcag2Parms.size){
+            case "AAsmall":
+            case "AAAlarge":
+                out = readability >= 4.5;
+                break;
+            case "AAlarge":
+                out = readability >= 3;
+                break;
+            case "AAAsmall":
+                out = readability >= 7;
+                break;
+        }
+        return out;
+    };
+    // `mostReadable`
+    // Given a base color and a list of possible foreground or background
+    // colors for that base, returns the most readable color.
+    // Optionally returns Black or White if the most readable color is unreadable.
+    // *Example*
+    //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+    //    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+    //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
+    //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
+    tinycolor.mostReadable = function(baseColor, colorList, args) {
+        var bestColor = null;
+        var bestScore = 0;
+        var readability;
+        var includeFallbackColors, level, size;
+        args = args || {};
+        includeFallbackColors = args.includeFallbackColors;
+        level = args.level;
+        size = args.size;
+        for(var i = 0; i < colorList.length; i++){
+            readability = tinycolor.readability(baseColor, colorList[i]);
+            if (readability > bestScore) {
+                bestScore = readability;
+                bestColor = tinycolor(colorList[i]);
+            }
+        }
+        if (tinycolor.isReadable(baseColor, bestColor, {
+            level: level,
+            size: size
+        }) || !includeFallbackColors) return bestColor;
+        else {
+            args.includeFallbackColors = false;
+            return tinycolor.mostReadable(baseColor, [
+                "#fff",
+                "#000"
+            ], args);
+        }
+    };
+    // Big List of Colors
+    // ------------------
+    // <https://www.w3.org/TR/css-color-4/#named-colors>
+    var names = tinycolor.names = {
+        aliceblue: "f0f8ff",
+        antiquewhite: "faebd7",
+        aqua: "0ff",
+        aquamarine: "7fffd4",
+        azure: "f0ffff",
+        beige: "f5f5dc",
+        bisque: "ffe4c4",
+        black: "000",
+        blanchedalmond: "ffebcd",
+        blue: "00f",
+        blueviolet: "8a2be2",
+        brown: "a52a2a",
+        burlywood: "deb887",
+        burntsienna: "ea7e5d",
+        cadetblue: "5f9ea0",
+        chartreuse: "7fff00",
+        chocolate: "d2691e",
+        coral: "ff7f50",
+        cornflowerblue: "6495ed",
+        cornsilk: "fff8dc",
+        crimson: "dc143c",
+        cyan: "0ff",
+        darkblue: "00008b",
+        darkcyan: "008b8b",
+        darkgoldenrod: "b8860b",
+        darkgray: "a9a9a9",
+        darkgreen: "006400",
+        darkgrey: "a9a9a9",
+        darkkhaki: "bdb76b",
+        darkmagenta: "8b008b",
+        darkolivegreen: "556b2f",
+        darkorange: "ff8c00",
+        darkorchid: "9932cc",
+        darkred: "8b0000",
+        darksalmon: "e9967a",
+        darkseagreen: "8fbc8f",
+        darkslateblue: "483d8b",
+        darkslategray: "2f4f4f",
+        darkslategrey: "2f4f4f",
+        darkturquoise: "00ced1",
+        darkviolet: "9400d3",
+        deeppink: "ff1493",
+        deepskyblue: "00bfff",
+        dimgray: "696969",
+        dimgrey: "696969",
+        dodgerblue: "1e90ff",
+        firebrick: "b22222",
+        floralwhite: "fffaf0",
+        forestgreen: "228b22",
+        fuchsia: "f0f",
+        gainsboro: "dcdcdc",
+        ghostwhite: "f8f8ff",
+        gold: "ffd700",
+        goldenrod: "daa520",
+        gray: "808080",
+        green: "008000",
+        greenyellow: "adff2f",
+        grey: "808080",
+        honeydew: "f0fff0",
+        hotpink: "ff69b4",
+        indianred: "cd5c5c",
+        indigo: "4b0082",
+        ivory: "fffff0",
+        khaki: "f0e68c",
+        lavender: "e6e6fa",
+        lavenderblush: "fff0f5",
+        lawngreen: "7cfc00",
+        lemonchiffon: "fffacd",
+        lightblue: "add8e6",
+        lightcoral: "f08080",
+        lightcyan: "e0ffff",
+        lightgoldenrodyellow: "fafad2",
+        lightgray: "d3d3d3",
+        lightgreen: "90ee90",
+        lightgrey: "d3d3d3",
+        lightpink: "ffb6c1",
+        lightsalmon: "ffa07a",
+        lightseagreen: "20b2aa",
+        lightskyblue: "87cefa",
+        lightslategray: "789",
+        lightslategrey: "789",
+        lightsteelblue: "b0c4de",
+        lightyellow: "ffffe0",
+        lime: "0f0",
+        limegreen: "32cd32",
+        linen: "faf0e6",
+        magenta: "f0f",
+        maroon: "800000",
+        mediumaquamarine: "66cdaa",
+        mediumblue: "0000cd",
+        mediumorchid: "ba55d3",
+        mediumpurple: "9370db",
+        mediumseagreen: "3cb371",
+        mediumslateblue: "7b68ee",
+        mediumspringgreen: "00fa9a",
+        mediumturquoise: "48d1cc",
+        mediumvioletred: "c71585",
+        midnightblue: "191970",
+        mintcream: "f5fffa",
+        mistyrose: "ffe4e1",
+        moccasin: "ffe4b5",
+        navajowhite: "ffdead",
+        navy: "000080",
+        oldlace: "fdf5e6",
+        olive: "808000",
+        olivedrab: "6b8e23",
+        orange: "ffa500",
+        orangered: "ff4500",
+        orchid: "da70d6",
+        palegoldenrod: "eee8aa",
+        palegreen: "98fb98",
+        paleturquoise: "afeeee",
+        palevioletred: "db7093",
+        papayawhip: "ffefd5",
+        peachpuff: "ffdab9",
+        peru: "cd853f",
+        pink: "ffc0cb",
+        plum: "dda0dd",
+        powderblue: "b0e0e6",
+        purple: "800080",
+        rebeccapurple: "663399",
+        red: "f00",
+        rosybrown: "bc8f8f",
+        royalblue: "4169e1",
+        saddlebrown: "8b4513",
+        salmon: "fa8072",
+        sandybrown: "f4a460",
+        seagreen: "2e8b57",
+        seashell: "fff5ee",
+        sienna: "a0522d",
+        silver: "c0c0c0",
+        skyblue: "87ceeb",
+        slateblue: "6a5acd",
+        slategray: "708090",
+        slategrey: "708090",
+        snow: "fffafa",
+        springgreen: "00ff7f",
+        steelblue: "4682b4",
+        tan: "d2b48c",
+        teal: "008080",
+        thistle: "d8bfd8",
+        tomato: "ff6347",
+        turquoise: "40e0d0",
+        violet: "ee82ee",
+        wheat: "f5deb3",
+        white: "fff",
+        whitesmoke: "f5f5f5",
+        yellow: "ff0",
+        yellowgreen: "9acd32"
+    };
+    // Make it easy to access colors via `hexNames[hex]`
+    var hexNames = tinycolor.hexNames = flip(names);
+    // Utilities
+    // ---------
+    // `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+    function flip(o) {
+        var flipped = {};
+        for(var i in o)if (o.hasOwnProperty(i)) flipped[o[i]] = i;
+        return flipped;
+    }
+    // Return a valid alpha value [0,1] with all invalid values being set to 1
+    function boundAlpha(a) {
+        a = parseFloat(a);
+        if (isNaN(a) || a < 0 || a > 1) a = 1;
+        return a;
+    }
+    // Take input from [0, n] and return it as [0, 1]
+    function bound01(n, max) {
+        if (isOnePointZero(n)) n = "100%";
+        var processPercent = isPercentage(n);
+        n = Math.min(max, Math.max(0, parseFloat(n)));
+        // Automatically convert percentage into number
+        if (processPercent) n = parseInt(n * max, 10) / 100;
+        // Handle floating point rounding errors
+        if (Math.abs(n - max) < 0.000001) return 1;
+        // Convert into [0, 1] range if it isn't already
+        return n % max / parseFloat(max);
+    }
+    // Force a number between 0 and 1
+    function clamp01(val) {
+        return Math.min(1, Math.max(0, val));
+    }
+    // Parse a base-16 hex value into a base-10 integer
+    function parseIntFromHex(val) {
+        return parseInt(val, 16);
+    }
+    // Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+    // <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+    function isOnePointZero(n) {
+        return typeof n == "string" && n.indexOf(".") != -1 && parseFloat(n) === 1;
+    }
+    // Check to see if string passed in is a percentage
+    function isPercentage(n) {
+        return typeof n === "string" && n.indexOf("%") != -1;
+    }
+    // Force a hex value to have 2 characters
+    function pad2(c) {
+        return c.length == 1 ? "0" + c : "" + c;
+    }
+    // Replace a decimal with it's percentage value
+    function convertToPercentage(n) {
+        if (n <= 1) n = n * 100 + "%";
+        return n;
+    }
+    // Converts a decimal to a hex value
+    function convertDecimalToHex(d) {
+        return Math.round(parseFloat(d) * 255).toString(16);
+    }
+    // Converts a hex value to a decimal
+    function convertHexToDecimal(h) {
+        return parseIntFromHex(h) / 255;
+    }
+    var matchers = function() {
+        // <http://www.w3.org/TR/css3-values/#integers>
+        var CSS_INTEGER = "[-\\+]?\\d+%?";
+        // <http://www.w3.org/TR/css3-values/#number-value>
+        var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+        // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
+        var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+        // Actual matching.
+        // Parentheses and commas are optional, but not required.
+        // Whitespace can take the place of commas or opening paren
+        var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+        var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+        return {
+            CSS_UNIT: new RegExp(CSS_UNIT),
+            rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+            rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+            hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+            hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+            hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+            hsva: new RegExp("hsva" + PERMISSIVE_MATCH4),
+            hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+            hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+            hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+            hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+        };
+    }();
+    // `isValidCSSUnit`
+    // Take in a single string / number and check to see if it looks like a CSS unit
+    // (see `matchers` above for definition).
+    function isValidCSSUnit(color) {
+        return !!matchers.CSS_UNIT.exec(color);
+    }
+    // `stringInputToObject`
+    // Permissive string parsing.  Take in a number of formats, and output an object
+    // based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+    function stringInputToObject(color) {
+        color = color.replace(trimLeft, "").replace(trimRight, "").toLowerCase();
+        var named = false;
+        if (names[color]) {
+            color = names[color];
+            named = true;
+        } else if (color == "transparent") return {
+            r: 0,
+            g: 0,
+            b: 0,
+            a: 0,
+            format: "name"
+        };
+        // Try to match string input using regular expressions.
+        // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
+        // Just return an object and let the conversion functions handle that.
+        // This way the result will be the same whether the tinycolor is initialized with string or object.
+        var match;
+        if (match = matchers.rgb.exec(color)) return {
+            r: match[1],
+            g: match[2],
+            b: match[3]
+        };
+        if (match = matchers.rgba.exec(color)) return {
+            r: match[1],
+            g: match[2],
+            b: match[3],
+            a: match[4]
+        };
+        if (match = matchers.hsl.exec(color)) return {
+            h: match[1],
+            s: match[2],
+            l: match[3]
+        };
+        if (match = matchers.hsla.exec(color)) return {
+            h: match[1],
+            s: match[2],
+            l: match[3],
+            a: match[4]
+        };
+        if (match = matchers.hsv.exec(color)) return {
+            h: match[1],
+            s: match[2],
+            v: match[3]
+        };
+        if (match = matchers.hsva.exec(color)) return {
+            h: match[1],
+            s: match[2],
+            v: match[3],
+            a: match[4]
+        };
+        if (match = matchers.hex8.exec(color)) return {
+            r: parseIntFromHex(match[1]),
+            g: parseIntFromHex(match[2]),
+            b: parseIntFromHex(match[3]),
+            a: convertHexToDecimal(match[4]),
+            format: named ? "name" : "hex8"
+        };
+        if (match = matchers.hex6.exec(color)) return {
+            r: parseIntFromHex(match[1]),
+            g: parseIntFromHex(match[2]),
+            b: parseIntFromHex(match[3]),
+            format: named ? "name" : "hex"
+        };
+        if (match = matchers.hex4.exec(color)) return {
+            r: parseIntFromHex(match[1] + "" + match[1]),
+            g: parseIntFromHex(match[2] + "" + match[2]),
+            b: parseIntFromHex(match[3] + "" + match[3]),
+            a: convertHexToDecimal(match[4] + "" + match[4]),
+            format: named ? "name" : "hex8"
+        };
+        if (match = matchers.hex3.exec(color)) return {
+            r: parseIntFromHex(match[1] + "" + match[1]),
+            g: parseIntFromHex(match[2] + "" + match[2]),
+            b: parseIntFromHex(match[3] + "" + match[3]),
+            format: named ? "name" : "hex"
+        };
+        return false;
+    }
+    function validateWCAG2Parms(parms) {
+        // return valid WCAG2 parms for isReadable.
+        // If input parms are invalid, return {"level":"AA", "size":"small"}
+        var level, size;
+        parms = parms || {
+            level: "AA",
+            size: "small"
+        };
+        level = (parms.level || "AA").toUpperCase();
+        size = (parms.size || "small").toLowerCase();
+        if (level !== "AA" && level !== "AAA") level = "AA";
+        if (size !== "small" && size !== "large") size = "small";
+        return {
+            level: level,
+            size: size
+        };
+    }
+    return tinycolor;
+});
+
+},{}],"jSM15":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Swatch", ()=>Swatch);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _interaction = require("../../helpers/interaction");
+var _checkboard = require("./Checkboard");
+var _checkboardDefault = parcelHelpers.interopDefault(_checkboard);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var ENTER = 13;
+var Swatch = function Swatch(_ref) {
+    var color = _ref.color, style = _ref.style, _ref$onClick = _ref.onClick, onClick = _ref$onClick === undefined ? function() {} : _ref$onClick, onHover = _ref.onHover, _ref$title = _ref.title, title = _ref$title === undefined ? color : _ref$title, children = _ref.children, focus = _ref.focus, _ref$focusStyle = _ref.focusStyle, focusStyle = _ref$focusStyle === undefined ? {} : _ref$focusStyle;
+    var transparent = color === "transparent";
+    var styles = (0, _reactcssDefault.default)({
+        default: {
+            swatch: _extends({
+                background: color,
+                height: "100%",
+                width: "100%",
+                cursor: "pointer",
+                position: "relative",
+                outline: "none"
+            }, style, focus ? focusStyle : {})
+        }
+    });
+    var handleClick = function handleClick(e) {
+        return onClick(color, e);
+    };
+    var handleKeyDown = function handleKeyDown(e) {
+        return e.keyCode === ENTER && onClick(color, e);
+    };
+    var handleHover = function handleHover(e) {
+        return onHover(color, e);
+    };
+    var optionalEvents = {};
+    if (onHover) optionalEvents.onMouseOver = handleHover;
+    return (0, _reactDefault.default).createElement("div", _extends({
+        style: styles.swatch,
+        onClick: handleClick,
+        title: title,
+        tabIndex: 0,
+        onKeyDown: handleKeyDown
+    }, optionalEvents), children, transparent && (0, _reactDefault.default).createElement((0, _checkboardDefault.default), {
+        borderRadius: styles.swatch.borderRadius,
+        boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)"
+    }));
+};
+exports.default = (0, _interaction.handleFocus)(Swatch);
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/interaction":"keSYw","./Checkboard":"f36zN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"keSYw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "handleFocus", ()=>handleFocus);
+/* eslint-disable no-invalid-this */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var handleFocus = function handleFocus(Component) {
+    var Span = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "span";
+    return function(_React$Component) {
+        _inherits(Focus, _React$Component);
+        function Focus() {
+            var _ref;
+            var _temp, _this, _ret;
+            _classCallCheck(this, Focus);
+            for(var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Focus.__proto__ || Object.getPrototypeOf(Focus)).call.apply(_ref, [
+                this
+            ].concat(args))), _this), _this.state = {
+                focus: false
+            }, _this.handleFocus = function() {
+                return _this.setState({
+                    focus: true
+                });
+            }, _this.handleBlur = function() {
+                return _this.setState({
+                    focus: false
+                });
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+        _createClass(Focus, [
+            {
+                key: "render",
+                value: function render() {
+                    return (0, _reactDefault.default).createElement(Span, {
+                        onFocus: this.handleFocus,
+                        onBlur: this.handleBlur
+                    }, (0, _reactDefault.default).createElement(Component, _extends({}, this.props, this.state)));
+                }
+            }
+        ]);
+        return Focus;
+    }((0, _reactDefault.default).Component);
+};
+
+},{"react":"b6YLU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6zIuq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AlphaPointer", ()=>AlphaPointer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var AlphaPointer = function AlphaPointer(_ref) {
+    var direction = _ref.direction;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "18px",
+                height: "18px",
+                borderRadius: "50%",
+                transform: "translate(-9px, -1px)",
+                backgroundColor: "rgb(248, 248, 248)",
+                boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.37)"
+            }
+        },
+        "vertical": {
+            picker: {
+                transform: "translate(-3px, -9px)"
+            }
+        }
+    }, {
+        vertical: direction === "vertical"
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = AlphaPointer;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6r7Ju":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Block", ()=>Block);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var _blockSwatches = require("./BlockSwatches");
+var _blockSwatchesDefault = parcelHelpers.interopDefault(_blockSwatches);
+var Block = function Block(_ref) {
+    var onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, hex = _ref.hex, colors = _ref.colors, width = _ref.width, triangle = _ref.triangle, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var transparent = hex === "transparent";
+    var handleChange = function handleChange(hexCode, e) {
+        _color.isValidHex(hexCode) && onChange({
+            hex: hexCode,
+            source: "hex"
+        }, e);
+    };
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            card: {
+                width: width,
+                background: "#fff",
+                boxShadow: "0 1px rgba(0,0,0,.1)",
+                borderRadius: "6px",
+                position: "relative"
+            },
+            head: {
+                height: "110px",
+                background: hex,
+                borderRadius: "6px 6px 0 0",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "relative"
+            },
+            body: {
+                padding: "10px"
+            },
+            label: {
+                fontSize: "18px",
+                color: _color.getContrastingColor(hex),
+                position: "relative"
+            },
+            triangle: {
+                width: "0px",
+                height: "0px",
+                borderStyle: "solid",
+                borderWidth: "0 10px 10px 10px",
+                borderColor: "transparent transparent " + hex + " transparent",
+                position: "absolute",
+                top: "-10px",
+                left: "50%",
+                marginLeft: "-10px"
+            },
+            input: {
+                width: "100%",
+                fontSize: "12px",
+                color: "#666",
+                border: "0px",
+                outline: "none",
+                height: "22px",
+                boxShadow: "inset 0 0 0 1px #ddd",
+                borderRadius: "4px",
+                padding: "0 7px",
+                boxSizing: "border-box"
+            }
+        },
+        "hide-triangle": {
+            triangle: {
+                display: "none"
+            }
+        }
+    }, passedStyles), {
+        "hide-triangle": triangle === "hide"
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.card,
+        className: "block-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.triangle
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.head
+    }, transparent && (0, _reactDefault.default).createElement((0, _common.Checkboard), {
+        borderRadius: "6px 6px 0 0"
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.label
+    }, hex)), (0, _reactDefault.default).createElement("div", {
+        style: styles.body
+    }, (0, _reactDefault.default).createElement((0, _blockSwatchesDefault.default), {
+        colors: colors,
+        onClick: handleChange,
+        onSwatchHover: onSwatchHover
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input
+        },
+        value: hex,
+        onChange: handleChange
+    })));
+};
+Block.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).string),
+    triangle: (0, _propTypesDefault.default).oneOf([
+        "top",
+        "hide"
+    ]),
+    styles: (0, _propTypesDefault.default).object
+};
+Block.defaultProps = {
+    width: 170,
+    colors: [
+        "#D9E3F0",
+        "#F47373",
+        "#697689",
+        "#37D67A",
+        "#2CCCE4",
+        "#555555",
+        "#dce775",
+        "#ff8a65",
+        "#ba68c8"
+    ],
+    triangle: "top",
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Block);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../../helpers/color":"6bN5W","../common":"4lq7P","./BlockSwatches":"llwHY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"llwHY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BlockSwatches", ()=>BlockSwatches);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _common = require("../common");
+var BlockSwatches = function BlockSwatches(_ref) {
+    var colors = _ref.colors, onClick = _ref.onClick, onSwatchHover = _ref.onSwatchHover;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatches: {
+                marginRight: "-10px"
+            },
+            swatch: {
+                width: "22px",
+                height: "22px",
+                float: "left",
+                marginRight: "10px",
+                marginBottom: "10px",
+                borderRadius: "4px"
+            },
+            clear: {
+                clear: "both"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.swatches
+    }, (0, _mapDefault.default)(colors, function(c) {
+        return (0, _reactDefault.default).createElement((0, _common.Swatch), {
+            key: c,
+            color: c,
+            style: styles.swatch,
+            onClick: onClick,
+            onHover: onSwatchHover,
+            focusStyle: {
+                boxShadow: "0 0 4px " + c
+            }
+        });
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.clear
+    }));
+};
+exports.default = BlockSwatches;
+
+},{"react":"b6YLU","reactcss":"e0uT9","lodash-es/map":"2Rw7L","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Rw7L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayMapJs = require("./_arrayMap.js");
+var _arrayMapJsDefault = parcelHelpers.interopDefault(_arrayMapJs);
+var _baseIterateeJs = require("./_baseIteratee.js");
+var _baseIterateeJsDefault = parcelHelpers.interopDefault(_baseIterateeJs);
+var _baseMapJs = require("./_baseMap.js");
+var _baseMapJsDefault = parcelHelpers.interopDefault(_baseMapJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+/**
+ * Creates an array of values by running each element in `collection` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * Many lodash methods are guarded to work as iteratees for methods like
+ * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
+ *
+ * The guarded methods are:
+ * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
+ * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
+ * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
+ * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * _.map([4, 8], square);
+ * // => [16, 64]
+ *
+ * _.map({ 'a': 4, 'b': 8 }, square);
+ * // => [16, 64] (iteration order is not guaranteed)
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.map(users, 'user');
+ * // => ['barney', 'fred']
+ */ function map(collection, iteratee) {
+    var func = (0, _isArrayJsDefault.default)(collection) ? (0, _arrayMapJsDefault.default) : (0, _baseMapJsDefault.default);
+    return func(collection, (0, _baseIterateeJsDefault.default)(iteratee, 3));
+}
+exports.default = map;
+
+},{"./_arrayMap.js":"gDCVM","./_baseIteratee.js":"48kCP","./_baseMap.js":"eHrfS","./isArray.js":"ETPQ1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gDCVM":[function(require,module,exports) {
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function arrayMap(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length, result = Array(length);
+    while(++index < length)result[index] = iteratee(array[index], index, array);
+    return result;
+}
+exports.default = arrayMap;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"48kCP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseMatchesJs = require("./_baseMatches.js");
+var _baseMatchesJsDefault = parcelHelpers.interopDefault(_baseMatchesJs);
+var _baseMatchesPropertyJs = require("./_baseMatchesProperty.js");
+var _baseMatchesPropertyJsDefault = parcelHelpers.interopDefault(_baseMatchesPropertyJs);
+var _identityJs = require("./identity.js");
+var _identityJsDefault = parcelHelpers.interopDefault(_identityJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _propertyJs = require("./property.js");
+var _propertyJsDefault = parcelHelpers.interopDefault(_propertyJs);
+/**
+ * The base implementation of `_.iteratee`.
+ *
+ * @private
+ * @param {*} [value=_.identity] The value to convert to an iteratee.
+ * @returns {Function} Returns the iteratee.
+ */ function baseIteratee(value) {
+    // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+    // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
+    if (typeof value == "function") return value;
+    if (value == null) return 0, _identityJsDefault.default;
+    if (typeof value == "object") return (0, _isArrayJsDefault.default)(value) ? (0, _baseMatchesPropertyJsDefault.default)(value[0], value[1]) : (0, _baseMatchesJsDefault.default)(value);
+    return (0, _propertyJsDefault.default)(value);
+}
+exports.default = baseIteratee;
+
+},{"./_baseMatches.js":"6vwVM","./_baseMatchesProperty.js":"4hv6L","./identity.js":"1Y0KA","./isArray.js":"ETPQ1","./property.js":"kwvYw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6vwVM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsMatchJs = require("./_baseIsMatch.js");
+var _baseIsMatchJsDefault = parcelHelpers.interopDefault(_baseIsMatchJs);
+var _getMatchDataJs = require("./_getMatchData.js");
+var _getMatchDataJsDefault = parcelHelpers.interopDefault(_getMatchDataJs);
+var _matchesStrictComparableJs = require("./_matchesStrictComparable.js");
+var _matchesStrictComparableJsDefault = parcelHelpers.interopDefault(_matchesStrictComparableJs);
+/**
+ * The base implementation of `_.matches` which doesn't clone `source`.
+ *
+ * @private
+ * @param {Object} source The object of property values to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatches(source) {
+    var matchData = (0, _getMatchDataJsDefault.default)(source);
+    if (matchData.length == 1 && matchData[0][2]) return (0, _matchesStrictComparableJsDefault.default)(matchData[0][0], matchData[0][1]);
+    return function(object) {
+        return object === source || (0, _baseIsMatchJsDefault.default)(object, source, matchData);
+    };
+}
+exports.default = baseMatches;
+
+},{"./_baseIsMatch.js":"519lF","./_getMatchData.js":"2HQJS","./_matchesStrictComparable.js":"19Pwe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"519lF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _stackJs = require("./_Stack.js");
+var _stackJsDefault = parcelHelpers.interopDefault(_stackJs);
+var _baseIsEqualJs = require("./_baseIsEqual.js");
+var _baseIsEqualJsDefault = parcelHelpers.interopDefault(_baseIsEqualJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.isMatch` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to inspect.
+ * @param {Object} source The object of property values to match.
+ * @param {Array} matchData The property names, values, and compare flags to match.
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @returns {boolean} Returns `true` if `object` is a match, else `false`.
+ */ function baseIsMatch(object, source, matchData, customizer) {
+    var index = matchData.length, length = index, noCustomizer = !customizer;
+    if (object == null) return !length;
+    object = Object(object);
+    while(index--){
+        var data = matchData[index];
+        if (noCustomizer && data[2] ? data[1] !== object[data[0]] : !(data[0] in object)) return false;
+    }
+    while(++index < length){
+        data = matchData[index];
+        var key = data[0], objValue = object[key], srcValue = data[1];
+        if (noCustomizer && data[2]) {
+            if (objValue === undefined && !(key in object)) return false;
+        } else {
+            var stack = new (0, _stackJsDefault.default);
+            if (customizer) var result = customizer(objValue, srcValue, key, object, source, stack);
+            if (!(result === undefined ? (0, _baseIsEqualJsDefault.default)(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack) : result)) return false;
+        }
+    }
+    return true;
+}
+exports.default = baseIsMatch;
+
+},{"./_Stack.js":"dCpM5","./_baseIsEqual.js":"1zaYh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1zaYh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsEqualDeepJs = require("./_baseIsEqualDeep.js");
+var _baseIsEqualDeepJsDefault = parcelHelpers.interopDefault(_baseIsEqualDeepJs);
+var _isObjectLikeJs = require("./isObjectLike.js");
+var _isObjectLikeJsDefault = parcelHelpers.interopDefault(_isObjectLikeJs);
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */ function baseIsEqual(value, other, bitmask, customizer, stack) {
+    if (value === other) return true;
+    if (value == null || other == null || !(0, _isObjectLikeJsDefault.default)(value) && !(0, _isObjectLikeJsDefault.default)(other)) return value !== value && other !== other;
+    return (0, _baseIsEqualDeepJsDefault.default)(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+exports.default = baseIsEqual;
+
+},{"./_baseIsEqualDeep.js":"hBKuk","./isObjectLike.js":"iad76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hBKuk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _stackJs = require("./_Stack.js");
+var _stackJsDefault = parcelHelpers.interopDefault(_stackJs);
+var _equalArraysJs = require("./_equalArrays.js");
+var _equalArraysJsDefault = parcelHelpers.interopDefault(_equalArraysJs);
+var _equalByTagJs = require("./_equalByTag.js");
+var _equalByTagJsDefault = parcelHelpers.interopDefault(_equalByTagJs);
+var _equalObjectsJs = require("./_equalObjects.js");
+var _equalObjectsJsDefault = parcelHelpers.interopDefault(_equalObjectsJs);
+var _getTagJs = require("./_getTag.js");
+var _getTagJsDefault = parcelHelpers.interopDefault(_getTagJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isBufferJs = require("./isBuffer.js");
+var _isBufferJsDefault = parcelHelpers.interopDefault(_isBufferJs);
+var _isTypedArrayJs = require("./isTypedArray.js");
+var _isTypedArrayJsDefault = parcelHelpers.interopDefault(_isTypedArrayJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** `Object#toString` result references. */ var argsTag = "[object Arguments]", arrayTag = "[object Array]", objectTag = "[object Object]";
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+    var objIsArr = (0, _isArrayJsDefault.default)(object), othIsArr = (0, _isArrayJsDefault.default)(other), objTag = objIsArr ? arrayTag : (0, _getTagJsDefault.default)(object), othTag = othIsArr ? arrayTag : (0, _getTagJsDefault.default)(other);
+    objTag = objTag == argsTag ? objectTag : objTag;
+    othTag = othTag == argsTag ? objectTag : othTag;
+    var objIsObj = objTag == objectTag, othIsObj = othTag == objectTag, isSameTag = objTag == othTag;
+    if (isSameTag && (0, _isBufferJsDefault.default)(object)) {
+        if (!(0, _isBufferJsDefault.default)(other)) return false;
+        objIsArr = true;
+        objIsObj = false;
+    }
+    if (isSameTag && !objIsObj) {
+        stack || (stack = new (0, _stackJsDefault.default));
+        return objIsArr || (0, _isTypedArrayJsDefault.default)(object) ? (0, _equalArraysJsDefault.default)(object, other, bitmask, customizer, equalFunc, stack) : (0, _equalByTagJsDefault.default)(object, other, objTag, bitmask, customizer, equalFunc, stack);
+    }
+    if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+        var objIsWrapped = objIsObj && hasOwnProperty.call(object, "__wrapped__"), othIsWrapped = othIsObj && hasOwnProperty.call(other, "__wrapped__");
+        if (objIsWrapped || othIsWrapped) {
+            var objUnwrapped = objIsWrapped ? object.value() : object, othUnwrapped = othIsWrapped ? other.value() : other;
+            stack || (stack = new (0, _stackJsDefault.default));
+            return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+        }
+    }
+    if (!isSameTag) return false;
+    stack || (stack = new (0, _stackJsDefault.default));
+    return (0, _equalObjectsJsDefault.default)(object, other, bitmask, customizer, equalFunc, stack);
+}
+exports.default = baseIsEqualDeep;
+
+},{"./_Stack.js":"dCpM5","./_equalArrays.js":"3xWWQ","./_equalByTag.js":"9KfIu","./_equalObjects.js":"7yAdV","./_getTag.js":"1kCom","./isArray.js":"ETPQ1","./isBuffer.js":"llpEE","./isTypedArray.js":"2LIMs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3xWWQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _setCacheJs = require("./_SetCache.js");
+var _setCacheJsDefault = parcelHelpers.interopDefault(_setCacheJs);
+var _arraySomeJs = require("./_arraySome.js");
+var _arraySomeJsDefault = parcelHelpers.interopDefault(_arraySomeJs);
+var _cacheHasJs = require("./_cacheHas.js");
+var _cacheHasJsDefault = parcelHelpers.interopDefault(_cacheHasJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, arrLength = array.length, othLength = other.length;
+    if (arrLength != othLength && !(isPartial && othLength > arrLength)) return false;
+    // Check that cyclic values are equal.
+    var arrStacked = stack.get(array);
+    var othStacked = stack.get(other);
+    if (arrStacked && othStacked) return arrStacked == other && othStacked == array;
+    var index = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG ? new (0, _setCacheJsDefault.default) : undefined;
+    stack.set(array, other);
+    stack.set(other, array);
+    // Ignore non-index properties.
+    while(++index < arrLength){
+        var arrValue = array[index], othValue = other[index];
+        if (customizer) var compared = isPartial ? customizer(othValue, arrValue, index, other, array, stack) : customizer(arrValue, othValue, index, array, other, stack);
+        if (compared !== undefined) {
+            if (compared) continue;
+            result = false;
+            break;
+        }
+        // Recursively compare arrays (susceptible to call stack limits).
+        if (seen) {
+            if (!(0, _arraySomeJsDefault.default)(other, function(othValue, othIndex) {
+                if (!(0, _cacheHasJsDefault.default)(seen, othIndex) && (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) return seen.push(othIndex);
+            })) {
+                result = false;
+                break;
+            }
+        } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+            result = false;
+            break;
+        }
+    }
+    stack["delete"](array);
+    stack["delete"](other);
+    return result;
+}
+exports.default = equalArrays;
+
+},{"./_SetCache.js":"6YwQx","./_arraySome.js":"9k95T","./_cacheHas.js":"jSrgN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6YwQx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _mapCacheJs = require("./_MapCache.js");
+var _mapCacheJsDefault = parcelHelpers.interopDefault(_mapCacheJs);
+var _setCacheAddJs = require("./_setCacheAdd.js");
+var _setCacheAddJsDefault = parcelHelpers.interopDefault(_setCacheAddJs);
+var _setCacheHasJs = require("./_setCacheHas.js");
+var _setCacheHasJsDefault = parcelHelpers.interopDefault(_setCacheHasJs);
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */ function SetCache(values) {
+    var index = -1, length = values == null ? 0 : values.length;
+    this.__data__ = new (0, _mapCacheJsDefault.default);
+    while(++index < length)this.add(values[index]);
+}
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = (0, _setCacheAddJsDefault.default);
+SetCache.prototype.has = (0, _setCacheHasJsDefault.default);
+exports.default = SetCache;
+
+},{"./_MapCache.js":"kdqbj","./_setCacheAdd.js":"7m7Pn","./_setCacheHas.js":"BJklm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7m7Pn":[function(require,module,exports) {
+/** Used to stand-in for `undefined` hash values. */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var HASH_UNDEFINED = "__lodash_hash_undefined__";
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */ function setCacheAdd(value) {
+    this.__data__.set(value, HASH_UNDEFINED);
+    return this;
+}
+exports.default = setCacheAdd;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"BJklm":[function(require,module,exports) {
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function setCacheHas(value) {
+    return this.__data__.has(value);
+}
+exports.default = setCacheHas;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9k95T":[function(require,module,exports) {
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function arraySome(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while(++index < length){
+        if (predicate(array[index], index, array)) return true;
+    }
+    return false;
+}
+exports.default = arraySome;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jSrgN":[function(require,module,exports) {
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function cacheHas(cache, key) {
+    return cache.has(key);
+}
+exports.default = cacheHas;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9KfIu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _symbolJs = require("./_Symbol.js");
+var _symbolJsDefault = parcelHelpers.interopDefault(_symbolJs);
+var _uint8ArrayJs = require("./_Uint8Array.js");
+var _uint8ArrayJsDefault = parcelHelpers.interopDefault(_uint8ArrayJs);
+var _eqJs = require("./eq.js");
+var _eqJsDefault = parcelHelpers.interopDefault(_eqJs);
+var _equalArraysJs = require("./_equalArrays.js");
+var _equalArraysJsDefault = parcelHelpers.interopDefault(_equalArraysJs);
+var _mapToArrayJs = require("./_mapToArray.js");
+var _mapToArrayJsDefault = parcelHelpers.interopDefault(_mapToArrayJs);
+var _setToArrayJs = require("./_setToArray.js");
+var _setToArrayJsDefault = parcelHelpers.interopDefault(_setToArrayJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/** `Object#toString` result references. */ var boolTag = "[object Boolean]", dateTag = "[object Date]", errorTag = "[object Error]", mapTag = "[object Map]", numberTag = "[object Number]", regexpTag = "[object RegExp]", setTag = "[object Set]", stringTag = "[object String]", symbolTag = "[object Symbol]";
+var arrayBufferTag = "[object ArrayBuffer]", dataViewTag = "[object DataView]";
+/** Used to convert symbols to primitives and strings. */ var symbolProto = (0, _symbolJsDefault.default) ? (0, _symbolJsDefault.default).prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+    switch(tag){
+        case dataViewTag:
+            if (object.byteLength != other.byteLength || object.byteOffset != other.byteOffset) return false;
+            object = object.buffer;
+            other = other.buffer;
+        case arrayBufferTag:
+            if (object.byteLength != other.byteLength || !equalFunc(new (0, _uint8ArrayJsDefault.default)(object), new (0, _uint8ArrayJsDefault.default)(other))) return false;
+            return true;
+        case boolTag:
+        case dateTag:
+        case numberTag:
+            // Coerce booleans to `1` or `0` and dates to milliseconds.
+            // Invalid dates are coerced to `NaN`.
+            return (0, _eqJsDefault.default)(+object, +other);
+        case errorTag:
+            return object.name == other.name && object.message == other.message;
+        case regexpTag:
+        case stringTag:
+            // Coerce regexes to strings and treat strings, primitives and objects,
+            // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+            // for more details.
+            return object == other + "";
+        case mapTag:
+            var convert = (0, _mapToArrayJsDefault.default);
+        case setTag:
+            var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+            convert || (convert = (0, _setToArrayJsDefault.default));
+            if (object.size != other.size && !isPartial) return false;
+            // Assume cyclic values are equal.
+            var stacked = stack.get(object);
+            if (stacked) return stacked == other;
+            bitmask |= COMPARE_UNORDERED_FLAG;
+            // Recursively compare objects (susceptible to call stack limits).
+            stack.set(object, other);
+            var result = (0, _equalArraysJsDefault.default)(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+            stack["delete"](object);
+            return result;
+        case symbolTag:
+            if (symbolValueOf) return symbolValueOf.call(object) == symbolValueOf.call(other);
+    }
+    return false;
+}
+exports.default = equalByTag;
+
+},{"./_Symbol.js":"jx216","./_Uint8Array.js":"5zVAV","./eq.js":"7el3s","./_equalArrays.js":"3xWWQ","./_mapToArray.js":"3RRCW","./_setToArray.js":"2ugef","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3RRCW":[function(require,module,exports) {
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function mapToArray(map) {
+    var index = -1, result = Array(map.size);
+    map.forEach(function(value, key) {
+        result[++index] = [
+            key,
+            value
+        ];
+    });
+    return result;
+}
+exports.default = mapToArray;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ugef":[function(require,module,exports) {
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function setToArray(set) {
+    var index = -1, result = Array(set.size);
+    set.forEach(function(value) {
+        result[++index] = value;
+    });
+    return result;
+}
+exports.default = setToArray;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7yAdV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getAllKeysJs = require("./_getAllKeys.js");
+var _getAllKeysJsDefault = parcelHelpers.interopDefault(_getAllKeysJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1;
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG, objProps = (0, _getAllKeysJsDefault.default)(object), objLength = objProps.length, othProps = (0, _getAllKeysJsDefault.default)(other), othLength = othProps.length;
+    if (objLength != othLength && !isPartial) return false;
+    var index = objLength;
+    while(index--){
+        var key = objProps[index];
+        if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) return false;
+    }
+    // Check that cyclic values are equal.
+    var objStacked = stack.get(object);
+    var othStacked = stack.get(other);
+    if (objStacked && othStacked) return objStacked == other && othStacked == object;
+    var result = true;
+    stack.set(object, other);
+    stack.set(other, object);
+    var skipCtor = isPartial;
+    while(++index < objLength){
+        key = objProps[index];
+        var objValue = object[key], othValue = other[key];
+        if (customizer) var compared = isPartial ? customizer(othValue, objValue, key, other, object, stack) : customizer(objValue, othValue, key, object, other, stack);
+        // Recursively compare objects (susceptible to call stack limits).
+        if (!(compared === undefined ? objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack) : compared)) {
+            result = false;
+            break;
+        }
+        skipCtor || (skipCtor = key == "constructor");
+    }
+    if (result && !skipCtor) {
+        var objCtor = object.constructor, othCtor = other.constructor;
+        // Non `Object` object instances with different constructors are not equal.
+        if (objCtor != othCtor && "constructor" in object && "constructor" in other && !(typeof objCtor == "function" && objCtor instanceof objCtor && typeof othCtor == "function" && othCtor instanceof othCtor)) result = false;
+    }
+    stack["delete"](object);
+    stack["delete"](other);
+    return result;
+}
+exports.default = equalObjects;
+
+},{"./_getAllKeys.js":"68ZDs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"68ZDs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetAllKeysJs = require("./_baseGetAllKeys.js");
+var _baseGetAllKeysJsDefault = parcelHelpers.interopDefault(_baseGetAllKeysJs);
+var _getSymbolsJs = require("./_getSymbols.js");
+var _getSymbolsJsDefault = parcelHelpers.interopDefault(_getSymbolsJs);
+var _keysJs = require("./keys.js");
+var _keysJsDefault = parcelHelpers.interopDefault(_keysJs);
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeys(object) {
+    return (0, _baseGetAllKeysJsDefault.default)(object, (0, _keysJsDefault.default), (0, _getSymbolsJsDefault.default));
+}
+exports.default = getAllKeys;
+
+},{"./_baseGetAllKeys.js":"jHmw2","./_getSymbols.js":"egqKq","./keys.js":"lbEZV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jHmw2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayPushJs = require("./_arrayPush.js");
+var _arrayPushJsDefault = parcelHelpers.interopDefault(_arrayPushJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+    var result = keysFunc(object);
+    return (0, _isArrayJsDefault.default)(object) ? result : (0, _arrayPushJsDefault.default)(result, symbolsFunc(object));
+}
+exports.default = baseGetAllKeys;
+
+},{"./_arrayPush.js":"4BTrx","./isArray.js":"ETPQ1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4BTrx":[function(require,module,exports) {
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function arrayPush(array, values) {
+    var index = -1, length = values.length, offset = array.length;
+    while(++index < length)array[offset + index] = values[index];
+    return array;
+}
+exports.default = arrayPush;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"egqKq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _arrayFilterJs = require("./_arrayFilter.js");
+var _arrayFilterJsDefault = parcelHelpers.interopDefault(_arrayFilterJs);
+var _stubArrayJs = require("./stubArray.js");
+var _stubArrayJsDefault = parcelHelpers.interopDefault(_stubArrayJs);
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbols = !nativeGetSymbols ? (0, _stubArrayJsDefault.default) : function(object) {
+    if (object == null) return [];
+    object = Object(object);
+    return (0, _arrayFilterJsDefault.default)(nativeGetSymbols(object), function(symbol) {
+        return propertyIsEnumerable.call(object, symbol);
+    });
+};
+exports.default = getSymbols;
+
+},{"./_arrayFilter.js":"iZqHX","./stubArray.js":"iwLLL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iZqHX":[function(require,module,exports) {
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function arrayFilter(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+    while(++index < length){
+        var value = array[index];
+        if (predicate(value, index, array)) result[resIndex++] = value;
+    }
+    return result;
+}
+exports.default = arrayFilter;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iwLLL":[function(require,module,exports) {
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function stubArray() {
+    return [];
+}
+exports.default = stubArray;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1kCom":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _dataViewJs = require("./_DataView.js");
+var _dataViewJsDefault = parcelHelpers.interopDefault(_dataViewJs);
+var _mapJs = require("./_Map.js");
+var _mapJsDefault = parcelHelpers.interopDefault(_mapJs);
+var _promiseJs = require("./_Promise.js");
+var _promiseJsDefault = parcelHelpers.interopDefault(_promiseJs);
+var _setJs = require("./_Set.js");
+var _setJsDefault = parcelHelpers.interopDefault(_setJs);
+var _weakMapJs = require("./_WeakMap.js");
+var _weakMapJsDefault = parcelHelpers.interopDefault(_weakMapJs);
+var _baseGetTagJs = require("./_baseGetTag.js");
+var _baseGetTagJsDefault = parcelHelpers.interopDefault(_baseGetTagJs);
+var _toSourceJs = require("./_toSource.js");
+var _toSourceJsDefault = parcelHelpers.interopDefault(_toSourceJs);
+/** `Object#toString` result references. */ var mapTag = "[object Map]", objectTag = "[object Object]", promiseTag = "[object Promise]", setTag = "[object Set]", weakMapTag = "[object WeakMap]";
+var dataViewTag = "[object DataView]";
+/** Used to detect maps, sets, and weakmaps. */ var dataViewCtorString = (0, _toSourceJsDefault.default)((0, _dataViewJsDefault.default)), mapCtorString = (0, _toSourceJsDefault.default)((0, _mapJsDefault.default)), promiseCtorString = (0, _toSourceJsDefault.default)((0, _promiseJsDefault.default)), setCtorString = (0, _toSourceJsDefault.default)((0, _setJsDefault.default)), weakMapCtorString = (0, _toSourceJsDefault.default)((0, _weakMapJsDefault.default));
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ var getTag = (0, _baseGetTagJsDefault.default);
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if ((0, _dataViewJsDefault.default) && getTag(new (0, _dataViewJsDefault.default)(new ArrayBuffer(1))) != dataViewTag || (0, _mapJsDefault.default) && getTag(new (0, _mapJsDefault.default)) != mapTag || (0, _promiseJsDefault.default) && getTag((0, _promiseJsDefault.default).resolve()) != promiseTag || (0, _setJsDefault.default) && getTag(new (0, _setJsDefault.default)) != setTag || (0, _weakMapJsDefault.default) && getTag(new (0, _weakMapJsDefault.default)) != weakMapTag) getTag = function(value) {
+    var result = (0, _baseGetTagJsDefault.default)(value), Ctor = result == objectTag ? value.constructor : undefined, ctorString = Ctor ? (0, _toSourceJsDefault.default)(Ctor) : "";
+    if (ctorString) switch(ctorString){
+        case dataViewCtorString:
+            return dataViewTag;
+        case mapCtorString:
+            return mapTag;
+        case promiseCtorString:
+            return promiseTag;
+        case setCtorString:
+            return setTag;
+        case weakMapCtorString:
+            return weakMapTag;
+    }
+    return result;
+};
+exports.default = getTag;
+
+},{"./_DataView.js":"4SeGN","./_Map.js":"8spnB","./_Promise.js":"lbYHf","./_Set.js":"jf3T7","./_WeakMap.js":"52eE0","./_baseGetTag.js":"gVDfP","./_toSource.js":"4wd66","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4SeGN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/* Built-in method references that are verified to be native. */ var DataView = (0, _getNativeJsDefault.default)((0, _rootJsDefault.default), "DataView");
+exports.default = DataView;
+
+},{"./_getNative.js":"bQrQL","./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lbYHf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/* Built-in method references that are verified to be native. */ var Promise = (0, _getNativeJsDefault.default)((0, _rootJsDefault.default), "Promise");
+exports.default = Promise;
+
+},{"./_getNative.js":"bQrQL","./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jf3T7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/* Built-in method references that are verified to be native. */ var Set = (0, _getNativeJsDefault.default)((0, _rootJsDefault.default), "Set");
+exports.default = Set;
+
+},{"./_getNative.js":"bQrQL","./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"52eE0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getNativeJs = require("./_getNative.js");
+var _getNativeJsDefault = parcelHelpers.interopDefault(_getNativeJs);
+var _rootJs = require("./_root.js");
+var _rootJsDefault = parcelHelpers.interopDefault(_rootJs);
+/* Built-in method references that are verified to be native. */ var WeakMap = (0, _getNativeJsDefault.default)((0, _rootJsDefault.default), "WeakMap");
+exports.default = WeakMap;
+
+},{"./_getNative.js":"bQrQL","./_root.js":"8yvCA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2HQJS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isStrictComparableJs = require("./_isStrictComparable.js");
+var _isStrictComparableJsDefault = parcelHelpers.interopDefault(_isStrictComparableJs);
+var _keysJs = require("./keys.js");
+var _keysJsDefault = parcelHelpers.interopDefault(_keysJs);
+/**
+ * Gets the property names, values, and compare flags of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the match data of `object`.
+ */ function getMatchData(object) {
+    var result = (0, _keysJsDefault.default)(object), length = result.length;
+    while(length--){
+        var key = result[length], value = object[key];
+        result[length] = [
+            key,
+            value,
+            (0, _isStrictComparableJsDefault.default)(value)
+        ];
+    }
+    return result;
+}
+exports.default = getMatchData;
+
+},{"./_isStrictComparable.js":"ksPGX","./keys.js":"lbEZV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ksPGX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isObjectJs = require("./isObject.js");
+var _isObjectJsDefault = parcelHelpers.interopDefault(_isObjectJs);
+/**
+ * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` if suitable for strict
+ *  equality comparisons, else `false`.
+ */ function isStrictComparable(value) {
+    return value === value && !(0, _isObjectJsDefault.default)(value);
+}
+exports.default = isStrictComparable;
+
+},{"./isObject.js":"dHhyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"19Pwe":[function(require,module,exports) {
+/**
+ * A specialized version of `matchesProperty` for source values suitable
+ * for strict equality comparisons, i.e. `===`.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function matchesStrictComparable(key, srcValue) {
+    return function(object) {
+        if (object == null) return false;
+        return object[key] === srcValue && (srcValue !== undefined || key in Object(object));
+    };
+}
+exports.default = matchesStrictComparable;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4hv6L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseIsEqualJs = require("./_baseIsEqual.js");
+var _baseIsEqualJsDefault = parcelHelpers.interopDefault(_baseIsEqualJs);
+var _getJs = require("./get.js");
+var _getJsDefault = parcelHelpers.interopDefault(_getJs);
+var _hasInJs = require("./hasIn.js");
+var _hasInJsDefault = parcelHelpers.interopDefault(_hasInJs);
+var _isKeyJs = require("./_isKey.js");
+var _isKeyJsDefault = parcelHelpers.interopDefault(_isKeyJs);
+var _isStrictComparableJs = require("./_isStrictComparable.js");
+var _isStrictComparableJsDefault = parcelHelpers.interopDefault(_isStrictComparableJs);
+var _matchesStrictComparableJs = require("./_matchesStrictComparable.js");
+var _matchesStrictComparableJsDefault = parcelHelpers.interopDefault(_matchesStrictComparableJs);
+var _toKeyJs = require("./_toKey.js");
+var _toKeyJsDefault = parcelHelpers.interopDefault(_toKeyJs);
+/** Used to compose bitmasks for value comparisons. */ var COMPARE_PARTIAL_FLAG = 1, COMPARE_UNORDERED_FLAG = 2;
+/**
+ * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.
+ *
+ * @private
+ * @param {string} path The path of the property to get.
+ * @param {*} srcValue The value to match.
+ * @returns {Function} Returns the new spec function.
+ */ function baseMatchesProperty(path, srcValue) {
+    if ((0, _isKeyJsDefault.default)(path) && (0, _isStrictComparableJsDefault.default)(srcValue)) return (0, _matchesStrictComparableJsDefault.default)((0, _toKeyJsDefault.default)(path), srcValue);
+    return function(object) {
+        var objValue = (0, _getJsDefault.default)(object, path);
+        return objValue === undefined && objValue === srcValue ? (0, _hasInJsDefault.default)(object, path) : (0, _baseIsEqualJsDefault.default)(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
+    };
+}
+exports.default = baseMatchesProperty;
+
+},{"./_baseIsEqual.js":"1zaYh","./get.js":"9ZP5X","./hasIn.js":"jfq4F","./_isKey.js":"h7SfK","./_isStrictComparable.js":"ksPGX","./_matchesStrictComparable.js":"19Pwe","./_toKey.js":"Zo68s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZP5X":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetJs = require("./_baseGet.js");
+var _baseGetJsDefault = parcelHelpers.interopDefault(_baseGetJs);
+/**
+ * Gets the value at `path` of `object`. If the resolved value is
+ * `undefined`, the `defaultValue` is returned in its place.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.7.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+ * @returns {*} Returns the resolved value.
+ * @example
+ *
+ * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ *
+ * _.get(object, 'a[0].b.c');
+ * // => 3
+ *
+ * _.get(object, ['a', '0', 'b', 'c']);
+ * // => 3
+ *
+ * _.get(object, 'a.b.c', 'default');
+ * // => 'default'
+ */ function get(object, path, defaultValue) {
+    var result = object == null ? undefined : (0, _baseGetJsDefault.default)(object, path);
+    return result === undefined ? defaultValue : result;
+}
+exports.default = get;
+
+},{"./_baseGet.js":"3IUaj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3IUaj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _castPathJs = require("./_castPath.js");
+var _castPathJsDefault = parcelHelpers.interopDefault(_castPathJs);
+var _toKeyJs = require("./_toKey.js");
+var _toKeyJsDefault = parcelHelpers.interopDefault(_toKeyJs);
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */ function baseGet(object, path) {
+    path = (0, _castPathJsDefault.default)(path, object);
+    var index = 0, length = path.length;
+    while(object != null && index < length)object = object[(0, _toKeyJsDefault.default)(path[index++])];
+    return index && index == length ? object : undefined;
+}
+exports.default = baseGet;
+
+},{"./_castPath.js":"g21zK","./_toKey.js":"Zo68s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g21zK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isKeyJs = require("./_isKey.js");
+var _isKeyJsDefault = parcelHelpers.interopDefault(_isKeyJs);
+var _stringToPathJs = require("./_stringToPath.js");
+var _stringToPathJsDefault = parcelHelpers.interopDefault(_stringToPathJs);
+var _toStringJs = require("./toString.js");
+var _toStringJsDefault = parcelHelpers.interopDefault(_toStringJs);
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
+ */ function castPath(value, object) {
+    if ((0, _isArrayJsDefault.default)(value)) return value;
+    return (0, _isKeyJsDefault.default)(value, object) ? [
+        value
+    ] : (0, _stringToPathJsDefault.default)((0, _toStringJsDefault.default)(value));
+}
+exports.default = castPath;
+
+},{"./isArray.js":"ETPQ1","./_isKey.js":"h7SfK","./_stringToPath.js":"cgxmj","./toString.js":"hF0LJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h7SfK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isSymbolJs = require("./isSymbol.js");
+var _isSymbolJsDefault = parcelHelpers.interopDefault(_isSymbolJs);
+/** Used to match property names within property paths. */ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */ function isKey(value, object) {
+    if ((0, _isArrayJsDefault.default)(value)) return false;
+    var type = typeof value;
+    if (type == "number" || type == "symbol" || type == "boolean" || value == null || (0, _isSymbolJsDefault.default)(value)) return true;
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+}
+exports.default = isKey;
+
+},{"./isArray.js":"ETPQ1","./isSymbol.js":"gCyRJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cgxmj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _memoizeCappedJs = require("./_memoizeCapped.js");
+var _memoizeCappedJsDefault = parcelHelpers.interopDefault(_memoizeCappedJs);
+/** Used to match property names within property paths. */ var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+/** Used to match backslashes in property paths. */ var reEscapeChar = /\\(\\)?/g;
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */ var stringToPath = (0, _memoizeCappedJsDefault.default)(function(string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */ ) result.push("");
+    string.replace(rePropName, function(match, number, quote, subString) {
+        result.push(quote ? subString.replace(reEscapeChar, "$1") : number || match);
+    });
+    return result;
+});
+exports.default = stringToPath;
+
+},{"./_memoizeCapped.js":"2kD71","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kD71":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _memoizeJs = require("./memoize.js");
+var _memoizeJsDefault = parcelHelpers.interopDefault(_memoizeJs);
+/** Used as the maximum memoize cache size. */ var MAX_MEMOIZE_SIZE = 500;
+/**
+ * A specialized version of `_.memoize` which clears the memoized function's
+ * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+ *
+ * @private
+ * @param {Function} func The function to have its output memoized.
+ * @returns {Function} Returns the new memoized function.
+ */ function memoizeCapped(func) {
+    var result = (0, _memoizeJsDefault.default)(func, function(key) {
+        if (cache.size === MAX_MEMOIZE_SIZE) cache.clear();
+        return key;
+    });
+    var cache = result.cache;
+    return result;
+}
+exports.default = memoizeCapped;
+
+},{"./memoize.js":"5zdei","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5zdei":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _mapCacheJs = require("./_MapCache.js");
+var _mapCacheJsDefault = parcelHelpers.interopDefault(_mapCacheJs);
+/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */ function memoize(func, resolver) {
+    if (typeof func != "function" || resolver != null && typeof resolver != "function") throw new TypeError(FUNC_ERROR_TEXT);
+    var memoized = function() {
+        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+        if (cache.has(key)) return cache.get(key);
+        var result = func.apply(this, args);
+        memoized.cache = cache.set(key, result) || cache;
+        return result;
+    };
+    memoized.cache = new (memoize.Cache || (0, _mapCacheJsDefault.default));
+    return memoized;
+}
+// Expose `MapCache`.
+memoize.Cache = (0, _mapCacheJsDefault.default);
+exports.default = memoize;
+
+},{"./_MapCache.js":"kdqbj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hF0LJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseToStringJs = require("./_baseToString.js");
+var _baseToStringJsDefault = parcelHelpers.interopDefault(_baseToStringJs);
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */ function toString(value) {
+    return value == null ? "" : (0, _baseToStringJsDefault.default)(value);
+}
+exports.default = toString;
+
+},{"./_baseToString.js":"fQ5ds","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fQ5ds":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _symbolJs = require("./_Symbol.js");
+var _symbolJsDefault = parcelHelpers.interopDefault(_symbolJs);
+var _arrayMapJs = require("./_arrayMap.js");
+var _arrayMapJsDefault = parcelHelpers.interopDefault(_arrayMapJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isSymbolJs = require("./isSymbol.js");
+var _isSymbolJsDefault = parcelHelpers.interopDefault(_isSymbolJs);
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/** Used to convert symbols to primitives and strings. */ var symbolProto = (0, _symbolJsDefault.default) ? (0, _symbolJsDefault.default).prototype : undefined, symbolToString = symbolProto ? symbolProto.toString : undefined;
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */ function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == "string") return value;
+    if ((0, _isArrayJsDefault.default)(value)) // Recursively convert values (susceptible to call stack limits).
+    return (0, _arrayMapJsDefault.default)(value, baseToString) + "";
+    if ((0, _isSymbolJsDefault.default)(value)) return symbolToString ? symbolToString.call(value) : "";
+    var result = value + "";
+    return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+}
+exports.default = baseToString;
+
+},{"./_Symbol.js":"jx216","./_arrayMap.js":"gDCVM","./isArray.js":"ETPQ1","./isSymbol.js":"gCyRJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Zo68s":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isSymbolJs = require("./isSymbol.js");
+var _isSymbolJsDefault = parcelHelpers.interopDefault(_isSymbolJs);
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */ function toKey(value) {
+    if (typeof value == "string" || (0, _isSymbolJsDefault.default)(value)) return value;
+    var result = value + "";
+    return result == "0" && 1 / value == -INFINITY ? "-0" : result;
+}
+exports.default = toKey;
+
+},{"./isSymbol.js":"gCyRJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jfq4F":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseHasInJs = require("./_baseHasIn.js");
+var _baseHasInJsDefault = parcelHelpers.interopDefault(_baseHasInJs);
+var _hasPathJs = require("./_hasPath.js");
+var _hasPathJsDefault = parcelHelpers.interopDefault(_hasPathJs);
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */ function hasIn(object, path) {
+    return object != null && (0, _hasPathJsDefault.default)(object, path, (0, _baseHasInJsDefault.default));
+}
+exports.default = hasIn;
+
+},{"./_baseHasIn.js":"8Hqdk","./_hasPath.js":"lcHZs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8Hqdk":[function(require,module,exports) {
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function baseHasIn(object, key) {
+    return object != null && key in Object(object);
+}
+exports.default = baseHasIn;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lcHZs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _castPathJs = require("./_castPath.js");
+var _castPathJsDefault = parcelHelpers.interopDefault(_castPathJs);
+var _isArgumentsJs = require("./isArguments.js");
+var _isArgumentsJsDefault = parcelHelpers.interopDefault(_isArgumentsJs);
+var _isArrayJs = require("./isArray.js");
+var _isArrayJsDefault = parcelHelpers.interopDefault(_isArrayJs);
+var _isIndexJs = require("./_isIndex.js");
+var _isIndexJsDefault = parcelHelpers.interopDefault(_isIndexJs);
+var _isLengthJs = require("./isLength.js");
+var _isLengthJsDefault = parcelHelpers.interopDefault(_isLengthJs);
+var _toKeyJs = require("./_toKey.js");
+var _toKeyJsDefault = parcelHelpers.interopDefault(_toKeyJs);
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */ function hasPath(object, path, hasFunc) {
+    path = (0, _castPathJsDefault.default)(path, object);
+    var index = -1, length = path.length, result = false;
+    while(++index < length){
+        var key = (0, _toKeyJsDefault.default)(path[index]);
+        if (!(result = object != null && hasFunc(object, key))) break;
+        object = object[key];
+    }
+    if (result || ++index != length) return result;
+    length = object == null ? 0 : object.length;
+    return !!length && (0, _isLengthJsDefault.default)(length) && (0, _isIndexJsDefault.default)(key, length) && ((0, _isArrayJsDefault.default)(object) || (0, _isArgumentsJsDefault.default)(object));
+}
+exports.default = hasPath;
+
+},{"./_castPath.js":"g21zK","./isArguments.js":"9k91Y","./isArray.js":"ETPQ1","./_isIndex.js":"5DS1K","./isLength.js":"bItM0","./_toKey.js":"Zo68s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kwvYw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _basePropertyJs = require("./_baseProperty.js");
+var _basePropertyJsDefault = parcelHelpers.interopDefault(_basePropertyJs);
+var _basePropertyDeepJs = require("./_basePropertyDeep.js");
+var _basePropertyDeepJsDefault = parcelHelpers.interopDefault(_basePropertyDeepJs);
+var _isKeyJs = require("./_isKey.js");
+var _isKeyJsDefault = parcelHelpers.interopDefault(_isKeyJs);
+var _toKeyJs = require("./_toKey.js");
+var _toKeyJsDefault = parcelHelpers.interopDefault(_toKeyJs);
+/**
+ * Creates a function that returns the value at `path` of a given object.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ * @example
+ *
+ * var objects = [
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
+ * ];
+ *
+ * _.map(objects, _.property('a.b'));
+ * // => [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // => [1, 2]
+ */ function property(path) {
+    return (0, _isKeyJsDefault.default)(path) ? (0, _basePropertyJsDefault.default)((0, _toKeyJsDefault.default)(path)) : (0, _basePropertyDeepJsDefault.default)(path);
+}
+exports.default = property;
+
+},{"./_baseProperty.js":"gAjZk","./_basePropertyDeep.js":"1xKss","./_isKey.js":"h7SfK","./_toKey.js":"Zo68s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gAjZk":[function(require,module,exports) {
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function baseProperty(key) {
+    return function(object) {
+        return object == null ? undefined : object[key];
+    };
+}
+exports.default = baseProperty;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1xKss":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseGetJs = require("./_baseGet.js");
+var _baseGetJsDefault = parcelHelpers.interopDefault(_baseGetJs);
+/**
+ * A specialized version of `baseProperty` which supports deep paths.
+ *
+ * @private
+ * @param {Array|string} path The path of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */ function basePropertyDeep(path) {
+    return function(object) {
+        return (0, _baseGetJsDefault.default)(object, path);
+    };
+}
+exports.default = basePropertyDeep;
+
+},{"./_baseGet.js":"3IUaj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eHrfS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _baseEachJs = require("./_baseEach.js");
+var _baseEachJsDefault = parcelHelpers.interopDefault(_baseEachJs);
+var _isArrayLikeJs = require("./isArrayLike.js");
+var _isArrayLikeJsDefault = parcelHelpers.interopDefault(_isArrayLikeJs);
+/**
+ * The base implementation of `_.map` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function baseMap(collection, iteratee) {
+    var index = -1, result = (0, _isArrayLikeJsDefault.default)(collection) ? Array(collection.length) : [];
+    (0, _baseEachJsDefault.default)(collection, function(value, key, collection) {
+        result[++index] = iteratee(value, key, collection);
+    });
+    return result;
+}
+exports.default = baseMap;
+
+},{"./_baseEach.js":"cgTz5","./isArrayLike.js":"8SdiO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9XyVW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Circle", ()=>Circle);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _materialColors = require("material-colors");
+var _common = require("../common");
+var _circleSwatch = require("./CircleSwatch");
+var _circleSwatchDefault = parcelHelpers.interopDefault(_circleSwatch);
+var Circle = function Circle(_ref) {
+    var width = _ref.width, onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, colors = _ref.colors, hex = _ref.hex, circleSize = _ref.circleSize, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, circleSpacing = _ref.circleSpacing, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            card: {
+                width: width,
+                display: "flex",
+                flexWrap: "wrap",
+                marginRight: -circleSpacing,
+                marginBottom: -circleSpacing
+            }
+        }
+    }, passedStyles));
+    var handleChange = function handleChange(hexCode, e) {
+        return onChange({
+            hex: hexCode,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.card,
+        className: "circle-picker " + className
+    }, (0, _mapDefault.default)(colors, function(c) {
+        return (0, _reactDefault.default).createElement((0, _circleSwatchDefault.default), {
+            key: c,
+            color: c,
+            onClick: handleChange,
+            onSwatchHover: onSwatchHover,
+            active: hex === c.toLowerCase(),
+            circleSize: circleSize,
+            circleSpacing: circleSpacing
+        });
+    }));
+};
+Circle.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    circleSize: (0, _propTypesDefault.default).number,
+    circleSpacing: (0, _propTypesDefault.default).number,
+    styles: (0, _propTypesDefault.default).object
+};
+Circle.defaultProps = {
+    width: 252,
+    circleSize: 28,
+    circleSpacing: 14,
+    colors: [
+        _materialColors.red["500"],
+        _materialColors.pink["500"],
+        _materialColors.purple["500"],
+        _materialColors.deepPurple["500"],
+        _materialColors.indigo["500"],
+        _materialColors.blue["500"],
+        _materialColors.lightBlue["500"],
+        _materialColors.cyan["500"],
+        _materialColors.teal["500"],
+        _materialColors.green["500"],
+        _materialColors.lightGreen["500"],
+        _materialColors.lime["500"],
+        _materialColors.yellow["500"],
+        _materialColors.amber["500"],
+        _materialColors.orange["500"],
+        _materialColors.deepOrange["500"],
+        _materialColors.brown["500"],
+        _materialColors.blueGrey["500"]
+    ],
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Circle);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/map":"2Rw7L","lodash-es/merge":"hwXcM","material-colors":"96bYT","../common":"4lq7P","./CircleSwatch":"421Bd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"96bYT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "red", ()=>red);
+parcelHelpers.export(exports, "pink", ()=>pink);
+parcelHelpers.export(exports, "purple", ()=>purple);
+parcelHelpers.export(exports, "deepPurple", ()=>deepPurple);
+parcelHelpers.export(exports, "indigo", ()=>indigo);
+parcelHelpers.export(exports, "blue", ()=>blue);
+parcelHelpers.export(exports, "lightBlue", ()=>lightBlue);
+parcelHelpers.export(exports, "cyan", ()=>cyan);
+parcelHelpers.export(exports, "teal", ()=>teal);
+parcelHelpers.export(exports, "green", ()=>green);
+parcelHelpers.export(exports, "lightGreen", ()=>lightGreen);
+parcelHelpers.export(exports, "lime", ()=>lime);
+parcelHelpers.export(exports, "yellow", ()=>yellow);
+parcelHelpers.export(exports, "amber", ()=>amber);
+parcelHelpers.export(exports, "orange", ()=>orange);
+parcelHelpers.export(exports, "deepOrange", ()=>deepOrange);
+parcelHelpers.export(exports, "brown", ()=>brown);
+parcelHelpers.export(exports, "grey", ()=>grey);
+parcelHelpers.export(exports, "blueGrey", ()=>blueGrey);
+parcelHelpers.export(exports, "darkText", ()=>darkText);
+parcelHelpers.export(exports, "lightText", ()=>lightText);
+parcelHelpers.export(exports, "darkIcons", ()=>darkIcons);
+parcelHelpers.export(exports, "lightIcons", ()=>lightIcons);
+parcelHelpers.export(exports, "white", ()=>white);
+parcelHelpers.export(exports, "black", ()=>black);
+var red = {
+    "50": "#ffebee",
+    "100": "#ffcdd2",
+    "200": "#ef9a9a",
+    "300": "#e57373",
+    "400": "#ef5350",
+    "500": "#f44336",
+    "600": "#e53935",
+    "700": "#d32f2f",
+    "800": "#c62828",
+    "900": "#b71c1c",
+    "a100": "#ff8a80",
+    "a200": "#ff5252",
+    "a400": "#ff1744",
+    "a700": "#d50000"
+};
+var pink = {
+    "50": "#fce4ec",
+    "100": "#f8bbd0",
+    "200": "#f48fb1",
+    "300": "#f06292",
+    "400": "#ec407a",
+    "500": "#e91e63",
+    "600": "#d81b60",
+    "700": "#c2185b",
+    "800": "#ad1457",
+    "900": "#880e4f",
+    "a100": "#ff80ab",
+    "a200": "#ff4081",
+    "a400": "#f50057",
+    "a700": "#c51162"
+};
+var purple = {
+    "50": "#f3e5f5",
+    "100": "#e1bee7",
+    "200": "#ce93d8",
+    "300": "#ba68c8",
+    "400": "#ab47bc",
+    "500": "#9c27b0",
+    "600": "#8e24aa",
+    "700": "#7b1fa2",
+    "800": "#6a1b9a",
+    "900": "#4a148c",
+    "a100": "#ea80fc",
+    "a200": "#e040fb",
+    "a400": "#d500f9",
+    "a700": "#aa00ff"
+};
+var deepPurple = {
+    "50": "#ede7f6",
+    "100": "#d1c4e9",
+    "200": "#b39ddb",
+    "300": "#9575cd",
+    "400": "#7e57c2",
+    "500": "#673ab7",
+    "600": "#5e35b1",
+    "700": "#512da8",
+    "800": "#4527a0",
+    "900": "#311b92",
+    "a100": "#b388ff",
+    "a200": "#7c4dff",
+    "a400": "#651fff",
+    "a700": "#6200ea"
+};
+var indigo = {
+    "50": "#e8eaf6",
+    "100": "#c5cae9",
+    "200": "#9fa8da",
+    "300": "#7986cb",
+    "400": "#5c6bc0",
+    "500": "#3f51b5",
+    "600": "#3949ab",
+    "700": "#303f9f",
+    "800": "#283593",
+    "900": "#1a237e",
+    "a100": "#8c9eff",
+    "a200": "#536dfe",
+    "a400": "#3d5afe",
+    "a700": "#304ffe"
+};
+var blue = {
+    "50": "#e3f2fd",
+    "100": "#bbdefb",
+    "200": "#90caf9",
+    "300": "#64b5f6",
+    "400": "#42a5f5",
+    "500": "#2196f3",
+    "600": "#1e88e5",
+    "700": "#1976d2",
+    "800": "#1565c0",
+    "900": "#0d47a1",
+    "a100": "#82b1ff",
+    "a200": "#448aff",
+    "a400": "#2979ff",
+    "a700": "#2962ff"
+};
+var lightBlue = {
+    "50": "#e1f5fe",
+    "100": "#b3e5fc",
+    "200": "#81d4fa",
+    "300": "#4fc3f7",
+    "400": "#29b6f6",
+    "500": "#03a9f4",
+    "600": "#039be5",
+    "700": "#0288d1",
+    "800": "#0277bd",
+    "900": "#01579b",
+    "a100": "#80d8ff",
+    "a200": "#40c4ff",
+    "a400": "#00b0ff",
+    "a700": "#0091ea"
+};
+var cyan = {
+    "50": "#e0f7fa",
+    "100": "#b2ebf2",
+    "200": "#80deea",
+    "300": "#4dd0e1",
+    "400": "#26c6da",
+    "500": "#00bcd4",
+    "600": "#00acc1",
+    "700": "#0097a7",
+    "800": "#00838f",
+    "900": "#006064",
+    "a100": "#84ffff",
+    "a200": "#18ffff",
+    "a400": "#00e5ff",
+    "a700": "#00b8d4"
+};
+var teal = {
+    "50": "#e0f2f1",
+    "100": "#b2dfdb",
+    "200": "#80cbc4",
+    "300": "#4db6ac",
+    "400": "#26a69a",
+    "500": "#009688",
+    "600": "#00897b",
+    "700": "#00796b",
+    "800": "#00695c",
+    "900": "#004d40",
+    "a100": "#a7ffeb",
+    "a200": "#64ffda",
+    "a400": "#1de9b6",
+    "a700": "#00bfa5"
+};
+var green = {
+    "50": "#e8f5e9",
+    "100": "#c8e6c9",
+    "200": "#a5d6a7",
+    "300": "#81c784",
+    "400": "#66bb6a",
+    "500": "#4caf50",
+    "600": "#43a047",
+    "700": "#388e3c",
+    "800": "#2e7d32",
+    "900": "#1b5e20",
+    "a100": "#b9f6ca",
+    "a200": "#69f0ae",
+    "a400": "#00e676",
+    "a700": "#00c853"
+};
+var lightGreen = {
+    "50": "#f1f8e9",
+    "100": "#dcedc8",
+    "200": "#c5e1a5",
+    "300": "#aed581",
+    "400": "#9ccc65",
+    "500": "#8bc34a",
+    "600": "#7cb342",
+    "700": "#689f38",
+    "800": "#558b2f",
+    "900": "#33691e",
+    "a100": "#ccff90",
+    "a200": "#b2ff59",
+    "a400": "#76ff03",
+    "a700": "#64dd17"
+};
+var lime = {
+    "50": "#f9fbe7",
+    "100": "#f0f4c3",
+    "200": "#e6ee9c",
+    "300": "#dce775",
+    "400": "#d4e157",
+    "500": "#cddc39",
+    "600": "#c0ca33",
+    "700": "#afb42b",
+    "800": "#9e9d24",
+    "900": "#827717",
+    "a100": "#f4ff81",
+    "a200": "#eeff41",
+    "a400": "#c6ff00",
+    "a700": "#aeea00"
+};
+var yellow = {
+    "50": "#fffde7",
+    "100": "#fff9c4",
+    "200": "#fff59d",
+    "300": "#fff176",
+    "400": "#ffee58",
+    "500": "#ffeb3b",
+    "600": "#fdd835",
+    "700": "#fbc02d",
+    "800": "#f9a825",
+    "900": "#f57f17",
+    "a100": "#ffff8d",
+    "a200": "#ffff00",
+    "a400": "#ffea00",
+    "a700": "#ffd600"
+};
+var amber = {
+    "50": "#fff8e1",
+    "100": "#ffecb3",
+    "200": "#ffe082",
+    "300": "#ffd54f",
+    "400": "#ffca28",
+    "500": "#ffc107",
+    "600": "#ffb300",
+    "700": "#ffa000",
+    "800": "#ff8f00",
+    "900": "#ff6f00",
+    "a100": "#ffe57f",
+    "a200": "#ffd740",
+    "a400": "#ffc400",
+    "a700": "#ffab00"
+};
+var orange = {
+    "50": "#fff3e0",
+    "100": "#ffe0b2",
+    "200": "#ffcc80",
+    "300": "#ffb74d",
+    "400": "#ffa726",
+    "500": "#ff9800",
+    "600": "#fb8c00",
+    "700": "#f57c00",
+    "800": "#ef6c00",
+    "900": "#e65100",
+    "a100": "#ffd180",
+    "a200": "#ffab40",
+    "a400": "#ff9100",
+    "a700": "#ff6d00"
+};
+var deepOrange = {
+    "50": "#fbe9e7",
+    "100": "#ffccbc",
+    "200": "#ffab91",
+    "300": "#ff8a65",
+    "400": "#ff7043",
+    "500": "#ff5722",
+    "600": "#f4511e",
+    "700": "#e64a19",
+    "800": "#d84315",
+    "900": "#bf360c",
+    "a100": "#ff9e80",
+    "a200": "#ff6e40",
+    "a400": "#ff3d00",
+    "a700": "#dd2c00"
+};
+var brown = {
+    "50": "#efebe9",
+    "100": "#d7ccc8",
+    "200": "#bcaaa4",
+    "300": "#a1887f",
+    "400": "#8d6e63",
+    "500": "#795548",
+    "600": "#6d4c41",
+    "700": "#5d4037",
+    "800": "#4e342e",
+    "900": "#3e2723"
+};
+var grey = {
+    "50": "#fafafa",
+    "100": "#f5f5f5",
+    "200": "#eeeeee",
+    "300": "#e0e0e0",
+    "400": "#bdbdbd",
+    "500": "#9e9e9e",
+    "600": "#757575",
+    "700": "#616161",
+    "800": "#424242",
+    "900": "#212121"
+};
+var blueGrey = {
+    "50": "#eceff1",
+    "100": "#cfd8dc",
+    "200": "#b0bec5",
+    "300": "#90a4ae",
+    "400": "#78909c",
+    "500": "#607d8b",
+    "600": "#546e7a",
+    "700": "#455a64",
+    "800": "#37474f",
+    "900": "#263238"
+};
+var darkText = {
+    "primary": "rgba(0, 0, 0, 0.87)",
+    "secondary": "rgba(0, 0, 0, 0.54)",
+    "disabled": "rgba(0, 0, 0, 0.38)",
+    "dividers": "rgba(0, 0, 0, 0.12)"
+};
+var lightText = {
+    "primary": "rgba(255, 255, 255, 1)",
+    "secondary": "rgba(255, 255, 255, 0.7)",
+    "disabled": "rgba(255, 255, 255, 0.5)",
+    "dividers": "rgba(255, 255, 255, 0.12)"
+};
+var darkIcons = {
+    "active": "rgba(0, 0, 0, 0.54)",
+    "inactive": "rgba(0, 0, 0, 0.38)"
+};
+var lightIcons = {
+    "active": "rgba(255, 255, 255, 1)",
+    "inactive": "rgba(255, 255, 255, 0.5)"
+};
+var white = "#ffffff";
+var black = "#000000";
+exports.default = {
+    red: red,
+    pink: pink,
+    purple: purple,
+    deepPurple: deepPurple,
+    indigo: indigo,
+    blue: blue,
+    lightBlue: lightBlue,
+    cyan: cyan,
+    teal: teal,
+    green: green,
+    lightGreen: lightGreen,
+    lime: lime,
+    yellow: yellow,
+    amber: amber,
+    orange: orange,
+    deepOrange: deepOrange,
+    brown: brown,
+    grey: grey,
+    blueGrey: blueGrey,
+    darkText: darkText,
+    lightText: lightText,
+    darkIcons: darkIcons,
+    lightIcons: lightIcons,
+    white: white,
+    black: black
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"421Bd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CircleSwatch", ()=>CircleSwatch);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _common = require("../common");
+var CircleSwatch = function CircleSwatch(_ref) {
+    var color = _ref.color, onClick = _ref.onClick, onSwatchHover = _ref.onSwatchHover, hover = _ref.hover, active = _ref.active, circleSize = _ref.circleSize, circleSpacing = _ref.circleSpacing;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatch: {
+                width: circleSize,
+                height: circleSize,
+                marginRight: circleSpacing,
+                marginBottom: circleSpacing,
+                transform: "scale(1)",
+                transition: "100ms transform ease"
+            },
+            Swatch: {
+                borderRadius: "50%",
+                background: "transparent",
+                boxShadow: "inset 0 0 0 " + (circleSize / 2 + 1) + "px " + color,
+                transition: "100ms box-shadow ease"
+            }
+        },
+        "hover": {
+            swatch: {
+                transform: "scale(1.2)"
+            }
+        },
+        "active": {
+            Swatch: {
+                boxShadow: "inset 0 0 0 3px " + color
+            }
+        }
+    }, {
+        hover: hover,
+        active: active
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _common.Swatch), {
+        style: styles.Swatch,
+        color: color,
+        onClick: onClick,
+        onHover: onSwatchHover,
+        focusStyle: {
+            boxShadow: styles.Swatch.boxShadow + ", 0 0 5px " + color
+        }
+    }));
+};
+CircleSwatch.defaultProps = {
+    circleSize: 28,
+    circleSpacing: 14
+};
+exports.default = (0, _reactcss.handleHover)(CircleSwatch);
+
+},{"react":"b6YLU","reactcss":"e0uT9","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4lhyU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Chrome", ()=>Chrome);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _chromeFields = require("./ChromeFields");
+var _chromeFieldsDefault = parcelHelpers.interopDefault(_chromeFields);
+var _chromePointer = require("./ChromePointer");
+var _chromePointerDefault = parcelHelpers.interopDefault(_chromePointer);
+var _chromePointerCircle = require("./ChromePointerCircle");
+var _chromePointerCircleDefault = parcelHelpers.interopDefault(_chromePointerCircle);
+var Chrome = function Chrome(_ref) {
+    var width = _ref.width, onChange = _ref.onChange, disableAlpha = _ref.disableAlpha, rgb = _ref.rgb, hsl = _ref.hsl, hsv = _ref.hsv, hex = _ref.hex, renderers = _ref.renderers, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className, defaultView = _ref.defaultView;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            picker: {
+                width: width,
+                background: "#fff",
+                borderRadius: "2px",
+                boxShadow: "0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3)",
+                boxSizing: "initial",
+                fontFamily: "Menlo"
+            },
+            saturation: {
+                width: "100%",
+                paddingBottom: "55%",
+                position: "relative",
+                borderRadius: "2px 2px 0 0",
+                overflow: "hidden"
+            },
+            Saturation: {
+                radius: "2px 2px 0 0"
+            },
+            body: {
+                padding: "16px 16px 12px"
+            },
+            controls: {
+                display: "flex"
+            },
+            color: {
+                width: "32px"
+            },
+            swatch: {
+                marginTop: "6px",
+                width: "16px",
+                height: "16px",
+                borderRadius: "8px",
+                position: "relative",
+                overflow: "hidden"
+            },
+            active: {
+                absolute: "0px 0px 0px 0px",
+                borderRadius: "8px",
+                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.1)",
+                background: "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", " + rgb.a + ")",
+                zIndex: "2"
+            },
+            toggles: {
+                flex: "1"
+            },
+            hue: {
+                height: "10px",
+                position: "relative",
+                marginBottom: "8px"
+            },
+            Hue: {
+                radius: "2px"
+            },
+            alpha: {
+                height: "10px",
+                position: "relative"
+            },
+            Alpha: {
+                radius: "2px"
+            }
+        },
+        "disableAlpha": {
+            color: {
+                width: "22px"
+            },
+            alpha: {
+                display: "none"
+            },
+            hue: {
+                marginBottom: "0px"
+            },
+            swatch: {
+                width: "10px",
+                height: "10px",
+                marginTop: "0px"
+            }
+        }
+    }, passedStyles), {
+        disableAlpha: disableAlpha
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "chrome-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.saturation
+    }, (0, _reactDefault.default).createElement((0, _common.Saturation), {
+        style: styles.Saturation,
+        hsl: hsl,
+        hsv: hsv,
+        pointer: (0, _chromePointerCircleDefault.default),
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.body
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.controls,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.color
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.active
+    }), (0, _reactDefault.default).createElement((0, _common.Checkboard), {
+        renderers: renderers
+    }))), (0, _reactDefault.default).createElement("div", {
+        style: styles.toggles
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.hue
+    }, (0, _reactDefault.default).createElement((0, _common.Hue), {
+        style: styles.Hue,
+        hsl: hsl,
+        pointer: (0, _chromePointerDefault.default),
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.alpha
+    }, (0, _reactDefault.default).createElement((0, _common.Alpha), {
+        style: styles.Alpha,
+        rgb: rgb,
+        hsl: hsl,
+        pointer: (0, _chromePointerDefault.default),
+        renderers: renderers,
+        onChange: onChange
+    })))), (0, _reactDefault.default).createElement((0, _chromeFieldsDefault.default), {
+        rgb: rgb,
+        hsl: hsl,
+        hex: hex,
+        view: defaultView,
+        onChange: onChange,
+        disableAlpha: disableAlpha
+    })));
+};
+Chrome.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    disableAlpha: (0, _propTypesDefault.default).bool,
+    styles: (0, _propTypesDefault.default).object,
+    defaultView: (0, _propTypesDefault.default).oneOf([
+        "hex",
+        "rgb",
+        "hsl"
+    ])
+};
+Chrome.defaultProps = {
+    width: 225,
+    disableAlpha: false,
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Chrome);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./ChromeFields":"a1Cai","./ChromePointer":"iD8M1","./ChromePointerCircle":"8pFSx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a1Cai":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ChromeFields", ()=>ChromeFields);
+/* eslint-disable react/no-did-mount-set-state, no-param-reassign */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _isUndefined = require("lodash-es/isUndefined");
+var _isUndefinedDefault = parcelHelpers.interopDefault(_isUndefined);
+var _common = require("../common");
+var _unfoldMoreHorizontalIcon = require("@icons/material/UnfoldMoreHorizontalIcon");
+var _unfoldMoreHorizontalIconDefault = parcelHelpers.interopDefault(_unfoldMoreHorizontalIcon);
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var ChromeFields = function(_React$Component) {
+    _inherits(ChromeFields, _React$Component);
+    function ChromeFields(props) {
+        _classCallCheck(this, ChromeFields);
+        var _this = _possibleConstructorReturn(this, (ChromeFields.__proto__ || Object.getPrototypeOf(ChromeFields)).call(this));
+        _this.toggleViews = function() {
+            if (_this.state.view === "hex") _this.setState({
+                view: "rgb"
+            });
+            else if (_this.state.view === "rgb") _this.setState({
+                view: "hsl"
+            });
+            else if (_this.state.view === "hsl") {
+                if (_this.props.hsl.a === 1) _this.setState({
+                    view: "hex"
+                });
+                else _this.setState({
+                    view: "rgb"
+                });
+            }
+        };
+        _this.handleChange = function(data, e) {
+            if (data.hex) _color.isValidHex(data.hex) && _this.props.onChange({
+                hex: data.hex,
+                source: "hex"
+            }, e);
+            else if (data.r || data.g || data.b) _this.props.onChange({
+                r: data.r || _this.props.rgb.r,
+                g: data.g || _this.props.rgb.g,
+                b: data.b || _this.props.rgb.b,
+                source: "rgb"
+            }, e);
+            else if (data.a) {
+                if (data.a < 0) data.a = 0;
+                else if (data.a > 1) data.a = 1;
+                _this.props.onChange({
+                    h: _this.props.hsl.h,
+                    s: _this.props.hsl.s,
+                    l: _this.props.hsl.l,
+                    a: Math.round(data.a * 100) / 100,
+                    source: "rgb"
+                }, e);
+            } else if (data.h || data.s || data.l) {
+                // Remove any occurances of '%'.
+                if (typeof data.s === "string" && data.s.includes("%")) data.s = data.s.replace("%", "");
+                if (typeof data.l === "string" && data.l.includes("%")) data.l = data.l.replace("%", "");
+                // We store HSL as a unit interval so we need to override the 1 input to 0.01
+                if (data.s == 1) data.s = 0.01;
+                else if (data.l == 1) data.l = 0.01;
+                _this.props.onChange({
+                    h: data.h || _this.props.hsl.h,
+                    s: Number(!(0, _isUndefinedDefault.default)(data.s) ? data.s : _this.props.hsl.s),
+                    l: Number(!(0, _isUndefinedDefault.default)(data.l) ? data.l : _this.props.hsl.l),
+                    source: "hsl"
+                }, e);
+            }
+        };
+        _this.showHighlight = function(e) {
+            e.currentTarget.style.background = "#eee";
+        };
+        _this.hideHighlight = function(e) {
+            e.currentTarget.style.background = "transparent";
+        };
+        if (props.hsl.a !== 1 && props.view === "hex") _this.state = {
+            view: "rgb"
+        };
+        else _this.state = {
+            view: props.view
+        };
+        return _this;
+    }
+    _createClass(ChromeFields, [
+        {
+            key: "render",
+            value: function render() {
+                var _this2 = this;
+                var styles = (0, _reactcssDefault.default)({
+                    "default": {
+                        wrap: {
+                            paddingTop: "16px",
+                            display: "flex"
+                        },
+                        fields: {
+                            flex: "1",
+                            display: "flex",
+                            marginLeft: "-6px"
+                        },
+                        field: {
+                            paddingLeft: "6px",
+                            width: "100%"
+                        },
+                        alpha: {
+                            paddingLeft: "6px",
+                            width: "100%"
+                        },
+                        toggle: {
+                            width: "32px",
+                            textAlign: "right",
+                            position: "relative"
+                        },
+                        icon: {
+                            marginRight: "-4px",
+                            marginTop: "12px",
+                            cursor: "pointer",
+                            position: "relative"
+                        },
+                        iconHighlight: {
+                            position: "absolute",
+                            width: "24px",
+                            height: "28px",
+                            background: "#eee",
+                            borderRadius: "4px",
+                            top: "10px",
+                            left: "12px",
+                            display: "none"
+                        },
+                        input: {
+                            fontSize: "11px",
+                            color: "#333",
+                            width: "100%",
+                            borderRadius: "2px",
+                            border: "none",
+                            boxShadow: "inset 0 0 0 1px #dadada",
+                            height: "21px",
+                            textAlign: "center"
+                        },
+                        label: {
+                            textTransform: "uppercase",
+                            fontSize: "11px",
+                            lineHeight: "11px",
+                            color: "#969696",
+                            textAlign: "center",
+                            display: "block",
+                            marginTop: "12px"
+                        },
+                        svg: {
+                            fill: "#333",
+                            width: "24px",
+                            height: "24px",
+                            border: "1px transparent solid",
+                            borderRadius: "5px"
+                        }
+                    },
+                    "disableAlpha": {
+                        alpha: {
+                            display: "none"
+                        }
+                    }
+                }, this.props, this.state);
+                var fields = void 0;
+                if (this.state.view === "hex") fields = (0, _reactDefault.default).createElement("div", {
+                    style: styles.fields,
+                    className: "flexbox-fix"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "hex",
+                    value: this.props.hex,
+                    onChange: this.handleChange
+                })));
+                else if (this.state.view === "rgb") fields = (0, _reactDefault.default).createElement("div", {
+                    style: styles.fields,
+                    className: "flexbox-fix"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "r",
+                    value: this.props.rgb.r,
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "g",
+                    value: this.props.rgb.g,
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "b",
+                    value: this.props.rgb.b,
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.alpha
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "a",
+                    value: this.props.rgb.a,
+                    arrowOffset: 0.01,
+                    onChange: this.handleChange
+                })));
+                else if (this.state.view === "hsl") fields = (0, _reactDefault.default).createElement("div", {
+                    style: styles.fields,
+                    className: "flexbox-fix"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "h",
+                    value: Math.round(this.props.hsl.h),
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "s",
+                    value: Math.round(this.props.hsl.s * 100) + "%",
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.field
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "l",
+                    value: Math.round(this.props.hsl.l * 100) + "%",
+                    onChange: this.handleChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.alpha
+                }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+                    style: {
+                        input: styles.input,
+                        label: styles.label
+                    },
+                    label: "a",
+                    value: this.props.hsl.a,
+                    arrowOffset: 0.01,
+                    onChange: this.handleChange
+                })));
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.wrap,
+                    className: "flexbox-fix"
+                }, fields, (0, _reactDefault.default).createElement("div", {
+                    style: styles.toggle
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.icon,
+                    onClick: this.toggleViews,
+                    ref: function ref(icon) {
+                        return _this2.icon = icon;
+                    }
+                }, (0, _reactDefault.default).createElement((0, _unfoldMoreHorizontalIconDefault.default), {
+                    style: styles.svg,
+                    onMouseOver: this.showHighlight,
+                    onMouseEnter: this.showHighlight,
+                    onMouseOut: this.hideHighlight
+                }))));
+            }
+        }
+    ], [
+        {
+            key: "getDerivedStateFromProps",
+            value: function getDerivedStateFromProps(nextProps, state) {
+                if (nextProps.hsl.a !== 1 && state.view === "hex") return {
+                    view: "rgb"
+                };
+                return null;
+            }
+        }
+    ]);
+    return ChromeFields;
+}((0, _reactDefault.default).Component);
+ChromeFields.defaultProps = {
+    view: "hex"
+};
+exports.default = ChromeFields;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","lodash-es/isUndefined":"9662h","../common":"4lq7P","@icons/material/UnfoldMoreHorizontalIcon":"10svV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9662h":[function(require,module,exports) {
+/**
+ * Checks if `value` is `undefined`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
+ * @example
+ *
+ * _.isUndefined(void 0);
+ * // => true
+ *
+ * _.isUndefined(null);
+ * // => false
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function isUndefined(value) {
+    return value === undefined;
+}
+exports.default = isUndefined;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"10svV":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _react = require("cab3160a8154bde");
+var _react2 = _interopRequireDefault(_react);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _objectWithoutProperties(obj, keys) {
+    var target = {};
+    for(var i in obj){
+        if (keys.indexOf(i) >= 0) continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+        target[i] = obj[i];
+    }
+    return target;
+}
+var DEFAULT_SIZE = 24;
+exports.default = function(_ref) {
+    var _ref$fill = _ref.fill, fill = _ref$fill === undefined ? "currentColor" : _ref$fill, _ref$width = _ref.width, width = _ref$width === undefined ? DEFAULT_SIZE : _ref$width, _ref$height = _ref.height, height = _ref$height === undefined ? DEFAULT_SIZE : _ref$height, _ref$style = _ref.style, style = _ref$style === undefined ? {} : _ref$style, props = _objectWithoutProperties(_ref, [
+        "fill",
+        "width",
+        "height",
+        "style"
+    ]);
+    return _react2.default.createElement("svg", _extends({
+        viewBox: "0 0 " + DEFAULT_SIZE + " " + DEFAULT_SIZE,
+        style: _extends({
+            fill: fill,
+            width: width,
+            height: height
+        }, style)
+    }, props), _react2.default.createElement("path", {
+        d: "M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z"
+    }));
+};
+
+},{"cab3160a8154bde":"b6YLU"}],"iD8M1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ChromePointer", ()=>ChromePointer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var ChromePointer = function ChromePointer() {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "12px",
+                height: "12px",
+                borderRadius: "6px",
+                transform: "translate(-6px, -1px)",
+                backgroundColor: "rgb(248, 248, 248)",
+                boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.37)"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = ChromePointer;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pFSx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ChromePointerCircle", ()=>ChromePointerCircle);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var ChromePointerCircle = function ChromePointerCircle() {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "12px",
+                height: "12px",
+                borderRadius: "6px",
+                boxShadow: "inset 0 0 0 1px #fff",
+                transform: "translate(-6px, -6px)"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = ChromePointerCircle;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3JYFT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Compact", ()=>Compact);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var _compactColor = require("./CompactColor");
+var _compactColorDefault = parcelHelpers.interopDefault(_compactColor);
+var _compactFields = require("./CompactFields");
+var _compactFieldsDefault = parcelHelpers.interopDefault(_compactFields);
+var Compact = function Compact(_ref) {
+    var onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, colors = _ref.colors, hex = _ref.hex, rgb = _ref.rgb, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            Compact: {
+                background: "#f6f6f6",
+                radius: "4px"
+            },
+            compact: {
+                paddingTop: "5px",
+                paddingLeft: "5px",
+                boxSizing: "initial",
+                width: "240px"
+            },
+            clear: {
+                clear: "both"
+            }
+        }
+    }, passedStyles));
+    var handleChange = function handleChange(data, e) {
+        if (data.hex) _color.isValidHex(data.hex) && onChange({
+            hex: data.hex,
+            source: "hex"
+        }, e);
+        else onChange(data, e);
+    };
+    return (0, _reactDefault.default).createElement((0, _common.Raised), {
+        style: styles.Compact,
+        styles: passedStyles
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.compact,
+        className: "compact-picker " + className
+    }, (0, _reactDefault.default).createElement("div", null, (0, _mapDefault.default)(colors, function(c) {
+        return (0, _reactDefault.default).createElement((0, _compactColorDefault.default), {
+            key: c,
+            color: c,
+            active: c.toLowerCase() === hex,
+            onClick: handleChange,
+            onSwatchHover: onSwatchHover
+        });
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.clear
+    })), (0, _reactDefault.default).createElement((0, _compactFieldsDefault.default), {
+        hex: hex,
+        rgb: rgb,
+        onChange: handleChange
+    })));
+};
+Compact.propTypes = {
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).string),
+    styles: (0, _propTypesDefault.default).object
+};
+Compact.defaultProps = {
+    colors: [
+        "#4D4D4D",
+        "#999999",
+        "#FFFFFF",
+        "#F44E3B",
+        "#FE9200",
+        "#FCDC00",
+        "#DBDF00",
+        "#A4DD00",
+        "#68CCCA",
+        "#73D8FF",
+        "#AEA1FF",
+        "#FDA1FF",
+        "#333333",
+        "#808080",
+        "#cccccc",
+        "#D33115",
+        "#E27300",
+        "#FCC400",
+        "#B0BC00",
+        "#68BC00",
+        "#16A5A5",
+        "#009CE0",
+        "#7B64FF",
+        "#FA28FF",
+        "#000000",
+        "#666666",
+        "#B3B3B3",
+        "#9F0500",
+        "#C45100",
+        "#FB9E00",
+        "#808900",
+        "#194D33",
+        "#0C797D",
+        "#0062B1",
+        "#653294",
+        "#AB149E"
+    ],
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Compact);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/map":"2Rw7L","lodash-es/merge":"hwXcM","../../helpers/color":"6bN5W","../common":"4lq7P","./CompactColor":"3cTWz","./CompactFields":"ie0YX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3cTWz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CompactColor", ()=>CompactColor);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var CompactColor = function CompactColor(_ref) {
+    var color = _ref.color, _ref$onClick = _ref.onClick, onClick = _ref$onClick === undefined ? function() {} : _ref$onClick, onSwatchHover = _ref.onSwatchHover, active = _ref.active;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            color: {
+                background: color,
+                width: "15px",
+                height: "15px",
+                float: "left",
+                marginRight: "5px",
+                marginBottom: "5px",
+                position: "relative",
+                cursor: "pointer"
+            },
+            dot: {
+                absolute: "5px 5px 5px 5px",
+                background: _color.getContrastingColor(color),
+                borderRadius: "50%",
+                opacity: "0"
+            }
+        },
+        "active": {
+            dot: {
+                opacity: "1"
+            }
+        },
+        "color-#FFFFFF": {
+            color: {
+                boxShadow: "inset 0 0 0 1px #ddd"
+            },
+            dot: {
+                background: "#000"
+            }
+        },
+        "transparent": {
+            dot: {
+                background: "#000"
+            }
+        }
+    }, {
+        active: active,
+        "color-#FFFFFF": color === "#FFFFFF",
+        "transparent": color === "transparent"
+    });
+    return (0, _reactDefault.default).createElement((0, _common.Swatch), {
+        style: styles.color,
+        color: color,
+        onClick: onClick,
+        onHover: onSwatchHover,
+        focusStyle: {
+            boxShadow: "0 0 4px " + color
+        }
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.dot
+    }));
+};
+exports.default = CompactColor;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ie0YX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CompactFields", ()=>CompactFields);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _common = require("../common");
+var CompactFields = function CompactFields(_ref) {
+    var hex = _ref.hex, rgb = _ref.rgb, onChange = _ref.onChange;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            fields: {
+                display: "flex",
+                paddingBottom: "6px",
+                paddingRight: "5px",
+                position: "relative"
+            },
+            active: {
+                position: "absolute",
+                top: "6px",
+                left: "5px",
+                height: "9px",
+                width: "9px",
+                background: hex
+            },
+            HEXwrap: {
+                flex: "6",
+                position: "relative"
+            },
+            HEXinput: {
+                width: "80%",
+                padding: "0px",
+                paddingLeft: "20%",
+                border: "none",
+                outline: "none",
+                background: "none",
+                fontSize: "12px",
+                color: "#333",
+                height: "16px"
+            },
+            HEXlabel: {
+                display: "none"
+            },
+            RGBwrap: {
+                flex: "3",
+                position: "relative"
+            },
+            RGBinput: {
+                width: "70%",
+                padding: "0px",
+                paddingLeft: "30%",
+                border: "none",
+                outline: "none",
+                background: "none",
+                fontSize: "12px",
+                color: "#333",
+                height: "16px"
+            },
+            RGBlabel: {
+                position: "absolute",
+                top: "3px",
+                left: "0px",
+                lineHeight: "16px",
+                textTransform: "uppercase",
+                fontSize: "12px",
+                color: "#999"
+            }
+        }
+    });
+    var handleChange = function handleChange(data, e) {
+        if (data.r || data.g || data.b) onChange({
+            r: data.r || rgb.r,
+            g: data.g || rgb.g,
+            b: data.b || rgb.b,
+            source: "rgb"
+        }, e);
+        else onChange({
+            hex: data.hex,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.fields,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.active
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.HEXwrap,
+            input: styles.HEXinput,
+            label: styles.HEXlabel
+        },
+        label: "hex",
+        value: hex,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "r",
+        value: rgb.r,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "g",
+        value: rgb.g,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "b",
+        value: rgb.b,
+        onChange: handleChange
+    }));
+};
+exports.default = CompactFields;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7KVSO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Github", ()=>Github);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _githubSwatch = require("./GithubSwatch");
+var _githubSwatchDefault = parcelHelpers.interopDefault(_githubSwatch);
+var Github = function Github(_ref) {
+    var width = _ref.width, colors = _ref.colors, onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, triangle = _ref.triangle, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            card: {
+                width: width,
+                background: "#fff",
+                border: "1px solid rgba(0,0,0,0.2)",
+                boxShadow: "0 3px 12px rgba(0,0,0,0.15)",
+                borderRadius: "4px",
+                position: "relative",
+                padding: "5px",
+                display: "flex",
+                flexWrap: "wrap"
+            },
+            triangle: {
+                position: "absolute",
+                border: "7px solid transparent",
+                borderBottomColor: "#fff"
+            },
+            triangleShadow: {
+                position: "absolute",
+                border: "8px solid transparent",
+                borderBottomColor: "rgba(0,0,0,0.15)"
+            }
+        },
+        "hide-triangle": {
+            triangle: {
+                display: "none"
+            },
+            triangleShadow: {
+                display: "none"
+            }
+        },
+        "top-left-triangle": {
+            triangle: {
+                top: "-14px",
+                left: "10px"
+            },
+            triangleShadow: {
+                top: "-16px",
+                left: "9px"
+            }
+        },
+        "top-right-triangle": {
+            triangle: {
+                top: "-14px",
+                right: "10px"
+            },
+            triangleShadow: {
+                top: "-16px",
+                right: "9px"
+            }
+        },
+        "bottom-left-triangle": {
+            triangle: {
+                top: "35px",
+                left: "10px",
+                transform: "rotate(180deg)"
+            },
+            triangleShadow: {
+                top: "37px",
+                left: "9px",
+                transform: "rotate(180deg)"
+            }
+        },
+        "bottom-right-triangle": {
+            triangle: {
+                top: "35px",
+                right: "10px",
+                transform: "rotate(180deg)"
+            },
+            triangleShadow: {
+                top: "37px",
+                right: "9px",
+                transform: "rotate(180deg)"
+            }
+        }
+    }, passedStyles), {
+        "hide-triangle": triangle === "hide",
+        "top-left-triangle": triangle === "top-left",
+        "top-right-triangle": triangle === "top-right",
+        "bottom-left-triangle": triangle === "bottom-left",
+        "bottom-right-triangle": triangle === "bottom-right"
+    });
+    var handleChange = function handleChange(hex, e) {
+        return onChange({
+            hex: hex,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.card,
+        className: "github-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.triangleShadow
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.triangle
+    }), (0, _mapDefault.default)(colors, function(c) {
+        return (0, _reactDefault.default).createElement((0, _githubSwatchDefault.default), {
+            color: c,
+            key: c,
+            onClick: handleChange,
+            onSwatchHover: onSwatchHover
+        });
+    }));
+};
+Github.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).string),
+    triangle: (0, _propTypesDefault.default).oneOf([
+        "hide",
+        "top-left",
+        "top-right",
+        "bottom-left",
+        "bottom-right"
+    ]),
+    styles: (0, _propTypesDefault.default).object
+};
+Github.defaultProps = {
+    width: 200,
+    colors: [
+        "#B80000",
+        "#DB3E00",
+        "#FCCB00",
+        "#008B02",
+        "#006B76",
+        "#1273DE",
+        "#004DCF",
+        "#5300EB",
+        "#EB9694",
+        "#FAD0C3",
+        "#FEF3BD",
+        "#C1E1C5",
+        "#BEDADC",
+        "#C4DEF6",
+        "#BED3F3",
+        "#D4C4FB"
+    ],
+    triangle: "top-left",
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Github);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/map":"2Rw7L","lodash-es/merge":"hwXcM","../common":"4lq7P","./GithubSwatch":"j7U7h","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j7U7h":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GithubSwatch", ()=>GithubSwatch);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _common = require("../common");
+var GithubSwatch = function GithubSwatch(_ref) {
+    var hover = _ref.hover, color = _ref.color, onClick = _ref.onClick, onSwatchHover = _ref.onSwatchHover;
+    var hoverSwatch = {
+        position: "relative",
+        zIndex: "2",
+        outline: "2px solid #fff",
+        boxShadow: "0 0 5px 2px rgba(0,0,0,0.25)"
+    };
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatch: {
+                width: "25px",
+                height: "25px",
+                fontSize: "0"
+            }
+        },
+        "hover": {
+            swatch: hoverSwatch
+        }
+    }, {
+        hover: hover
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _common.Swatch), {
+        color: color,
+        onClick: onClick,
+        onHover: onSwatchHover,
+        focusStyle: hoverSwatch
+    }));
+};
+exports.default = (0, _reactcss.handleHover)(GithubSwatch);
+
+},{"react":"b6YLU","reactcss":"e0uT9","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6eXMl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "HuePicker", ()=>HuePicker);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _huePointer = require("./HuePointer");
+var _huePointerDefault = parcelHelpers.interopDefault(_huePointer);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var HuePicker = function HuePicker(_ref) {
+    var width = _ref.width, height = _ref.height, onChange = _ref.onChange, hsl = _ref.hsl, direction = _ref.direction, pointer = _ref.pointer, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            picker: {
+                position: "relative",
+                width: width,
+                height: height
+            },
+            hue: {
+                radius: "2px"
+            }
+        }
+    }, passedStyles));
+    // Overwrite to provide pure hue color
+    var handleChange = function handleChange(data) {
+        return onChange({
+            a: 1,
+            h: data.h,
+            l: 0.5,
+            s: 1
+        });
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "hue-picker " + className
+    }, (0, _reactDefault.default).createElement((0, _common.Hue), _extends({}, styles.hue, {
+        hsl: hsl,
+        pointer: pointer,
+        onChange: handleChange,
+        direction: direction
+    })));
+};
+HuePicker.propTypes = {
+    styles: (0, _propTypesDefault.default).object
+};
+HuePicker.defaultProps = {
+    width: "316px",
+    height: "16px",
+    direction: "horizontal",
+    pointer: (0, _huePointerDefault.default),
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(HuePicker);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./HuePointer":"hhp4s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hhp4s":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SliderPointer", ()=>SliderPointer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var SliderPointer = function SliderPointer(_ref) {
+    var direction = _ref.direction;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "18px",
+                height: "18px",
+                borderRadius: "50%",
+                transform: "translate(-9px, -1px)",
+                backgroundColor: "rgb(248, 248, 248)",
+                boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.37)"
+            }
+        },
+        "vertical": {
+            picker: {
+                transform: "translate(-3px, -9px)"
+            }
+        }
+    }, {
+        vertical: direction === "vertical"
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = SliderPointer;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9cZy9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Material", ()=>Material);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var Material = function Material(_ref) {
+    var onChange = _ref.onChange, hex = _ref.hex, rgb = _ref.rgb, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            material: {
+                width: "98px",
+                height: "98px",
+                padding: "16px",
+                fontFamily: "Roboto"
+            },
+            HEXwrap: {
+                position: "relative"
+            },
+            HEXinput: {
+                width: "100%",
+                marginTop: "12px",
+                fontSize: "15px",
+                color: "#333",
+                padding: "0px",
+                border: "0px",
+                borderBottom: "2px solid " + hex,
+                outline: "none",
+                height: "30px"
+            },
+            HEXlabel: {
+                position: "absolute",
+                top: "0px",
+                left: "0px",
+                fontSize: "11px",
+                color: "#999999",
+                textTransform: "capitalize"
+            },
+            Hex: {
+                style: {}
+            },
+            RGBwrap: {
+                position: "relative"
+            },
+            RGBinput: {
+                width: "100%",
+                marginTop: "12px",
+                fontSize: "15px",
+                color: "#333",
+                padding: "0px",
+                border: "0px",
+                borderBottom: "1px solid #eee",
+                outline: "none",
+                height: "30px"
+            },
+            RGBlabel: {
+                position: "absolute",
+                top: "0px",
+                left: "0px",
+                fontSize: "11px",
+                color: "#999999",
+                textTransform: "capitalize"
+            },
+            split: {
+                display: "flex",
+                marginRight: "-10px",
+                paddingTop: "11px"
+            },
+            third: {
+                flex: "1",
+                paddingRight: "10px"
+            }
+        }
+    }, passedStyles));
+    var handleChange = function handleChange(data, e) {
+        if (data.hex) _color.isValidHex(data.hex) && onChange({
+            hex: data.hex,
+            source: "hex"
+        }, e);
+        else if (data.r || data.g || data.b) onChange({
+            r: data.r || rgb.r,
+            g: data.g || rgb.g,
+            b: data.b || rgb.b,
+            source: "rgb"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement((0, _common.Raised), {
+        styles: passedStyles
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.material,
+        className: "material-picker " + className
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.HEXwrap,
+            input: styles.HEXinput,
+            label: styles.HEXlabel
+        },
+        label: "hex",
+        value: hex,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.split,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.third
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "r",
+        value: rgb.r,
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.third
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "g",
+        value: rgb.g,
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.third
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "b",
+        value: rgb.b,
+        onChange: handleChange
+    })))));
+};
+exports.default = (0, _common.ColorWrap)(Material);
+
+},{"react":"b6YLU","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5T5Xy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Photoshop", ()=>Photoshop);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _photoshopFields = require("./PhotoshopFields");
+var _photoshopFieldsDefault = parcelHelpers.interopDefault(_photoshopFields);
+var _photoshopPointerCircle = require("./PhotoshopPointerCircle");
+var _photoshopPointerCircleDefault = parcelHelpers.interopDefault(_photoshopPointerCircle);
+var _photoshopPointer = require("./PhotoshopPointer");
+var _photoshopPointerDefault = parcelHelpers.interopDefault(_photoshopPointer);
+var _photoshopButton = require("./PhotoshopButton");
+var _photoshopButtonDefault = parcelHelpers.interopDefault(_photoshopButton);
+var _photoshopPreviews = require("./PhotoshopPreviews");
+var _photoshopPreviewsDefault = parcelHelpers.interopDefault(_photoshopPreviews);
+var _createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _possibleConstructorReturn(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+var Photoshop = function(_React$Component) {
+    _inherits(Photoshop, _React$Component);
+    function Photoshop(props) {
+        _classCallCheck(this, Photoshop);
+        var _this = _possibleConstructorReturn(this, (Photoshop.__proto__ || Object.getPrototypeOf(Photoshop)).call(this));
+        _this.state = {
+            currentColor: props.hex
+        };
+        return _this;
+    }
+    _createClass(Photoshop, [
+        {
+            key: "render",
+            value: function render() {
+                var _props = this.props, _props$styles = _props.styles, passedStyles = _props$styles === undefined ? {} : _props$styles, _props$className = _props.className, className = _props$className === undefined ? "" : _props$className;
+                var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+                    "default": {
+                        picker: {
+                            background: "#DCDCDC",
+                            borderRadius: "4px",
+                            boxShadow: "0 0 0 1px rgba(0,0,0,.25), 0 8px 16px rgba(0,0,0,.15)",
+                            boxSizing: "initial",
+                            width: "513px"
+                        },
+                        head: {
+                            backgroundImage: "linear-gradient(-180deg, #F0F0F0 0%, #D4D4D4 100%)",
+                            borderBottom: "1px solid #B1B1B1",
+                            boxShadow: "inset 0 1px 0 0 rgba(255,255,255,.2), inset 0 -1px 0 0 rgba(0,0,0,.02)",
+                            height: "23px",
+                            lineHeight: "24px",
+                            borderRadius: "4px 4px 0 0",
+                            fontSize: "13px",
+                            color: "#4D4D4D",
+                            textAlign: "center"
+                        },
+                        body: {
+                            padding: "15px 15px 0",
+                            display: "flex"
+                        },
+                        saturation: {
+                            width: "256px",
+                            height: "256px",
+                            position: "relative",
+                            border: "2px solid #B3B3B3",
+                            borderBottom: "2px solid #F0F0F0",
+                            overflow: "hidden"
+                        },
+                        hue: {
+                            position: "relative",
+                            height: "256px",
+                            width: "19px",
+                            marginLeft: "10px",
+                            border: "2px solid #B3B3B3",
+                            borderBottom: "2px solid #F0F0F0"
+                        },
+                        controls: {
+                            width: "180px",
+                            marginLeft: "10px"
+                        },
+                        top: {
+                            display: "flex"
+                        },
+                        previews: {
+                            width: "60px"
+                        },
+                        actions: {
+                            flex: "1",
+                            marginLeft: "20px"
+                        }
+                    }
+                }, passedStyles));
+                return (0, _reactDefault.default).createElement("div", {
+                    style: styles.picker,
+                    className: "photoshop-picker " + className
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.head
+                }, this.props.header), (0, _reactDefault.default).createElement("div", {
+                    style: styles.body,
+                    className: "flexbox-fix"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.saturation
+                }, (0, _reactDefault.default).createElement((0, _common.Saturation), {
+                    hsl: this.props.hsl,
+                    hsv: this.props.hsv,
+                    pointer: (0, _photoshopPointerCircleDefault.default),
+                    onChange: this.props.onChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.hue
+                }, (0, _reactDefault.default).createElement((0, _common.Hue), {
+                    direction: "vertical",
+                    hsl: this.props.hsl,
+                    pointer: (0, _photoshopPointerDefault.default),
+                    onChange: this.props.onChange
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.controls
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.top,
+                    className: "flexbox-fix"
+                }, (0, _reactDefault.default).createElement("div", {
+                    style: styles.previews
+                }, (0, _reactDefault.default).createElement((0, _photoshopPreviewsDefault.default), {
+                    rgb: this.props.rgb,
+                    currentColor: this.state.currentColor
+                })), (0, _reactDefault.default).createElement("div", {
+                    style: styles.actions
+                }, (0, _reactDefault.default).createElement((0, _photoshopButtonDefault.default), {
+                    label: "OK",
+                    onClick: this.props.onAccept,
+                    active: true
+                }), (0, _reactDefault.default).createElement((0, _photoshopButtonDefault.default), {
+                    label: "Cancel",
+                    onClick: this.props.onCancel
+                }), (0, _reactDefault.default).createElement((0, _photoshopFieldsDefault.default), {
+                    onChange: this.props.onChange,
+                    rgb: this.props.rgb,
+                    hsv: this.props.hsv,
+                    hex: this.props.hex
+                }))))));
+            }
+        }
+    ]);
+    return Photoshop;
+}((0, _reactDefault.default).Component);
+Photoshop.propTypes = {
+    header: (0, _propTypesDefault.default).string,
+    styles: (0, _propTypesDefault.default).object
+};
+Photoshop.defaultProps = {
+    header: "Color Picker",
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Photoshop);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./PhotoshopFields":"a0g4O","./PhotoshopPointerCircle":"fpZ7h","./PhotoshopPointer":"3t1JG","./PhotoshopButton":"akB3s","./PhotoshopPreviews":"6cWNQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a0g4O":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PhotoshopPicker", ()=>PhotoshopPicker);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var PhotoshopPicker = function PhotoshopPicker(_ref) {
+    var onChange = _ref.onChange, rgb = _ref.rgb, hsv = _ref.hsv, hex = _ref.hex;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            fields: {
+                paddingTop: "5px",
+                paddingBottom: "9px",
+                width: "80px",
+                position: "relative"
+            },
+            divider: {
+                height: "5px"
+            },
+            RGBwrap: {
+                position: "relative"
+            },
+            RGBinput: {
+                marginLeft: "40%",
+                width: "40%",
+                height: "18px",
+                border: "1px solid #888888",
+                boxShadow: "inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC",
+                marginBottom: "5px",
+                fontSize: "13px",
+                paddingLeft: "3px",
+                marginRight: "10px"
+            },
+            RGBlabel: {
+                left: "0px",
+                top: "0px",
+                width: "34px",
+                textTransform: "uppercase",
+                fontSize: "13px",
+                height: "18px",
+                lineHeight: "22px",
+                position: "absolute"
+            },
+            HEXwrap: {
+                position: "relative"
+            },
+            HEXinput: {
+                marginLeft: "20%",
+                width: "80%",
+                height: "18px",
+                border: "1px solid #888888",
+                boxShadow: "inset 0 1px 1px rgba(0,0,0,.1), 0 1px 0 0 #ECECEC",
+                marginBottom: "6px",
+                fontSize: "13px",
+                paddingLeft: "3px"
+            },
+            HEXlabel: {
+                position: "absolute",
+                top: "0px",
+                left: "0px",
+                width: "14px",
+                textTransform: "uppercase",
+                fontSize: "13px",
+                height: "18px",
+                lineHeight: "22px"
+            },
+            fieldSymbols: {
+                position: "absolute",
+                top: "5px",
+                right: "-7px",
+                fontSize: "13px"
+            },
+            symbol: {
+                height: "20px",
+                lineHeight: "22px",
+                paddingBottom: "7px"
+            }
+        }
+    });
+    var handleChange = function handleChange(data, e) {
+        if (data["#"]) _color.isValidHex(data["#"]) && onChange({
+            hex: data["#"],
+            source: "hex"
+        }, e);
+        else if (data.r || data.g || data.b) onChange({
+            r: data.r || rgb.r,
+            g: data.g || rgb.g,
+            b: data.b || rgb.b,
+            source: "rgb"
+        }, e);
+        else if (data.h || data.s || data.v) onChange({
+            h: data.h || hsv.h,
+            s: data.s || hsv.s,
+            v: data.v || hsv.v,
+            source: "hsv"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.fields
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "h",
+        value: Math.round(hsv.h),
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "s",
+        value: Math.round(hsv.s * 100),
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "v",
+        value: Math.round(hsv.v * 100),
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.divider
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "r",
+        value: rgb.r,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "g",
+        value: rgb.g,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.RGBwrap,
+            input: styles.RGBinput,
+            label: styles.RGBlabel
+        },
+        label: "b",
+        value: rgb.b,
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.divider
+    }), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            wrap: styles.HEXwrap,
+            input: styles.HEXinput,
+            label: styles.HEXlabel
+        },
+        label: "#",
+        value: hex.replace("#", ""),
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.fieldSymbols
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.symbol
+    }, "\xb0"), (0, _reactDefault.default).createElement("div", {
+        style: styles.symbol
+    }, "%"), (0, _reactDefault.default).createElement("div", {
+        style: styles.symbol
+    }, "%")));
+};
+exports.default = PhotoshopPicker;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fpZ7h":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PhotoshopPointerCircle", ()=>PhotoshopPointerCircle);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var PhotoshopPointerCircle = function PhotoshopPointerCircle(_ref) {
+    var hsl = _ref.hsl;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "12px",
+                height: "12px",
+                borderRadius: "6px",
+                boxShadow: "inset 0 0 0 1px #fff",
+                transform: "translate(-6px, -6px)"
+            }
+        },
+        "black-outline": {
+            picker: {
+                boxShadow: "inset 0 0 0 1px #000"
+            }
+        }
+    }, {
+        "black-outline": hsl.l > 0.5
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = PhotoshopPointerCircle;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3t1JG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PhotoshopPointerCircle", ()=>PhotoshopPointerCircle);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var PhotoshopPointerCircle = function PhotoshopPointerCircle() {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            triangle: {
+                width: 0,
+                height: 0,
+                borderStyle: "solid",
+                borderWidth: "4px 0 4px 6px",
+                borderColor: "transparent transparent transparent #fff",
+                position: "absolute",
+                top: "1px",
+                left: "1px"
+            },
+            triangleBorder: {
+                width: 0,
+                height: 0,
+                borderStyle: "solid",
+                borderWidth: "5px 0 5px 8px",
+                borderColor: "transparent transparent transparent #555"
+            },
+            left: {
+                Extend: "triangleBorder",
+                transform: "translate(-13px, -4px)"
+            },
+            leftInside: {
+                Extend: "triangle",
+                transform: "translate(-8px, -5px)"
+            },
+            right: {
+                Extend: "triangleBorder",
+                transform: "translate(20px, -14px) rotate(180deg)"
+            },
+            rightInside: {
+                Extend: "triangle",
+                transform: "translate(-8px, -5px)"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.pointer
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.left
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.leftInside
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.right
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.rightInside
+    })));
+};
+exports.default = PhotoshopPointerCircle;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"akB3s":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PhotoshopButton", ()=>PhotoshopButton);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var PhotoshopButton = function PhotoshopButton(_ref) {
+    var onClick = _ref.onClick, label = _ref.label, children = _ref.children, active = _ref.active;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            button: {
+                backgroundImage: "linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)",
+                border: "1px solid #878787",
+                borderRadius: "2px",
+                height: "20px",
+                boxShadow: "0 1px 0 0 #EAEAEA",
+                fontSize: "14px",
+                color: "#000",
+                lineHeight: "20px",
+                textAlign: "center",
+                marginBottom: "10px",
+                cursor: "pointer"
+            }
+        },
+        "active": {
+            button: {
+                boxShadow: "0 0 0 1px #878787"
+            }
+        }
+    }, {
+        active: active
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.button,
+        onClick: onClick
+    }, label || children);
+};
+exports.default = PhotoshopButton;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6cWNQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PhotoshopPreviews", ()=>PhotoshopPreviews);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var PhotoshopPreviews = function PhotoshopPreviews(_ref) {
+    var rgb = _ref.rgb, currentColor = _ref.currentColor;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatches: {
+                border: "1px solid #B3B3B3",
+                borderBottom: "1px solid #F0F0F0",
+                marginBottom: "2px",
+                marginTop: "1px"
+            },
+            new: {
+                height: "34px",
+                background: "rgb(" + rgb.r + "," + rgb.g + ", " + rgb.b + ")",
+                boxShadow: "inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000"
+            },
+            current: {
+                height: "34px",
+                background: currentColor,
+                boxShadow: "inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 -1px 0 #000"
+            },
+            label: {
+                fontSize: "14px",
+                color: "#000",
+                textAlign: "center"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", null, (0, _reactDefault.default).createElement("div", {
+        style: styles.label
+    }, "new"), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatches
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.new
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.current
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.label
+    }, "current"));
+};
+exports.default = PhotoshopPreviews;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hAcy1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Sketch", ()=>Sketch);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _sketchFields = require("./SketchFields");
+var _sketchFieldsDefault = parcelHelpers.interopDefault(_sketchFields);
+var _sketchPresetColors = require("./SketchPresetColors");
+var _sketchPresetColorsDefault = parcelHelpers.interopDefault(_sketchPresetColors);
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var Sketch = function Sketch(_ref) {
+    var width = _ref.width, rgb = _ref.rgb, hex = _ref.hex, hsv = _ref.hsv, hsl = _ref.hsl, onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, disableAlpha = _ref.disableAlpha, presetColors = _ref.presetColors, renderers = _ref.renderers, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": _extends({
+            picker: {
+                width: width,
+                padding: "10px 10px 0",
+                boxSizing: "initial",
+                background: "#fff",
+                borderRadius: "4px",
+                boxShadow: "0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15)"
+            },
+            saturation: {
+                width: "100%",
+                paddingBottom: "75%",
+                position: "relative",
+                overflow: "hidden"
+            },
+            Saturation: {
+                radius: "3px",
+                shadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
+            },
+            controls: {
+                display: "flex"
+            },
+            sliders: {
+                padding: "4px 0",
+                flex: "1"
+            },
+            color: {
+                width: "24px",
+                height: "24px",
+                position: "relative",
+                marginTop: "4px",
+                marginLeft: "4px",
+                borderRadius: "3px"
+            },
+            activeColor: {
+                absolute: "0px 0px 0px 0px",
+                borderRadius: "2px",
+                background: "rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + "," + rgb.a + ")",
+                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
+            },
+            hue: {
+                position: "relative",
+                height: "10px",
+                overflow: "hidden"
+            },
+            Hue: {
+                radius: "2px",
+                shadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
+            },
+            alpha: {
+                position: "relative",
+                height: "10px",
+                marginTop: "4px",
+                overflow: "hidden"
+            },
+            Alpha: {
+                radius: "2px",
+                shadow: "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)"
+            }
+        }, passedStyles),
+        "disableAlpha": {
+            color: {
+                height: "10px"
+            },
+            hue: {
+                height: "10px"
+            },
+            alpha: {
+                display: "none"
+            }
+        }
+    }, passedStyles), {
+        disableAlpha: disableAlpha
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "sketch-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.saturation
+    }, (0, _reactDefault.default).createElement((0, _common.Saturation), {
+        style: styles.Saturation,
+        hsl: hsl,
+        hsv: hsv,
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.controls,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.sliders
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.hue
+    }, (0, _reactDefault.default).createElement((0, _common.Hue), {
+        style: styles.Hue,
+        hsl: hsl,
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.alpha
+    }, (0, _reactDefault.default).createElement((0, _common.Alpha), {
+        style: styles.Alpha,
+        rgb: rgb,
+        hsl: hsl,
+        renderers: renderers,
+        onChange: onChange
+    }))), (0, _reactDefault.default).createElement("div", {
+        style: styles.color
+    }, (0, _reactDefault.default).createElement((0, _common.Checkboard), null), (0, _reactDefault.default).createElement("div", {
+        style: styles.activeColor
+    }))), (0, _reactDefault.default).createElement((0, _sketchFieldsDefault.default), {
+        rgb: rgb,
+        hsl: hsl,
+        hex: hex,
+        onChange: onChange,
+        disableAlpha: disableAlpha
+    }), (0, _reactDefault.default).createElement((0, _sketchPresetColorsDefault.default), {
+        colors: presetColors,
+        onClick: onChange,
+        onSwatchHover: onSwatchHover
+    }));
+};
+Sketch.propTypes = {
+    disableAlpha: (0, _propTypesDefault.default).bool,
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    styles: (0, _propTypesDefault.default).object
+};
+Sketch.defaultProps = {
+    disableAlpha: false,
+    width: 200,
+    styles: {},
+    presetColors: [
+        "#D0021B",
+        "#F5A623",
+        "#F8E71C",
+        "#8B572A",
+        "#7ED321",
+        "#417505",
+        "#BD10E0",
+        "#9013FE",
+        "#4A90E2",
+        "#50E3C2",
+        "#B8E986",
+        "#000000",
+        "#4A4A4A",
+        "#9B9B9B",
+        "#FFFFFF"
+    ]
+};
+exports.default = (0, _common.ColorWrap)(Sketch);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./SketchFields":"cdqeA","./SketchPresetColors":"6TRTS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cdqeA":[function(require,module,exports) {
+/* eslint-disable no-param-reassign */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SketchFields", ()=>SketchFields);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var SketchFields = function SketchFields(_ref) {
+    var onChange = _ref.onChange, rgb = _ref.rgb, hsl = _ref.hsl, hex = _ref.hex, disableAlpha = _ref.disableAlpha;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            fields: {
+                display: "flex",
+                paddingTop: "4px"
+            },
+            single: {
+                flex: "1",
+                paddingLeft: "6px"
+            },
+            alpha: {
+                flex: "1",
+                paddingLeft: "6px"
+            },
+            double: {
+                flex: "2"
+            },
+            input: {
+                width: "80%",
+                padding: "4px 10% 3px",
+                border: "none",
+                boxShadow: "inset 0 0 0 1px #ccc",
+                fontSize: "11px"
+            },
+            label: {
+                display: "block",
+                textAlign: "center",
+                fontSize: "11px",
+                color: "#222",
+                paddingTop: "3px",
+                paddingBottom: "4px",
+                textTransform: "capitalize"
+            }
+        },
+        "disableAlpha": {
+            alpha: {
+                display: "none"
+            }
+        }
+    }, {
+        disableAlpha: disableAlpha
+    });
+    var handleChange = function handleChange(data, e) {
+        if (data.hex) _color.isValidHex(data.hex) && onChange({
+            hex: data.hex,
+            source: "hex"
+        }, e);
+        else if (data.r || data.g || data.b) onChange({
+            r: data.r || rgb.r,
+            g: data.g || rgb.g,
+            b: data.b || rgb.b,
+            a: rgb.a,
+            source: "rgb"
+        }, e);
+        else if (data.a) {
+            if (data.a < 0) data.a = 0;
+            else if (data.a > 100) data.a = 100;
+            data.a /= 100;
+            onChange({
+                h: hsl.h,
+                s: hsl.s,
+                l: hsl.l,
+                a: data.a,
+                source: "rgb"
+            }, e);
+        }
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.fields,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.double
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "hex",
+        value: hex.replace("#", ""),
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "r",
+        value: rgb.r,
+        onChange: handleChange,
+        dragLabel: "true",
+        dragMax: "255"
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "g",
+        value: rgb.g,
+        onChange: handleChange,
+        dragLabel: "true",
+        dragMax: "255"
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "b",
+        value: rgb.b,
+        onChange: handleChange,
+        dragLabel: "true",
+        dragMax: "255"
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.alpha
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "a",
+        value: Math.round(rgb.a * 100),
+        onChange: handleChange,
+        dragLabel: "true",
+        dragMax: "100"
+    })));
+};
+exports.default = SketchFields;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6TRTS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SketchPresetColors", ()=>SketchPresetColors);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _common = require("../common");
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var SketchPresetColors = function SketchPresetColors(_ref) {
+    var colors = _ref.colors, _ref$onClick = _ref.onClick, onClick = _ref$onClick === undefined ? function() {} : _ref$onClick, onSwatchHover = _ref.onSwatchHover;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            colors: {
+                margin: "0 -10px",
+                padding: "10px 0 0 10px",
+                borderTop: "1px solid #eee",
+                display: "flex",
+                flexWrap: "wrap",
+                position: "relative"
+            },
+            swatchWrap: {
+                width: "16px",
+                height: "16px",
+                margin: "0 10px 10px 0"
+            },
+            swatch: {
+                borderRadius: "3px",
+                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15)"
+            }
+        },
+        "no-presets": {
+            colors: {
+                display: "none"
+            }
+        }
+    }, {
+        "no-presets": !colors || !colors.length
+    });
+    var handleClick = function handleClick(hex, e) {
+        onClick({
+            hex: hex,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.colors,
+        className: "flexbox-fix"
+    }, colors.map(function(colorObjOrString) {
+        var c = typeof colorObjOrString === "string" ? {
+            color: colorObjOrString
+        } : colorObjOrString;
+        var key = "" + c.color + (c.title || "");
+        return (0, _reactDefault.default).createElement("div", {
+            key: key,
+            style: styles.swatchWrap
+        }, (0, _reactDefault.default).createElement((0, _common.Swatch), _extends({}, c, {
+            style: styles.swatch,
+            onClick: handleClick,
+            onHover: onSwatchHover,
+            focusStyle: {
+                boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + c.color
+            }
+        })));
+    }));
+};
+SketchPresetColors.propTypes = {
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).shape({
+            color: (0, _propTypesDefault.default).string,
+            title: (0, _propTypesDefault.default).string
+        })
+    ])).isRequired
+};
+exports.default = SketchPresetColors;
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9r1rG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Slider", ()=>Slider);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _sliderSwatches = require("./SliderSwatches");
+var _sliderSwatchesDefault = parcelHelpers.interopDefault(_sliderSwatches);
+var _sliderPointer = require("./SliderPointer");
+var _sliderPointerDefault = parcelHelpers.interopDefault(_sliderPointer);
+var Slider = function Slider(_ref) {
+    var hsl = _ref.hsl, onChange = _ref.onChange, pointer = _ref.pointer, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            hue: {
+                height: "12px",
+                position: "relative"
+            },
+            Hue: {
+                radius: "2px"
+            }
+        }
+    }, passedStyles));
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.wrap || {},
+        className: "slider-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.hue
+    }, (0, _reactDefault.default).createElement((0, _common.Hue), {
+        style: styles.Hue,
+        hsl: hsl,
+        pointer: pointer,
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatches
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchesDefault.default), {
+        hsl: hsl,
+        onClick: onChange
+    })));
+};
+Slider.propTypes = {
+    styles: (0, _propTypesDefault.default).object
+};
+Slider.defaultProps = {
+    pointer: (0, _sliderPointerDefault.default),
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Slider);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./SliderSwatches":"82nWy","./SliderPointer":"epXGA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"82nWy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SliderSwatches", ()=>SliderSwatches);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _sliderSwatch = require("./SliderSwatch");
+var _sliderSwatchDefault = parcelHelpers.interopDefault(_sliderSwatch);
+var SliderSwatches = function SliderSwatches(_ref) {
+    var onClick = _ref.onClick, hsl = _ref.hsl;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatches: {
+                marginTop: "20px"
+            },
+            swatch: {
+                boxSizing: "border-box",
+                width: "20%",
+                paddingRight: "1px",
+                float: "left"
+            },
+            clear: {
+                clear: "both"
+            }
+        }
+    });
+    // Acceptible difference in floating point equality
+    var epsilon = 0.1;
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.swatches
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchDefault.default), {
+        hsl: hsl,
+        offset: ".80",
+        active: Math.abs(hsl.l - 0.80) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick,
+        first: true
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchDefault.default), {
+        hsl: hsl,
+        offset: ".65",
+        active: Math.abs(hsl.l - 0.65) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchDefault.default), {
+        hsl: hsl,
+        offset: ".50",
+        active: Math.abs(hsl.l - 0.50) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchDefault.default), {
+        hsl: hsl,
+        offset: ".35",
+        active: Math.abs(hsl.l - 0.35) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }, (0, _reactDefault.default).createElement((0, _sliderSwatchDefault.default), {
+        hsl: hsl,
+        offset: ".20",
+        active: Math.abs(hsl.l - 0.20) < epsilon && Math.abs(hsl.s - 0.50) < epsilon,
+        onClick: onClick,
+        last: true
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.clear
+    }));
+};
+exports.default = SliderSwatches;
+
+},{"react":"b6YLU","reactcss":"e0uT9","./SliderSwatch":"gaHva","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaHva":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SliderSwatch", ()=>SliderSwatch);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var SliderSwatch = function SliderSwatch(_ref) {
+    var hsl = _ref.hsl, offset = _ref.offset, _ref$onClick = _ref.onClick, onClick = _ref$onClick === undefined ? function() {} : _ref$onClick, active = _ref.active, first = _ref.first, last = _ref.last;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            swatch: {
+                height: "12px",
+                background: "hsl(" + hsl.h + ", 50%, " + offset * 100 + "%)",
+                cursor: "pointer"
+            }
+        },
+        "first": {
+            swatch: {
+                borderRadius: "2px 0 0 2px"
+            }
+        },
+        "last": {
+            swatch: {
+                borderRadius: "0 2px 2px 0"
+            }
+        },
+        "active": {
+            swatch: {
+                transform: "scaleY(1.8)",
+                borderRadius: "3.6px/2px"
+            }
+        }
+    }, {
+        active: active,
+        first: first,
+        last: last
+    });
+    var handleClick = function handleClick(e) {
+        return onClick({
+            h: hsl.h,
+            s: 0.5,
+            l: offset,
+            source: "hsl"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch,
+        onClick: handleClick
+    });
+};
+exports.default = SliderSwatch;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"epXGA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SliderPointer", ()=>SliderPointer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var SliderPointer = function SliderPointer() {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "14px",
+                height: "14px",
+                borderRadius: "6px",
+                transform: "translate(-7px, -1px)",
+                backgroundColor: "rgb(248, 248, 248)",
+                boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.37)"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+exports.default = SliderPointer;
+
+},{"react":"b6YLU","reactcss":"e0uT9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jZHDH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Swatches", ()=>Swatches);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _materialColors = require("material-colors");
+var _common = require("../common");
+var _swatchesGroup = require("./SwatchesGroup");
+var _swatchesGroupDefault = parcelHelpers.interopDefault(_swatchesGroup);
+var Swatches = function Swatches(_ref) {
+    var width = _ref.width, height = _ref.height, onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, colors = _ref.colors, hex = _ref.hex, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            picker: {
+                width: width,
+                height: height
+            },
+            overflow: {
+                height: height,
+                overflowY: "scroll"
+            },
+            body: {
+                padding: "16px 0 6px 16px"
+            },
+            clear: {
+                clear: "both"
+            }
+        }
+    }, passedStyles));
+    var handleChange = function handleChange(data, e) {
+        return onChange({
+            hex: data,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "swatches-picker " + className
+    }, (0, _reactDefault.default).createElement((0, _common.Raised), null, (0, _reactDefault.default).createElement("div", {
+        style: styles.overflow
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.body
+    }, (0, _mapDefault.default)(colors, function(group) {
+        return (0, _reactDefault.default).createElement((0, _swatchesGroupDefault.default), {
+            key: group.toString(),
+            group: group,
+            active: hex,
+            onClick: handleChange,
+            onSwatchHover: onSwatchHover
+        });
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.clear
+    })))));
+};
+Swatches.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    height: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).string)),
+    styles: (0, _propTypesDefault.default).object
+};
+Swatches.defaultProps = {
+    width: 320,
+    height: 240,
+    colors: [
+        [
+            _materialColors.red["900"],
+            _materialColors.red["700"],
+            _materialColors.red["500"],
+            _materialColors.red["300"],
+            _materialColors.red["100"]
+        ],
+        [
+            _materialColors.pink["900"],
+            _materialColors.pink["700"],
+            _materialColors.pink["500"],
+            _materialColors.pink["300"],
+            _materialColors.pink["100"]
+        ],
+        [
+            _materialColors.purple["900"],
+            _materialColors.purple["700"],
+            _materialColors.purple["500"],
+            _materialColors.purple["300"],
+            _materialColors.purple["100"]
+        ],
+        [
+            _materialColors.deepPurple["900"],
+            _materialColors.deepPurple["700"],
+            _materialColors.deepPurple["500"],
+            _materialColors.deepPurple["300"],
+            _materialColors.deepPurple["100"]
+        ],
+        [
+            _materialColors.indigo["900"],
+            _materialColors.indigo["700"],
+            _materialColors.indigo["500"],
+            _materialColors.indigo["300"],
+            _materialColors.indigo["100"]
+        ],
+        [
+            _materialColors.blue["900"],
+            _materialColors.blue["700"],
+            _materialColors.blue["500"],
+            _materialColors.blue["300"],
+            _materialColors.blue["100"]
+        ],
+        [
+            _materialColors.lightBlue["900"],
+            _materialColors.lightBlue["700"],
+            _materialColors.lightBlue["500"],
+            _materialColors.lightBlue["300"],
+            _materialColors.lightBlue["100"]
+        ],
+        [
+            _materialColors.cyan["900"],
+            _materialColors.cyan["700"],
+            _materialColors.cyan["500"],
+            _materialColors.cyan["300"],
+            _materialColors.cyan["100"]
+        ],
+        [
+            _materialColors.teal["900"],
+            _materialColors.teal["700"],
+            _materialColors.teal["500"],
+            _materialColors.teal["300"],
+            _materialColors.teal["100"]
+        ],
+        [
+            "#194D33",
+            _materialColors.green["700"],
+            _materialColors.green["500"],
+            _materialColors.green["300"],
+            _materialColors.green["100"]
+        ],
+        [
+            _materialColors.lightGreen["900"],
+            _materialColors.lightGreen["700"],
+            _materialColors.lightGreen["500"],
+            _materialColors.lightGreen["300"],
+            _materialColors.lightGreen["100"]
+        ],
+        [
+            _materialColors.lime["900"],
+            _materialColors.lime["700"],
+            _materialColors.lime["500"],
+            _materialColors.lime["300"],
+            _materialColors.lime["100"]
+        ],
+        [
+            _materialColors.yellow["900"],
+            _materialColors.yellow["700"],
+            _materialColors.yellow["500"],
+            _materialColors.yellow["300"],
+            _materialColors.yellow["100"]
+        ],
+        [
+            _materialColors.amber["900"],
+            _materialColors.amber["700"],
+            _materialColors.amber["500"],
+            _materialColors.amber["300"],
+            _materialColors.amber["100"]
+        ],
+        [
+            _materialColors.orange["900"],
+            _materialColors.orange["700"],
+            _materialColors.orange["500"],
+            _materialColors.orange["300"],
+            _materialColors.orange["100"]
+        ],
+        [
+            _materialColors.deepOrange["900"],
+            _materialColors.deepOrange["700"],
+            _materialColors.deepOrange["500"],
+            _materialColors.deepOrange["300"],
+            _materialColors.deepOrange["100"]
+        ],
+        [
+            _materialColors.brown["900"],
+            _materialColors.brown["700"],
+            _materialColors.brown["500"],
+            _materialColors.brown["300"],
+            _materialColors.brown["100"]
+        ],
+        [
+            _materialColors.blueGrey["900"],
+            _materialColors.blueGrey["700"],
+            _materialColors.blueGrey["500"],
+            _materialColors.blueGrey["300"],
+            _materialColors.blueGrey["100"]
+        ],
+        [
+            "#000000",
+            "#525252",
+            "#969696",
+            "#D9D9D9",
+            "#FFFFFF"
+        ]
+    ],
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Swatches);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/map":"2Rw7L","lodash-es/merge":"hwXcM","material-colors":"96bYT","../common":"4lq7P","./SwatchesGroup":"1yQbD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1yQbD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SwatchesGroup", ()=>SwatchesGroup);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _swatchesColor = require("./SwatchesColor");
+var _swatchesColorDefault = parcelHelpers.interopDefault(_swatchesColor);
+var SwatchesGroup = function SwatchesGroup(_ref) {
+    var onClick = _ref.onClick, onSwatchHover = _ref.onSwatchHover, group = _ref.group, active = _ref.active;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            group: {
+                paddingBottom: "10px",
+                width: "40px",
+                float: "left",
+                marginRight: "10px"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.group
+    }, (0, _mapDefault.default)(group, function(color, i) {
+        return (0, _reactDefault.default).createElement((0, _swatchesColorDefault.default), {
+            key: color,
+            color: color,
+            active: color.toLowerCase() === active,
+            first: i === 0,
+            last: i === group.length - 1,
+            onClick: onClick,
+            onSwatchHover: onSwatchHover
+        });
+    }));
+};
+exports.default = SwatchesGroup;
+
+},{"react":"b6YLU","reactcss":"e0uT9","lodash-es/map":"2Rw7L","./SwatchesColor":"eBsvW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eBsvW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SwatchesColor", ()=>SwatchesColor);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var _checkIcon = require("@icons/material/CheckIcon");
+var _checkIconDefault = parcelHelpers.interopDefault(_checkIcon);
+var SwatchesColor = function SwatchesColor(_ref) {
+    var color = _ref.color, _ref$onClick = _ref.onClick, onClick = _ref$onClick === undefined ? function() {} : _ref$onClick, onSwatchHover = _ref.onSwatchHover, first = _ref.first, last = _ref.last, active = _ref.active;
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            color: {
+                width: "40px",
+                height: "24px",
+                cursor: "pointer",
+                background: color,
+                marginBottom: "1px"
+            },
+            check: {
+                color: _color.getContrastingColor(color),
+                marginLeft: "8px",
+                display: "none"
+            }
+        },
+        "first": {
+            color: {
+                overflow: "hidden",
+                borderRadius: "2px 2px 0 0"
+            }
+        },
+        "last": {
+            color: {
+                overflow: "hidden",
+                borderRadius: "0 0 2px 2px"
+            }
+        },
+        "active": {
+            check: {
+                display: "block"
+            }
+        },
+        "color-#FFFFFF": {
+            color: {
+                boxShadow: "inset 0 0 0 1px #ddd"
+            },
+            check: {
+                color: "#333"
+            }
+        },
+        "transparent": {
+            check: {
+                color: "#333"
+            }
+        }
+    }, {
+        first: first,
+        last: last,
+        active: active,
+        "color-#FFFFFF": color === "#FFFFFF",
+        "transparent": color === "transparent"
+    });
+    return (0, _reactDefault.default).createElement((0, _common.Swatch), {
+        color: color,
+        style: styles.color,
+        onClick: onClick,
+        onHover: onSwatchHover,
+        focusStyle: {
+            boxShadow: "0 0 4px " + color
+        }
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.check
+    }, (0, _reactDefault.default).createElement((0, _checkIconDefault.default), null)));
+};
+exports.default = SwatchesColor;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","../common":"4lq7P","@icons/material/CheckIcon":"1qfhn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1qfhn":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var _react = require("b7292f2d749daff7");
+var _react2 = _interopRequireDefault(_react);
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function _objectWithoutProperties(obj, keys) {
+    var target = {};
+    for(var i in obj){
+        if (keys.indexOf(i) >= 0) continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+        target[i] = obj[i];
+    }
+    return target;
+}
+var DEFAULT_SIZE = 24;
+exports.default = function(_ref) {
+    var _ref$fill = _ref.fill, fill = _ref$fill === undefined ? "currentColor" : _ref$fill, _ref$width = _ref.width, width = _ref$width === undefined ? DEFAULT_SIZE : _ref$width, _ref$height = _ref.height, height = _ref$height === undefined ? DEFAULT_SIZE : _ref$height, _ref$style = _ref.style, style = _ref$style === undefined ? {} : _ref$style, props = _objectWithoutProperties(_ref, [
+        "fill",
+        "width",
+        "height",
+        "style"
+    ]);
+    return _react2.default.createElement("svg", _extends({
+        viewBox: "0 0 " + DEFAULT_SIZE + " " + DEFAULT_SIZE,
+        style: _extends({
+            fill: fill,
+            width: width,
+            height: height
+        }, style)
+    }, props), _react2.default.createElement("path", {
+        d: "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+    }));
+};
+
+},{"b7292f2d749daff7":"b6YLU"}],"ceLEj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Twitter", ()=>Twitter);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _map = require("lodash-es/map");
+var _mapDefault = parcelHelpers.interopDefault(_map);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var Twitter = function Twitter(_ref) {
+    var onChange = _ref.onChange, onSwatchHover = _ref.onSwatchHover, hex = _ref.hex, colors = _ref.colors, width = _ref.width, triangle = _ref.triangle, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            card: {
+                width: width,
+                background: "#fff",
+                border: "0 solid rgba(0,0,0,0.25)",
+                boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
+                borderRadius: "4px",
+                position: "relative"
+            },
+            body: {
+                padding: "15px 9px 9px 15px"
+            },
+            label: {
+                fontSize: "18px",
+                color: "#fff"
+            },
+            triangle: {
+                width: "0px",
+                height: "0px",
+                borderStyle: "solid",
+                borderWidth: "0 9px 10px 9px",
+                borderColor: "transparent transparent #fff transparent",
+                position: "absolute"
+            },
+            triangleShadow: {
+                width: "0px",
+                height: "0px",
+                borderStyle: "solid",
+                borderWidth: "0 9px 10px 9px",
+                borderColor: "transparent transparent rgba(0,0,0,.1) transparent",
+                position: "absolute"
+            },
+            hash: {
+                background: "#F0F0F0",
+                height: "30px",
+                width: "30px",
+                borderRadius: "4px 0 0 4px",
+                float: "left",
+                color: "#98A1A4",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+            },
+            input: {
+                width: "100px",
+                fontSize: "14px",
+                color: "#666",
+                border: "0px",
+                outline: "none",
+                height: "28px",
+                boxShadow: "inset 0 0 0 1px #F0F0F0",
+                boxSizing: "content-box",
+                borderRadius: "0 4px 4px 0",
+                float: "left",
+                paddingLeft: "8px"
+            },
+            swatch: {
+                width: "30px",
+                height: "30px",
+                float: "left",
+                borderRadius: "4px",
+                margin: "0 6px 6px 0"
+            },
+            clear: {
+                clear: "both"
+            }
+        },
+        "hide-triangle": {
+            triangle: {
+                display: "none"
+            },
+            triangleShadow: {
+                display: "none"
+            }
+        },
+        "top-left-triangle": {
+            triangle: {
+                top: "-10px",
+                left: "12px"
+            },
+            triangleShadow: {
+                top: "-11px",
+                left: "12px"
+            }
+        },
+        "top-right-triangle": {
+            triangle: {
+                top: "-10px",
+                right: "12px"
+            },
+            triangleShadow: {
+                top: "-11px",
+                right: "12px"
+            }
+        }
+    }, passedStyles), {
+        "hide-triangle": triangle === "hide",
+        "top-left-triangle": triangle === "top-left",
+        "top-right-triangle": triangle === "top-right"
+    });
+    var handleChange = function handleChange(hexcode, e) {
+        _color.isValidHex(hexcode) && onChange({
+            hex: hexcode,
+            source: "hex"
+        }, e);
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.card,
+        className: "twitter-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.triangleShadow
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.triangle
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.body
+    }, (0, _mapDefault.default)(colors, function(c, i) {
+        return (0, _reactDefault.default).createElement((0, _common.Swatch), {
+            key: i,
+            color: c,
+            hex: c,
+            style: styles.swatch,
+            onClick: handleChange,
+            onHover: onSwatchHover,
+            focusStyle: {
+                boxShadow: "0 0 4px " + c
+            }
+        });
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.hash
+    }, "#"), (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        label: null,
+        style: {
+            input: styles.input
+        },
+        value: hex.replace("#", ""),
+        onChange: handleChange
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.clear
+    })));
+};
+Twitter.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    triangle: (0, _propTypesDefault.default).oneOf([
+        "hide",
+        "top-left",
+        "top-right"
+    ]),
+    colors: (0, _propTypesDefault.default).arrayOf((0, _propTypesDefault.default).string),
+    styles: (0, _propTypesDefault.default).object
+};
+Twitter.defaultProps = {
+    width: 276,
+    colors: [
+        "#FF6900",
+        "#FCB900",
+        "#7BDCB5",
+        "#00D084",
+        "#8ED1FC",
+        "#0693E3",
+        "#ABB8C3",
+        "#EB144C",
+        "#F78DA7",
+        "#9900EF"
+    ],
+    triangle: "top-left",
+    styles: {}
+};
+exports.default = (0, _common.ColorWrap)(Twitter);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/map":"2Rw7L","lodash-es/merge":"hwXcM","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNjIx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Google", ()=>Google);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _merge = require("lodash-es/merge");
+var _mergeDefault = parcelHelpers.interopDefault(_merge);
+var _common = require("../common");
+var _googlePointerCircle = require("./GooglePointerCircle");
+var _googlePointerCircleDefault = parcelHelpers.interopDefault(_googlePointerCircle);
+var _googlePointer = require("./GooglePointer");
+var _googlePointerDefault = parcelHelpers.interopDefault(_googlePointer);
+var _googleFields = require("./GoogleFields");
+var _googleFieldsDefault = parcelHelpers.interopDefault(_googleFields);
+var Google = function Google(_ref) {
+    var width = _ref.width, onChange = _ref.onChange, rgb = _ref.rgb, hsl = _ref.hsl, hsv = _ref.hsv, hex = _ref.hex, header = _ref.header, _ref$styles = _ref.styles, passedStyles = _ref$styles === undefined ? {} : _ref$styles, _ref$className = _ref.className, className = _ref$className === undefined ? "" : _ref$className;
+    var styles = (0, _reactcssDefault.default)((0, _mergeDefault.default)({
+        "default": {
+            picker: {
+                width: width,
+                background: "#fff",
+                border: "1px solid #dfe1e5",
+                boxSizing: "initial",
+                display: "flex",
+                flexWrap: "wrap",
+                borderRadius: "8px 8px 0px 0px"
+            },
+            head: {
+                height: "57px",
+                width: "100%",
+                paddingTop: "16px",
+                paddingBottom: "16px",
+                paddingLeft: "16px",
+                fontSize: "20px",
+                boxSizing: "border-box",
+                fontFamily: "Roboto-Regular,HelveticaNeue,Arial,sans-serif"
+            },
+            saturation: {
+                width: "70%",
+                padding: "0px",
+                position: "relative",
+                overflow: "hidden"
+            },
+            swatch: {
+                width: "30%",
+                height: "228px",
+                padding: "0px",
+                background: "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 1)",
+                position: "relative",
+                overflow: "hidden"
+            },
+            body: {
+                margin: "auto",
+                width: "95%"
+            },
+            controls: {
+                display: "flex",
+                boxSizing: "border-box",
+                height: "52px",
+                paddingTop: "22px"
+            },
+            color: {
+                width: "32px"
+            },
+            hue: {
+                height: "8px",
+                position: "relative",
+                margin: "0px 16px 0px 16px",
+                width: "100%"
+            },
+            Hue: {
+                radius: "2px"
+            }
+        }
+    }, passedStyles));
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker,
+        className: "google-picker " + className
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.head
+    }, header), (0, _reactDefault.default).createElement("div", {
+        style: styles.swatch
+    }), (0, _reactDefault.default).createElement("div", {
+        style: styles.saturation
+    }, (0, _reactDefault.default).createElement((0, _common.Saturation), {
+        hsl: hsl,
+        hsv: hsv,
+        pointer: (0, _googlePointerCircleDefault.default),
+        onChange: onChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.body
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.controls,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.hue
+    }, (0, _reactDefault.default).createElement((0, _common.Hue), {
+        style: styles.Hue,
+        hsl: hsl,
+        radius: "4px",
+        pointer: (0, _googlePointerDefault.default),
+        onChange: onChange
+    }))), (0, _reactDefault.default).createElement((0, _googleFieldsDefault.default), {
+        rgb: rgb,
+        hsl: hsl,
+        hex: hex,
+        hsv: hsv,
+        onChange: onChange
+    })));
+};
+Google.propTypes = {
+    width: (0, _propTypesDefault.default).oneOfType([
+        (0, _propTypesDefault.default).string,
+        (0, _propTypesDefault.default).number
+    ]),
+    styles: (0, _propTypesDefault.default).object,
+    header: (0, _propTypesDefault.default).string
+};
+Google.defaultProps = {
+    width: 652,
+    styles: {},
+    header: "Color picker"
+};
+exports.default = (0, _common.ColorWrap)(Google);
+
+},{"react":"b6YLU","prop-types":"7wKI2","reactcss":"e0uT9","lodash-es/merge":"hwXcM","../common":"4lq7P","./GooglePointerCircle":"8B7Qk","./GooglePointer":"71nur","./GoogleFields":"8s031","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8B7Qk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GooglePointerCircle", ()=>GooglePointerCircle);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var GooglePointerCircle = function GooglePointerCircle(props) {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "20px",
+                height: "20px",
+                borderRadius: "22px",
+                border: "2px #fff solid",
+                transform: "translate(-12px, -13px)",
+                background: "hsl(" + Math.round(props.hsl.h) + ", " + Math.round(props.hsl.s * 100) + "%, " + Math.round(props.hsl.l * 100) + "%)"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+GooglePointerCircle.propTypes = {
+    hsl: (0, _propTypesDefault.default).shape({
+        h: (0, _propTypesDefault.default).number,
+        s: (0, _propTypesDefault.default).number,
+        l: (0, _propTypesDefault.default).number,
+        a: (0, _propTypesDefault.default).number
+    })
+};
+GooglePointerCircle.defaultProps = {
+    hsl: {
+        a: 1,
+        h: 249.94,
+        l: 0.2,
+        s: 0.50
+    }
+};
+exports.default = GooglePointerCircle;
+
+},{"react":"b6YLU","reactcss":"e0uT9","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"71nur":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GooglePointer", ()=>GooglePointer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var GooglePointer = function GooglePointer(props) {
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            picker: {
+                width: "20px",
+                height: "20px",
+                borderRadius: "22px",
+                transform: "translate(-10px, -7px)",
+                background: "hsl(" + Math.round(props.hsl.h) + ", 100%, 50%)",
+                border: "2px white solid"
+            }
+        }
+    });
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.picker
+    });
+};
+GooglePointer.propTypes = {
+    hsl: (0, _propTypesDefault.default).shape({
+        h: (0, _propTypesDefault.default).number,
+        s: (0, _propTypesDefault.default).number,
+        l: (0, _propTypesDefault.default).number,
+        a: (0, _propTypesDefault.default).number
+    })
+};
+GooglePointer.defaultProps = {
+    hsl: {
+        a: 1,
+        h: 249.94,
+        l: 0.2,
+        s: 0.50
+    }
+};
+exports.default = GooglePointer;
+
+},{"react":"b6YLU","reactcss":"e0uT9","prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8s031":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GoogleFields", ()=>GoogleFields);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactcss = require("reactcss");
+var _reactcssDefault = parcelHelpers.interopDefault(_reactcss);
+var _color = require("../../helpers/color");
+var _common = require("../common");
+var GoogleFields = function GoogleFields(_ref) {
+    var onChange = _ref.onChange, rgb = _ref.rgb, hsl = _ref.hsl, hex = _ref.hex, hsv = _ref.hsv;
+    var handleChange = function handleChange(data, e) {
+        if (data.hex) _color.isValidHex(data.hex) && onChange({
+            hex: data.hex,
+            source: "hex"
+        }, e);
+        else if (data.rgb) {
+            var values = data.rgb.split(",");
+            _color.isvalidColorString(data.rgb, "rgb") && onChange({
+                r: values[0],
+                g: values[1],
+                b: values[2],
+                a: 1,
+                source: "rgb"
+            }, e);
+        } else if (data.hsv) {
+            var _values = data.hsv.split(",");
+            if (_color.isvalidColorString(data.hsv, "hsv")) {
+                _values[2] = _values[2].replace("%", "");
+                _values[1] = _values[1].replace("%", "");
+                _values[0] = _values[0].replace("\xb0", "");
+                if (_values[1] == 1) _values[1] = 0.01;
+                else if (_values[2] == 1) _values[2] = 0.01;
+                onChange({
+                    h: Number(_values[0]),
+                    s: Number(_values[1]),
+                    v: Number(_values[2]),
+                    source: "hsv"
+                }, e);
+            }
+        } else if (data.hsl) {
+            var _values2 = data.hsl.split(",");
+            if (_color.isvalidColorString(data.hsl, "hsl")) {
+                _values2[2] = _values2[2].replace("%", "");
+                _values2[1] = _values2[1].replace("%", "");
+                _values2[0] = _values2[0].replace("\xb0", "");
+                if (hsvValue[1] == 1) hsvValue[1] = 0.01;
+                else if (hsvValue[2] == 1) hsvValue[2] = 0.01;
+                onChange({
+                    h: Number(_values2[0]),
+                    s: Number(_values2[1]),
+                    v: Number(_values2[2]),
+                    source: "hsl"
+                }, e);
+            }
+        }
+    };
+    var styles = (0, _reactcssDefault.default)({
+        "default": {
+            wrap: {
+                display: "flex",
+                height: "100px",
+                marginTop: "4px"
+            },
+            fields: {
+                width: "100%"
+            },
+            column: {
+                paddingTop: "10px",
+                display: "flex",
+                justifyContent: "space-between"
+            },
+            double: {
+                padding: "0px 4.4px",
+                boxSizing: "border-box"
+            },
+            input: {
+                width: "100%",
+                height: "38px",
+                boxSizing: "border-box",
+                padding: "4px 10% 3px",
+                textAlign: "center",
+                border: "1px solid #dadce0",
+                fontSize: "11px",
+                textTransform: "lowercase",
+                borderRadius: "5px",
+                outline: "none",
+                fontFamily: "Roboto,Arial,sans-serif"
+            },
+            input2: {
+                height: "38px",
+                width: "100%",
+                border: "1px solid #dadce0",
+                boxSizing: "border-box",
+                fontSize: "11px",
+                textTransform: "lowercase",
+                borderRadius: "5px",
+                outline: "none",
+                paddingLeft: "10px",
+                fontFamily: "Roboto,Arial,sans-serif"
+            },
+            label: {
+                textAlign: "center",
+                fontSize: "12px",
+                background: "#fff",
+                position: "absolute",
+                textTransform: "uppercase",
+                color: "#3c4043",
+                width: "35px",
+                top: "-6px",
+                left: "0",
+                right: "0",
+                marginLeft: "auto",
+                marginRight: "auto",
+                fontFamily: "Roboto,Arial,sans-serif"
+            },
+            label2: {
+                left: "10px",
+                textAlign: "center",
+                fontSize: "12px",
+                background: "#fff",
+                position: "absolute",
+                textTransform: "uppercase",
+                color: "#3c4043",
+                width: "32px",
+                top: "-6px",
+                fontFamily: "Roboto,Arial,sans-serif"
+            },
+            single: {
+                flexGrow: "1",
+                margin: "0px 4.4px"
+            }
+        }
+    });
+    var rgbValue = rgb.r + ", " + rgb.g + ", " + rgb.b;
+    var hslValue = Math.round(hsl.h) + "\xb0, " + Math.round(hsl.s * 100) + "%, " + Math.round(hsl.l * 100) + "%";
+    var hsvValue = Math.round(hsv.h) + "\xb0, " + Math.round(hsv.s * 100) + "%, " + Math.round(hsv.v * 100) + "%";
+    return (0, _reactDefault.default).createElement("div", {
+        style: styles.wrap,
+        className: "flexbox-fix"
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.fields
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.double
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input,
+            label: styles.label
+        },
+        label: "hex",
+        value: hex,
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.column
+    }, (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input2,
+            label: styles.label2
+        },
+        label: "rgb",
+        value: rgbValue,
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input2,
+            label: styles.label2
+        },
+        label: "hsv",
+        value: hsvValue,
+        onChange: handleChange
+    })), (0, _reactDefault.default).createElement("div", {
+        style: styles.single
+    }, (0, _reactDefault.default).createElement((0, _common.EditableInput), {
+        style: {
+            input: styles.input2,
+            label: styles.label2
+        },
+        label: "hsl",
+        value: hslValue,
+        onChange: handleChange
+    })))));
+};
+exports.default = GoogleFields;
+
+},{"react":"b6YLU","reactcss":"e0uT9","../../helpers/color":"6bN5W","../common":"4lq7P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["3fE3b","1xC6H","kjLP2"], "kjLP2", "parcelRequired98c")
 
 //# sourceMappingURL=index.6fa4ea68.js.map
