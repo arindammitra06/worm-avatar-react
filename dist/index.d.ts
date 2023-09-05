@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { WormAvatarOptions } from './types/avatar-options.types';
 export declare type GradientDegree = number & {
-    _type_: "GradientDegree";
+    _type_: 'GradientDegree';
 };
 export declare const gradientDegrees: (value: number) => GradientDegree;
 export declare type HexColor = string & {
-    _type_: "HexColor";
+    _type_: 'HexColor';
 };
 export declare const hexColor: (value: string) => HexColor;
 export declare enum BodyShape {

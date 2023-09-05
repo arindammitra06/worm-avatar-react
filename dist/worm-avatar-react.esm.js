@@ -583,20 +583,25 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       var _backgroundStartColor;
       if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor = backgroundStartColor) == null ? void 0 : _backgroundStartColor.trim()) === '' || !isValidHex(backgroundStartColor)) {
         var index = hashSeed % options.backgroundColor.length;
-        console.log('Background Color index :' + index);
+        //console.log('Background Color index :' + index);
         backgroundStartColor = options.backgroundColor[index][0];
         backgroundEndColor = options.backgroundColor[index][1];
-        console.log('Background Color Start :' + backgroundStartColor);
-        console.log('Background Color End :' + backgroundEndColor);
+        //console.log('Background Color Start :' + backgroundStartColor);
+        //console.log('Background Color End :' + backgroundEndColor);
       } else {
-        backgroundEndColor = backgroundStartColor;
+        var _backgroundEndColor;
+        if (backgroundEndColor === null || backgroundEndColor !== null && ((_backgroundEndColor = backgroundEndColor) == null ? void 0 : _backgroundEndColor.trim()) === '' || !isValidHex(backgroundEndColor)) {
+          backgroundEndColor = backgroundStartColor;
+        } else {
+          backgroundEndColor = backgroundEndColor;
+        }
       }
-      console.log('backgroundGradientDegree :' + backgroundGradientDegree);
+      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
       if (backgroundGradientDegree === null || backgroundGradientDegree === undefined) {
         var _index = hashSeed % options.backgroundGradientDegree.length;
         backgroundGradientDegree = gradientDegrees(options.backgroundGradientDegree[_index]);
       }
-      console.log('backgroundGradientDegree :' + backgroundGradientDegree);
+      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
     } else {
       var _backgroundStartColor2;
       if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor2 = backgroundStartColor) == null ? void 0 : _backgroundStartColor2.trim()) === '' || !isValidHex(backgroundStartColor)) {
@@ -604,7 +609,7 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
         backgroundStartColor = options.backgroundColor[_index2][0];
       }
     }
-    //Process Body 
+    //Process Body
     if (bodyHeight === null || bodyHeight === undefined) {
       var _index3 = hashSeed % options.bodyHeight.length;
       bodyHeight = options.bodyHeight[_index3];
@@ -613,17 +618,22 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       var _index4 = hashSeed % options.bodyShape.length;
       bodyShape = options.bodyShape[_index4];
     }
-    console.log('bodyColorGradient :' + bodyColorGradient);
+    //console.log('bodyColorGradient :' + bodyColorGradient);
     if (bodyColorGradient) {
       var _bodyStartColor;
       if (bodyStartColor === null || bodyStartColor === undefined || bodyStartColor !== null && ((_bodyStartColor = bodyStartColor) == null ? void 0 : _bodyStartColor.trim()) === '' || !isValidHex(bodyStartColor)) {
         var _index5 = hashSeed % options.bodyColor.length;
         bodyStartColor = options.bodyColor[_index5][0];
         bodyEndColor = options.bodyColor[_index5][1];
-        console.log('bodyStartColor :' + bodyStartColor);
-        console.log('bodyEndColor :' + bodyEndColor);
+        //console.log('bodyStartColor :' + bodyStartColor);
+        //console.log('bodyEndColor :' + bodyEndColor);
       } else {
-        bodyEndColor = bodyStartColor;
+        var _bodyEndColor;
+        if (bodyEndColor === null || bodyEndColor !== null && ((_bodyEndColor = bodyEndColor) == null ? void 0 : _bodyEndColor.trim()) === '' || !isValidHex(bodyEndColor)) {
+          bodyEndColor = bodyStartColor;
+        } else {
+          bodyEndColor = bodyEndColor;
+        }
       }
       if (bodyGradientDegree === null || bodyGradientDegree === undefined) {
         var _index6 = hashSeed % options.bodyGradientDegree.length;
@@ -662,7 +672,7 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       eyeShadeColor = options.eyeShadeColor[_index12];
     }
     //Eye Pupil Color
-    console.log('eyePupilGradient ' + eyePupilGradient);
+    //console.log('eyePupilGradient ' + eyePupilGradient);
     if (eyePupilGradient) {
       var _eyePupilStartColor;
       if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === '' || !isValidHex(eyePupilStartColor)) {
@@ -670,7 +680,12 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
         eyePupilStartColor = options.backgroundColor[_index13][0];
         eyePupilEndColor = options.backgroundColor[_index13][1];
       } else {
-        eyePupilEndColor = eyePupilStartColor;
+        var _eyePupilEndColor;
+        if (eyePupilEndColor === null || eyePupilEndColor !== null && ((_eyePupilEndColor = eyePupilEndColor) == null ? void 0 : _eyePupilEndColor.trim()) === '' || !isValidHex(eyePupilEndColor)) {
+          eyePupilEndColor = eyePupilStartColor;
+        } else {
+          eyePupilEndColor = eyePupilEndColor;
+        }
       }
     } else {
       var _eyePupilStartColor2;
