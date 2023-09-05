@@ -34,9 +34,9 @@
   },
   "name": "worm-avatar-react",
   "author": "Arindam Mitra",
-  "homepage": "https://github.com/arindammitra06/worm-avatar-react",
+  "homepage": "https://github.com/arindammitra06/worm-avatar-react.git",
   "license": "Apache License 2",
-  "repository": "github:arindammitra06/worm-avatar-react",
+  "repository": "https://github.com/arindammitra06/worm-avatar-react.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
