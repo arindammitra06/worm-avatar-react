@@ -1,7 +1,7 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "main": "index.js",
+  "default": "index.tsx",
   "license": "MIT",
   "scripts": {
     "start": "rm -r .parcel-cache && parcel index.html",
