@@ -37,6 +37,9 @@
   "homepage": "https://github.com/arindammitra06/worm-avatar-react",
   "license": "Apache License 2",
   "repository": "github:arindammitra06/worm-avatar-react",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "react-component",
     "avatar",
