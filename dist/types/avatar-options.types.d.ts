@@ -10,6 +10,7 @@ export declare const pupilGradients: string[][];
  * Gennerate avatar configurations
  */
 export interface WormAvatarOptions {
+    size: number;
     seed?: string;
     isRandom: boolean;
     radius?: number;

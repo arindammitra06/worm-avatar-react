@@ -41,6 +41,8 @@ export interface EyeProps {
     eyePupilGradient: boolean;
     eyePupilStartColor: string;
     eyePupilEndColor: string;
+    bodyShape?: BodyShape;
+    bodyHeight?: BodyHeight;
 }
 export declare enum Expression {
     HAPPY = 0,
@@ -57,6 +59,7 @@ export declare enum TongueOrTeeth {
 export interface MouthProps {
     expression: Expression;
     mouthColor: string;
+    size: number;
 }
 export declare enum ToothCount {
     ONE = 0,
@@ -69,6 +72,7 @@ export declare enum ToothSide {
 export interface ToothProps {
     toothCount: ToothCount;
     toothSide: ToothSide;
+    size: number;
 }
 export interface TongueProps {
     tongueColor: string;
@@ -80,6 +84,7 @@ export declare enum EarSide {
 export interface EarProps {
     earSide: EarSide;
     earColor: string;
+    bodyShape?: BodyShape;
 }
 declare class WormAvatar extends React.Component<WormAvatarOptions> {
     render(): React.JSX.Element;

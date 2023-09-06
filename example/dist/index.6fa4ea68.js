@@ -3013,27 +3013,14 @@ const App = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: output,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _Default.default), {
+                    size: 40,
                     isRandom: isRandom,
                     seed: seed,
-                    radius: 20,
+                    radius: 100,
                     isBackgroundGradient: isBGGradient,
                     backgroundStartColor: allowBackground ? (0, _.hexColor)(backgroundColor) : "",
                     backgroundEndColor: allowBackground ? (0, _.hexColor)(backgroundEndColor) : "",
-                    bodyColorGradient: isBodyGradient,
-                    // bodyGradientDegree={gradientDegrees(180)}
-                    bodyStartColor: allowBody ? (0, _.hexColor)(bodyColor) : "",
-                    bodyEndColor: allowBody ? (0, _.hexColor)(bodyEndColor) : "",
-                    // backgroundGradientDegree={gradientDegrees(0)}
-                    //mouthExpression={Expression.SAD}
-                    //showEar={showEar}
-                    // earColor={hexColor('#f5af19')}
-                    // eyePosition={EyePosition.NORMAL}
-                    // eyeCount={EyeCount.TWO}
-                    // eyeShadeColor={hexColor('#fca311')}
-                    // eyePupilGradient={true}
-                    // eyePupilStartColor={hexColor('#fca311')}
-                    // eyePupilEndColor={hexColor('#ef233c')}
-                    showTongueOrTeeth: showTeeth ? (0, _.TongueOrTeeth).TEETH : (0, _.TongueOrTeeth).TONGUE
+                    bodyColorGradient: isBodyGradient
                 }, void 0, false, {
                     fileName: "index.tsx",
                     lineNumber: 85,
@@ -3048,7 +3035,7 @@ const App = ()=>{
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 116,
+                lineNumber: 120,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3069,23 +3056,23 @@ const App = ()=>{
                                         onChange: (event)=>setSeed(event.currentTarget.value)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 127,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 121,
+                                lineNumber: 125,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 120,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 119,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3103,36 +3090,36 @@ const App = ()=>{
                                         onChange: (event)=>setIsRandom(!isRandom)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 134,
+                                lineNumber: 138,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 133,
+                            lineNumber: 137,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 132,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 118,
+                lineNumber: 122,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 146,
+                lineNumber: 150,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3153,23 +3140,23 @@ const App = ()=>{
                                         onChange: (event)=>setAllowBackground(!allowBackground)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 157,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 151,
+                                lineNumber: 155,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 150,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 149,
+                        lineNumber: 153,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3187,36 +3174,36 @@ const App = ()=>{
                                         onChange: (event)=>setAllowBody(!allowBody)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 170,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 164,
+                                lineNumber: 168,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 163,
+                            lineNumber: 167,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 162,
+                        lineNumber: 166,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 148,
+                lineNumber: 152,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 177,
+                lineNumber: 181,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3238,18 +3225,18 @@ const App = ()=>{
                                             onChange: (event)=>setIsBGGradient(!isBGGradient)
                                         }, void 0, false, {
                                             fileName: "index.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "index.tsx",
-                                    lineNumber: 182,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "index.tsx",
-                                lineNumber: 181,
+                                lineNumber: 185,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3265,13 +3252,13 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 197,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 191,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3288,19 +3275,19 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 205,
+                                        lineNumber: 209,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 201,
+                                lineNumber: 205,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "index.tsx",
-                        lineNumber: 180,
+                        lineNumber: 184,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3319,18 +3306,18 @@ const App = ()=>{
                                             onChange: (event)=>setIsBodyGradient(!isBodyGradient)
                                         }, void 0, false, {
                                             fileName: "index.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 222,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "index.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 220,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "index.tsx",
-                                lineNumber: 215,
+                                lineNumber: 219,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3346,13 +3333,13 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 231,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 225,
+                                lineNumber: 229,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3369,32 +3356,32 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 242,
+                                        lineNumber: 246,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 235,
+                                lineNumber: 239,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "index.tsx",
-                        lineNumber: 214,
+                        lineNumber: 218,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 179,
+                lineNumber: 183,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 252,
+                lineNumber: 256,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3415,23 +3402,23 @@ const App = ()=>{
                                         onChange: (event)=>setShowEar(!showEar)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 259,
+                                        lineNumber: 263,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 257,
+                                lineNumber: 261,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 256,
+                            lineNumber: 260,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 255,
+                        lineNumber: 259,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3449,29 +3436,29 @@ const App = ()=>{
                                         onChange: (event)=>setShowTeeth(!showTeeth)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 272,
+                                        lineNumber: 276,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 270,
+                                lineNumber: 274,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 269,
+                            lineNumber: 273,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 268,
+                        lineNumber: 272,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 254,
+                lineNumber: 258,
                 columnNumber: 7
             }, undefined)
         ]
@@ -3485,7 +3472,7 @@ _s(App, "sOMWss4jLAOD3quyI6Uf7VEvVkY=");
 _c = App;
 _reactDom.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "index.tsx",
-    lineNumber: 285,
+    lineNumber: 289,
     columnNumber: 17
 }, undefined), document.getElementById("root"));
 var _c;
@@ -27695,17 +27682,18 @@ function _setPrototypeOf(o, p) {
     return _setPrototypeOf(o, p);
 }
 var Eye = function Eye(_ref) {
-    var eyePosition = _ref.eyePosition, eyeCount = _ref.eyeCount, eyeSide = _ref.eyeSide, eyeShadeColor = _ref.eyeShadeColor, showShadow = _ref.showShadow, eyePupilGradient = _ref.eyePupilGradient, eyePupilStartColor = _ref.eyePupilStartColor, eyePupilEndColor = _ref.eyePupilEndColor;
+    var eyePosition = _ref.eyePosition, eyeCount = _ref.eyeCount, eyeSide = _ref.eyeSide, eyeShadeColor = _ref.eyeShadeColor, showShadow = _ref.showShadow, eyePupilGradient = _ref.eyePupilGradient, eyePupilStartColor = _ref.eyePupilStartColor, eyePupilEndColor = _ref.eyePupilEndColor, bodyShape = _ref.bodyShape, bodyHeight = _ref.bodyHeight;
+    console.log(bodyHeight);
     var avatarEye = {
         position: "absolute",
-        top: eyePosition === EyePosition.NORMAL ? "10%" : eyePosition === EyePosition.TOP ? "-15%" : "5%",
-        left: eyeCount === EyeCount.ONE ? "45%" : eyeSide === EyeSide.LEFT ? "10%" : "85%",
-        width: "65px",
-        height: "65px",
+        top: eyePosition === EyePosition.NORMAL ? "10%" : eyePosition === EyePosition.TOP ? "-10%" : "5%",
+        left: eyeCount === EyeCount.ONE ? "45%" : eyeSide === EyeSide.LEFT ? "10%" : "80%",
+        width: eyeCount === EyeCount.ONE ? bodyShape === BodyShape.FAT ? "40%" : "65%" : "50%",
+        aspectRatio: 1,
         background: "linear-gradient( 105deg, rgba(255, 255, 255, 1), " + eyeShadeColor + " )",
         borderRadius: "100%",
         boxShadow: showShadow ? "4px 8px 5px rgba(0, 0, 0, 0.2)" : "rgba(0, 0, 0, 0.5) 0px 0px 0px 0px",
-        margin: "5px",
+        margin: "5%",
         transform: "translateX(-50%)"
     };
     var avatarEyePupil = {
@@ -27732,10 +27720,10 @@ var Eye = function Eye(_ref) {
     };
     var avatarEyeReflection = {
         position: "absolute",
-        width: "7px",
-        height: "7px",
-        left: "25%",
-        top: "10%",
+        width: "35%",
+        aspectRatio: 1,
+        left: "30%",
+        top: "15%",
         background: "rgba(235, 235, 235, 1)",
         transform: "translate(-50%)",
         borderRadius: "100%",
@@ -27753,29 +27741,31 @@ var Eye = function Eye(_ref) {
 };
 _c = Eye;
 var Mouth = function Mouth(_ref) {
-    var expression = _ref.expression, mouthColor = _ref.mouthColor;
+    var size = _ref.size, expression = _ref.expression, mouthColor = _ref.mouthColor;
+    var border = size / 25;
+    var borderThin = size / 35;
     var avatarMeh = {
         position: "absolute",
         left: "50%",
-        top: "65%",
+        top: "66%",
         transform: "translate(-50%)",
         padding: "0.2em",
         transition: "0.2s all linear",
-        width: "60px",
-        height: "23px",
+        width: "25%",
+        height: "0%",
         background: "rgba(0,0,0,0.3)",
-        border: "2px solid rgba(96,163,138,1)",
-        borderRadius: "10px"
+        border: borderThin + "px solid rgba(96,163,138,1)",
+        borderRadius: "3px"
     };
     var avatarSmile = {
         position: "absolute",
         transform: "translate(-50%)",
         transition: "0.2s all linear",
-        border: "10px solid " + mouthColor,
+        border: border + "px solid " + mouthColor,
         left: "50%",
-        top: "15%",
-        width: "70px",
-        height: "70px",
+        top: "20%",
+        width: "65%",
+        aspectRatio: 1,
         background: "transparent",
         borderRadius: "50%",
         borderLeftColor: "transparent",
@@ -27785,11 +27775,11 @@ var Mouth = function Mouth(_ref) {
     var avatarSad = {
         position: "absolute",
         transform: "translate(-50%)",
-        border: "10px solid " + mouthColor,
+        border: border + "px solid " + mouthColor,
         left: "50%",
         top: "65%",
-        width: "70px",
-        height: "70px",
+        width: "65%",
+        aspectRatio: 1,
         background: "transparent",
         borderRadius: "50%",
         borderLeftColor: "transparent",
@@ -27799,14 +27789,14 @@ var Mouth = function Mouth(_ref) {
     var avatarWoh = {
         position: "absolute",
         left: "50%",
-        top: "65%",
+        top: "63%",
         transform: "translate(-50%)",
-        padding: "0.2em",
         transition: "0.2s all linear",
-        width: "30px",
-        height: "40px",
+        width: "28%",
+        height: "23%",
+        aspectRatio: 1,
         background: "" + mouthColor,
-        border: "5px solid #2727274a",
+        border: borderThin + "px solid #2727274a",
         borderRadius: "100%"
     };
     var avatarBlank = {
@@ -27814,13 +27804,11 @@ var Mouth = function Mouth(_ref) {
         left: "50%",
         top: "65%",
         transform: "translate(-50%)",
-        padding: "0.2em",
         transition: "0.2s all linear",
-        width: "50px",
-        height: "10px",
+        width: "50%",
+        height: "4%",
         background: "rgba(0,0,0,0.3)",
-        border: "rgba(243,166,222,0.5)",
-        borderRadius: "10px"
+        borderRadius: "3px"
     };
     return /*#__PURE__*/ (0, _react.createElement)("div", {
         style: expression === Expression.HAPPY ? avatarSmile : expression === Expression.SAD ? avatarSad : expression === Expression.WOH ? avatarWoh : expression === Expression.BLANK ? avatarBlank : avatarMeh
@@ -27832,10 +27820,10 @@ var Tongue = function Tongue(_ref) {
     var avatarTongue = {
         position: "absolute",
         left: "50%",
-        top: "68%",
+        top: "66%",
         transform: "translate(-50%)",
-        width: "20px",
-        height: "20px",
+        width: "14%",
+        height: "17%",
         borderBottomLeftRadius: "100%",
         borderBottomRightRadius: "100%",
         background: tongueColor
@@ -27893,16 +27881,16 @@ function generateUUID() {
     });
 }
 var Ear = function Ear(_ref) {
-    var earSide = _ref.earSide, earColor = _ref.earColor;
+    var earSide = _ref.earSide, earColor = _ref.earColor, bodyShape = _ref.bodyShape;
     var earShadeLight = newShade(earColor, -60);
     var avatarEar = {
         position: "absolute",
         top: "-10%",
         transform: "translate(-50%)",
-        width: "15px",
-        height: "30px",
+        width: "15%",
+        height: "20%",
         background: "linear-gradient(to top, " + earColor + "," + earShadeLight + ")",
-        left: earSide === EarSide.LEFT ? "25%" : "75%",
+        left: earSide === EarSide.LEFT ? bodyShape === BodyShape.FAT ? "35%" : "20%" : bodyShape === BodyShape.FAT ? "65%" : "80%",
         borderTopRightRadius: earSide === EarSide.LEFT ? "100%" : "25%",
         borderTopLeftRadius: earSide === EarSide.RIGHT ? "100%" : "25%"
     };
@@ -27914,13 +27902,14 @@ var Ear = function Ear(_ref) {
 };
 _c3 = Ear;
 var Tooth = function Tooth(_ref) {
-    var toothCount = _ref.toothCount, toothSide = _ref.toothSide;
+    var toothCount = _ref.toothCount, toothSide = _ref.toothSide, size = _ref.size;
+    var borderRadius = size / 50;
     var avatarTooth = {
         position: "absolute",
-        width: toothCount === ToothCount.ONE ? "20px" : "10px",
-        height: "10px",
+        width: toothCount === ToothCount.ONE ? "12%" : "10%",
+        aspectRatio: 1,
         background: "rgba(210,237,227,1)",
-        borderRadius: "2px",
+        borderRadius: borderRadius + "px",
         top: "68%",
         transform: "translate(-50%)",
         left: toothCount === ToothCount.ONE ? "50%" : toothSide === ToothSide.LEFT ? "45%" : "55%"
@@ -27931,10 +27920,10 @@ var Tooth = function Tooth(_ref) {
 };
 _c4 = Tooth;
 var Body = function Body(_ref) {
-    var addShadows = _ref.addShadows, bodyHeight = _ref.bodyHeight, bodyShape = _ref.bodyShape, bodyColorGradient = _ref.bodyColorGradient, bodyStartColor = _ref.bodyStartColor, bodyEndColor = _ref.bodyEndColor, bodyGradientDegree = _ref.bodyGradientDegree, showEar = _ref.showEar, earColor = _ref.earColor, eyeCount = _ref.eyeCount, eyePosition = _ref.eyePosition, eyeShadeColor = _ref.eyeShadeColor, eyePupilGradient = _ref.eyePupilGradient, eyePupilStartColor = _ref.eyePupilStartColor, eyePupilEndColor = _ref.eyePupilEndColor, mouthColor = _ref.mouthColor, mouthExpression = _ref.mouthExpression, showTongueOrTeeth = _ref.showTongueOrTeeth, tongueColor = _ref.tongueColor, toothCount = _ref.toothCount;
+    var size = _ref.size, addShadows = _ref.addShadows, bodyHeight = _ref.bodyHeight, bodyShape = _ref.bodyShape, bodyColorGradient = _ref.bodyColorGradient, bodyStartColor = _ref.bodyStartColor, bodyEndColor = _ref.bodyEndColor, bodyGradientDegree = _ref.bodyGradientDegree, showEar = _ref.showEar, earColor = _ref.earColor, eyeCount = _ref.eyeCount, eyePosition = _ref.eyePosition, eyeShadeColor = _ref.eyeShadeColor, eyePupilGradient = _ref.eyePupilGradient, eyePupilStartColor = _ref.eyePupilStartColor, eyePupilEndColor = _ref.eyePupilEndColor, mouthColor = _ref.mouthColor, mouthExpression = _ref.mouthExpression, showTongueOrTeeth = _ref.showTongueOrTeeth, tongueColor = _ref.tongueColor, toothCount = _ref.toothCount;
     var avatarBody = {
         left: "50%",
-        top: bodyHeight === BodyHeight.TALL ? "55%" : "65%",
+        top: bodyHeight === BodyHeight.TALL ? "55%" : "62%",
         transform: "translate(-50%, -50%)",
         width: bodyShape === BodyShape.THIN ? "50%" : "80%",
         height: bodyHeight === BodyHeight.TALL ? "90%" : "80%",
@@ -27949,10 +27938,12 @@ var Body = function Body(_ref) {
         style: avatarBody
     }, showEar && /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null, /*#__PURE__*/ (0, _react.createElement)(Ear, {
         earSide: EarSide.LEFT,
-        earColor: earColor
+        earColor: earColor,
+        bodyShape: bodyShape
     }), /*#__PURE__*/ (0, _react.createElement)(Ear, {
         earSide: EarSide.RIGHT,
-        earColor: earColor
+        earColor: earColor,
+        bodyShape: bodyShape
     })), eyeCount === EyeCount.ONE && /*#__PURE__*/ (0, _react.createElement)(Eye, {
         showShadow: addShadows,
         eyeSide: EyeSide.LEFT,
@@ -27961,7 +27952,9 @@ var Body = function Body(_ref) {
         eyeShadeColor: eyeShadeColor,
         eyePupilGradient: eyePupilGradient,
         eyePupilStartColor: eyePupilStartColor,
-        eyePupilEndColor: eyePupilEndColor
+        eyePupilEndColor: eyePupilEndColor,
+        bodyShape: bodyShape,
+        bodyHeight: bodyHeight
     }), eyeCount === EyeCount.TWO && /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null, /*#__PURE__*/ (0, _react.createElement)(Eye, {
         showShadow: addShadows,
         eyeSide: EyeSide.LEFT,
@@ -27970,7 +27963,9 @@ var Body = function Body(_ref) {
         eyeShadeColor: eyeShadeColor,
         eyePupilGradient: eyePupilGradient,
         eyePupilStartColor: eyePupilStartColor,
-        eyePupilEndColor: eyePupilEndColor
+        eyePupilEndColor: eyePupilEndColor,
+        bodyShape: bodyShape,
+        bodyHeight: bodyHeight
     }), /*#__PURE__*/ (0, _react.createElement)(Eye, {
         showShadow: addShadows,
         eyeSide: EyeSide.RIGHT,
@@ -27979,21 +27974,27 @@ var Body = function Body(_ref) {
         eyeShadeColor: eyeShadeColor,
         eyePupilGradient: eyePupilGradient,
         eyePupilStartColor: eyePupilStartColor,
-        eyePupilEndColor: eyePupilEndColor
+        eyePupilEndColor: eyePupilEndColor,
+        bodyShape: bodyShape,
+        bodyHeight: bodyHeight
     })), /*#__PURE__*/ (0, _react.createElement)(Mouth, {
         expression: mouthExpression,
-        mouthColor: mouthColor
+        mouthColor: mouthColor,
+        size: size
     }), showTongueOrTeeth === TongueOrTeeth.NONE ? /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null) : showTongueOrTeeth === TongueOrTeeth.TONGUE ? /*#__PURE__*/ (0, _react.createElement)(Tongue, {
         tongueColor: tongueColor
     }) : showTongueOrTeeth === TongueOrTeeth.TEETH ? /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null, toothCount === ToothCount.ONE ? /*#__PURE__*/ (0, _react.createElement)(Tooth, {
         toothCount: toothCount,
-        toothSide: ToothSide.LEFT
+        toothSide: ToothSide.LEFT,
+        size: size
     }) : /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null, /*#__PURE__*/ (0, _react.createElement)(Tooth, {
         toothCount: toothCount,
-        toothSide: ToothSide.LEFT
+        toothSide: ToothSide.LEFT,
+        size: size
     }), /*#__PURE__*/ (0, _react.createElement)(Tooth, {
         toothCount: toothCount,
-        toothSide: ToothSide.RIGHT
+        toothSide: ToothSide.RIGHT,
+        size: size
     }))) : /*#__PURE__*/ (0, _react.createElement)((0, _react.Fragment), null));
 };
 _c5 = Body;
@@ -31167,7 +31168,7 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
     }
     var _proto = WormAvatar.prototype;
     _proto.render = function render() {
-        var _this$props = this.props, _this$props$seed = _this$props.seed, seed = _this$props$seed === void 0 ? null : _this$props$seed, _this$props$isRandom = _this$props.isRandom, isRandom = _this$props$isRandom === void 0 ? false : _this$props$isRandom, _this$props$radius = _this$props.radius, radius = _this$props$radius === void 0 ? 20 : _this$props$radius, _this$props$isBackgro = _this$props.isBackgroundGradient, isBackgroundGradient = _this$props$isBackgro === void 0 ? true : _this$props$isBackgro, backgroundStartColor = _this$props.backgroundStartColor, backgroundEndColor = _this$props.backgroundEndColor, backgroundGradientDegree = _this$props.backgroundGradientDegree, _this$props$addShadow = _this$props.addShadows, addShadows = _this$props$addShadow === void 0 ? true : _this$props$addShadow, bodyHeight = _this$props.bodyHeight, bodyShape = _this$props.bodyShape, _this$props$bodyColor = _this$props.bodyColorGradient, bodyColorGradient = _this$props$bodyColor === void 0 ? true : _this$props$bodyColor, bodyStartColor = _this$props.bodyStartColor, bodyEndColor = _this$props.bodyEndColor, bodyGradientDegree = _this$props.bodyGradientDegree, showEar = _this$props.showEar, earColor = _this$props.earColor, eyeCount = _this$props.eyeCount, eyePosition = _this$props.eyePosition, eyeShadeColor = _this$props.eyeShadeColor, _this$props$eyePupilG = _this$props.eyePupilGradient, eyePupilGradient = _this$props$eyePupilG === void 0 ? true : _this$props$eyePupilG, eyePupilStartColor = _this$props.eyePupilStartColor, eyePupilEndColor = _this$props.eyePupilEndColor, mouthColor = _this$props.mouthColor, mouthExpression = _this$props.mouthExpression, showTongueOrTeeth = _this$props.showTongueOrTeeth, tongueColor = _this$props.tongueColor, toothCount = _this$props.toothCount;
+        var _this$props = this.props, _this$props$size = _this$props.size, size = _this$props$size === void 0 ? 50 : _this$props$size, _this$props$seed = _this$props.seed, seed = _this$props$seed === void 0 ? null : _this$props$seed, _this$props$isRandom = _this$props.isRandom, isRandom = _this$props$isRandom === void 0 ? false : _this$props$isRandom, _this$props$radius = _this$props.radius, radius = _this$props$radius === void 0 ? 20 : _this$props$radius, _this$props$isBackgro = _this$props.isBackgroundGradient, isBackgroundGradient = _this$props$isBackgro === void 0 ? true : _this$props$isBackgro, backgroundStartColor = _this$props.backgroundStartColor, backgroundEndColor = _this$props.backgroundEndColor, backgroundGradientDegree = _this$props.backgroundGradientDegree, _this$props$addShadow = _this$props.addShadows, addShadows = _this$props$addShadow === void 0 ? true : _this$props$addShadow, bodyHeight = _this$props.bodyHeight, bodyShape = _this$props.bodyShape, _this$props$bodyColor = _this$props.bodyColorGradient, bodyColorGradient = _this$props$bodyColor === void 0 ? true : _this$props$bodyColor, bodyStartColor = _this$props.bodyStartColor, bodyEndColor = _this$props.bodyEndColor, bodyGradientDegree = _this$props.bodyGradientDegree, showEar = _this$props.showEar, earColor = _this$props.earColor, eyeCount = _this$props.eyeCount, eyePosition = _this$props.eyePosition, eyeShadeColor = _this$props.eyeShadeColor, _this$props$eyePupilG = _this$props.eyePupilGradient, eyePupilGradient = _this$props$eyePupilG === void 0 ? true : _this$props$eyePupilG, eyePupilStartColor = _this$props.eyePupilStartColor, eyePupilEndColor = _this$props.eyePupilEndColor, mouthColor = _this$props.mouthColor, mouthExpression = _this$props.mouthExpression, showTongueOrTeeth = _this$props.showTongueOrTeeth, tongueColor = _this$props.tongueColor, toothCount = _this$props.toothCount;
         if (isRandom) {
             var ranDomUUID = generateUUID();
             var hashSeed = stringToHashCode(ranDomUUID);
@@ -31219,9 +31220,9 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             toothCount = _this$processProps2.toothCount;
         }
         var avatar = {
-            width: "200px",
-            height: "200px",
-            borderRadius: radius + "px",
+            width: size + "px",
+            height: size + "px",
+            borderRadius: radius + "%",
             overflow: "hidden",
             opacity: 1,
             background: isBackgroundGradient ? "linear-gradient( " + backgroundGradientDegree + "deg, " + backgroundStartColor + ", " + backgroundEndColor + ")" : backgroundStartColor
@@ -31254,7 +31255,8 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             tongueColor: tongueColor,
             toothCount: toothCount,
             earColor: earColor,
-            isRandom: isRandom
+            isRandom: isRandom,
+            size: size
         }));
     };
     _proto.processProps = function processProps(isBackgroundGradient, backgroundStartColor, hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount) {
@@ -31344,8 +31346,8 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             var _eyePupilStartColor;
             if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === "" || !isValidHex(eyePupilStartColor)) {
                 var _index13 = hashSeed % options.eyePupilColor.length;
-                eyePupilStartColor = options.backgroundColor[_index13][0];
-                eyePupilEndColor = options.backgroundColor[_index13][1];
+                eyePupilStartColor = options.eyePupilColor[_index13][0];
+                eyePupilEndColor = options.eyePupilColor[_index13][1];
             } else {
                 var _eyePupilEndColor;
                 if (eyePupilEndColor === null || eyePupilEndColor !== null && ((_eyePupilEndColor = eyePupilEndColor) == null ? void 0 : _eyePupilEndColor.trim()) === "" || !isValidHex(eyePupilEndColor)) eyePupilEndColor = eyePupilStartColor;

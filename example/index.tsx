@@ -83,18 +83,22 @@ const App = () => {
       <h2>Funny & Customizable Worm Avatars for your react project</h2>
       <div style={output}>
         <WormAvatar
+          size={40}
           isRandom={isRandom}
           seed={seed}
-          radius={20}
+          radius={100}
           isBackgroundGradient={isBGGradient}
           backgroundStartColor={allowBackground ? hexColor(backgroundColor): ''}
           backgroundEndColor={allowBackground ? hexColor(backgroundEndColor): ''}
           bodyColorGradient={isBodyGradient}
           // bodyGradientDegree={gradientDegrees(180)}
-          bodyStartColor={allowBody ? hexColor(bodyColor) :''}
-          bodyEndColor={allowBody ?  hexColor(bodyEndColor) : ''}
+          //bodyStartColor={allowBody ? hexColor(bodyColor) :''}
+          //bodyEndColor={allowBody ?  hexColor(bodyEndColor) : ''}
           // backgroundGradientDegree={gradientDegrees(0)}
-          //mouthExpression={Expression.SAD}
+          //bodyHeight={BodyHeight.TALL}
+          //bodyShape={BodyShape.FAT}
+          //mouthExpression={Expression.MEH}
+          //showTongueOrTeeth={TongueOrTeeth.TEETH}
           //showEar={showEar}
           // earColor={hexColor('#f5af19')}
           // eyePosition={EyePosition.NORMAL}
@@ -103,9 +107,9 @@ const App = () => {
           // eyePupilGradient={true}
           // eyePupilStartColor={hexColor('#fca311')}
           // eyePupilEndColor={hexColor('#ef233c')}
-          showTongueOrTeeth={
-            showTeeth ? TongueOrTeeth.TEETH : TongueOrTeeth.TONGUE
-          }
+          // showTongueOrTeeth={
+          //   showTeeth ? TongueOrTeeth.TEETH : TongueOrTeeth.TONGUE
+          // }
           // tongueColor={hexColor('#004FF9')}
           // toothCount={ToothCount.TWO}
           // bodyHeight={BodyHeight.TALL}

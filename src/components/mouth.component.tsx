@@ -2,32 +2,37 @@ import * as React from 'react';
 import { Expression, MouthProps } from '..';
 
 export const Mouth: React.FC<MouthProps> = ({
+  size,
   expression,
   mouthColor,
 }: MouthProps) => {
+  let border = size/25;
+  let borderThin = size/35;
+  
+  
   const avatarMeh: React.CSSProperties = {
     position: 'absolute',
     left: '50%',
-    top: '65%',
+    top: '66%',
     transform: 'translate(-50%)',
     padding: '0.2em',
     transition: '0.2s all linear',
-    width: '60px',
-    height: '23px',
+    width: '25%',
+    height: '0%',
     background: 'rgba(0,0,0,0.3)',
-    border: '2px solid rgba(96,163,138,1)',
-    borderRadius: '10px',
+    border: `${borderThin}px solid rgba(96,163,138,1)`,
+    borderRadius: '3px',
   };
 
   const avatarSmile: React.CSSProperties = {
     position: 'absolute',
     transform: 'translate(-50%)',
     transition: '0.2s all linear',
-    border: `10px solid ${mouthColor}`,
+    border: `${border}px solid ${mouthColor}`,
     left: '50%',
-    top: '15%',
-    width: '70px',
-    height: '70px',
+    top: '20%',
+    width: '65%',
+    aspectRatio: 1,
     background: 'transparent',
     borderRadius: '50%',
     borderLeftColor: 'transparent',
@@ -38,11 +43,11 @@ export const Mouth: React.FC<MouthProps> = ({
   const avatarSad: React.CSSProperties = {
     position: 'absolute',
     transform: 'translate(-50%)',
-    border: `10px solid ${mouthColor}`,
+    border: `${border}px solid ${mouthColor}`,
     left: '50%',
     top: '65%',
-    width: '70px',
-    height: '70px',
+    width: '65%',
+    aspectRatio: 1,
     background: 'transparent',
     borderRadius: '50%',
     borderLeftColor: 'transparent',
@@ -53,14 +58,14 @@ export const Mouth: React.FC<MouthProps> = ({
   const avatarWoh: React.CSSProperties = {
     position: 'absolute',
     left: '50%',
-    top: '65%',
+    top: '63%',
     transform: 'translate(-50%)',
-    padding: '0.2em',
     transition: '0.2s all linear',
-    width: '30px',
-    height: '40px',
+    width: '28%',
+    height: '23%',
+    aspectRatio: 1,
     background: `${mouthColor}`,
-    border: '5px solid #2727274a',
+    border: `${borderThin}px solid #2727274a`,
     borderRadius: '100%',
   };
 
@@ -69,13 +74,11 @@ export const Mouth: React.FC<MouthProps> = ({
     left: '50%',
     top: '65%',
     transform: 'translate(-50%)',
-    padding: '0.2em',
     transition: '0.2s all linear',
-    width: '50px',
-    height: '10px',
+    width: '50%',
+    height: '4%',
     background: 'rgba(0,0,0,0.3)',
-    border: 'rgba(243,166,222,0.5)',
-    borderRadius: '10px',
+    borderRadius: '3px',
   };
 
   return (

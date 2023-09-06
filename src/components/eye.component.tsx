@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { EyeCount, EyePosition, EyeProps, EyeSide } from '..';
+import { BodyShape, EyeCount, EyePosition, EyeProps, EyeSide } from '..';
 
 export const Eye: React.FC<EyeProps> = ({
   eyePosition,
@@ -10,29 +10,32 @@ export const Eye: React.FC<EyeProps> = ({
   eyePupilGradient,
   eyePupilStartColor,
   eyePupilEndColor,
+  bodyShape,
+  bodyHeight
 }: EyeProps) => {
+  console.log(bodyHeight);
   const avatarEye: React.CSSProperties = {
     position: 'absolute',
     top:
       eyePosition === EyePosition.NORMAL
         ? '10%'
         : eyePosition === EyePosition.TOP
-        ? '-15%'
+        ? '-10%'
         : '5%',
     left:
       eyeCount === EyeCount.ONE
         ? '45%'
         : eyeSide === EyeSide.LEFT
         ? '10%'
-        : '85%',
-    width: '65px',
-    height: '65px',
+        : '80%',
+    width: eyeCount === EyeCount.ONE? bodyShape === BodyShape.FAT ?'40%' : '65%': '50%',
+    aspectRatio: 1,
     background: `linear-gradient( 105deg, rgba(255, 255, 255, 1), ${eyeShadeColor} )`,
     borderRadius: '100%',
     boxShadow: showShadow
       ? '4px 8px 5px rgba(0, 0, 0, 0.2)'
       : 'rgba(0, 0, 0, 0.5) 0px 0px 0px 0px',
-    margin: '5px',
+    margin: '5%',
     transform: 'translateX(-50%)',
   };
 
@@ -66,10 +69,10 @@ export const Eye: React.FC<EyeProps> = ({
 
   const avatarEyeReflection: React.CSSProperties = {
     position: 'absolute',
-    width: '7px',
-    height: '7px',
-    left: '25%',
-    top: '10%',
+    width: '35%',
+    aspectRatio: 1,
+    left: '30%',
+    top: '15%',
     background: 'rgba(235, 235, 235, 1)',
     transform: 'translate(-50%)',
     borderRadius: '100%',

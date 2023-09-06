@@ -72,6 +72,7 @@ function App() {
       <h1>Funny & Customizable Worm Avatars for your React Project</h1>
       <div style={output}>
         <WormAvatar
+          size={100}
           isRandom={isRandom}
           seed={seed}
           radius={20}

@@ -4,13 +4,15 @@ import { ToothCount, ToothProps, ToothSide } from '..';
 export const Tooth: React.FC<ToothProps> = ({
   toothCount,
   toothSide,
+  size
 }: ToothProps) => {
+  let borderRadius = size/50;
   const avatarTooth: React.CSSProperties = {
     position: 'absolute',
-    width: toothCount === ToothCount.ONE ? '20px' : '10px',
-    height: '10px',
+    width: toothCount === ToothCount.ONE ? '12%' : '10%',
+    aspectRatio:1/1,
     background: 'rgba(210,237,227,1)',
-    borderRadius: '2px',
+    borderRadius: `${borderRadius}px`,
     top: '68%',
     transform: 'translate(-50%)',
     left:

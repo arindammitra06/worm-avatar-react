@@ -5,10 +5,10 @@ export const Tongue: React.FC<TongueProps> = ({ tongueColor }: TongueProps) => {
   const avatarTongue: React.CSSProperties = {
     position: 'absolute',
     left: '50%',
-    top: '68%',
+    top: '66%',
     transform: 'translate(-50%)',
-    width: '20px',
-    height: '20px',
+    width: '14%',
+    height: '17%',
     borderBottomLeftRadius: '100%',
     borderBottomRightRadius: '100%',
     background: tongueColor,

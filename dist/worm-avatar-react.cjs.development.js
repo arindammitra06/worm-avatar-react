@@ -25,17 +25,20 @@ var Eye = function Eye(_ref) {
     showShadow = _ref.showShadow,
     eyePupilGradient = _ref.eyePupilGradient,
     eyePupilStartColor = _ref.eyePupilStartColor,
-    eyePupilEndColor = _ref.eyePupilEndColor;
+    eyePupilEndColor = _ref.eyePupilEndColor,
+    bodyShape = _ref.bodyShape,
+    bodyHeight = _ref.bodyHeight;
+  console.log(bodyHeight);
   var avatarEye = {
     position: 'absolute',
-    top: eyePosition === exports.EyePosition.NORMAL ? '10%' : eyePosition === exports.EyePosition.TOP ? '-15%' : '5%',
-    left: eyeCount === exports.EyeCount.ONE ? '45%' : eyeSide === exports.EyeSide.LEFT ? '10%' : '85%',
-    width: '65px',
-    height: '65px',
+    top: eyePosition === exports.EyePosition.NORMAL ? '10%' : eyePosition === exports.EyePosition.TOP ? '-10%' : '5%',
+    left: eyeCount === exports.EyeCount.ONE ? '45%' : eyeSide === exports.EyeSide.LEFT ? '10%' : '80%',
+    width: eyeCount === exports.EyeCount.ONE ? bodyShape === exports.BodyShape.FAT ? '40%' : '65%' : '50%',
+    aspectRatio: 1,
     background: "linear-gradient( 105deg, rgba(255, 255, 255, 1), " + eyeShadeColor + " )",
     borderRadius: '100%',
     boxShadow: showShadow ? '4px 8px 5px rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.5) 0px 0px 0px 0px',
-    margin: '5px',
+    margin: '5%',
     transform: 'translateX(-50%)'
   };
   var avatarEyePupil = {
@@ -62,10 +65,10 @@ var Eye = function Eye(_ref) {
   };
   var avatarEyeReflection = {
     position: 'absolute',
-    width: '7px',
-    height: '7px',
-    left: '25%',
-    top: '10%',
+    width: '35%',
+    aspectRatio: 1,
+    left: '30%',
+    top: '15%',
     background: 'rgba(235, 235, 235, 1)',
     transform: 'translate(-50%)',
     borderRadius: '100%',
@@ -83,30 +86,33 @@ var Eye = function Eye(_ref) {
 };
 
 var Mouth = function Mouth(_ref) {
-  var expression = _ref.expression,
+  var size = _ref.size,
+    expression = _ref.expression,
     mouthColor = _ref.mouthColor;
+  var border = size / 25;
+  var borderThin = size / 35;
   var avatarMeh = {
     position: 'absolute',
     left: '50%',
-    top: '65%',
+    top: '66%',
     transform: 'translate(-50%)',
     padding: '0.2em',
     transition: '0.2s all linear',
-    width: '60px',
-    height: '23px',
+    width: '25%',
+    height: '0%',
     background: 'rgba(0,0,0,0.3)',
-    border: '2px solid rgba(96,163,138,1)',
-    borderRadius: '10px'
+    border: borderThin + "px solid rgba(96,163,138,1)",
+    borderRadius: '3px'
   };
   var avatarSmile = {
     position: 'absolute',
     transform: 'translate(-50%)',
     transition: '0.2s all linear',
-    border: "10px solid " + mouthColor,
+    border: border + "px solid " + mouthColor,
     left: '50%',
-    top: '15%',
-    width: '70px',
-    height: '70px',
+    top: '20%',
+    width: '65%',
+    aspectRatio: 1,
     background: 'transparent',
     borderRadius: '50%',
     borderLeftColor: 'transparent',
@@ -116,11 +122,11 @@ var Mouth = function Mouth(_ref) {
   var avatarSad = {
     position: 'absolute',
     transform: 'translate(-50%)',
-    border: "10px solid " + mouthColor,
+    border: border + "px solid " + mouthColor,
     left: '50%',
     top: '65%',
-    width: '70px',
-    height: '70px',
+    width: '65%',
+    aspectRatio: 1,
     background: 'transparent',
     borderRadius: '50%',
     borderLeftColor: 'transparent',
@@ -130,14 +136,14 @@ var Mouth = function Mouth(_ref) {
   var avatarWoh = {
     position: 'absolute',
     left: '50%',
-    top: '65%',
+    top: '63%',
     transform: 'translate(-50%)',
-    padding: '0.2em',
     transition: '0.2s all linear',
-    width: '30px',
-    height: '40px',
+    width: '28%',
+    height: '23%',
+    aspectRatio: 1,
     background: "" + mouthColor,
-    border: '5px solid #2727274a',
+    border: borderThin + "px solid #2727274a",
     borderRadius: '100%'
   };
   var avatarBlank = {
@@ -145,13 +151,11 @@ var Mouth = function Mouth(_ref) {
     left: '50%',
     top: '65%',
     transform: 'translate(-50%)',
-    padding: '0.2em',
     transition: '0.2s all linear',
-    width: '50px',
-    height: '10px',
+    width: '50%',
+    height: '4%',
     background: 'rgba(0,0,0,0.3)',
-    border: 'rgba(243,166,222,0.5)',
-    borderRadius: '10px'
+    borderRadius: '3px'
   };
   return React.createElement("div", {
     style: expression === exports.Expression.HAPPY ? avatarSmile : expression === exports.Expression.SAD ? avatarSad : expression === exports.Expression.WOH ? avatarWoh : expression === exports.Expression.BLANK ? avatarBlank : avatarMeh
@@ -163,10 +167,10 @@ var Tongue = function Tongue(_ref) {
   var avatarTongue = {
     position: 'absolute',
     left: '50%',
-    top: '68%',
+    top: '66%',
     transform: 'translate(-50%)',
-    width: '20px',
-    height: '20px',
+    width: '14%',
+    height: '17%',
     borderBottomLeftRadius: '100%',
     borderBottomRightRadius: '100%',
     background: tongueColor
@@ -229,16 +233,17 @@ function generateUUID() {
 
 var Ear = function Ear(_ref) {
   var earSide = _ref.earSide,
-    earColor = _ref.earColor;
+    earColor = _ref.earColor,
+    bodyShape = _ref.bodyShape;
   var earShadeLight = newShade(earColor, -60);
   var avatarEar = {
     position: 'absolute',
     top: '-10%',
     transform: 'translate(-50%)',
-    width: '15px',
-    height: '30px',
+    width: '15%',
+    height: '20%',
     background: "linear-gradient(to top, " + earColor + "," + earShadeLight + ")",
-    left: earSide === exports.EarSide.LEFT ? '25%' : '75%',
+    left: earSide === exports.EarSide.LEFT ? bodyShape === exports.BodyShape.FAT ? '35%' : '20%' : bodyShape === exports.BodyShape.FAT ? '65%' : '80%',
     borderTopRightRadius: earSide === exports.EarSide.LEFT ? '100%' : '25%',
     borderTopLeftRadius: earSide === exports.EarSide.RIGHT ? '100%' : '25%'
   };
@@ -251,13 +256,15 @@ var Ear = function Ear(_ref) {
 
 var Tooth = function Tooth(_ref) {
   var toothCount = _ref.toothCount,
-    toothSide = _ref.toothSide;
+    toothSide = _ref.toothSide,
+    size = _ref.size;
+  var borderRadius = size / 50;
   var avatarTooth = {
     position: 'absolute',
-    width: toothCount === exports.ToothCount.ONE ? '20px' : '10px',
-    height: '10px',
+    width: toothCount === exports.ToothCount.ONE ? '12%' : '10%',
+    aspectRatio: 1 / 1,
     background: 'rgba(210,237,227,1)',
-    borderRadius: '2px',
+    borderRadius: borderRadius + "px",
     top: '68%',
     transform: 'translate(-50%)',
     left: toothCount === exports.ToothCount.ONE ? '50%' : toothSide === exports.ToothSide.LEFT ? '45%' : '55%'
@@ -268,7 +275,8 @@ var Tooth = function Tooth(_ref) {
 };
 
 var Body = function Body(_ref) {
-  var addShadows = _ref.addShadows,
+  var size = _ref.size,
+    addShadows = _ref.addShadows,
     bodyHeight = _ref.bodyHeight,
     bodyShape = _ref.bodyShape,
     bodyColorGradient = _ref.bodyColorGradient,
@@ -290,7 +298,7 @@ var Body = function Body(_ref) {
     toothCount = _ref.toothCount;
   var avatarBody = {
     left: '50%',
-    top: bodyHeight === exports.BodyHeight.TALL ? '55%' : '65%',
+    top: bodyHeight === exports.BodyHeight.TALL ? '55%' : '62%',
     transform: 'translate(-50%, -50%)',
     width: bodyShape === exports.BodyShape.THIN ? '50%' : '80%',
     height: bodyHeight === exports.BodyHeight.TALL ? '90%' : '80%',
@@ -305,10 +313,12 @@ var Body = function Body(_ref) {
     style: avatarBody
   }, showEar && React.createElement(React.Fragment, null, React.createElement(Ear, {
     earSide: exports.EarSide.LEFT,
-    earColor: earColor
+    earColor: earColor,
+    bodyShape: bodyShape
   }), React.createElement(Ear, {
     earSide: exports.EarSide.RIGHT,
-    earColor: earColor
+    earColor: earColor,
+    bodyShape: bodyShape
   })), eyeCount === exports.EyeCount.ONE && React.createElement(Eye, {
     showShadow: addShadows,
     eyeSide: exports.EyeSide.LEFT,
@@ -317,7 +327,9 @@ var Body = function Body(_ref) {
     eyeShadeColor: eyeShadeColor,
     eyePupilGradient: eyePupilGradient,
     eyePupilStartColor: eyePupilStartColor,
-    eyePupilEndColor: eyePupilEndColor
+    eyePupilEndColor: eyePupilEndColor,
+    bodyShape: bodyShape,
+    bodyHeight: bodyHeight
   }), eyeCount === exports.EyeCount.TWO && React.createElement(React.Fragment, null, React.createElement(Eye, {
     showShadow: addShadows,
     eyeSide: exports.EyeSide.LEFT,
@@ -326,7 +338,9 @@ var Body = function Body(_ref) {
     eyeShadeColor: eyeShadeColor,
     eyePupilGradient: eyePupilGradient,
     eyePupilStartColor: eyePupilStartColor,
-    eyePupilEndColor: eyePupilEndColor
+    eyePupilEndColor: eyePupilEndColor,
+    bodyShape: bodyShape,
+    bodyHeight: bodyHeight
   }), React.createElement(Eye, {
     showShadow: addShadows,
     eyeSide: exports.EyeSide.RIGHT,
@@ -335,21 +349,27 @@ var Body = function Body(_ref) {
     eyeShadeColor: eyeShadeColor,
     eyePupilGradient: eyePupilGradient,
     eyePupilStartColor: eyePupilStartColor,
-    eyePupilEndColor: eyePupilEndColor
+    eyePupilEndColor: eyePupilEndColor,
+    bodyShape: bodyShape,
+    bodyHeight: bodyHeight
   })), React.createElement(Mouth, {
     expression: mouthExpression,
-    mouthColor: mouthColor
+    mouthColor: mouthColor,
+    size: size
   }), showTongueOrTeeth === exports.TongueOrTeeth.NONE ? React.createElement(React.Fragment, null) : showTongueOrTeeth === exports.TongueOrTeeth.TONGUE ? React.createElement(Tongue, {
     tongueColor: tongueColor
   }) : showTongueOrTeeth === exports.TongueOrTeeth.TEETH ? React.createElement(React.Fragment, null, toothCount === exports.ToothCount.ONE ? React.createElement(Tooth, {
     toothCount: toothCount,
-    toothSide: exports.ToothSide.LEFT
+    toothSide: exports.ToothSide.LEFT,
+    size: size
   }) : React.createElement(React.Fragment, null, React.createElement(Tooth, {
     toothCount: toothCount,
-    toothSide: exports.ToothSide.LEFT
+    toothSide: exports.ToothSide.LEFT,
+    size: size
   }), React.createElement(Tooth, {
     toothCount: toothCount,
-    toothSide: exports.ToothSide.RIGHT
+    toothSide: exports.ToothSide.RIGHT,
+    size: size
   }))) : React.createElement(React.Fragment, null));
 };
 
@@ -445,6 +465,8 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
   var _proto = WormAvatar.prototype;
   _proto.render = function render() {
     var _this$props = this.props,
+      _this$props$size = _this$props.size,
+      size = _this$props$size === void 0 ? 50 : _this$props$size,
       _this$props$seed = _this$props.seed,
       seed = _this$props$seed === void 0 ? null : _this$props$seed,
       _this$props$isRandom = _this$props.isRandom,
@@ -530,9 +552,9 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       toothCount = _this$processProps2.toothCount;
     }
     var avatar = {
-      width: "200px",
-      height: "200px",
-      borderRadius: radius + "px",
+      width: size + "px",
+      height: size + "px",
+      borderRadius: radius + "%",
       overflow: 'hidden',
       opacity: 1,
       background: isBackgroundGradient ? "linear-gradient( " + backgroundGradientDegree + "deg, " + backgroundStartColor + ", " + backgroundEndColor + ")" : backgroundStartColor
@@ -565,7 +587,8 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       tongueColor: tongueColor,
       toothCount: toothCount,
       earColor: earColor,
-      isRandom: isRandom
+      isRandom: isRandom,
+      size: size
     }));
   };
   _proto.processProps = function processProps(isBackgroundGradient, backgroundStartColor, hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount) {
@@ -661,8 +684,8 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       var _eyePupilStartColor;
       if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === '' || !isValidHex(eyePupilStartColor)) {
         var _index13 = hashSeed % options.eyePupilColor.length;
-        eyePupilStartColor = options.backgroundColor[_index13][0];
-        eyePupilEndColor = options.backgroundColor[_index13][1];
+        eyePupilStartColor = options.eyePupilColor[_index13][0];
+        eyePupilEndColor = options.eyePupilColor[_index13][1];
       } else {
         var _eyePupilEndColor;
         if (eyePupilEndColor === null || eyePupilEndColor !== null && ((_eyePupilEndColor = eyePupilEndColor) == null ? void 0 : _eyePupilEndColor.trim()) === '' || !isValidHex(eyePupilEndColor)) {

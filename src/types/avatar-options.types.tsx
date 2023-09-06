@@ -14,6 +14,7 @@ export const pupilGradients =[["#cc2b5e","#753a88"],["#eecda3","#ef629f"],["#ee9
  * Gennerate avatar configurations
  */
 export interface WormAvatarOptions {
+    size: number,
     seed?: string,
     isRandom: boolean,
     radius? : number,

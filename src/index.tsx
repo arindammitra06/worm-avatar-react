@@ -67,6 +67,8 @@ export interface EyeProps {
   eyePupilGradient: boolean;
   eyePupilStartColor: string;
   eyePupilEndColor: string;
+  bodyShape?: BodyShape;
+  bodyHeight?: BodyHeight;
 }
 
 export enum Expression {
@@ -86,6 +88,7 @@ export enum TongueOrTeeth {
 export interface MouthProps {
   expression: Expression;
   mouthColor: string;
+  size: number;
 }
 
 export enum ToothCount {
@@ -100,6 +103,7 @@ export enum ToothSide {
 export interface ToothProps {
   toothCount: ToothCount;
   toothSide: ToothSide;
+  size: number;
 }
 
 export interface TongueProps {
@@ -113,6 +117,7 @@ export enum EarSide {
 export interface EarProps {
   earSide: EarSide;
   earColor: string;
+  bodyShape?: BodyShape;
 }
 
 const options = {
@@ -177,6 +182,7 @@ const options = {
 class WormAvatar extends React.Component<WormAvatarOptions> {
   render() {
     let {
+      size = 50,
       seed = null,
       isRandom = false,
       radius = 20,
@@ -313,15 +319,19 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
     }
 
     const avatar: React.CSSProperties = {
-      width: `200px`,
-      height: `200px`,
-      borderRadius: `${radius}px`,
+      width: `${size}px`,
+      height: `${size}px`,
+      borderRadius: `${radius}%`,
       overflow: 'hidden',
       opacity: 1,
       background: isBackgroundGradient
         ? `linear-gradient( ${backgroundGradientDegree}deg, ${backgroundStartColor}, ${backgroundEndColor})`
         : backgroundStartColor,
     };
+
+    
+
+
     return (
       <div style={avatar}>
         <Body
@@ -350,8 +360,8 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
           tongueColor={tongueColor}
           toothCount={toothCount}
           earColor={earColor}
-          isRandom={isRandom}
-        />
+          isRandom={isRandom} 
+          size={size}        />
       </div>
     );
   }
@@ -519,8 +529,8 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
         !isValidHex(eyePupilStartColor!)
       ) {
         const index = hashSeed % options.eyePupilColor.length;
-        eyePupilStartColor = options.backgroundColor[index][0];
-        eyePupilEndColor = options.backgroundColor[index][1];
+        eyePupilStartColor = options.eyePupilColor[index][0];
+        eyePupilEndColor = options.eyePupilColor[index][1];
       } else {
         if (
           eyePupilEndColor === null ||
