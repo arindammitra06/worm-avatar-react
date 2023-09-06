@@ -1,21 +1,21 @@
 
-<h3  align="center">
-Worm-Avatar-React</h3>
-<br>
+<h2  align="center">
+Worm-Avatar-React</h2>
 
   
 
----
-
   
 
-**Create Funny Worm Avatars for your react projects in seconds** Get Random Worm Avatars or use with unique keys like email address. Highly customizable and easy to integrate
+**Create Funny Worm Avatars for your React projects in seconds...** 
+Create Random Worm Avatars or use with unique keys like email address. Highly customizable and easy to integrate.
+
+Click to try out interactive [demo](https://worm-avatar-react.netlify.app/)
 
   
 
  <p align="center">
 
-<img width="100%" alt=" Worm-Avatar-React" src="https://user-images.githubusercontent.com/2235134/80811888-2bee1f00-8bc7-11ea-83b2-cde8060ab7ad.png">
+<img width="100%" alt=" Worm-Avatar-React" src="https://raw.githubusercontent.com/arindammitra06/worm-avatar-react/main/screenshots/screenshot.png">
 
 </p> 
 
@@ -127,6 +127,8 @@ mouthExpression,
 showTongueOrTeeth,
 tongueColor,
 toothCount,
+
+Inspired from the original codepen [here](https://codepen.io/akhil_001/pen/MWYjBgJ)
 
 ## License
 
