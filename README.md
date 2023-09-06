@@ -56,9 +56,6 @@ import  React  from  'react'
 
 import { render } from  'react-dom'
 
-import  ReactGiphySearchbox  from  'react-giphy-search-picker'
-
-  
 
 const  App = () => (
 
