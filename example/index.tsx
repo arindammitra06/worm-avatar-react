@@ -40,8 +40,10 @@ const App = () => {
     borderTop: '3px dashed #bbb',
   };
 
-  const [seed, setSeed] = useState('worm-avatar-react');
+  const [seed, setSeed] = useState(generateUUID());
   const [isRandom, setIsRandom] = useState(false);
+  const [allowBackground, setAllowBackground] = useState(false);
+  const [allowBody, setAllowBody] = useState(false);
   const [isBGGradient, setIsBGGradient] = useState(true);
   const [backgroundColor, setBackgroundColor] = useState('#697689');
   const [backgroundEndColor, setBackgroundEndColor] = useState('#DCE775');
@@ -53,6 +55,29 @@ const App = () => {
   const [showEar, setShowEar] = useState(false);
   const [showTeeth, setShowTeeth] = useState(false);
 
+  function generateUUID() {
+    var d = new Date().getTime();
+    var d2 =
+      (typeof performance !== 'undefined' &&
+        performance.now &&
+        performance.now() * 1000) ||
+      0; //Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16; //random number between 0 and 16
+      if (d > 0) {
+        //Use timestamp until depleted
+        r = (d + r) % 16 | 0;
+        d = Math.floor(d / 16);
+      } else {
+        //Use microseconds since page-load if supported
+        r = (d2 + r) % 16 | 0;
+        d2 = Math.floor(d2 / 16);
+      }
+      return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
+    });
+  }
+  
+
   return (
     <div style={container}>
       <h2>Funny & Customizable Worm Avatars for your react project</h2>
@@ -62,15 +87,15 @@ const App = () => {
           seed={seed}
           radius={20}
           isBackgroundGradient={isBGGradient}
-          backgroundStartColor={hexColor(backgroundColor)}
-          backgroundEndColor={hexColor(backgroundEndColor)}
+          backgroundStartColor={allowBackground ? hexColor(backgroundColor): ''}
+          backgroundEndColor={allowBackground ? hexColor(backgroundEndColor): ''}
           bodyColorGradient={isBodyGradient}
           // bodyGradientDegree={gradientDegrees(180)}
-          bodyStartColor={hexColor(bodyColor)}
-          bodyEndColor={hexColor(bodyEndColor)}
+          bodyStartColor={allowBody ? hexColor(bodyColor) :''}
+          bodyEndColor={allowBody ?  hexColor(bodyEndColor) : ''}
           // backgroundGradientDegree={gradientDegrees(0)}
-          mouthExpression={Expression.SAD}
-          showEar={showEar}
+          //mouthExpression={Expression.SAD}
+          //showEar={showEar}
           // earColor={hexColor('#f5af19')}
           // eyePosition={EyePosition.NORMAL}
           // eyeCount={EyeCount.TWO}
@@ -117,6 +142,38 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      <hr style={divider} />
+
+      <div style={gridContainer}>
+        <div style={{ textAlign: 'left', marginLeft: '50px' }}>
+          <div>
+            <label>
+              Allow background colors? 
+              <input
+                type="checkbox"
+                checked={allowBackground}
+                onChange={event => setAllowBackground(!allowBackground)}
+              />
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <div style={{ textAlign: 'left', marginLeft: '50px' }}>
+            <label>
+              Allow Body color?
+              <input
+                type="checkbox"
+                checked={allowBody}
+                onChange={event => setAllowBody(!allowBody)}
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+
+
       <hr style={divider} />
 
       <div style={gridContainer}>

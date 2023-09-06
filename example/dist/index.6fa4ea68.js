@@ -2971,8 +2971,10 @@ const App = ()=>{
     const divider = {
         borderTop: "3px dashed #bbb"
     };
-    const [seed, setSeed] = (0, _react.useState)("worm-avatar-react");
+    const [seed, setSeed] = (0, _react.useState)(generateUUID());
     const [isRandom, setIsRandom] = (0, _react.useState)(false);
+    const [allowBackground, setAllowBackground] = (0, _react.useState)(false);
+    const [allowBody, setAllowBody] = (0, _react.useState)(false);
     const [isBGGradient, setIsBGGradient] = (0, _react.useState)(true);
     const [backgroundColor, setBackgroundColor] = (0, _react.useState)("#697689");
     const [backgroundEndColor, setBackgroundEndColor] = (0, _react.useState)("#DCE775");
@@ -2981,6 +2983,23 @@ const App = ()=>{
     const [bodyEndColor, setBodyEndColor] = (0, _react.useState)("#D9E3F0");
     const [showEar, setShowEar] = (0, _react.useState)(false);
     const [showTeeth, setShowTeeth] = (0, _react.useState)(false);
+    function generateUUID() {
+        var d = new Date().getTime();
+        var d2 = typeof performance !== "undefined" && performance.now && performance.now() * 1000 || 0; //Time in microseconds since page-load or 0 if unsupported
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16; //random number between 0 and 16
+            if (d > 0) {
+                //Use timestamp until depleted
+                r = (d + r) % 16 | 0;
+                d = Math.floor(d / 16);
+            } else {
+                //Use microseconds since page-load if supported
+                r = (d2 + r) % 16 | 0;
+                d2 = Math.floor(d2 / 16);
+            }
+            return (c === "x" ? r : r & 0x3 | 0x8).toString(16);
+        });
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         style: container,
         children: [
@@ -2988,7 +3007,7 @@ const App = ()=>{
                 children: "Funny & Customizable Worm Avatars for your react project"
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 58,
+                lineNumber: 83,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2998,15 +3017,15 @@ const App = ()=>{
                     seed: seed,
                     radius: 20,
                     isBackgroundGradient: isBGGradient,
-                    backgroundStartColor: (0, _.hexColor)(backgroundColor),
-                    backgroundEndColor: (0, _.hexColor)(backgroundEndColor),
+                    backgroundStartColor: allowBackground ? (0, _.hexColor)(backgroundColor) : "",
+                    backgroundEndColor: allowBackground ? (0, _.hexColor)(backgroundEndColor) : "",
                     bodyColorGradient: isBodyGradient,
                     // bodyGradientDegree={gradientDegrees(180)}
-                    bodyStartColor: (0, _.hexColor)(bodyColor),
-                    bodyEndColor: (0, _.hexColor)(bodyEndColor),
+                    bodyStartColor: allowBody ? (0, _.hexColor)(bodyColor) : "",
+                    bodyEndColor: allowBody ? (0, _.hexColor)(bodyEndColor) : "",
                     // backgroundGradientDegree={gradientDegrees(0)}
-                    mouthExpression: (0, _.Expression).SAD,
-                    showEar: showEar,
+                    //mouthExpression={Expression.SAD}
+                    //showEar={showEar}
                     // earColor={hexColor('#f5af19')}
                     // eyePosition={EyePosition.NORMAL}
                     // eyeCount={EyeCount.TWO}
@@ -3017,19 +3036,19 @@ const App = ()=>{
                     showTongueOrTeeth: showTeeth ? (0, _.TongueOrTeeth).TEETH : (0, _.TongueOrTeeth).TONGUE
                 }, void 0, false, {
                     fileName: "index.tsx",
-                    lineNumber: 60,
+                    lineNumber: 85,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 59,
+                lineNumber: 84,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 91,
+                lineNumber: 116,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3050,23 +3069,23 @@ const App = ()=>{
                                         onChange: (event)=>setSeed(event.currentTarget.value)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 123,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 96,
+                                lineNumber: 121,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 95,
+                            lineNumber: 120,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 94,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3084,36 +3103,120 @@ const App = ()=>{
                                         onChange: (event)=>setIsRandom(!isRandom)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 136,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 109,
+                                lineNumber: 134,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 108,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 107,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 93,
+                lineNumber: 118,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 120,
+                lineNumber: 146,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: gridContainer,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            textAlign: "left",
+                            marginLeft: "50px"
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Allow background colors?",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: allowBackground,
+                                        onChange: (event)=>setAllowBackground(!allowBackground)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 153,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 151,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 150,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 149,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                textAlign: "left",
+                                marginLeft: "50px"
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: [
+                                    "Allow Body color?",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: allowBody,
+                                        onChange: (event)=>setAllowBody(!allowBody)
+                                    }, void 0, false, {
+                                        fileName: "index.tsx",
+                                        lineNumber: 166,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.tsx",
+                                lineNumber: 164,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "index.tsx",
+                            lineNumber: 163,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "index.tsx",
+                        lineNumber: 162,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "index.tsx",
+                lineNumber: 148,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                style: divider
+            }, void 0, false, {
+                fileName: "index.tsx",
+                lineNumber: 177,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3135,18 +3238,18 @@ const App = ()=>{
                                             onChange: (event)=>setIsBGGradient(!isBGGradient)
                                         }, void 0, false, {
                                             fileName: "index.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 184,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "index.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 182,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "index.tsx",
-                                lineNumber: 124,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3162,13 +3265,13 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 193,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 134,
+                                lineNumber: 191,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3185,19 +3288,19 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 205,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 144,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "index.tsx",
-                        lineNumber: 123,
+                        lineNumber: 180,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3216,18 +3319,18 @@ const App = ()=>{
                                             onChange: (event)=>setIsBodyGradient(!isBodyGradient)
                                         }, void 0, false, {
                                             fileName: "index.tsx",
-                                            lineNumber: 161,
+                                            lineNumber: 218,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "index.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 216,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "index.tsx",
-                                lineNumber: 158,
+                                lineNumber: 215,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3243,13 +3346,13 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 170,
+                                        lineNumber: 227,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 168,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3266,32 +3369,32 @@ const App = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 242,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 178,
+                                lineNumber: 235,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "index.tsx",
-                        lineNumber: 157,
+                        lineNumber: 214,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 122,
+                lineNumber: 179,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                 style: divider
             }, void 0, false, {
                 fileName: "index.tsx",
-                lineNumber: 195,
+                lineNumber: 252,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3312,23 +3415,23 @@ const App = ()=>{
                                         onChange: (event)=>setShowEar(!showEar)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 259,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 200,
+                                lineNumber: 257,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 199,
+                            lineNumber: 256,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 198,
+                        lineNumber: 255,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3346,43 +3449,43 @@ const App = ()=>{
                                         onChange: (event)=>setShowTeeth(!showTeeth)
                                     }, void 0, false, {
                                         fileName: "index.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 272,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "index.tsx",
-                                lineNumber: 213,
+                                lineNumber: 270,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.tsx",
-                            lineNumber: 212,
+                            lineNumber: 269,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "index.tsx",
-                        lineNumber: 211,
+                        lineNumber: 268,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "index.tsx",
-                lineNumber: 197,
+                lineNumber: 254,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.tsx",
-        lineNumber: 57,
+        lineNumber: 82,
         columnNumber: 5
     }, undefined);
 };
-_s(App, "rW9043BEu7KVGQ6XRWBBGD/E1jI=");
+_s(App, "sOMWss4jLAOD3quyI6Uf7VEvVkY=");
 _c = App;
 _reactDom.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "index.tsx",
-    lineNumber: 228,
+    lineNumber: 285,
     columnNumber: 17
 }, undefined), document.getElementById("root"));
 var _c;
@@ -31068,7 +31171,6 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
         if (isRandom) {
             var ranDomUUID = generateUUID();
             var hashSeed = stringToHashCode(ranDomUUID);
-            console.log("Printing hash seed :" + hashSeed);
             //Process Background Color
             var _this$processProps = this.processProps(isBackgroundGradient, backgroundStartColor, hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount);
             backgroundStartColor = _this$processProps.backgroundStartColor;
@@ -31093,7 +31195,6 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             toothCount = _this$processProps.toothCount;
         } else if (seed !== null && seed.trim() !== "") {
             var _hashSeed = stringToHashCode(seed);
-            console.log("Printing hash seed :" + _hashSeed);
             //Process Background Color
             var _this$processProps2 = this.processProps(isBackgroundGradient, backgroundStartColor, _hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount);
             backgroundStartColor = _this$processProps2.backgroundStartColor;
@@ -31125,7 +31226,6 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             opacity: 1,
             background: isBackgroundGradient ? "linear-gradient( " + backgroundGradientDegree + "deg, " + backgroundStartColor + ", " + backgroundEndColor + ")" : backgroundStartColor
         };
-        console.log(avatar);
         return /*#__PURE__*/ (0, _react.createElement)("div", {
             style: avatar
         }, /*#__PURE__*/ (0, _react.createElement)(Body, {
@@ -31163,22 +31263,17 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             var _backgroundStartColor;
             if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor = backgroundStartColor) == null ? void 0 : _backgroundStartColor.trim()) === "" || !isValidHex(backgroundStartColor)) {
                 var index = hashSeed % options.backgroundColor.length;
-                //console.log('Background Color index :' + index);
                 backgroundStartColor = options.backgroundColor[index][0];
                 backgroundEndColor = options.backgroundColor[index][1];
-            //console.log('Background Color Start :' + backgroundStartColor);
-            //console.log('Background Color End :' + backgroundEndColor);
             } else {
                 var _backgroundEndColor;
                 if (backgroundEndColor === null || backgroundEndColor !== null && ((_backgroundEndColor = backgroundEndColor) == null ? void 0 : _backgroundEndColor.trim()) === "" || !isValidHex(backgroundEndColor)) backgroundEndColor = backgroundStartColor;
                 else backgroundEndColor;
             }
-            //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
             if (backgroundGradientDegree === null || backgroundGradientDegree === undefined) {
                 var _index = hashSeed % options.backgroundGradientDegree.length;
                 backgroundGradientDegree = gradientDegrees(options.backgroundGradientDegree[_index]);
             }
-        //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
         } else {
             var _backgroundStartColor2;
             if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor2 = backgroundStartColor) == null ? void 0 : _backgroundStartColor2.trim()) === "" || !isValidHex(backgroundStartColor)) {
@@ -31195,15 +31290,12 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             var _index4 = hashSeed % options.bodyShape.length;
             bodyShape = options.bodyShape[_index4];
         }
-        //console.log('bodyColorGradient :' + bodyColorGradient);
         if (bodyColorGradient) {
             var _bodyStartColor;
             if (bodyStartColor === null || bodyStartColor === undefined || bodyStartColor !== null && ((_bodyStartColor = bodyStartColor) == null ? void 0 : _bodyStartColor.trim()) === "" || !isValidHex(bodyStartColor)) {
                 var _index5 = hashSeed % options.bodyColor.length;
                 bodyStartColor = options.bodyColor[_index5][0];
                 bodyEndColor = options.bodyColor[_index5][1];
-            //console.log('bodyStartColor :' + bodyStartColor);
-            //console.log('bodyEndColor :' + bodyEndColor);
             } else {
                 var _bodyEndColor;
                 if (bodyEndColor === null || bodyEndColor !== null && ((_bodyEndColor = bodyEndColor) == null ? void 0 : _bodyEndColor.trim()) === "" || !isValidHex(bodyEndColor)) bodyEndColor = bodyStartColor;
@@ -31220,11 +31312,13 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
                 bodyStartColor = options.bodyColor[_index7][0];
             }
         }
+        console.log("showEar >> " + showEar);
         //Process Ear
         if (showEar === null || showEar === undefined) {
             var _index8 = hashSeed % options.showEar.length;
             showEar = options.showEar[_index8];
         }
+        console.log("showEar >> " + showEar);
         //Ear Color
         if (earColor === null || earColor === undefined || earColor !== null && ((_earColor = earColor) == null ? void 0 : _earColor.trim()) === "" || !isValidHex(earColor)) {
             var _index9 = hashSeed % options.earColor.length;
@@ -31246,7 +31340,6 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             eyeShadeColor = options.eyeShadeColor[_index12];
         }
         //Eye Pupil Color
-        //console.log('eyePupilGradient ' + eyePupilGradient);
         if (eyePupilGradient) {
             var _eyePupilStartColor;
             if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === "" || !isValidHex(eyePupilStartColor)) {
@@ -31271,25 +31364,31 @@ var WormAvatar = /*#__PURE__*/ function(_React$Component) {
             mouthColor = options.eyeShadeColor[_index15];
         }
         //Expression
+        console.log("Expression >> " + mouthExpression);
         if (mouthExpression === null || mouthExpression === undefined) {
             var _index16 = hashSeed % options.mouthExpression.length;
             mouthExpression = options.mouthExpression[_index16];
         }
+        console.log("Expression >> " + mouthExpression);
+        console.log("showTongueOrTeeth >> " + showTongueOrTeeth);
         //Teeth Or Tongue
         if (showTongueOrTeeth === null || showTongueOrTeeth === undefined) {
             var _index17 = hashSeed % options.showTongueOrTeeth.length;
             showTongueOrTeeth = options.showTongueOrTeeth[_index17];
         }
+        console.log("showTongueOrTeeth >> " + showTongueOrTeeth);
         //Tongue Color
         if (tongueColor === null || tongueColor === undefined || tongueColor !== null && ((_tongueColor = tongueColor) == null ? void 0 : _tongueColor.trim()) === "" || !isValidHex(tongueColor)) {
             var _index18 = hashSeed % options.tongueColor.length;
             tongueColor = options.tongueColor[_index18];
         }
-        //Tongue Count
+        console.log("toothCount >> " + toothCount);
+        //Tooth Count
         if (toothCount === null || toothCount === undefined) {
-            var _index19 = hashSeed % options.earColor.length;
+            var _index19 = hashSeed % options.toothCount.length;
             toothCount = options.toothCount[_index19];
         }
+        console.log("toothCount >> " + toothCount);
         return {
             backgroundStartColor: backgroundStartColor,
             backgroundEndColor: backgroundEndColor,

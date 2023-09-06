@@ -488,7 +488,6 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
     if (isRandom) {
       var ranDomUUID = generateUUID();
       var hashSeed = stringToHashCode(ranDomUUID);
-      console.log('Printing hash seed :' + hashSeed);
       //Process Background Color
       var _this$processProps = this.processProps(isBackgroundGradient, backgroundStartColor, hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount);
       backgroundStartColor = _this$processProps.backgroundStartColor;
@@ -513,7 +512,6 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       toothCount = _this$processProps.toothCount;
     } else if (seed !== null && seed.trim() !== '') {
       var _hashSeed = stringToHashCode(seed);
-      console.log('Printing hash seed :' + _hashSeed);
       //Process Background Color
       var _this$processProps2 = this.processProps(isBackgroundGradient, backgroundStartColor, _hashSeed, backgroundEndColor, backgroundGradientDegree, bodyHeight, bodyShape, bodyColorGradient, bodyStartColor, bodyEndColor, bodyGradientDegree, showEar, earColor, eyeCount, eyePosition, eyeShadeColor, eyePupilGradient, eyePupilStartColor, eyePupilEndColor, mouthColor, mouthExpression, showTongueOrTeeth, tongueColor, toothCount);
       backgroundStartColor = _this$processProps2.backgroundStartColor;
@@ -545,7 +543,6 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       opacity: 1,
       background: isBackgroundGradient ? "linear-gradient( " + backgroundGradientDegree + "deg, " + backgroundStartColor + ", " + backgroundEndColor + ")" : backgroundStartColor
     };
-    console.log(avatar);
     return createElement("div", {
       style: avatar
     }, createElement(Body, {
@@ -583,11 +580,8 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       var _backgroundStartColor;
       if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor = backgroundStartColor) == null ? void 0 : _backgroundStartColor.trim()) === '' || !isValidHex(backgroundStartColor)) {
         var index = hashSeed % options.backgroundColor.length;
-        //console.log('Background Color index :' + index);
         backgroundStartColor = options.backgroundColor[index][0];
         backgroundEndColor = options.backgroundColor[index][1];
-        //console.log('Background Color Start :' + backgroundStartColor);
-        //console.log('Background Color End :' + backgroundEndColor);
       } else {
         var _backgroundEndColor;
         if (backgroundEndColor === null || backgroundEndColor !== null && ((_backgroundEndColor = backgroundEndColor) == null ? void 0 : _backgroundEndColor.trim()) === '' || !isValidHex(backgroundEndColor)) {
@@ -596,12 +590,10 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
           backgroundEndColor = backgroundEndColor;
         }
       }
-      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
       if (backgroundGradientDegree === null || backgroundGradientDegree === undefined) {
         var _index = hashSeed % options.backgroundGradientDegree.length;
         backgroundGradientDegree = gradientDegrees(options.backgroundGradientDegree[_index]);
       }
-      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
     } else {
       var _backgroundStartColor2;
       if (backgroundStartColor === null || backgroundStartColor !== null && ((_backgroundStartColor2 = backgroundStartColor) == null ? void 0 : _backgroundStartColor2.trim()) === '' || !isValidHex(backgroundStartColor)) {
@@ -618,15 +610,12 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       var _index4 = hashSeed % options.bodyShape.length;
       bodyShape = options.bodyShape[_index4];
     }
-    //console.log('bodyColorGradient :' + bodyColorGradient);
     if (bodyColorGradient) {
       var _bodyStartColor;
       if (bodyStartColor === null || bodyStartColor === undefined || bodyStartColor !== null && ((_bodyStartColor = bodyStartColor) == null ? void 0 : _bodyStartColor.trim()) === '' || !isValidHex(bodyStartColor)) {
         var _index5 = hashSeed % options.bodyColor.length;
         bodyStartColor = options.bodyColor[_index5][0];
         bodyEndColor = options.bodyColor[_index5][1];
-        //console.log('bodyStartColor :' + bodyStartColor);
-        //console.log('bodyEndColor :' + bodyEndColor);
       } else {
         var _bodyEndColor;
         if (bodyEndColor === null || bodyEndColor !== null && ((_bodyEndColor = bodyEndColor) == null ? void 0 : _bodyEndColor.trim()) === '' || !isValidHex(bodyEndColor)) {
@@ -646,11 +635,13 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
         bodyStartColor = options.bodyColor[_index7][0];
       }
     }
+    console.log('showEar >> ' + showEar);
     //Process Ear
     if (showEar === null || showEar === undefined) {
       var _index8 = hashSeed % options.showEar.length;
       showEar = options.showEar[_index8];
     }
+    console.log('showEar >> ' + showEar);
     //Ear Color
     if (earColor === null || earColor === undefined || earColor !== null && ((_earColor = earColor) == null ? void 0 : _earColor.trim()) === '' || !isValidHex(earColor)) {
       var _index9 = hashSeed % options.earColor.length;
@@ -672,7 +663,6 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       eyeShadeColor = options.eyeShadeColor[_index12];
     }
     //Eye Pupil Color
-    //console.log('eyePupilGradient ' + eyePupilGradient);
     if (eyePupilGradient) {
       var _eyePupilStartColor;
       if (eyePupilStartColor === null || eyePupilStartColor === undefined || eyePupilStartColor !== null && ((_eyePupilStartColor = eyePupilStartColor) == null ? void 0 : _eyePupilStartColor.trim()) === '' || !isValidHex(eyePupilStartColor)) {
@@ -700,25 +690,31 @@ var WormAvatar = /*#__PURE__*/function (_React$Component) {
       mouthColor = options.eyeShadeColor[_index15];
     }
     //Expression
+    console.log('Expression >> ' + mouthExpression);
     if (mouthExpression === null || mouthExpression === undefined) {
       var _index16 = hashSeed % options.mouthExpression.length;
       mouthExpression = options.mouthExpression[_index16];
     }
+    console.log('Expression >> ' + mouthExpression);
+    console.log('showTongueOrTeeth >> ' + showTongueOrTeeth);
     //Teeth Or Tongue
     if (showTongueOrTeeth === null || showTongueOrTeeth === undefined) {
       var _index17 = hashSeed % options.showTongueOrTeeth.length;
       showTongueOrTeeth = options.showTongueOrTeeth[_index17];
     }
+    console.log('showTongueOrTeeth >> ' + showTongueOrTeeth);
     //Tongue Color
     if (tongueColor === null || tongueColor === undefined || tongueColor !== null && ((_tongueColor = tongueColor) == null ? void 0 : _tongueColor.trim()) === '' || !isValidHex(tongueColor)) {
       var _index18 = hashSeed % options.tongueColor.length;
       tongueColor = options.tongueColor[_index18];
     }
-    //Tongue Count
+    console.log('toothCount >> ' + toothCount);
+    //Tooth Count
     if (toothCount === null || toothCount === undefined) {
-      var _index19 = hashSeed % options.earColor.length;
+      var _index19 = hashSeed % options.toothCount.length;
       toothCount = options.toothCount[_index19];
     }
+    console.log('toothCount >> ' + toothCount);
     return {
       backgroundStartColor: backgroundStartColor,
       backgroundEndColor: backgroundEndColor,

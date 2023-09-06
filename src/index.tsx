@@ -211,7 +211,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
     if (isRandom) {
       const ranDomUUID = generateUUID();
       const hashSeed = stringToHashCode(ranDomUUID);
-      console.log('Printing hash seed :' + hashSeed);
       //Process Background Color
       ({
         backgroundStartColor,
@@ -262,8 +261,7 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
       ));
     } else if (seed !== null && seed.trim() !== '') {
       const hashSeed = stringToHashCode(seed);
-      console.log('Printing hash seed :' + hashSeed);
-
+      
       //Process Background Color
       ({
         backgroundStartColor,
@@ -324,7 +322,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
         ? `linear-gradient( ${backgroundGradientDegree}deg, ${backgroundStartColor}, ${backgroundEndColor})`
         : backgroundStartColor,
     };
-    console.log(avatar);
     return (
       <div style={avatar}>
         <Body
@@ -393,12 +390,9 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
         !isValidHex(backgroundStartColor!)
       ) {
         const index = hashSeed % options.backgroundColor.length;
-        //console.log('Background Color index :' + index);
-
+        
         backgroundStartColor = options.backgroundColor[index][0];
         backgroundEndColor = options.backgroundColor[index][1];
-        //console.log('Background Color Start :' + backgroundStartColor);
-        //console.log('Background Color End :' + backgroundEndColor);
       } else {
         if (
           backgroundEndColor === null ||
@@ -410,7 +404,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
           backgroundEndColor = backgroundEndColor;
         }
       }
-      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
       if (
         backgroundGradientDegree === null ||
         backgroundGradientDegree === undefined
@@ -420,7 +413,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
           options.backgroundGradientDegree[index]
         );
       }
-      //console.log('backgroundGradientDegree :' + backgroundGradientDegree);
     } else {
       if (
         backgroundStartColor === null ||
@@ -441,7 +433,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
       const index = hashSeed % options.bodyShape.length;
       bodyShape = options.bodyShape[index];
     }
-    //console.log('bodyColorGradient :' + bodyColorGradient);
     if (bodyColorGradient) {
       if (
         bodyStartColor === null ||
@@ -452,8 +443,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
         const index = hashSeed % options.bodyColor.length;
         bodyStartColor = options.bodyColor[index][0];
         bodyEndColor = options.bodyColor[index][1];
-        //console.log('bodyStartColor :' + bodyStartColor);
-        //console.log('bodyEndColor :' + bodyEndColor);
       } else {
         if (
           bodyEndColor === null ||
@@ -481,11 +470,15 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
       }
     }
 
+    console.log('showEar >> '+showEar)
     //Process Ear
     if (showEar === null || showEar === undefined) {
       const index = hashSeed % options.showEar.length;
       showEar = options.showEar[index];
     }
+    console.log('showEar >> '+showEar)
+
+
     //Ear Color
     if (
       earColor === null ||
@@ -518,7 +511,6 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
       eyeShadeColor = options.eyeShadeColor[index];
     }
     //Eye Pupil Color
-    //console.log('eyePupilGradient ' + eyePupilGradient);
     if (eyePupilGradient) {
       if (
         eyePupilStartColor === null ||
@@ -563,15 +555,20 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
     }
 
     //Expression
+    console.log('Expression >> '+mouthExpression)
     if (mouthExpression === null || mouthExpression === undefined) {
       const index = hashSeed % options.mouthExpression.length;
       mouthExpression = options.mouthExpression[index];
     }
+    console.log('Expression >> '+mouthExpression)
+
+    console.log('showTongueOrTeeth >> '+showTongueOrTeeth)
     //Teeth Or Tongue
     if (showTongueOrTeeth === null || showTongueOrTeeth === undefined) {
       const index = hashSeed % options.showTongueOrTeeth.length;
       showTongueOrTeeth = options.showTongueOrTeeth[index];
     }
+    console.log('showTongueOrTeeth >> '+showTongueOrTeeth)
 
     //Tongue Color
     if (
@@ -584,11 +581,15 @@ class WormAvatar extends React.Component<WormAvatarOptions> {
       tongueColor = options.tongueColor[index];
     }
 
-    //Tongue Count
+    console.log('toothCount >> '+toothCount)
+    //Tooth Count
     if (toothCount === null || toothCount === undefined) {
-      const index = hashSeed % options.earColor.length;
+      const index = hashSeed % options.toothCount.length;
       toothCount = options.toothCount[index];
     }
+    console.log('toothCount >> '+toothCount)
+
+
     return {
       backgroundStartColor,
       backgroundEndColor,
