@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import WormAvatar, { hexColor, Expression, TongueOrTeeth } from 'worm-avatar-react';
 import { BlockPicker } from 'react-color';
