@@ -69,8 +69,7 @@ function App() {
 
   return (
     <div style={container}>
-      <h1>Funny & Customizable Worm Avatars for your react project</h1>
-      <h2>Funny & Customizable Worm Avatars for your react project</h2>
+      <h1>Funny & Customizable Worm Avatars for your React Project</h1>
       <div style={output}>
         <WormAvatar
           isRandom={isRandom}
