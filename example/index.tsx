@@ -13,6 +13,8 @@ import WormAvatar, {
 } from '../.';
 import { useState } from 'react';
 import { BlockPicker } from 'react-color';
+import { nanoid } from 'nanoid'
+
 
 const App = () => {
   const container: React.CSSProperties = {
@@ -38,9 +40,11 @@ const App = () => {
 
   const divider: React.CSSProperties = {
     borderTop: '3px dashed #bbb',
+    marginLeft: '30%',
+    marginRight: '30%'
   };
 
-  const [seed, setSeed] = useState(generateUUID());
+  const [seed, setSeed] = useState(nanoid(10));
   const [isRandom, setIsRandom] = useState(false);
   const [allowBackground, setAllowBackground] = useState(false);
   const [allowBody, setAllowBody] = useState(false);
@@ -56,45 +60,28 @@ const App = () => {
   const [showTeeth, setShowTeeth] = useState(false);
 
   function generateUUID() {
-    var d = new Date().getTime();
-    var d2 =
-      (typeof performance !== 'undefined' &&
-        performance.now &&
-        performance.now() * 1000) ||
-      0; //Time in microseconds since page-load or 0 if unsupported
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      var r = Math.random() * 16; //random number between 0 and 16
-      if (d > 0) {
-        //Use timestamp until depleted
-        r = (d + r) % 16 | 0;
-        d = Math.floor(d / 16);
-      } else {
-        //Use microseconds since page-load if supported
-        r = (d2 + r) % 16 | 0;
-        d2 = Math.floor(d2 / 16);
-      }
-      return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
-    });
+      let id  =nanoid(10);
+      setSeed(id);
   }
   
 
   return (
     <div style={container}>
-      <h2>Funny & Customizable Worm Avatars for your react project</h2>
+      <h2>Funny & customizable Worm Avatars for your next React project</h2>
       <div style={output}>
         <WormAvatar
-          size={40}
+          size={250}
           isRandom={isRandom}
           seed={seed}
-          radius={100}
+          radius={10}
           isBackgroundGradient={isBGGradient}
           backgroundStartColor={allowBackground ? hexColor(backgroundColor): ''}
           backgroundEndColor={allowBackground ? hexColor(backgroundEndColor): ''}
           bodyColorGradient={isBodyGradient}
-          // bodyGradientDegree={gradientDegrees(180)}
+          //bodyGradientDegree={gradientDegrees(180)}
           //bodyStartColor={allowBody ? hexColor(bodyColor) :''}
           //bodyEndColor={allowBody ?  hexColor(bodyEndColor) : ''}
-          // backgroundGradientDegree={gradientDegrees(0)}
+          //backgroundGradientDegree={gradientDegrees(0)}
           //bodyHeight={BodyHeight.TALL}
           //bodyShape={BodyShape.FAT}
           //mouthExpression={Expression.MEH}
@@ -118,8 +105,8 @@ const App = () => {
         />
       </div>
       <hr style={divider} />
-
-      <div style={gridContainer}>
+      <button onClick={()=>generateUUID()}>Randomize</button>
+      {/* <div style={gridContainer}>
         <div style={{ textAlign: 'left', marginLeft: '50px' }}>
           <div>
             <label>
@@ -281,7 +268,7 @@ const App = () => {
             </label>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
